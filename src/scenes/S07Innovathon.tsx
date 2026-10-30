@@ -3,6 +3,7 @@ import { sceneContent } from './content.ts'
 import { CountUp } from '../kit/CountUp.tsx'
 import { QR } from '../kit/QR.tsx'
 import { SheetVideo } from '../kit/SheetVideo.tsx'
+import type { SceneProps } from './index.ts'
 import poster from '../assets/innovathon-poster.webp'
 import './s07.css'
 
@@ -14,15 +15,18 @@ const c = sceneContent('innovathon')
  * it is evidence that the day happened. The figures beside it carry the
  * argument.
  *
- * Then the reel. Every figure has finished counting by about 2.0s, so the
- * video arrives at 2.3s over a dimmed sheet — nothing in the composition
- * moves or resizes to accommodate it. The numbers get the room first, then
- * the day itself does.
+ * The reel is on its own step. It arrives on a clicker press rather than a
+ * timer, so the sheet waits as long as you do — and it comes up over a
+ * dimmed sheet without anything in the composition moving or resizing to
+ * accommodate it.
+ *
+ * Stepping back unmounts the video, which stops it; stepping forward again
+ * starts it from the beginning. That is what you want in a rehearsal, and
+ * what you want if you lose your place.
  */
+export function S07Innovathon({ step }: SceneProps) {
+  const playing = step >= 1
 
-/** Everything above has landed by ~2.0s; the reel follows at 2.3s. */
-const VIDEO_IN = 2.3
-export function S07Innovathon() {
   return (
     <div className="sc s07">
       <motion.figure
@@ -99,21 +103,25 @@ export function S07Innovathon() {
         className="s07__qr"
       />
 
-      <motion.div
-        className="s07__scrim"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 0.65, delay: VIDEO_IN, ease: 'easeOut' }}
-      />
+      {playing && (
+        <>
+          <motion.div
+            className="s07__scrim"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.5, ease: 'easeOut' }}
+          />
 
-      <SheetVideo
-        className="s07__video"
-        src={`${import.meta.env.BASE_URL}${c.video}`}
-        width={1160}
-        height={653}
-        delay={VIDEO_IN}
-        startDelay={VIDEO_IN + 0.25}
-      />
+          <SheetVideo
+            className="s07__video"
+            src={`${import.meta.env.BASE_URL}${c.video}`}
+            width={1160}
+            height={653}
+            delay={0.1}
+            startDelay={0.35}
+          />
+        </>
+      )}
     </div>
   )
 }

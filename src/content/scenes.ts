@@ -349,8 +349,8 @@ export const SCENES: Scene[] = [
     id: 'innovathon',
     sheet: 'S-07',
     title: 'Innovathon',
-    steps: 1,
-    moment: 0,
+    steps: 2,
+    moment: 1,
     seconds: 60,
     content: {
       date: '21 July 2026',
