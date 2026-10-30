@@ -86,7 +86,10 @@ export function WidthType({
     <motion.span
       className={className}
       style={{ ...style, fontVariationSettings: settings }}
-      initial={reduced ? { opacity: 0 } : false}
+      // Not `initial={false}` — that paints at the animate values on the
+      // first frame, so every delay was ignored and all of a scene's lines
+      // arrived at once with only their widths staggered.
+      initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: reduced ? 0.18 : 0.4, delay }}
     >

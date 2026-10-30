@@ -31,7 +31,7 @@ export function S01ColdOpen() {
           height={1334}
           framed={false}
           className="drawing--blueprint"
-          delay={2.9 * t}
+          delay={4.3 * t}
         />
       </div>
 
@@ -39,8 +39,11 @@ export function S01ColdOpen() {
         className="s01__lines"
         animate={{ opacity: [1, 1, 0] }}
         transition={{
-          duration: reduced ? 0.2 : 3.6,
-          times: [0, 0.82, 1],
+          // The third line only finishes arriving at ~2.2s. Holding the
+          // group until 4.2s gives "No vendor to wait for." two seconds to
+          // be read before the building starts drawing over it.
+          duration: reduced ? 0.2 : 5.4,
+          times: [0, 0.78, 1],
           ease: 'easeOut',
         }}
       >
@@ -63,7 +66,7 @@ export function S01ColdOpen() {
           className="s01__title"
           from={{ wdth: 62, wght: 800 }}
           to={{ wdth: 118, wght: 700 }}
-          delay={4.1 * t}
+          delay={5.5 * t}
           duration={0.75}
         >
           {content.title}
@@ -73,7 +76,7 @@ export function S01ColdOpen() {
           className="s01__sub"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ duration: 0.6, delay: 4.8 * t }}
+          transition={{ duration: 0.6, delay: 6.2 * t }}
         >
           {content.subtitle}
         </motion.p>
@@ -82,7 +85,7 @@ export function S01ColdOpen() {
           className="s01__byline"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ duration: 0.6, delay: 5.2 * t }}
+          transition={{ duration: 0.6, delay: 6.6 * t }}
         >
           {content.byline}
         </motion.p>
