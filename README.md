@@ -6,10 +6,15 @@ Twelve sheets, twenty-three clicker presses, 4:55 planned.
 
 ## Presenting
 
-**Present from `dist-single/index.html`.** Copy that one file onto the venue
-laptop and open it in Chrome. Everything is inlined — fonts, images, QR codes —
-so it needs no network, no server and no dev tools. This is the path that has to
-work in the room.
+**Copy the whole `dist-single/` folder onto the venue laptop** and open
+`index.html` in Chrome. Fonts, images and QR codes are inlined into the HTML;
+the sheet 7 video sits beside it as `innovathon.mp4`. Two files, no network, no
+server, no dev tools.
+
+The video is not inlined on purpose — 13MB of base64 would roughly triple the
+HTML and make it slow to parse, for nothing. A folder is exactly as offline as
+a single file. If `innovathon.mp4` ever goes missing, sheet 7 falls back to the
+poster image rather than going blank.
 
 The GitHub Pages copy is for sharing afterwards, not for presenting: it runs
 inside a hosted page that can compete for keystrokes and may not grant real

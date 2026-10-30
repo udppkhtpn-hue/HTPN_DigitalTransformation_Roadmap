@@ -91,6 +91,9 @@ export interface Portfolio {
 export interface Innovathon {
   date: string
   poster: string
+  /** Final 55.9s of the event reel, cut before its own closing card. */
+  video: string
+  videoSeconds: number
   rotation: number
   counters: Figure[]
   coverage: string
@@ -348,11 +351,13 @@ export const SCENES: Scene[] = [
     title: 'Innovathon',
     steps: 1,
     moment: 0,
-    seconds: 20,
+    seconds: 60,
     content: {
       date: '21 July 2026',
       poster: 'innovathon-poster.webp',
-      rotation: -4,
+      video: 'innovathon.mp4',
+      videoSeconds: 55.9,
+      rotation: -5,
       counters: [
         { value: 200, label: 'delegates' },
         { value: 28, label: 'finalists' },

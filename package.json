@@ -5,8 +5,8 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
-    "build:single": "vite build --mode single",
+    "build": "vite build && node scripts/copy-media.mjs dist",
+    "build:single": "vite build --mode single && node scripts/copy-media.mjs dist-single",
     "preview": "vite preview",
     "typecheck": "tsc --noEmit",
     "assets": "node scripts/extract-assets.mjs",
