@@ -1,0 +1,45 @@
+/*
+ * Latin subsets only, copied out of Fontsource into src/assets/fonts.
+ * Writing the @font-face rules by hand instead of importing the package CSS
+ * keeps the vietnamese and latin-ext subsets out of the inlined offline file —
+ * about two thirds of the font weight we would otherwise carry.
+ */
+
+/* Display. Both axes: wght 100–900, wdth 62–125. */
+@font-face {
+  font-family: 'Archivo';
+  font-style: normal;
+  font-display: block;
+  font-weight: 100 900;
+  font-stretch: 62% 125%;
+  src: url('../assets/fonts/archivo-latin-wdth-normal.woff2')
+    format('woff2-variations');
+}
+
+/* Full human sentences and quotes only. */
+@font-face {
+  font-family: 'Instrument Serif';
+  font-style: normal;
+  font-display: block;
+  font-weight: 400;
+  src: url('../assets/fonts/instrument-serif-latin-400-normal.woff2')
+    format('woff2');
+}
+@font-face {
+  font-family: 'Instrument Serif';
+  font-style: italic;
+  font-display: block;
+  font-weight: 400;
+  src: url('../assets/fonts/instrument-serif-latin-400-italic.woff2')
+    format('woff2');
+}
+
+/* Title block and dimension labels only. */
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-display: block;
+  font-weight: 100 800;
+  src: url('../assets/fonts/jetbrains-mono-latin-wght-normal.woff2')
+    format('woff2-variations');
+}

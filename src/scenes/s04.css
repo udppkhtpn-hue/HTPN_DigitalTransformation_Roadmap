@@ -1,0 +1,70 @@
+.s04 { position: absolute; inset: 0; padding: 0; }
+
+.s04__stage {
+  position: absolute;
+  width: 372px;
+  height: 300px;
+  padding: 28px 28px 26px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.s04__n {
+  font-family: var(--font-mono);
+  font-size: var(--t-dim);
+  color: var(--line);
+  opacity: 0.8;
+}
+
+.s04__name {
+  font-size: 46px;
+  line-height: 1.08;
+  font-variation-settings: 'wght' 600, 'wdth' 88;
+  color: var(--chalk);
+}
+
+.s04__detail {
+  margin-top: auto;
+  font-size: var(--t-small);
+  line-height: 1.32;
+  font-variation-settings: 'wght' 400, 'wdth' 96;
+  color: var(--line);
+}
+
+.s04__framework {
+  position: absolute;
+  top: 566px;
+  left: 200px;
+  margin: 0;
+  font-family: var(--font-mono);
+  font-size: var(--t-dim);
+  color: var(--line);
+  opacity: 0.7;
+  letter-spacing: 0.04em;
+}
+
+.s04__flip {
+  position: absolute;
+  left: 200px;
+  top: 690px;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.s04__flip-text {
+  font-size: 150px;
+  line-height: 1;
+  font-variation-settings: 'wght' 700, 'wdth' 92;
+  letter-spacing: -0.02em;
+  color: var(--chalk);
+}
+
+.s04__flip-caption {
+  margin: 0;
+  font-family: var(--font-human);
+  font-style: italic;
+  font-size: var(--t-lead);
+  color: var(--signal);
+}

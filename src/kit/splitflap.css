@@ -1,0 +1,30 @@
+.flap {
+  display: inline-flex;
+  align-items: baseline;
+  white-space: pre;
+}
+
+.flap__cell {
+  display: inline-block;
+  perspective: 1200px;
+}
+
+/* Both faces share one grid cell, so the block is as wide as the wider of
+   the two words and nothing reflows while it turns. */
+.flap__inner {
+  display: grid;
+  transform-style: preserve-3d;
+}
+
+.flap__face {
+  grid-area: 1 / 1;
+  justify-self: start;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  white-space: pre;
+}
+
+.flap__face--back {
+  transform: rotateX(180deg);
+  color: var(--signal);
+}

@@ -1,0 +1,39 @@
+.s05 { position: absolute; inset: 0; padding: 0; }
+
+/* Two rows of two. One row of four looked tidier on paper, but "1,300+" at
+   this size is wider than a quarter of the sheet and the figures collided —
+   the numbers are the scene, so they get the room. */
+.s05__col {
+  position: absolute;
+  width: 700px;
+  display: flex;
+  flex-direction: column;
+}
+
+.s05__num {
+  font-size: 142px;
+  line-height: 0.92;
+  letter-spacing: -0.035em;
+  align-items: baseline;
+}
+
+.s05__label {
+  position: absolute;
+  top: 206px;
+  width: 600px;
+  font-size: var(--t-small);
+  line-height: 1.32;
+  font-variation-settings: 'wght' 400, 'wdth' 96;
+  color: var(--chalk);
+}
+
+.s05__foot {
+  position: absolute;
+  left: 200px;
+  bottom: 110px;
+  margin: 0;
+  font-family: var(--font-mono);
+  font-size: var(--t-dim);
+  color: var(--line);
+  opacity: 0.7;
+}

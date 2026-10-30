@@ -1,0 +1,106 @@
+.s07 { position: absolute; inset: 0; padding: 0; }
+
+.s07__poster {
+  position: absolute;
+  top: 152px;
+  left: 200px;
+  width: 404px;
+  margin: 0;
+  /* Restrained, and in the sheet's own deep navy rather than a grey wash. */
+  box-shadow: 0 20px 48px rgba(10, 24, 48, 0.72);
+  border: 1px solid rgba(124, 196, 242, 0.3);
+}
+
+.s07__poster img { display: block; width: 100%; height: auto; }
+
+.s07__right {
+  position: absolute;
+  top: 152px;
+  left: 688px;
+  width: 848px;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.s07__date {
+  font-size: 86px;
+  line-height: 1;
+  font-variation-settings: 'wght' 600, 'wdth' 92;
+  letter-spacing: -0.02em;
+  color: var(--chalk);
+}
+
+.s07__counters {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px 40px;
+}
+
+.s07__counter {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding-top: 14px;
+  border-top: 1px solid rgba(124, 196, 242, 0.35);
+}
+
+.s07__num {
+  font-size: 96px;
+  line-height: 0.95;
+  letter-spacing: -0.03em;
+}
+
+.s07__clabel {
+  font-size: var(--t-small);
+  font-variation-settings: 'wght' 400, 'wdth' 96;
+  color: var(--chalk);
+}
+
+.s07__coverage {
+  margin: 0;
+  font-family: var(--font-mono);
+  font-size: var(--t-dim);
+  color: var(--line);
+  letter-spacing: 0.03em;
+}
+
+/* The spread runs along the bottom-left, clear of the title block. */
+.s07__spread {
+  position: absolute;
+  left: 200px;
+  top: 802px;
+  width: 1080px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.s07__spread-intro {
+  font-size: var(--t-small);
+  font-variation-settings: 'wght' 500, 'wdth' 92;
+  color: var(--chalk);
+}
+
+.s07__spread-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px 12px;
+}
+
+.s07__spread-list li {
+  padding: 7px 15px;
+  border: 1px solid rgba(124, 196, 242, 0.55);
+  font-size: 27px;
+  font-variation-settings: 'wght' 400, 'wdth' 94;
+  color: var(--line);
+}
+
+.s07__qr {
+  position: absolute;
+  right: 170px;
+  top: 152px;
+}

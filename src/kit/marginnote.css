@@ -1,0 +1,29 @@
+.mnote {
+  position: relative;
+  font-family: var(--font-human);
+  font-style: italic;
+  font-size: var(--t-lead);
+  line-height: 1.32;
+  color: var(--signal);
+  transform-origin: left center;
+}
+
+.mnote__text {
+  display: block;
+}
+
+.mnote__leader {
+  position: absolute;
+  top: 0.62em;
+  width: 120px;
+  height: 20px;
+  overflow: visible;
+}
+
+.mnote__leader--left {
+  right: calc(100% + 18px);
+}
+
+.mnote__leader--right {
+  left: calc(100% + 18px);
+}

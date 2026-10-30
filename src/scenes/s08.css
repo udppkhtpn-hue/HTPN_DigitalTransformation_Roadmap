@@ -1,0 +1,75 @@
+.s08 { position: absolute; inset: 0; padding: 0; }
+
+.s08__field { z-index: 0; }
+
+/* A slow, low-amplitude wander. Shared keyframes, per-dot duration and a
+   negative delay so they are already out of phase on the first frame. */
+.s08__dot {
+  animation-name: s08-drift;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@keyframes s08-drift {
+  from { transform: translate(-9px, 5px); }
+  to { transform: translate(9px, -6px); }
+}
+
+.s08__head {
+  position: absolute;
+  top: 168px;
+  left: 200px;
+  margin: 0;
+  font-size: 148px;
+  line-height: 1;
+  letter-spacing: -0.028em;
+  color: var(--chalk);
+  z-index: 1;
+}
+
+.s08__gaps {
+  position: absolute;
+  top: 432px;
+  left: 200px;
+  display: grid;
+  grid-template-columns: repeat(4, 372px);
+  gap: 36px;
+  z-index: 1;
+}
+
+.s08__gap {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(124, 196, 242, 0.5);
+}
+
+.s08__gap-name {
+  font-size: 48px;
+  line-height: 1.04;
+  font-variation-settings: 'wght' 600, 'wdth' 86;
+  color: var(--chalk);
+}
+
+.s08__gap-body {
+  font-size: var(--t-small);
+  line-height: 1.34;
+  font-variation-settings: 'wght' 400, 'wdth' 96;
+  color: var(--line);
+}
+
+.s08__lens {
+  position: absolute;
+  left: 200px;
+  bottom: 180px;
+  width: 1320px;
+  margin: 0;
+  font-family: var(--font-mono);
+  font-size: var(--t-dim);
+  line-height: 1.45;
+  color: var(--line);
+  opacity: 0.8;
+  z-index: 1;
+}

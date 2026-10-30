@@ -1,0 +1,24 @@
+.boot {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 28px;
+  background: var(--deep);
+  z-index: 200;
+}
+
+.boot__mark {
+  width: 240px;
+  height: 80px;
+}
+
+.boot__label {
+  font-family: var(--font-mono);
+  font-size: 15px;
+  letter-spacing: 0.12em;
+  color: var(--line);
+  opacity: 0.55;
+}

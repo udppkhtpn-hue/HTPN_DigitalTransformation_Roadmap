@@ -1,0 +1,97 @@
+/*
+ * Blueprint.
+ *
+ * Six colours. --line is strictly line work: grid, rules, strokes, dimension
+ * arrows, secondary type. It never glows, never fills a shape, never sits
+ * behind text as a wash. No filter, no box-shadow, no gradient decoration
+ * anywhere in this deck — that discipline is what keeps it an architectural
+ * drawing instead of a dark page with a cyan accent.
+ */
+
+:root {
+  --drafting: #10233f; /* base, blueprint navy */
+  --deep: #0a1830; /* letterbox, vignette, depth */
+  --line: #7cc4f2; /* cyan line work, grid, secondary type */
+  --chalk: #eef3f6; /* primary type */
+  --signal: #f5a524; /* achieved results, the human element. Sparingly. */
+  --alert: #e5484d; /* dengue +128% and risk. Nothing else. */
+
+  /* The stage is designed at exactly this size and scaled to fit. */
+  --stage-w: 1920px;
+  --stage-h: 1080px;
+
+  /* Drawing margins. Content hangs off the left rule; one element per
+     sheet may cross it, and that element is the scene's moment. */
+  --margin-l: 200px;
+  --margin-r: 160px;
+  --margin-t: 130px;
+  --margin-b: 150px;
+
+  --font-display: 'Archivo', system-ui, sans-serif;
+  --font-human: 'Instrument Serif', Georgia, serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, monospace;
+
+  /* Type scale. 28px is the floor, and it belongs to mono dimension
+     labels only — body sits at 34 and up so it reads from the back. */
+  --t-dim: 28px;
+  --t-small: 34px;
+  --t-body: 44px;
+  --t-lead: 58px;
+  --t-sub: 76px;
+  --t-head: 120px;
+  --t-display: 200px;
+  --t-hero: 300px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: var(--deep);
+  color: var(--chalk);
+  font-family: var(--font-display);
+  font-synthesis: none;
+  -webkit-font-smoothing: antialiased;
+  overflow: hidden;
+  /* Space and arrow keys drive the deck; never let them scroll. */
+  overscroll-behavior: none;
+}
+
+/* The presenter drives this with a clicker, not a mouse. */
+.deck-root {
+  cursor: none;
+}
+.deck-root.is-pointing {
+  cursor: default;
+}
+
+::selection {
+  background: var(--line);
+  color: var(--drafting);
+}
+
+:focus-visible {
+  outline: 2px solid var(--signal);
+  outline-offset: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.18s !important;
+  }
+}

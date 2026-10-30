@@ -1,0 +1,107 @@
+.s12 { position: absolute; inset: 0; padding: 0; }
+
+.s12__lesson {
+  position: absolute;
+  top: 230px;
+  left: 200px;
+  width: 1520px;
+}
+
+.s12__before {
+  margin: 0;
+  font-size: 92px;
+  line-height: 1.1;
+  font-variation-settings: 'wght' 400, 'wdth' 92;
+  color: var(--line);
+}
+
+.s12__strike-wrap {
+  position: relative;
+  display: inline-block;
+  color: var(--chalk);
+}
+
+.s12__strike {
+  position: absolute;
+  left: -4px;
+  right: -4px;
+  top: 46%;
+  width: calc(100% + 8px);
+  height: 22px;
+  overflow: visible;
+}
+
+.s12__after {
+  margin: 44px 0 0;
+  font-size: 118px;
+  line-height: 1.04;
+  letter-spacing: -0.025em;
+  color: var(--chalk);
+}
+
+.s12__lines {
+  margin: 56px 0 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  gap: 18px;
+}
+
+.s12__lines li {
+  padding: 14px 24px;
+  border: 1px solid rgba(124, 196, 242, 0.55);
+  font-size: 32px;
+  font-variation-settings: 'wght' 400, 'wdth' 94;
+  color: var(--line);
+}
+
+/* ── the close ──────────────────────────────────────────────────────── */
+
+.s12__close { position: absolute; inset: 0; }
+
+.s12__bg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 1680px;
+  transform: translate(-50%, -52%);
+  opacity: 0.3;
+  pointer-events: none;
+}
+
+.s12__close-text {
+  position: absolute;
+  top: 222px;
+  left: 200px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.s12__closing-line {
+  font-size: 112px;
+  line-height: 1.06;
+  font-variation-settings: 'wght' 680, 'wdth' 106;
+  letter-spacing: -0.028em;
+  color: var(--chalk);
+}
+
+.s12__thanks {
+  margin-top: 46px;
+  font-family: var(--font-human);
+  font-style: italic;
+  font-size: 84px;
+  color: var(--signal);
+}
+
+.s12__codes {
+  position: absolute;
+  left: 200px;
+  top: 716px;
+  display: flex;
+  gap: 72px;
+}
+
+.s12__codes span {
+  white-space: pre-line;
+}

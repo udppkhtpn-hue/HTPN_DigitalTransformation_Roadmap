@@ -1,0 +1,65 @@
+.tblock {
+  position: absolute;
+  right: 56px;
+  bottom: 56px;
+  width: 560px;
+  height: 154px;
+  font-family: var(--font-mono);
+  color: var(--line);
+  user-select: none;
+}
+
+.tblock__frame {
+  position: absolute;
+  inset: 0;
+  width: 560px;
+  height: 154px;
+  overflow: visible;
+}
+
+.tblock__org {
+  position: absolute;
+  top: 17px;
+  left: 20px;
+  font-size: var(--t-dim);
+  font-weight: 400;
+  letter-spacing: 0.04em;
+  opacity: 0.7;
+}
+
+.tblock__title {
+  position: absolute;
+  top: 78px;
+  left: 20px;
+  width: 352px;
+  font-family: var(--font-display);
+  font-size: 38px;
+  font-variation-settings: 'wght' 500, 'wdth' 100;
+  color: var(--chalk);
+  line-height: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.tblock__sheet {
+  position: absolute;
+  top: 70px;
+  left: 412px;
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  white-space: nowrap;
+}
+
+.tblock__sheet-no {
+  font-size: 40px;
+  font-weight: 500;
+  color: var(--chalk);
+  letter-spacing: 0.01em;
+}
+
+.tblock__sheet-of {
+  font-size: var(--t-dim);
+  opacity: 0.6;
+}

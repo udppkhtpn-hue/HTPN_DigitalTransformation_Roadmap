@@ -1,0 +1,43 @@
+{
+  "name": "htpn-built-from-within",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "build:single": "vite build --mode single",
+    "preview": "vite preview",
+    "typecheck": "tsc --noEmit",
+    "assets": "node scripts/extract-assets.mjs",
+    "shots": "node scripts/capture-sites.mjs",
+    "qr": "node scripts/gen-qr.mjs",
+    "deploy": "npm run build && npm run build:single && npm run budget && gh-pages -d dist -b gh-pages --dotfiles",
+    "notes": "node scripts/count-notes.ts",
+    "perf": "node scripts/check-perf.mjs",
+    "budget": "node scripts/check-budget.mjs",
+    "check": "npm run typecheck && npm run build:single && npm run budget && npm run perf"
+  },
+  "dependencies": {
+    "motion": "14.9.0",
+    "react": "19.3.1",
+    "react-dom": "19.3.1",
+    "@fontsource-variable/archivo": "5.3.0",
+    "@fontsource/instrument-serif": "5.3.0",
+    "@fontsource-variable/jetbrains-mono": "5.3.0"
+  },
+  "devDependencies": {
+    "@types/node": "26.6.6",
+    "@types/qrcode": "1.5.6",
+    "@types/react": "19.3.0",
+    "@types/react-dom": "19.3.0",
+    "@vitejs/plugin-react": "6.1.2",
+    "gh-pages": "6.3.0",
+    "playwright": "1.64.1",
+    "qrcode": "1.5.4",
+    "sharp": "0.35.5",
+    "typescript": "7.0.2",
+    "vite": "8.3.5",
+    "vite-plugin-singlefile": "2.3.4"
+  }
+}

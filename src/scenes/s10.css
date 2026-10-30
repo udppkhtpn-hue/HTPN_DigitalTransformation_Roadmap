@@ -1,0 +1,111 @@
+.s10 { position: absolute; inset: 0; padding: 0; }
+
+/* Pulses travelling into the hub: one animated dash offset per stream,
+   rather than sixty moving elements. */
+.s10__pulse {
+  stroke-dasharray: 26 300;
+  opacity: 0.9;
+  animation: s10-pulse 2.6s linear infinite;
+}
+
+@keyframes s10-pulse {
+  from { stroke-dashoffset: 326; }
+  to { stroke-dashoffset: 0; }
+}
+
+.s10__stream {
+  position: absolute;
+  width: 330px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.s10__stream.is-left { text-align: right; }
+
+.s10__stream-name {
+  font-size: 38px;
+  line-height: 1.1;
+  font-variation-settings: 'wght' 500, 'wdth' 88;
+  color: var(--chalk);
+}
+
+.s10__stream-src {
+  font-family: var(--font-mono);
+  font-size: var(--t-dim);
+  color: var(--line);
+  opacity: 0.8;
+}
+
+.s10__hub-label {
+  position: absolute;
+  top: 612px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 900px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  text-align: center;
+}
+
+.s10__hub-name {
+  font-size: 56px;
+  line-height: 1.05;
+  font-variation-settings: 'wght' 650, 'wdth' 90;
+  color: var(--signal);
+}
+
+.s10__hub-strap {
+  font-family: var(--font-human);
+  font-style: italic;
+  font-size: 40px;
+  color: var(--chalk);
+}
+
+.s10__alert {
+  position: absolute;
+  top: 120px;
+  left: 200px;
+  max-width: 1180px;
+  margin: 0;
+  padding: 12px 24px;
+  border: 1px solid var(--alert);
+  font-family: var(--font-mono);
+  font-size: 30px;
+  color: var(--alert);
+  letter-spacing: 0.02em;
+  line-height: 1.35;
+}
+
+.s10__evidence {
+  position: absolute;
+  left: 200px;
+  top: 806px;
+  width: 1060px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.s10__evidence p {
+  margin: 0;
+  font-family: var(--font-human);
+  font-style: italic;
+  font-size: 40px;
+  line-height: 1.26;
+  color: var(--chalk);
+}
+
+.s10__foot {
+  position: absolute;
+  left: 200px;
+  top: 952px;
+  margin: 0;
+  max-width: 1080px;
+  font-family: var(--font-mono);
+  font-size: 25px;
+  color: var(--line);
+  opacity: 0.7;
+}

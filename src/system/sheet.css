@@ -1,0 +1,88 @@
+/*
+ * The drawing sheet: grid, grain, vignette.
+ *
+ * Mounted once at the root and never animated, so the compositor rasterises
+ * it a single time and never touches it again. Four gradients for the grid
+ * (major and minor, each axis), one tiled PNG for grain, one radial for the
+ * vignette — all on one element, all static.
+ */
+
+.sheet {
+  position: absolute;
+  inset: 0;
+  background-color: var(--drafting);
+  pointer-events: none;
+}
+
+.sheet__grid {
+  position: absolute;
+  inset: 0;
+  background-image:
+    /* major, 120px */
+    linear-gradient(to right, var(--line) 0 1px, transparent 1px),
+    linear-gradient(to bottom, var(--line) 0 1px, transparent 1px),
+    /* minor, 24px */ linear-gradient(to right, var(--line) 0 1px, transparent 1px),
+    linear-gradient(to bottom, var(--line) 0 1px, transparent 1px);
+  background-size:
+    120px 120px,
+    120px 120px,
+    24px 24px,
+    24px 24px;
+  /* Major lines at 6%, minor at 3% — the minor layers are drawn under the
+     major ones and tuned by opacity on the element, not per-gradient. */
+  opacity: 0.06;
+}
+
+.sheet__grid--minor {
+  background-image:
+    linear-gradient(to right, var(--line) 0 1px, transparent 1px),
+    linear-gradient(to bottom, var(--line) 0 1px, transparent 1px);
+  background-size:
+    24px 24px,
+    24px 24px;
+  opacity: 0.03;
+}
+
+.sheet__grid--major {
+  background-image:
+    linear-gradient(to right, var(--line) 0 1px, transparent 1px),
+    linear-gradient(to bottom, var(--line) 0 1px, transparent 1px);
+  background-size:
+    120px 120px,
+    120px 120px;
+  opacity: 0.06;
+}
+
+.sheet__grain {
+  position: absolute;
+  inset: 0;
+  background-image: var(--grain-url);
+  background-repeat: repeat;
+  background-size: 128px 128px;
+  opacity: 0.035;
+  mix-blend-mode: overlay;
+}
+
+.sheet__vignette {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    ellipse 85% 75% at 50% 45%,
+    transparent 0%,
+    transparent 48%,
+    var(--deep) 100%
+  );
+  opacity: 0.85;
+}
+
+/* The drawing border: a hairline rule inset from the sheet edge, the way a
+   real print has one. Content hangs off the left rule. */
+.sheet__border {
+  position: absolute;
+  top: 56px;
+  right: 56px;
+  bottom: 56px;
+  left: 56px;
+  border: 1px solid var(--line);
+  opacity: 0.22;
+}

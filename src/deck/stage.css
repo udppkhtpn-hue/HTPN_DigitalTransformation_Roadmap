@@ -1,0 +1,99 @@
+.letterbox {
+  position: fixed;
+  inset: 0;
+  background: var(--deep);
+  overflow: hidden;
+}
+
+.stage {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: var(--stage-w);
+  height: var(--stage-h);
+  transform-origin: center center;
+  background: var(--drafting);
+  overflow: hidden;
+  /* One composited transform drives all the scaling. */
+  will-change: transform;
+}
+
+.stage__content {
+  position: absolute;
+  inset: 0;
+}
+
+.scene {
+  position: absolute;
+  inset: 0;
+}
+
+.stage__blackout {
+  position: absolute;
+  inset: 0;
+  background: #000;
+  z-index: 50;
+}
+
+.stage__sr {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+/* Shared scene furniture. Content hangs off the left drawing margin;
+   exactly one element per sheet is allowed to cross it. */
+.sc {
+  position: absolute;
+  inset: 0;
+  padding: var(--margin-t) var(--margin-r) var(--margin-b) var(--margin-l);
+}
+
+.sc__head {
+  font-size: var(--t-head);
+  line-height: 0.94;
+  letter-spacing: -0.015em;
+  color: var(--chalk);
+  margin: 0;
+}
+
+.sc__lead {
+  font-size: var(--t-lead);
+  line-height: 1.22;
+  font-variation-settings: 'wght' 400, 'wdth' 100;
+  color: var(--chalk);
+  max-width: 1180px;
+}
+
+.sc__body {
+  font-size: var(--t-body);
+  line-height: 1.34;
+  font-variation-settings: 'wght' 400, 'wdth' 100;
+  color: var(--chalk);
+}
+
+.sc__small {
+  font-size: var(--t-small);
+  line-height: 1.4;
+  font-variation-settings: 'wght' 400, 'wdth' 100;
+  color: var(--line);
+}
+
+.sc__dim {
+  font-family: var(--font-mono);
+  font-size: var(--t-dim);
+  color: var(--line);
+  letter-spacing: 0.03em;
+}
+
+.sc__svg {
+  position: absolute;
+  inset: 0;
+  width: var(--stage-w);
+  height: var(--stage-h);
+  pointer-events: none;
+  overflow: visible;
+}

@@ -1,0 +1,36 @@
+.drawing {
+  position: relative;
+}
+
+.drawing__clip {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+}
+
+.drawing__clip img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.drawing__frame {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  pointer-events: none;
+}
+
+.drawing--framed .drawing__clip {
+  inset: 6px;
+}
+
+/* The building wireframe carries its own alpha — the navy field was turned
+   into transparency in the asset pipeline — so it sits directly on the
+   sheet's grid with no plate, no border and no blend mode. */
+.drawing--blueprint .drawing__clip img {
+  object-fit: contain;
+}
