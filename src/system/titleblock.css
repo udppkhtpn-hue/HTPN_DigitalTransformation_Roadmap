@@ -4,6 +4,11 @@
   bottom: 56px;
   width: 560px;
   height: 154px;
+  /* A cleared field, the way a real title block is a box ruled onto the
+     sheet rather than type floating on it. Almost invisible over the
+     blueprint; it is what keeps the sheet number readable on S-07, where
+     the video runs full-bleed behind it. */
+  background: rgba(8, 20, 40, 0.58);
   font-family: var(--font-mono);
   color: var(--line);
   user-select: none;

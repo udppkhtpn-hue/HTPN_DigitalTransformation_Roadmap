@@ -15,9 +15,10 @@
 
 .s07__right {
   position: absolute;
-  top: 152px;
-  left: 688px;
-  width: 848px;
+  top: 128px;
+  left: 668px;
+  width: 888px;
+  padding: 24px 20px;
   display: flex;
   flex-direction: column;
   gap: 28px;
@@ -68,9 +69,11 @@
 /* The spread runs along the bottom-left, clear of the title block. */
 .s07__spread {
   position: absolute;
-  left: 200px;
-  top: 802px;
-  width: 1080px;
+  left: 176px;
+  top: 782px;
+  width: fit-content;
+  max-width: 1100px;
+  padding: 20px 24px;
   display: flex;
   flex-direction: column;
   gap: 12px;
@@ -101,8 +104,14 @@
 
 .s07__qr {
   position: absolute;
-  right: 170px;
-  top: 152px;
+  right: 156px;
+  top: 138px;
+  padding: 14px;
+}
+
+/* The poster is opaque anyway; it only needs its edge back. */
+.s07__poster {
+  box-shadow: 0 20px 52px rgba(6, 16, 34, 0.85);
 }
 
 /* ── the reel ──────────────────────────────────────────────────────────
@@ -118,9 +127,21 @@
   will-change: transform;
 }
 
+/* A light wash only. The reel has to stay readable behind the figures —
+   what makes the type stand out is its own ground, not drowning the video. */
 .s07__scrim {
   position: absolute;
   inset: 0;
-  background: rgba(10, 24, 48, 0.86);
+  background: rgba(10, 24, 48, 0.38);
   pointer-events: none;
+}
+
+/* Label fields: each block of type sits on its own plate, the way text on
+   a drawing sits in a cleared box rather than straight over the linework.
+   Flat, hairline-ruled, no radius — the sheet's own vocabulary. */
+.s07__right,
+.s07__spread,
+.s07__qr {
+  background: rgba(8, 20, 40, 0.9);
+  border: 1px solid rgba(124, 196, 242, 0.22);
 }
