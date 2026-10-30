@@ -10,115 +10,133 @@ import './s07.css'
 const c = sceneContent('innovathon')
 
 /**
- * The poster as an artefact, pinned to the sheet at an angle. It is far too
- * dense to read from the back of a room, and it is not meant to be read —
- * it is evidence that the day happened. The figures beside it carry the
- * argument.
+ * The reel leads.
  *
- * The reel is on its own step. It arrives on a clicker press rather than a
- * timer, so the sheet waits as long as you do — and it comes up over a
- * dimmed sheet without anything in the composition moving or resizing to
- * accommodate it.
+ * It arrives framed and crisp with an empty sheet behind it, and for those
+ * first seconds it is the only thing in the room. On your press it expands
+ * to fill the sheet and drops back under a scrim — still running — and the
+ * figures build in front of it. The video stops being an object on the
+ * drawing and becomes the ground the drawing sits on.
  *
- * Stepping back unmounts the video, which stops it; stepping forward again
- * starts it from the beginning. That is what you want in a rehearsal, and
- * what you want if you lose your place.
+ * The expansion is one composited transform on a layer that is already
+ * full-stage, so the video is never re-laid-out, only scaled. The text
+ * keeps the entrance timings it always had, shifted behind the recede.
+ *
+ * The poster stays what it always was: far too dense to read from the back
+ * of a room, and not meant to be read. It is evidence the day was organised.
  */
+
+/** 1160/1920 — the framed panel, expressed as a scale of the full stage. */
+const PANEL = 0.604
+
+/** Shift applied to the original text delays, so they follow the recede. */
+const T = 0.5
+
 export function S07Innovathon({ step }: SceneProps) {
-  const playing = step >= 1
+  const back = step >= 1
 
   return (
     <div className="sc s07">
-      <motion.figure
-        className="s07__poster"
-        initial={{ opacity: 0, y: -28, rotate: c.rotation - 2 }}
-        animate={{ opacity: 1, y: 0, rotate: c.rotation }}
-        transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-      >
-        <img src={poster} alt="Innovathon 2026 breakout session allocation poster" />
-      </motion.figure>
-
-      <div className="s07__right">
-        <motion.span
-          className="s07__date"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.5, delay: 0.3 }}
-        >
-          {c.date}
-        </motion.span>
-
-        <div className="s07__counters">
-          {c.counters.map((f, i) => (
-            <div className="s07__counter" key={f.label}>
-              <CountUp
-                {...f}
-                tone="signal"
-                className="s07__num"
-                delay={0.45 + i * 0.16}
-                duration={1.1}
-              />
-              <motion.span
-                className="s07__clabel"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 0.4, delay: 0.75 + i * 0.16 }}
-              >
-                {f.label}
-              </motion.span>
-            </div>
-          ))}
-        </div>
-
-        <motion.p
-          className="s07__coverage"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.5, delay: 1.2 }}
-        >
-          {c.coverage}
-        </motion.p>
-
-      </div>
-
       <motion.div
-        className="s07__spread"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 0.5, delay: 1.4 }}
+        className="s07__vlayer"
+        initial={{ scale: PANEL }}
+        animate={{ scale: back ? 1 : PANEL }}
+        transition={{ duration: 1.0, ease: [0.16, 1, 0.3, 1] }}
       >
-        <span className="s07__spread-intro">{c.spreadIntro}</span>
-        <ul className="s07__spread-list">
-          {c.spread.map((s) => (
-            <li key={s}>{s}</li>
-          ))}
-        </ul>
+        <SheetVideo
+          src={`${import.meta.env.BASE_URL}${c.video}`}
+          width={1920}
+          height={1080}
+          delay={0.1}
+          startDelay={0.35}
+          frameVisible={!back}
+          strokeWidth={1.7}
+        />
       </motion.div>
 
-      <QR
-        code="innovathon"
-        size={158}
-        delay={1.6}
-        caption="innovathon2026"
-        className="s07__qr"
+      <motion.div
+        className="s07__scrim"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: back ? 1 : 0 }}
+        transition={{ duration: 0.7, ease: 'easeOut' }}
       />
 
-      {playing && (
+      {back && (
         <>
+          <motion.figure
+            className="s07__poster"
+            initial={{ opacity: 0, y: -28, rotate: c.rotation - 2 }}
+            animate={{ opacity: 1, y: 0, rotate: c.rotation }}
+            transition={{ duration: 0.8, delay: T, ease: [0.16, 1, 0.3, 1] }}
+          >
+            <img
+              src={poster}
+              alt="Innovathon 2026 breakout session allocation poster"
+            />
+          </motion.figure>
+
+          <div className="s07__right">
+            <motion.span
+              className="s07__date"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.5, delay: T + 0.3 }}
+            >
+              {c.date}
+            </motion.span>
+
+            <div className="s07__counters">
+              {c.counters.map((f, i) => (
+                <div className="s07__counter" key={f.label}>
+                  <CountUp
+                    {...f}
+                    tone="signal"
+                    className="s07__num"
+                    delay={T + 0.45 + i * 0.16}
+                    duration={1.1}
+                  />
+                  <motion.span
+                    className="s07__clabel"
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ duration: 0.4, delay: T + 0.75 + i * 0.16 }}
+                  >
+                    {f.label}
+                  </motion.span>
+                </div>
+              ))}
+            </div>
+
+            <motion.p
+              className="s07__coverage"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.5, delay: T + 1.2 }}
+            >
+              {c.coverage}
+            </motion.p>
+          </div>
+
           <motion.div
-            className="s07__scrim"
+            className="s07__spread"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ duration: 0.5, ease: 'easeOut' }}
-          />
+            transition={{ duration: 0.5, delay: T + 1.4 }}
+          >
+            <span className="s07__spread-intro">{c.spreadIntro}</span>
+            <ul className="s07__spread-list">
+              {c.spread.map((s) => (
+                <li key={s}>{s}</li>
+              ))}
+            </ul>
+          </motion.div>
 
-          <SheetVideo
-            className="s07__video"
-            src={`${import.meta.env.BASE_URL}${c.video}`}
-            width={1160}
-            height={653}
-            delay={0.1}
-            startDelay={0.35}
+          <QR
+            code="innovathon"
+            size={158}
+            delay={T + 1.6}
+            caption="innovathon2026"
+            className="s07__qr"
           />
         </>
       )}

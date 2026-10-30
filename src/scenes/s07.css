@@ -105,21 +105,22 @@
   top: 152px;
 }
 
-/* ── the reel, once the sheet has finished drawing itself ───────────────
-   The sheet above is untouched: same poster, same counters, same QR, same
-   entrance. The video arrives on top of all of it, with everything behind
-   dimmed back so the room knows where to look. The title block is rendered
-   outside the scene, so the sheet number stays legible over the scrim. */
+/* ── the reel ──────────────────────────────────────────────────────────
+   The video layer is always full-stage; `scale` presents it as a framed
+   panel first and then expands it to fill the sheet. Scaling a layer that
+   is already the right size keeps it a single composited transform — an
+   animated width would re-lay-out the video on every frame. */
+
+.s07__vlayer {
+  position: absolute;
+  inset: 0;
+  transform-origin: center center;
+  will-change: transform;
+}
 
 .s07__scrim {
   position: absolute;
   inset: 0;
-  background: rgba(10, 24, 48, 0.82);
+  background: rgba(10, 24, 48, 0.86);
   pointer-events: none;
-}
-
-.s07__video {
-  position: absolute;
-  top: 196px;
-  left: 380px;
 }

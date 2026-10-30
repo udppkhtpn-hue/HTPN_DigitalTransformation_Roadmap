@@ -12,6 +12,10 @@ interface Props {
   delay?: number
   /** When the picture wipes in and playback starts. */
   startDelay?: number
+  /** The drawn frame, faded out once the video stops being an object. */
+  frameVisible?: boolean
+  /** Compensates when a CSS transform scales the whole element down. */
+  strokeWidth?: number
   className?: string
 }
 
@@ -34,6 +38,8 @@ export function SheetVideo({
   height,
   delay = 0,
   startDelay,
+  frameVisible = true,
+  strokeWidth = 1,
   className,
 }: Props) {
   const start = startDelay ?? delay
@@ -100,12 +106,16 @@ export function SheetVideo({
           height={height - 1}
           fill="none"
           stroke="var(--line)"
-          strokeWidth="1"
-          vectorEffect="non-scaling-stroke"
-          initial={reduced ? { opacity: 0 } : { pathLength: 0 }}
-          animate={reduced ? { opacity: 0.55 } : { pathLength: 1 }}
-          transition={{ duration: 0.9, delay, ease: [0.16, 1, 0.3, 1] }}
-          opacity={0.55}
+          strokeWidth={strokeWidth}
+          initial={reduced ? { opacity: 0 } : { pathLength: 0, opacity: 0.55 }}
+          animate={{
+            pathLength: reduced ? 1 : 1,
+            opacity: frameVisible ? 0.55 : 0,
+          }}
+          transition={{
+            pathLength: { duration: 0.9, delay, ease: [0.16, 1, 0.3, 1] },
+            opacity: { duration: 0.45 },
+          }}
         />
       </svg>
     </motion.div>
