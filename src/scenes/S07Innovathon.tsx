@@ -25,6 +25,9 @@ const c = sceneContent('innovathon')
  * breakout-session tables was competing with the thing it was evidence for,
  * and losing. The figures now hang off the drawing margin like every other
  * sheet, and the right half of the sheet is left to the video.
+ *
+ * Losing the poster also lost the only place the event was named, so the
+ * title carries it instead — as printed on the delegate badge.
  */
 
 /** 1160/1920 — the framed panel, expressed as a scale of the full stage. */
@@ -65,11 +68,20 @@ export function S07Innovathon({ step }: SceneProps) {
       {back && (
         <>
           <div className="s07__right">
+            <motion.h2
+              className="s07__title"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.5, delay: T + 0.2 }}
+            >
+              {c.title}
+            </motion.h2>
+
             <motion.span
               className="s07__date"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
-              transition={{ duration: 0.5, delay: T + 0.3 }}
+              transition={{ duration: 0.5, delay: T + 0.35 }}
             >
               {c.date}
             </motion.span>

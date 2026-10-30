@@ -10,15 +10,26 @@
   padding: 24px 20px;
   display: flex;
   flex-direction: column;
-  gap: 28px;
+  gap: 26px;
+}
+
+.s07__title {
+  margin: 0 0 -14px;
+  /* Narrow enough to force the break after "Intelligence" rather than
+     leaving "2026" alone on the second line. */
+  max-width: 740px;
+  font-size: 52px;
+  line-height: 1.06;
+  font-variation-settings: 'wght' 640, 'wdth' 84;
+  letter-spacing: -0.015em;
+  color: var(--chalk);
 }
 
 .s07__date {
-  font-size: 86px;
+  font-size: 36px;
   line-height: 1;
-  font-variation-settings: 'wght' 600, 'wdth' 92;
-  letter-spacing: -0.02em;
-  color: var(--chalk);
+  font-variation-settings: 'wght' 450, 'wdth' 94;
+  color: var(--line);
 }
 
 .s07__counters {
@@ -36,7 +47,7 @@
 }
 
 .s07__num {
-  font-size: 96px;
+  font-size: 88px;
   line-height: 0.95;
   letter-spacing: -0.03em;
 }
@@ -59,7 +70,7 @@
 .s07__spread {
   position: absolute;
   left: 180px;
-  top: 714px;
+  top: 742px;
   width: fit-content;
   max-width: 1100px;
   padding: 20px 24px;

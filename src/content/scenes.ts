@@ -89,6 +89,8 @@ export interface Portfolio {
 }
 
 export interface Innovathon {
+  /** As printed on the delegate badge and the event site. */
+  title: string
   date: string
   poster: string
   /** Final 55.9s of the event reel, cut before its own closing card. */
@@ -353,6 +355,7 @@ export const SCENES: Scene[] = [
     moment: 1,
     seconds: 60,
     content: {
+      title: 'AI Productivity Intelligence Innovathon 2026',
       date: '21 July 2026',
       poster: 'innovathon-poster.webp',
       video: 'innovathon.mp4',
