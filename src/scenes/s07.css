@@ -1,22 +1,11 @@
 .s07 { position: absolute; inset: 0; padding: 0; }
 
-.s07__poster {
-  position: absolute;
-  top: 152px;
-  left: 200px;
-  width: 404px;
-  margin: 0;
-  /* Restrained, and in the sheet's own deep navy rather than a grey wash. */
-  box-shadow: 0 20px 48px rgba(10, 24, 48, 0.72);
-  border: 1px solid rgba(124, 196, 242, 0.3);
-}
 
-.s07__poster img { display: block; width: 100%; height: auto; }
 
 .s07__right {
   position: absolute;
   top: 128px;
-  left: 668px;
+  left: 180px;
   width: 888px;
   padding: 24px 20px;
   display: flex;
@@ -69,8 +58,8 @@
 /* The spread runs along the bottom-left, clear of the title block. */
 .s07__spread {
   position: absolute;
-  left: 176px;
-  top: 782px;
+  left: 180px;
+  top: 714px;
   width: fit-content;
   max-width: 1100px;
   padding: 20px 24px;
@@ -142,6 +131,6 @@
 .s07__right,
 .s07__spread,
 .s07__qr {
-  background: rgba(8, 20, 40, 0.9);
+  background: rgba(8, 20, 40, 0.45);
   border: 1px solid rgba(124, 196, 242, 0.22);
 }

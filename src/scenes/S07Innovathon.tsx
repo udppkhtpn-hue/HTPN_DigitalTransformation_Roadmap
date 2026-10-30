@@ -4,7 +4,6 @@ import { CountUp } from '../kit/CountUp.tsx'
 import { QR } from '../kit/QR.tsx'
 import { SheetVideo } from '../kit/SheetVideo.tsx'
 import type { SceneProps } from './index.ts'
-import poster from '../assets/innovathon-poster.webp'
 import './s07.css'
 
 const c = sceneContent('innovathon')
@@ -22,8 +21,10 @@ const c = sceneContent('innovathon')
  * full-stage, so the video is never re-laid-out, only scaled. The text
  * keeps the entrance timings it always had, shifted behind the recede.
  *
- * The poster stays what it always was: far too dense to read from the back
- * of a room, and not meant to be read. It is evidence the day was organised.
+ * The poster is gone. Once the reel is running behind it, a dense A3 of
+ * breakout-session tables was competing with the thing it was evidence for,
+ * and losing. The figures now hang off the drawing margin like every other
+ * sheet, and the right half of the sheet is left to the video.
  */
 
 /** 1160/1920 — the framed panel, expressed as a scale of the full stage. */
@@ -63,18 +64,6 @@ export function S07Innovathon({ step }: SceneProps) {
 
       {back && (
         <>
-          <motion.figure
-            className="s07__poster"
-            initial={{ opacity: 0, y: -28, rotate: c.rotation - 2 }}
-            animate={{ opacity: 1, y: 0, rotate: c.rotation }}
-            transition={{ duration: 0.8, delay: T, ease: [0.16, 1, 0.3, 1] }}
-          >
-            <img
-              src={poster}
-              alt="Innovathon 2026 breakout session allocation poster"
-            />
-          </motion.figure>
-
           <div className="s07__right">
             <motion.span
               className="s07__date"
