@@ -21,6 +21,23 @@ const GAP = 0.4
 const FLIGHT = 0.45
 const LAST = FIRST + (SITES.length - 1) * GAP + FLIGHT
 
+/** Kajang to the nearest point on the magnifier's rim, not to a fixed corner. */
+const LEADER = (() => {
+  const dx = MAP.inset.cx - MAP.home.mainX
+  const dy = MAP.inset.cy - MAP.home.mainY
+  const d = Math.hypot(dx, dy)
+  const x = MAP.inset.cx - (dx / d) * MAP.inset.r
+  const y = MAP.inset.cy - (dy / d) * MAP.inset.r
+  return `M ${MAP.home.mainX} ${MAP.home.mainY} L ${x.toFixed(1)} ${y.toFixed(1)}`
+})()
+
+/** End a leader 15px short of its label, so it never runs into the digits. */
+const shorten = (x1: number, x2: number, y1: number, y2: number): [number, number] => {
+  const d = Math.hypot(x2 - x1, y2 - y1) || 1
+  const k = Math.max(0, d - 15) / d
+  return [x1 + (x2 - x1) * k, y1 + (y2 - y1) * k]
+}
+
 const MONTHS = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
 const monthOf = (iso: string) => {
   const [y, m] = iso.split('-')
@@ -103,7 +120,7 @@ export function WhereTaught({ step }: SceneProps) {
                   d={d}
                   className="wt__faint"
                   initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
+                  animate={{ opacity: 0.12 }}
                   transition={{ duration: 0.5 * t + 0.01, delay: 0.3 * t }}
                 />
               ))}
@@ -120,7 +137,7 @@ export function WhereTaught({ step }: SceneProps) {
 
         {/* break line between the peninsula and Borneo */}
         <motion.path
-          d={`M ${MAP.breakX} 250 L ${MAP.breakX} 800`}
+          d={`M ${MAP.breakX} 240 L ${MAP.breakX} 790`}
           className="wt__break"
           initial={{ opacity: 0 }}
           animate={{ opacity: 0.5 }}
@@ -133,16 +150,13 @@ export function WhereTaught({ step }: SceneProps) {
           animate={{ opacity: 1 }}
           transition={{ duration: 0.5, delay: 1.0 * t }}
         >
-          <path
-            d={`M ${MAP.home.mainX} ${MAP.home.mainY} L ${MAP.inset.cx - MAP.inset.r * 0.72} ${MAP.inset.cy - MAP.inset.r * 0.72}`}
-            className="wt__leader"
-          />
+          <path d={LEADER} className="wt__leader" />
           <circle cx={MAP.inset.cx} cy={MAP.inset.cy} r={MAP.inset.r} className="wt__inset-plate" />
           <g clipPath="url(#wt-inset)">
             <path d={MAP.inset.path} className="wt__inset-land" />
           </g>
           <circle cx={MAP.inset.cx} cy={MAP.inset.cy} r={MAP.inset.r} className="wt__inset-ring" />
-          <text x={MAP.inset.cx} y={MAP.inset.cy + MAP.inset.r + 30} className="wt__inset-label">
+          <text x={MAP.inset.cx} y={MAP.inset.cy - MAP.inset.r - 16} className="wt__inset-label">
             KLANG VALLEY
           </text>
         </motion.g>
@@ -195,14 +209,18 @@ export function WhereTaught({ step }: SceneProps) {
                   style={{ transformOrigin: `${pin.ix}px ${pin.iy}px` }}
                 >
                   <Mark kind={s.kind} x={pin.ix!} y={pin.iy!} r={9} />
-                  {/* Three of these sites are within 0.05° of each other, so
-                      the numbers are fanned by the golden angle: neighbours
-                      never pick the same direction. */}
-                  <text
-                    x={pin.ix! + Math.cos(s.n * 2.3999) * 22}
-                    y={pin.iy! + Math.sin(s.n * 2.3999) * 22}
-                    className="wt__pin-n"
-                  >
+                  {/* Nine sites sit within a few pixels of each other, so each
+                      number is placed by the map script (relaxed off its
+                      neighbours) and tied back to its pin by a short leader. */}
+                  <line
+                    x1={pin.ix!}
+                    y1={pin.iy!}
+                    x2={shorten(pin.ix!, pin.lx!, pin.iy!, pin.ly!)[0]}
+                    y2={shorten(pin.ix!, pin.lx!, pin.iy!, pin.ly!)[1]}
+                    className="wt__pin-lead"
+                    style={{ display: Math.hypot(pin.lx! - pin.ix!, pin.ly! - pin.iy!) > 24 ? undefined : 'none' }}
+                  />
+                  <text x={pin.lx!} y={pin.ly!} className="wt__pin-n">
                     {s.n}
                   </text>
                 </motion.g>
@@ -242,32 +260,38 @@ export function WhereTaught({ step }: SceneProps) {
         <motion.span className="wt__now-dates">{nowDates}</motion.span>
       </div>
 
-      <motion.p
-        className="wt__sub"
-        initial={{ opacity: 0, y: reduced ? 0 : 10 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6, delay: (LAST + 0.2) * t }}
-      >
-        {c.subline}
-      </motion.p>
+      {/* the right-hand column: legend, then the verdict */}
+      <div className="wt__aside">
+        <ul className="wt__legend">
+          <li><i className="wt__k wt__k--h" /> hospital</li>
+          <li><i className="wt__k wt__k--n" /> national service / state department</li>
+          <li><i className="wt__k wt__k--c" /> community organisation</li>
+          {/* Always laid out, so the column does not shift on press 2. */}
+          <li className={`wt__k-adopted${adopted ? ' is-on' : ''}`}>
+            <i className="wt__k wt__k--r" /> {c.legendAdopted}
+          </li>
+        </ul>
 
-      <ul className="wt__legend">
-        <li><i className="wt__k wt__k--h" /> hospital</li>
-        <li><i className="wt__k wt__k--n" /> national service / state department</li>
-        <li><i className="wt__k wt__k--c" /> community organisation</li>
-        {adopted && <li className="wt__k-adopted"><i className="wt__k wt__k--r" /> {c.legendAdopted}</li>}
-      </ul>
-
-      {adopted && (
         <motion.p
-          className="wt__taught"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.6, delay: 1.0 }}
+          className="wt__sub"
+          initial={{ opacity: 0, y: reduced ? 0 : 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: (LAST + 0.2) * t }}
         >
-          {c.adoptedLine}
+          {c.subline}
         </motion.p>
-      )}
+
+        {adopted && (
+          <motion.p
+            className="wt__taught"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.6, delay: 1.0 }}
+          >
+            {c.adoptedLine}
+          </motion.p>
+        )}
+      </div>
 
       <p className="wt__home-note">{HOME.name} · {HOME.note}</p>
     </div>

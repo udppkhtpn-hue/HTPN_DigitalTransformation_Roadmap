@@ -43,9 +43,14 @@ const clip = (f, west) =>
     : split(f, west)
 
 /** Stage boxes. The peninsula sits left, Borneo right, a break line between. */
-const WEST_BOX = [[200, 262], [496, 742]]
-const EAST_BOX = [[820, 268], [1180, 478]]
-const INSET = { cx: 660, cy: 596, r: 116 } // Klang Valley detail circle
+//
+// The Kuching arc leaves Kajang, bows south and crosses the sea to Sarawak.
+// The magnifier therefore sits in the open water above that arc, not in
+// its path, and the break line passes behind it.
+const WEST_BOX = [[200, 240], [660, 790]]
+const EAST_BOX = [[990, 380], [1440, 760]]
+const INSET = { cx: 830, cy: 410, r: 140 } // Klang Valley detail circle
+const BREAK_X = 830
 
 function panel(box, geom, extraFeatures) {
   const [[x0, y0], [x1, y1]] = box
@@ -102,6 +107,51 @@ const pins = SITES.map((s) => {
   }
 })
 
+// Number labels for the magnifier. Nine sites sit within a few pixels of
+// each other (two share a point exactly), so a fixed offset per pin cannot
+// keep them apart. Relax the labels instead: each wants to sit ~38px from
+// its own pin, and is pushed off every other label and every pin, inside
+// the circle. Leader lines tie each label back to its pin.
+{
+  const kv = pins.filter((p) => p.ix !== null)
+  const cx = kv.reduce((a, p) => a + p.ix, 0) / kv.length
+  const cy = kv.reduce((a, p) => a + p.iy, 0) / kv.length
+  const R = INSET.r - 24
+  const L = kv.map((p, i) => {
+    // Fan outward from the cluster's centre; coincident pins get distinct angles.
+    let a = Math.atan2(p.iy - cy, p.ix - cx)
+    a += (i % 2 ? 1 : -1) * 0.35 * Math.floor((i + 1) / 2)
+    return { p, x: p.ix + Math.cos(a) * 38, y: p.iy + Math.sin(a) * 38 }
+  })
+  const W = 46, H = 36 // label box incl. breathing room (28px mono, two digits)
+  for (let it = 0; it < 600; it++) {
+    for (const a of L) {
+      // pull toward its own ring around the pin
+      const dx = a.x - a.p.ix, dy = a.y - a.p.iy, d = Math.hypot(dx, dy) || 1
+      const k = (d - 38) * 0.04
+      a.x -= (dx / d) * k; a.y -= (dy / d) * k
+      // keep off every pin
+      for (const q of kv) {
+        const ex = a.x - q.ix, ey = a.y - q.iy, e = Math.hypot(ex, ey) || 1
+        if (e < 30) { a.x += (ex / e) * (30 - e) * 0.3; a.y += (ey / e) * (30 - e) * 0.3 }
+      }
+      // keep off every other label (axis-aligned boxes)
+      for (const b of L) {
+        if (a === b) continue
+        const ox = W - Math.abs(a.x - b.x), oy = H - Math.abs(a.y - b.y)
+        if (ox > 0 && oy > 0) {
+          if (ox < oy) { const sx = Math.sign(a.x - b.x) || 1; a.x += sx * ox * 0.25; b.x -= sx * ox * 0.25 }
+          else { const sy = Math.sign(a.y - b.y) || 1; a.y += sy * oy * 0.25; b.y -= sy * oy * 0.25 }
+        }
+      }
+      // stay inside the circle
+      const rx = a.x - INSET.cx, ry = a.y - INSET.cy, r = Math.hypot(rx, ry)
+      if (r > R) { a.x = INSET.cx + (rx / r) * R; a.y = INSET.cy + (ry / r) * R }
+    }
+  }
+  for (const a of L) { a.p.lx = +a.x.toFixed(1); a.p.ly = +a.y.toFixed(1) }
+}
+
 const homeKV = inKV(HOME)
 const hp = homeKV ? insetProj([HOME.lon, HOME.lat]) : west.project(HOME.lon, HOME.lat)
 // The arc origin on the main map, so arcs to distant sites start sensibly.
@@ -114,7 +164,7 @@ export const MAP = {
   west: ${JSON.stringify({ main: west.main, faint: west.faint })},
   east: ${JSON.stringify({ main: east.main, faint: east.faint })},
   inset: ${JSON.stringify({ ...INSET, path: insetPath })},
-  breakX: 532,
+  breakX: ${BREAK_X},
   home: { x: ${hp[0].toFixed(1)}, y: ${hp[1].toFixed(1)}, mainX: ${homeMain[0].toFixed(1)}, mainY: ${homeMain[1].toFixed(1)}, inset: ${homeKV} },
   pins: ${JSON.stringify(pins)},
 } as const
