@@ -15,6 +15,7 @@ export type SceneId =
   | 'ahead-of-mandate'
   | 'how-we-led-it'
   | 'results'
+  | 'where-weve-taught'
   | 'portfolio'
   | 'innovathon'
   | 'the-gap'
@@ -80,6 +81,13 @@ export interface HowWeLedIt {
 export interface Results {
   figures: Figure[]
   footnote: string
+}
+
+export interface WhereTaught {
+  heading: string
+  subline: string
+  adoptedLine: string
+  legendAdopted: string
 }
 
 export interface Portfolio {
@@ -150,6 +158,7 @@ export type Scene =
   | (Base & { id: 'ahead-of-mandate'; content: AheadOfMandate })
   | (Base & { id: 'how-we-led-it'; content: HowWeLedIt })
   | (Base & { id: 'results'; content: Results })
+  | (Base & { id: 'where-weve-taught'; content: WhereTaught })
   | (Base & { id: 'portfolio'; content: Portfolio })
   | (Base & { id: 'innovathon'; content: Innovathon })
   | (Base & { id: 'the-gap'; content: TheGap })
@@ -291,8 +300,24 @@ export const SCENES: Scene[] = [
   },
 
   {
-    id: 'portfolio',
+    id: 'where-weve-taught',
     sheet: 'S-06',
+    title: "Where we've taught",
+    steps: 2,
+    moment: 0,
+    seconds: 35,
+    content: {
+      heading: 'Invited, not imposed.',
+      subline: '15 external sessions in 12 months. 5 in the last two.',
+      adoptedLine: 'We taught. They built.',
+      legendAdopted: 'cyan ring = runs a tool built on our model',
+    },
+    notes: `And then people started inviting us. Fifteen sessions in twelve months: hospitals, community groups, and whole national services. Northern, central and southern O&G. Family Medicine. Medical Services. From Alor Setar to Johor Bahru, and across the sea to Kuching. Five of those were in the last two months alone. And here's what happened next. The hospitals we taught started building their own tools, in Marudi, Sri Aman, Mukah, Penang and Johor. We taught. They built.`,
+  },
+
+  {
+    id: 'portfolio',
+    sheet: 'S-07',
     title: 'The portfolio',
     steps: 1,
     moment: 0,
@@ -347,7 +372,7 @@ export const SCENES: Scene[] = [
 
   {
     id: 'innovathon',
-    sheet: 'S-07',
+    sheet: 'S-08',
     title: 'Innovathon',
     steps: 2,
     moment: 1,
@@ -379,7 +404,7 @@ export const SCENES: Scene[] = [
 
   {
     id: 'the-gap',
-    sheet: 'S-08',
+    sheet: 'S-09',
     title: 'The gap',
     steps: 2,
     moment: 1,
@@ -406,7 +431,7 @@ export const SCENES: Scene[] = [
 
   {
     id: 'roadmap',
-    sheet: 'S-09',
+    sheet: 'S-10',
     title: 'Roadmap',
     steps: 4,
     moment: 0,
@@ -457,7 +482,7 @@ export const SCENES: Scene[] = [
 
   {
     id: 'command-centre',
-    sheet: 'S-10',
+    sheet: 'S-11',
     title: 'Command Centre',
     steps: 2,
     moment: 0,
@@ -488,7 +513,7 @@ export const SCENES: Scene[] = [
 
   {
     id: 'predict-and-scale',
-    sheet: 'S-11',
+    sheet: 'S-12',
     title: 'Predict and scale',
     steps: 1,
     moment: 0,
@@ -507,7 +532,7 @@ export const SCENES: Scene[] = [
 
   {
     id: 'lesson-and-close',
-    sheet: 'S-12',
+    sheet: 'S-13',
     title: 'Lesson & close',
     steps: 3,
     moment: 1,

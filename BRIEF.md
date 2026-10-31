@@ -5,7 +5,7 @@ leaders (Microsoft, Grab, Shopee) at the Executive Digital Leadership Programme.
 Speaker: Dr Ferwahn Fairis bin Ab Karim, Acting Deputy Director, Hospital Tengku
 Permaisuri Norashikin (HTPN), Kajang, Ministry of Health Malaysia.
 
-12 sheets · 24 clicker presses · planned 5:35 against a 5:00 slot
+13 sheets · 26 clicker presses · planned 6:10 against a 5:00 slot
 
 ## Ground rules for this deck
 
@@ -90,7 +90,18 @@ footnote: Figures as of October 2026.
 
 Script — Eighteen months in: more than thirteen hundred staff trained, more than fifty apps in daily use, thirty-five workshops, fifteen of them because other hospitals and services invited us. And zero ringgit in software licences.
 
-### S-06 The portfolio
+### S-06 Where we've taught
+2 presses · 35s · 75 words spoken (129 wpm)
+
+On screen —
+heading: Invited, not imposed.
+subline: 15 external sessions in 12 months. 5 in the last two.
+adoptedLine: We taught. They built.
+legendAdopted: cyan ring = runs a tool built on our model
+
+Script — And then people started inviting us. Fifteen sessions in twelve months: hospitals, community groups, and whole national services. Northern, central and southern O&G. Family Medicine. Medical Services. From Alor Setar to Johor Bahru, and across the sea to Kuching. Five of those were in the last two months alone. And here's what happened next. The hospitals we taught started building their own tools, in Marudi, Sri Aman, Mukah, Penang and Johor. We taught. They built.
+
+### S-07 The portfolio
 1 press · 20s · 45 words spoken (135 wpm)
 
 On screen —
@@ -103,7 +114,7 @@ line: Built by clinicians, for clinicians.
 
 Script — These are real tools, used daily: theatre scheduling, an AI blood-loss estimator, an emergency department dashboard. And some of them weren't built by us. They were built by hospitals in Penang, Johor and Sarawak that learned our model. Scan the code and look for yourself.
 
-### S-07 Innovathon
+### S-08 Innovathon
 2 presses · 60s · 36 words spoken (36 wpm)
 
 On screen —
@@ -122,7 +133,7 @@ url: https://udppkhtpn-hue.github.io/innovathon2026/
 
 Script — In July we took it national. Innovathon 2026: two hundred delegates, twenty-eight finalists, thirteen judges from industry, academia and government, some of them in this room. Several winners came from other hospitals that adopted our model.
 
-### S-08 The gap
+### S-09 The gap
 2 presses · 25s · 55 words spoken (132 wpm)
 
 On screen —
@@ -137,7 +148,7 @@ lens: MIT CISR lens: strong shared insights, a growing developer community; weak
 
 Script — But success created a new problem, one you'll all recognise. Fifty apps is not one hospital. Our tools sit on separate spreadsheets. Many depend on a single builder. Governance hasn't caught up, and we lack the evidence to know what to scale. In MIT's terms, we have the community. We don't yet have the backbone.
 
-### S-09 Roadmap
+### S-10 Roadmap
 4 presses · 30s · 51 words spoken (102 wpm)
 
 On screen —
@@ -150,7 +161,7 @@ enablers: people · process · technology · data · governance · funding and p
 
 Script — So here's the roadmap. Phase one is done. Phase two governs what we've built: every tool registered, tiered by risk, with an owner and a backup. Phase three is the flagship: integration. Phase four adds prediction and takes the model across the Ministry. Every phase has a clear test for done.
 
-### S-10 Command Centre
+### S-11 Command Centre
 2 presses · 35s · 74 words spoken (127 wpm)
 
 On screen —
@@ -168,7 +179,7 @@ footer: Reads from existing tools · read-only HIS feeds · audit-logged access
 
 Script — This is where we're going. The HTPN Command Centre. Six data streams we already own — beds, the emergency department, theatres, transport, discharge and staffing — into one real-time view of patient flow, with automatic surge alerts built on our own dengue thresholds. Why? Because focused flow work already cut boarding time by thirteen point three percent. And during this year's dengue surge, every decision ran on bed data gathered by hand. Never again.
 
-### S-11 Predict and scale
+### S-12 Predict and scale
 1 press · 20s · 40 words spoken (120 wpm)
 
 On screen —
@@ -177,7 +188,7 @@ items: admission and bed-demand forecasting · governed clinical AI with clinici
 
 Script — With a year of clean, integrated data, we move from seeing now to anticipating next: forecasting admissions, putting clinical AI into production with a clinician always signing off, and packaging all of it as a playbook for every Ministry hospital.
 
-### S-12 Lesson & close
+### S-13 Lesson & close
 3 presses · 30s · 80 words spoken (160 wpm)
 
 On screen —
@@ -195,7 +206,7 @@ Script — Here's the lesson for me as a leader. Phase one was won through cultu
 
 ## Totals
 
-628 words spoken · 5:35 planned · 24 presses
+703 words spoken · 6:10 planned · 26 presses
 
 ## Known open points
 

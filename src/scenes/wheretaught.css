@@ -1,0 +1,105 @@
+.wt { position: absolute; inset: 0; padding: 0; }
+
+.wt__head {
+  position: absolute; top: 132px; left: 200px; margin: 0;
+  font-size: 104px; line-height: 1; letter-spacing: -0.025em; color: var(--chalk);
+}
+
+/* ── the drawing ─────────────────────────────────────────────────── */
+.wt__outline {
+  fill: rgba(124, 196, 242, 0.04);
+  stroke: var(--line); stroke-width: 1.4;
+  stroke-linejoin: round; vector-effect: non-scaling-stroke;
+}
+.wt__faint {
+  fill: none; stroke: var(--line); stroke-width: 1;
+  opacity: 0.1; vector-effect: non-scaling-stroke;
+}
+.wt__break {
+  stroke: var(--line); stroke-width: 1.5; stroke-dasharray: 10 9;
+  vector-effect: non-scaling-stroke; fill: none;
+}
+.wt__leader { stroke: var(--line); stroke-width: 1; opacity: 0.4; fill: none; }
+.wt__inset-plate { fill: var(--drafting); opacity: 0.92; }
+.wt__inset-land { fill: rgba(124, 196, 242, 0.05); stroke: var(--line); stroke-width: 1.2; opacity: 0.8; }
+.wt__inset-ring { fill: none; stroke: var(--line); stroke-width: 1.5; opacity: 0.65; }
+.wt__inset-label {
+  text-anchor: middle; font-family: var(--font-mono); font-size: var(--t-dim);
+  fill: var(--line); opacity: 0.75; letter-spacing: 0.08em;
+}
+
+.wt__home { fill: var(--chalk); }
+.wt__home-ring { fill: none; stroke: var(--chalk); stroke-width: 1.4; opacity: 0.5; }
+
+.wt__arc {
+  fill: none; stroke: var(--signal); stroke-width: 1.6;
+  stroke-dasharray: 7 6; vector-effect: non-scaling-stroke;
+}
+.wt__pin { fill: var(--signal); }
+.wt__pin-n {
+  font-family: var(--font-mono); font-size: var(--t-dim);
+  fill: var(--chalk); dominant-baseline: middle;
+}
+.wt__ring { fill: none; stroke: var(--line); stroke-width: 2; }
+
+/* ── the ticker ──────────────────────────────────────────────────── */
+.wt__ticker {
+  position: absolute; left: 1250px; top: 276px;
+  display: flex; align-items: baseline; gap: 18px;
+}
+.wt__month {
+  font-family: var(--font-mono); font-size: 46px; color: var(--line);
+  letter-spacing: 0.02em; min-width: 240px;
+}
+.wt__tally {
+  font-size: 128px; line-height: 0.9; color: var(--signal);
+  font-variation-settings: 'wght' 650, 'wdth' 110;
+  font-variant-numeric: tabular-nums; letter-spacing: -0.03em;
+}
+.wt__tally-of { font-family: var(--font-mono); font-size: 40px; color: var(--line); opacity: 0.7; }
+
+.wt__now {
+  position: absolute; left: 1250px; top: 452px; width: 650px;
+  display: flex; flex-direction: column; gap: 10px; min-height: 160px;
+}
+.wt__now-name {
+  font-size: 42px; line-height: 1.22; color: var(--chalk);
+  font-variation-settings: 'wght' 500, 'wdth' 92;
+}
+.wt__now-dates { font-family: var(--font-mono); font-size: var(--t-dim); color: var(--line); }
+
+.wt__sub {
+  position: absolute; left: 1250px; top: 628px; width: 510px; margin: 0;
+  font-size: 44px; line-height: 1.22; color: var(--chalk);
+  font-variation-settings: 'wght' 600, 'wdth' 94;
+}
+
+.wt__taught {
+  position: absolute; left: 1250px; top: 772px; margin: 0;
+  font-family: var(--font-human); font-style: italic;
+  font-size: 48px; color: var(--signal);
+}
+
+.wt__legend {
+  position: absolute; left: 200px; bottom: 186px; margin: 0; padding: 0;
+  list-style: none; display: flex; flex-direction: column; gap: 10px;
+}
+.wt__legend li {
+  display: flex; align-items: center; gap: 14px;
+  font-family: var(--font-mono); font-size: var(--t-dim); color: var(--line);
+}
+.wt__k { display: inline-block; width: 15px; height: 15px; background: var(--signal); }
+.wt__k--h { border-radius: 50%; }
+.wt__k--n { transform: rotate(45deg); }
+.wt__k--c { border-radius: 0; }
+.wt__k--r {
+  background: transparent; border: 2px solid var(--line); border-radius: 50%;
+  width: 17px; height: 17px;
+}
+.wt__k-adopted { color: var(--line); }
+
+.wt__home-note {
+  position: absolute; left: 200px; bottom: 104px; width: 1060px; margin: 0;
+  font-family: var(--font-mono); font-size: 21px; line-height: 1.35;
+  color: var(--line); opacity: 0.55;
+}

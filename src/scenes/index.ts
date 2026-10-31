@@ -6,6 +6,7 @@ import { S02ThreeForces } from './S02ThreeForces.tsx'
 import { S03AheadOfMandate } from './S03AheadOfMandate.tsx'
 import { S04HowWeLedIt } from './S04HowWeLedIt.tsx'
 import { S05Results } from './S05Results.tsx'
+import { WhereTaught } from './WhereTaught.tsx'
 import { S06Portfolio } from './S06Portfolio.tsx'
 import { S07Innovathon } from './S07Innovathon.tsx'
 import { S08TheGap } from './S08TheGap.tsx'
@@ -29,6 +30,7 @@ export const SCENE_COMPONENTS: Record<SceneId, ComponentType<SceneProps>> = {
   'ahead-of-mandate': S03AheadOfMandate,
   'how-we-led-it': S04HowWeLedIt,
   results: S05Results,
+  'where-weve-taught': WhereTaught,
   portfolio: S06Portfolio,
   innovathon: S07Innovathon,
   'the-gap': S08TheGap,
