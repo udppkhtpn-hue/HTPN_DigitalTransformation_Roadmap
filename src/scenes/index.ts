@@ -18,6 +18,8 @@ import { PhaseFoundations } from './PhaseFoundations.tsx'
 import { CommandCentreBuild } from './CommandCentreBuild.tsx'
 import { S10CommandCentre } from './S10CommandCentre.tsx'
 import { S11PredictAndScale } from './S11PredictAndScale.tsx'
+import { MeasuringSuccess } from './MeasuringSuccess.tsx'
+import { Risks } from './Risks.tsx'
 import { S12LessonAndClose } from './S12LessonAndClose.tsx'
 
 export interface SceneProps {
@@ -47,5 +49,7 @@ export const SCENE_COMPONENTS: Record<SceneId, ComponentType<SceneProps>> = {
   'command-centre': S10CommandCentre,
   'command-centre-build': CommandCentreBuild,
   'predict-and-scale': S11PredictAndScale,
+  'measuring-success': MeasuringSuccess,
+  risks: Risks,
   'lesson-and-close': S12LessonAndClose,
 }

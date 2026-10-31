@@ -49,6 +49,9 @@ const MOMENTS = [
   moment('command-centre', 0, 'converge + pulses', 3000),
   moment('command-centre-build', 0, 'timeline + stamps', 4000),
   moment('predict-and-scale', 0, 'width-axis headline', 3000),
+  moment('measuring-success', 0, 'schedule draws on', 4500),
+  moment('risks', 0, 'stamp lands', 2500),
+  moment('risks', 1, 'register draws', 3000),
   moment('lesson-and-close', 1, 'strike-through', 2500),
 ]
 

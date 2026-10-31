@@ -27,6 +27,8 @@ export type SceneId =
   | 'command-centre'
   | 'command-centre-build'
   | 'predict-and-scale'
+  | 'measuring-success'
+  | 'risks'
   | 'lesson-and-close'
 
 export type Tone = 'chalk' | 'line' | 'signal' | 'alert'
@@ -167,6 +169,25 @@ export interface NationalPicture {
   depth: { line: string; foundAt: string; sites: string[]; closer: string }
 }
 
+export interface MeasuringSuccess {
+  heading: string
+  columns: [string, string]
+  rows: {
+    n: number
+    name: string
+    indicators: string
+    achieved?: boolean
+  }[]
+  note: string
+}
+
+export interface Risks {
+  stamp: string
+  columns: [string, string]
+  first: { severity: string; risk: string; mitigation: string }
+  rest: { risk: string; mitigation: string }[]
+}
+
 export interface PhaseRegistry {
   heading: string
   kicker: string
@@ -230,6 +251,8 @@ export type Scene =
   | (Base & { id: 'command-centre'; content: CommandCentre })
   | (Base & { id: 'command-centre-build'; content: CommandCentreBuild })
   | (Base & { id: 'predict-and-scale'; content: PredictAndScale })
+  | (Base & { id: 'measuring-success'; content: MeasuringSuccess })
+  | (Base & { id: 'risks'; content: Risks })
   | (Base & { id: 'lesson-and-close'; content: LessonAndClose })
 
 // ─── The talk ───────────────────────────────────────────────────────────────
@@ -799,8 +822,103 @@ export const SCENES: Scene[] = [
   },
 
   {
-    id: 'lesson-and-close',
+    id: 'measuring-success',
     sheet: 'S-18',
+    title: 'Measuring success',
+    steps: 1,
+    moment: 0,
+    seconds: 30,
+    content: {
+      heading: "How we'll know it worked",
+      columns: ['Phase', 'Indicators'],
+      rows: [
+        {
+          n: 1,
+          name: 'Ignite',
+          achieved: true,
+          indicators:
+            '1,300+ trained; 50+ apps in use; national Innovathon; adoption by partner sites.',
+        },
+        {
+          n: 2,
+          name: 'Protect & Showcase',
+          indicators:
+            'MyIPO workshop held; key innovations protected through MyIPO; entries to Karnival Inovasi KKM.',
+        },
+        {
+          n: 3,
+          name: 'Consolidate & Govern',
+          indicators:
+            'All tools registered and tiered; all critical tools with owner, backup and baseline; governance endorsed.',
+        },
+        {
+          n: 4,
+          name: 'Integrate',
+          indicators:
+            'Command Centre in daily bed meetings; automated alerts live; boarding time, BOR and ED stay vs baseline.',
+        },
+        {
+          n: 5,
+          name: 'Predict & Scale',
+          indicators:
+            'Forecast accuracy; clinical AI in production with sign-off; KKM sites adopting the playbook.',
+        },
+      ],
+      note: "Operational targets are set from Phase 3 baselines, grounded in HTPN's own data. Programme health is tracked too: active builders, tools with a backup maintainer, staff satisfaction.",
+    },
+    notes: `Every phase has indicators. You'll notice I haven't put a target on boarding time or length of stay. That's deliberate. Those targets will be set from our Phase three baselines, from our own data, not invented for a slide. And we track the health of the programme itself: active builders, tools with a backup, and how our staff feel. Because the biggest risk to this roadmap isn't technical.`,
+  },
+
+  {
+    id: 'risks',
+    sheet: 'S-19',
+    title: 'Risks',
+    steps: 2,
+    moment: 0,
+    seconds: 36,
+    content: {
+      stamp: 'The biggest risk is already here: key people.',
+      columns: ['Risk', 'Mitigation'],
+      first: {
+        severity: 'High',
+        risk: 'key-person dependency',
+        mitigation:
+          'protected time or formal posts; departmental champions; a backup maintainer for every tool.',
+      },
+      rest: [
+        {
+          risk: 'Seen as shadow IT',
+          mitigation:
+            'early partnership with the IT unit and JP ICT; a joint digital governance committee.',
+        },
+        {
+          risk: 'Data protection breach',
+          mitigation:
+            'tiered data classes; de-identified by default; audit logs; human review of AI.',
+        },
+        {
+          risk: 'Spreadsheets hit their limits',
+          mitigation:
+            'architecture review in Phase 4 to choose an approved data layer.',
+        },
+        {
+          risk: 'Resistance to HIS integration',
+          mitigation:
+            'start with read-only feeds; prove value with our own data first.',
+        },
+        {
+          risk: 'Builder burnout, lost momentum',
+          mitigation:
+            'keep the Innovathon; balance governance with new wins; proportionate rules.',
+        },
+      ],
+    },
+    notes: `I want to be candid. The biggest risk isn't in the future. It's here now. This whole office runs on a handful of people doing it on top of clinical and management work. So protected time, formal posts and champions in every department are not optional. The other risks: being seen as shadow IT, data protection, platform limits, resistance to integration, and burnout. None of them is a reason to slow down. Each is a reason to make the next phase about structure.`,
+  },
+
+  {
+    id: 'lesson-and-close',
+    sheet: 'S-20',
     title: 'Lesson & close',
     steps: 3,
     moment: 1,

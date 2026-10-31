@@ -1,0 +1,49 @@
+.rk { position: absolute; inset: 0; padding: 0; }
+
+/* A rubber stamp: an inked rectangle, a little off true. */
+.rk__stamp {
+  position: absolute; top: 120px; left: 200px; margin: 0;
+  padding: 10px 30px 12px;
+  border: 5px solid var(--alert);
+  font-size: 58px; line-height: 1.04; color: var(--alert);
+  font-variation-settings: 'wght' 800, 'wdth' 100;
+  letter-spacing: -0.01em; white-space: nowrap;
+  transform-origin: left center;
+}
+
+.rk__first {
+  position: absolute; left: 200px; width: 1560px;
+  display: flex; align-items: center;
+}
+.rk__first-risk {
+  width: 640px; flex: none; display: flex; align-items: baseline; gap: 18px; padding-left: 4px;
+  font-size: 42px; line-height: 1.08; color: var(--alert);
+  font-variation-settings: 'wght' 600, 'wdth' 90;
+}
+.rk__first-risk i {
+  font-family: var(--font-mono); font-style: normal; font-size: var(--t-dim);
+  padding: 2px 12px; border: 2px solid var(--alert); letter-spacing: 0.04em;
+}
+.rk__first-mit {
+  width: 880px; font-size: 32px; line-height: 1.2; color: var(--chalk); text-wrap: balance;
+  font-variation-settings: 'wght' 450, 'wdth' 92;
+}
+
+.rk__cols {
+  position: absolute; left: 0; width: 1920px; height: 36px;
+  font-family: var(--font-mono); font-size: var(--t-dim); color: var(--line); letter-spacing: 0.04em;
+}
+.rk__cols span { position: absolute; top: 0; }
+
+.rk__row {
+  position: absolute; left: 200px; width: 1560px; display: flex; align-items: center;
+}
+.rk__risk {
+  width: 640px; flex: none; padding-left: 4px;
+  font-size: 34px; line-height: 1.1; color: var(--chalk);
+  font-variation-settings: 'wght' 560, 'wdth' 90;
+}
+.rk__mit {
+  width: 880px; font-size: 30px; line-height: 1.2; color: var(--line); text-wrap: balance;
+  font-variation-settings: 'wght' 400, 'wdth' 92;
+}

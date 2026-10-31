@@ -1,0 +1,43 @@
+.ms { position: absolute; inset: 0; padding: 0; }
+
+.ms__head {
+  position: absolute; top: 112px; left: 200px; margin: 0;
+  font-size: 96px; line-height: 1; letter-spacing: -0.025em; color: var(--chalk);
+}
+
+.ms__cols { position: absolute; left: 0; width: 1920px; height: 40px; font-family: var(--font-mono); font-size: var(--t-dim); color: var(--line); letter-spacing: 0.04em; }
+.ms__cols span { position: absolute; top: 0; }
+
+.ms__row {
+  position: absolute; left: 200px; width: 1560px;
+  display: flex; align-items: center;
+}
+.ms__phase {
+  width: 500px; display: flex; align-items: baseline; gap: 14px; flex: none;
+  padding-left: 4px;
+}
+.ms__phase i {
+  font-family: var(--font-mono); font-style: normal; font-size: var(--t-dim); color: var(--line);
+}
+.ms__phase b {
+  font-size: 36px; line-height: 1.06; color: var(--chalk); font-weight: 400;
+  font-variation-settings: 'wght' 600, 'wdth' 88;
+}
+.ms__phase em {
+  font-family: var(--font-mono); font-style: normal; font-size: var(--t-dim); color: var(--signal);
+}
+.ms__ind {
+  font-size: 30px; line-height: 1.2; color: var(--chalk);
+  font-variation-settings: 'wght' 400, 'wdth' 92; width: 1020px; text-wrap: balance;
+}
+
+/* The one row that has already happened. */
+.ms__row.is-achieved .ms__phase i,
+.ms__row.is-achieved .ms__phase b,
+.ms__row.is-achieved .ms__ind { color: var(--signal); }
+
+.ms__note {
+  position: absolute; left: 200px; top: 812px; width: 1040px; margin: 0;
+  font-size: var(--t-dim); line-height: 1.25; color: var(--line); text-wrap: balance;
+  font-variation-settings: 'wght' 400, 'wdth' 92;
+}

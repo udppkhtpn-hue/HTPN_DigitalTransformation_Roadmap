@@ -5,7 +5,7 @@ leaders (Microsoft, Grab, Shopee) at the Executive Digital Leadership Programme.
 Speaker: Dr Ferwahn Fairis bin Ab Karim, Acting Deputy Director, Hospital Tengku
 Permaisuri Norashikin (HTPN), Kajang, Ministry of Health Malaysia.
 
-18 sheets · 40 clicker presses · planned 9:20 against a 5:00 slot
+20 sheets · 43 clicker presses · planned 10:26 against a 5:00 slot
 
 ## Ground rules for this deck
 
@@ -25,7 +25,7 @@ only for the dengue figure. Numbers arrive as dimensions on a drawing rather tha
 stat cards. A title block bottom-right carries the sheet number instead of a
 progress bar. One orchestrated animation per sheet; everything else holds still.
 
-## The 18 sheets
+## The 20 sheets
 
 ### S-01 Cold open
 1 press · 20s · 56 words spoken (168 wpm)
@@ -279,7 +279,39 @@ items: admission and bed-demand forecasting · governed clinical AI with clinici
 
 Script — With a year of clean, integrated data, we move from seeing now to anticipating next: forecasting admissions, putting clinical AI into production with a clinician always signing off, and packaging all of it as a playbook for every Ministry hospital.
 
-### S-18 Lesson & close
+### S-18 Measuring success
+1 press · 30s · 68 words spoken (136 wpm)
+
+On screen —
+heading: How we'll know it worked
+columns: Phase · Indicators
+rows:
+  - n: 1; name: Ignite; achieved: true; indicators: 1,300+ trained; 50+ apps in use; national Innovathon; adoption by partner sites.
+  - n: 2; name: Protect & Showcase; indicators: MyIPO workshop held; key innovations protected through MyIPO; entries to Karnival Inovasi KKM.
+  - n: 3; name: Consolidate & Govern; indicators: All tools registered and tiered; all critical tools with owner, backup and baseline; governance endorsed.
+  - n: 4; name: Integrate; indicators: Command Centre in daily bed meetings; automated alerts live; boarding time, BOR and ED stay vs baseline.
+  - n: 5; name: Predict & Scale; indicators: Forecast accuracy; clinical AI in production with sign-off; KKM sites adopting the playbook.
+note: Operational targets are set from Phase 3 baselines, grounded in HTPN's own data. Programme health is tracked too: active builders, tools with a backup maintainer, staff satisfaction.
+
+Script — Every phase has indicators. You'll notice I haven't put a target on boarding time or length of stay. That's deliberate. Those targets will be set from our Phase three baselines, from our own data, not invented for a slide. And we track the health of the programme itself: active builders, tools with a backup, and how our staff feel. Because the biggest risk to this roadmap isn't technical.
+
+### S-19 Risks
+2 presses · 36s · 83 words spoken (138 wpm)
+
+On screen —
+stamp: The biggest risk is already here: key people.
+columns: Risk · Mitigation
+first: severity: High; risk: key-person dependency; mitigation: protected time or formal posts; departmental champions; a backup maintainer for every tool.
+rest:
+  - risk: Seen as shadow IT; mitigation: early partnership with the IT unit and JP ICT; a joint digital governance committee.
+  - risk: Data protection breach; mitigation: tiered data classes; de-identified by default; audit logs; human review of AI.
+  - risk: Spreadsheets hit their limits; mitigation: architecture review in Phase 4 to choose an approved data layer.
+  - risk: Resistance to HIS integration; mitigation: start with read-only feeds; prove value with our own data first.
+  - risk: Builder burnout, lost momentum; mitigation: keep the Innovathon; balance governance with new wins; proportionate rules.
+
+Script — I want to be candid. The biggest risk isn't in the future. It's here now. This whole office runs on a handful of people doing it on top of clinical and management work. So protected time, formal posts and champions in every department are not optional. The other risks: being seen as shadow IT, data protection, platform limits, resistance to integration, and burnout. None of them is a reason to slow down. Each is a reason to make the next phase about structure.
+
+### S-20 Lesson & close
 3 presses · 30s · 80 words spoken (160 wpm)
 
 On screen —
@@ -297,11 +329,11 @@ Script — Here's the lesson for me as a leader. Phase one was won through cultu
 
 ## Totals
 
-1216 words spoken · 9:20 planned · 40 presses
+1367 words spoken · 10:26 planned · 43 presses
 
 ## Known open points
 
-- Planned running time is 9:20 against a 5:00 slot, 4:20 over.
+- Planned running time is 10:26 against a 5:00 slot, 5:26 over.
 - Fastest-spoken sheets: S-12 (180 wpm), S-16 (176 wpm), S-01 (168 wpm).
 - S-08 plays a reel that runs longer than its script; it sits on its own press and can be cut short by advancing early.
 - S-12: some lines did not fit on the sheet at 28px and live in the presenter cues, not on screen.
