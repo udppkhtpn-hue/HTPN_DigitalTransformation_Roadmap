@@ -50,8 +50,9 @@ export function SheetVideo({
   useEffect(() => {
     const v = ref.current
     if (!v || reduced) return
-    // autoPlay alone is unreliable when the element mounts mid-session;
-    // asking explicitly covers it, and muted means it is never blocked.
+    // Belt and braces: the autoPlay attribute covers the normal mount, and
+    // this covers the case where the element mounts mid-session and the
+    // attribute is ignored. Muted means neither is ever blocked.
     const t = setTimeout(() => {
       v.play().catch(() => {
         /* a paused poster frame is an acceptable outcome, not a failure */
@@ -89,6 +90,7 @@ export function SheetVideo({
             ref={ref}
             src={src}
             poster={poster}
+            autoPlay
             muted
             playsInline
             preload="auto"
