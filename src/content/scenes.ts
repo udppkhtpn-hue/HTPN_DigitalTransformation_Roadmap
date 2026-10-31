@@ -522,7 +522,7 @@ export const SCENES: Scene[] = [
         },
         {
           n: 2,
-          name: 'MyIPO & Innovation',
+          name: 'Protect & Showcase',
           dates: '19 Oct 2026',
           htpn: 'Workshop held: ~20 Innovathon participants.',
           kkm: 'Protect key innovations through MyIPO; enter Karnival Inovasi KKM for national exposure.',
