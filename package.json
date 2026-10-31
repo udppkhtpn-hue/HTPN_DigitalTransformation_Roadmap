@@ -22,6 +22,7 @@
     "poster": "node scripts/make-poster.mjs",
     "brief": "node scripts/brief.mjs",
     "script-brief": "node scripts/script-brief.mjs",
+    "script": "node scripts/make-script.mjs",
     "map": "node scripts/make-map.mjs"
   },
   "dependencies": {

@@ -1,6 +1,7 @@
 import { AnimatePresence, motion } from 'motion/react'
 import { useDeck } from './DeckProvider.tsx'
 import { SCENES, PLANNED_SECONDS } from '../content/scenes.ts'
+import { ScriptPanel } from './ScriptPanel.tsx'
 import './presenter.css'
 
 const mmss = (s: number) =>
@@ -47,7 +48,9 @@ export function Presenter() {
               </span>
             </header>
 
-            <p className="pres__notes">{scene.notes}</p>
+            <div className="pres__notes">
+              <ScriptPanel scene={scene} step={step} show="near" />
+            </div>
 
             {scene.cues && <p className="pres__cues">{scene.cues}</p>}
 
@@ -65,7 +68,7 @@ export function Presenter() {
                 plan {mmss(planned)} · total {mmss(PLANNED_SECONDS)}
               </span>
               <span className="pres__keys">
-                → next · ← back · N notes · B blank · F fullscreen · R reset
+                → next · ← back · N notes · P presenter window · B blank · F fullscreen · R reset
               </span>
             </footer>
           </div>

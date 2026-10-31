@@ -30,6 +30,11 @@ interface Deck extends Cursor {
   elapsed: number
   running: boolean
   reset: () => void
+  /** True in the presenter's own window (opened with ?presenter). */
+  isPresenter: boolean
+  /** Presenter window only: has the audience window answered yet? */
+  linked: boolean
+  openPresenter: () => void
 }
 
 const DeckContext = createContext<Deck | null>(null)
@@ -41,6 +46,18 @@ export function useDeck(): Deck {
 }
 
 const STORE_KEY = 'htpn-deck-cursor'
+const CHANNEL = 'htpn-deck'
+
+const IS_PRESENTER = new URLSearchParams(window.location.search).has('presenter')
+
+/** Everything the two windows must agree on. The clock rides along. */
+interface Shared extends Cursor {
+  blackout: boolean
+  running: boolean
+  elapsed: number
+}
+
+type Msg = { type: 'state'; state: Shared } | { type: 'hello' }
 
 function readInitial(): Cursor {
   // The hash wins — it survives a reload and can be typed during a rehearsal.
@@ -76,7 +93,12 @@ export function DeckProvider({ children }: { children: ReactNode }) {
   const [notesOpen, setNotesOpen] = useState(false)
   const [elapsed, setElapsed] = useState(0)
   const [running, setRunning] = useState(false)
+  const [linked, setLinked] = useState(false)
   const gotoBuffer = useRef('')
+  const channel = useRef<BroadcastChannel | null>(null)
+  const lastSent = useRef('')
+  const live = useRef<Shared>({ sceneIndex: 0, step: 0, blackout: false, running: false, elapsed: 0 })
+  live.current = { ...cursor, blackout, running, elapsed }
 
   const scene = SCENES[cursor.sceneIndex]
 
@@ -115,6 +137,13 @@ export function DeckProvider({ children }: { children: ReactNode }) {
   const toggleNotes = useCallback(() => setNotesOpen((v) => !v), [])
   const toggleBlackout = useCallback(() => setBlackout((v) => !v), [])
   const fullscreen = useCallback(() => toggleFullscreen(), [])
+
+  const openPresenter = useCallback(() => {
+    const u = new URL(window.location.href)
+    u.search = '?presenter'
+    u.hash = ''
+    window.open(u.toString(), 'htpn-presenter', 'popup,width=1320,height=860')
+  }, [])
 
   const reset = useCallback(() => {
     setCursor({ sceneIndex: 0, step: 0 })
@@ -197,6 +226,11 @@ export function DeckProvider({ children }: { children: ReactNode }) {
           e.preventDefault()
           setNotesOpen((v) => !v)
           break
+        case 'p':
+        case 'P':
+          e.preventDefault()
+          if (!IS_PRESENTER) openPresenter()
+          break
         case 'f':
         case 'F':
           e.preventDefault()
@@ -211,13 +245,14 @@ export function DeckProvider({ children }: { children: ReactNode }) {
     }
     window.addEventListener('keydown', onKey)
     return () => window.removeEventListener('keydown', onKey)
-  }, [next, prev, goto, reset])
+  }, [next, prev, goto, reset, openPresenter])
 
   // ── persistence ───────────────────────────────────────────────────────
   // A reload or a crash at minute four lands back on the exact beat.
   // replaceState so the clicker never builds up history to go "back" through.
 
   useEffect(() => {
+    if (IS_PRESENTER) return
     const hash = `#/s/${cursor.sceneIndex + 1}/${cursor.step}`
     if (window.location.hash !== hash)
       window.history.replaceState(null, '', hash)
@@ -243,6 +278,56 @@ export function DeckProvider({ children }: { children: ReactNode }) {
     window.addEventListener('hashchange', onHash)
     return () => window.removeEventListener('hashchange', onHash)
   }, [])
+
+  // ── two windows ───────────────────────────────────────────────────────
+  // The presenter's window and the audience's share one cursor, blackout and
+  // clock over a BroadcastChannel, so notes can sit on the laptop while the
+  // projector shows only the sheet. Either window can drive. Where the
+  // browser gives the page no channel (some file:// origins), nothing here
+  // runs and the N overlay on the sheet is the fallback.
+
+  useEffect(() => {
+    let ch: BroadcastChannel
+    try {
+      ch = new BroadcastChannel(CHANNEL)
+    } catch {
+      return
+    }
+    channel.current = ch
+    ch.onmessage = (e: MessageEvent<Msg>) => {
+      const m = e.data
+      if (m.type === 'hello') {
+        const st = live.current
+        lastSent.current = JSON.stringify([st.sceneIndex, st.step, st.blackout, st.running])
+        ch.postMessage({ type: 'state', state: st } satisfies Msg)
+        return
+      }
+      if (m.type !== 'state') return
+      const st = m.state
+      setLinked(true)
+      lastSent.current = JSON.stringify([st.sceneIndex, st.step, st.blackout, st.running])
+      setCursor((c) =>
+        c.sceneIndex === st.sceneIndex && c.step === st.step
+          ? c
+          : { sceneIndex: clampScene(st.sceneIndex), step: clampStep(clampScene(st.sceneIndex), st.step) },
+      )
+      setBlackout(st.blackout)
+      setRunning(st.running)
+      setElapsed(st.elapsed)
+    }
+    if (IS_PRESENTER) ch.postMessage({ type: 'hello' } satisfies Msg)
+    return () => {
+      ch.close()
+      channel.current = null
+    }
+  }, [])
+
+  useEffect(() => {
+    const key = JSON.stringify([cursor.sceneIndex, cursor.step, blackout, running])
+    if (key === lastSent.current) return
+    lastSent.current = key
+    channel.current?.postMessage({ type: 'state', state: live.current } satisfies Msg)
+  }, [cursor, blackout, running])
 
   // ── timer ─────────────────────────────────────────────────────────────
 
@@ -291,6 +376,9 @@ export function DeckProvider({ children }: { children: ReactNode }) {
       elapsed,
       running,
       reset,
+      isPresenter: IS_PRESENTER,
+      linked,
+      openPresenter,
     }),
     [
       cursor,
@@ -306,6 +394,8 @@ export function DeckProvider({ children }: { children: ReactNode }) {
       elapsed,
       running,
       reset,
+      linked,
+      openPresenter,
     ],
   )
 

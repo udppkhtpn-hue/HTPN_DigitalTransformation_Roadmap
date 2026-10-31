@@ -273,7 +273,7 @@ export const SCENES: Scene[] = [
     title: 'Cold open',
     steps: 1,
     moment: 0,
-    seconds: 20,
+    seconds: 45,
     content: {
       lines: ['A public hospital.', '135 years old.', 'No vendor to wait for.'],
       title: 'Built From Within',
@@ -290,7 +290,7 @@ export const SCENES: Scene[] = [
     title: 'Three forces',
     steps: 3,
     moment: 0,
-    seconds: 35,
+    seconds: 69,
     content: {
       forces: [
         {
@@ -324,7 +324,7 @@ export const SCENES: Scene[] = [
     title: 'Ahead of the mandate',
     steps: 2,
     moment: 1,
-    seconds: 20,
+    seconds: 38,
     content: {
       nodes: [
         {
@@ -354,7 +354,7 @@ export const SCENES: Scene[] = [
     title: 'How we led it',
     steps: 5,
     moment: 4,
-    seconds: 25,
+    seconds: 61,
     content: {
       framework: "Kotter's eight steps",
       stages: [
@@ -385,7 +385,7 @@ export const SCENES: Scene[] = [
     title: 'Results',
     steps: 1,
     moment: 0,
-    seconds: 25,
+    seconds: 34,
     content: {
       figures: [
         { value: 1300, suffix: '+', label: 'healthcare staff trained', tone: 'signal' },
@@ -410,7 +410,7 @@ export const SCENES: Scene[] = [
     title: "Where we've taught",
     steps: 2,
     moment: 0,
-    seconds: 35,
+    seconds: 55,
     content: {
       heading: 'Invited, not imposed.',
       subline: '15 external sessions in 12 months. 5 in the last two.',
@@ -427,7 +427,7 @@ export const SCENES: Scene[] = [
     title: 'The portfolio',
     steps: 1,
     moment: 0,
-    seconds: 20,
+    seconds: 39,
     content: {
       lanes: [
         {
@@ -482,7 +482,7 @@ export const SCENES: Scene[] = [
     title: 'Innovathon',
     steps: 2,
     moment: 1,
-    seconds: 60,
+    seconds: 76,
     content: {
       title: 'AI Productivity Intelligence Innovathon 2026',
       date: '21 July 2026',
@@ -514,7 +514,7 @@ export const SCENES: Scene[] = [
     title: 'The gap',
     steps: 2,
     moment: 1,
-    seconds: 25,
+    seconds: 66,
     content: {
       dots: 50,
       headline: '50 apps ≠ one hospital',
@@ -541,7 +541,7 @@ export const SCENES: Scene[] = [
     title: 'The national picture',
     steps: 3,
     moment: 0,
-    seconds: 50,
+    seconds: 67,
     content: {
       heading: '135 of 155 hospitals are still manual.',
       total: { value: 155, label: 'MOH hospitals' },
@@ -573,7 +573,7 @@ export const SCENES: Scene[] = [
     title: 'Vision 2028',
     steps: 4,
     moment: 1,
-    seconds: 40,
+    seconds: 85,
     content: {
       heading: 'A lighthouse, not an island',
       vision:
@@ -621,7 +621,7 @@ export const SCENES: Scene[] = [
     title: 'Roadmap',
     steps: 5,
     moment: 1,
-    seconds: 40,
+    seconds: 135,
     content: {
       rails: { htpn: 'HTPN · the lighthouse', kkm: 'KKM · scale what travels' },
       phases: [
@@ -706,7 +706,7 @@ export const SCENES: Scene[] = [
     title: 'Phase 3: the registry',
     steps: 2,
     moment: 0,
-    seconds: 30,
+    seconds: 50,
     content: {
       heading: 'A registry with governance in proportion to risk',
       kicker: 'Phase 3 · Consolidate and Govern · Nov 2026 – Jun 2027',
@@ -735,7 +735,7 @@ export const SCENES: Scene[] = [
     title: 'Phase 3: the foundations',
     steps: 2,
     moment: 0,
-    seconds: 30,
+    seconds: 55,
     content: {
       heading: 'Four foundations under everything we build',
       piles: [
@@ -769,7 +769,7 @@ export const SCENES: Scene[] = [
     title: 'Command Centre',
     steps: 2,
     moment: 0,
-    seconds: 35,
+    seconds: 64,
     content: {
       hub: {
         name: 'HTPN Command Centre',
@@ -800,7 +800,7 @@ export const SCENES: Scene[] = [
     title: 'Command Centre: how we build it',
     steps: 2,
     moment: 0,
-    seconds: 30,
+    seconds: 57,
     content: {
       heading: 'Small first, governed from day one',
       kicker: 'Phase 4 · Integrate · Jul 2027 – Jun 2028',
@@ -827,7 +827,7 @@ export const SCENES: Scene[] = [
     title: 'Predict and scale',
     steps: 1,
     moment: 0,
-    seconds: 20,
+    seconds: 44,
     content: {
       headline: { from: 'From seeing now', to: 'to anticipating next' },
       items: [
@@ -846,7 +846,7 @@ export const SCENES: Scene[] = [
     title: 'Measuring success',
     steps: 1,
     moment: 0,
-    seconds: 30,
+    seconds: 43,
     content: {
       heading: "How we'll know it worked",
       columns: ['Phase', 'Indicators'],
@@ -894,7 +894,7 @@ export const SCENES: Scene[] = [
     title: 'Risks',
     steps: 2,
     moment: 0,
-    seconds: 36,
+    seconds: 66,
     content: {
       stamp: 'The biggest risk is already here: key people.',
       columns: ['Risk', 'Mitigation'],
@@ -941,7 +941,7 @@ export const SCENES: Scene[] = [
     title: 'Lesson & close',
     steps: 3,
     moment: 1,
-    seconds: 30,
+    seconds: 61,
     content: {
       before: 'Phase 1 was won through culture.',
       strike: 'culture',
