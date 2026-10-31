@@ -17,7 +17,8 @@
     "perf": "node scripts/check-perf.mjs",
     "budget": "node scripts/check-budget.mjs",
     "check": "npm run typecheck && npm run build:single && npm run budget && npm run perf",
-    "poster": "node scripts/make-poster.mjs"
+    "poster": "node scripts/make-poster.mjs",
+    "brief": "node scripts/brief.mjs"
   },
   "dependencies": {
     "motion": "14.9.0",

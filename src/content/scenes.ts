@@ -92,11 +92,9 @@ export interface Innovathon {
   /** As printed on the delegate badge and the event site. */
   title: string
   date: string
-  poster: string
   /** Final 55.9s of the event reel, cut before its own closing card. */
   video: string
   videoSeconds: number
-  rotation: number
   counters: Figure[]
   coverage: string
   spreadIntro: string
@@ -357,10 +355,8 @@ export const SCENES: Scene[] = [
     content: {
       title: 'AI Productivity Intelligence Innovathon 2026',
       date: '21 July 2026',
-      poster: 'innovathon-poster.webp',
       video: 'innovathon.mp4',
       videoSeconds: 55.9,
-      rotation: -5,
       counters: [
         { value: 200, label: 'delegates' },
         { value: 28, label: 'finalists' },
