@@ -5,7 +5,7 @@ leaders (Microsoft, Grab, Shopee) at the Executive Digital Leadership Programme.
 Speaker: Dr Ferwahn Fairis bin Ab Karim, Acting Deputy Director, Hospital Tengku
 Permaisuri Norashikin (HTPN), Kajang, Ministry of Health Malaysia.
 
-20 sheets · 46 clicker presses · planned 10:26 against a 5:00 slot
+20 sheets · 46 clicker presses · planned 10:36 against a 5:00 slot
 
 ## Ground rules for this deck
 
@@ -22,8 +22,9 @@ Permaisuri Norashikin (HTPN), Kajang, Ministry of Health Malaysia.
 "Blueprint": the hospital is drawn as an architectural sheet while he speaks. Dark
 navy ground, cyan line work, amber for achieved results and the human voice, red
 only for the dengue figure. Numbers arrive as dimensions on a drawing rather than
-stat cards. A title block bottom-right carries the sheet number instead of a
-progress bar. One orchestrated animation per sheet; everything else holds still.
+stat cards. Each sheet's name stands large at the top-left; a title block
+bottom-right carries the sheet number instead of a progress bar. One
+orchestrated animation per sheet; everything else holds still.
 
 ## The 20 sheets
 
@@ -39,16 +40,16 @@ byline: Dr Ferwahn Fairis bin Ab Karim · Acting Deputy Director, Hospital Tengk
 Script — Good afternoon. I'm Fairis, from Hospital Tengku Permaisuri Norashikin in Kajang, a public hospital that is a hundred and thirty-five years old. Eighteen months ago, a small team of clinicians decided not to wait for a vendor. We decided to build it ourselves. This is the story of what we built, and where it goes next.
 
 ### S-02 Three forces
-3 presses · 25s · 57 words spoken (137 wpm)
+3 presses · 35s · 81 words spoken (139 wpm)
 
 On screen —
 forces:
-  - name: Pressure; figure: value: 128; prefix: +; suffix: %; tone: alert; caption: Dengue admissions, June 2026 vs the year before.
+  - name: Pressure; figure: value: 128; prefix: +; suffix: %; tone: alert; caption: Dengue admissions, June 2026 vs the year before.; change: from: 200+; to: 500+; caption: Births a month: almost tripled since moving from the old building to the new Women & Child Centre.
   - name: Vendor lock-in; body: Every change request has a price. Data can leave our control.
   - name: Opportunity; body: AI and low-code let clinicians build working tools in weeks.
 footer: Change fails when it is delegated. It succeeds when it is led.
 
-Script — Three forces made this necessary. Pressure: beds are full, staff are tired, and this June our dengue admissions rose a hundred and twenty-eight percent. Vendor lock-in: procurement is too slow for problems that change every month. And opportunity: for the first time, clinicians can build real tools in weeks. The limit is no longer technology. It's leadership.
+Script — Three forces made this necessary. Pressure: beds are full, staff are tired, and this June our dengue admissions rose a hundred and twenty-eight percent. Births have almost tripled since we moved into the new Women and Child Centre, from two hundred to more than five hundred a month. Vendor lock-in: procurement is too slow for problems that change every month. And opportunity: for the first time, clinicians can build real tools in weeks. The limit is no longer technology. It's leadership.
 
 ### S-03 Ahead of the mandate
 2 presses · 20s · 45 words spoken (135 wpm)
@@ -333,11 +334,11 @@ Script — Here's the lesson for me as a leader. Phase one was won through cultu
 
 ## Totals
 
-1367 words spoken · 10:26 planned · 46 presses
+1391 words spoken · 10:36 planned · 46 presses
 
 ## Known open points
 
-- Planned running time is 10:26 against a 5:00 slot, 5:26 over.
+- Planned running time is 10:36 against a 5:00 slot, 5:36 over.
 - Fastest-spoken sheets: S-12 (180 wpm), S-16 (176 wpm), S-01 (168 wpm).
 - S-08 plays a reel that runs longer than its script; it sits on its own press and can be cut short by advancing early.
 - S-12: some lines did not fit on the sheet at 28px and live in the presenter cues, not on screen.

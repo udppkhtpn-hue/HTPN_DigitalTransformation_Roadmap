@@ -26,7 +26,7 @@ const PRESSES = {
     'The sheet arrives on its own and runs for about seven seconds: three lines land one after another, then fade; the original 1889 hospital building draws in behind; the title, subtitle and byline appear.',
   ],
   'three-forces': [
-    'Pressure: +128% in red, dengue admissions, June 2026 vs the year before.',
+    'Pressure: +128% in red, dengue admissions, June 2026 vs the year before; then, under it, births a month 200+ → 500+, almost tripled since the move from the old building to the new Women & Child Centre.',
     'Vendor lock-in.',
     'Opportunity, then the footer line underneath all three.',
   ],

@@ -42,6 +42,29 @@
   inset: 0;
 }
 
+/* Scaled about the bottom-left drawing margin; see TOP_EDGE in Stage.tsx. */
+.scene__fit {
+  position: absolute;
+  inset: 0;
+  transform-origin: 200px 1022px;
+}
+
+/* The sheet's name: top-left, on the content margin, above everything. */
+.stage__name {
+  position: absolute;
+  top: 66px;
+  left: 200px;
+  z-index: 2;
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: 54px;
+  line-height: 1;
+  font-variation-settings: 'wght' 640, 'wdth' 96;
+  letter-spacing: -0.005em;
+  color: var(--line);
+  white-space: nowrap;
+}
+
 .stage__blackout {
   position: absolute;
   inset: 0;

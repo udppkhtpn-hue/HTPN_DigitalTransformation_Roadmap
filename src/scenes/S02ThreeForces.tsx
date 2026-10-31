@@ -11,7 +11,8 @@ const c = sceneContent('three-forces')
 /**
  * One force per click. The +128% is the scene's moment and the only place
  * --alert appears on this sheet; the other two forces stay quiet so the
- * number carries the weight.
+ * number carries the weight. The births figure lands beside it after the
+ * count-up, smaller and in chalk: a second pressure, not a second moment.
  */
 export function S02ThreeForces({ step }: SceneProps) {
   return (
@@ -54,6 +55,21 @@ export function S02ThreeForces({ step }: SceneProps) {
                           duration={1.1}
                         />
                         <p className="s02__caption">{f.caption}</p>
+                        {f.change && (
+                          <motion.div
+                            className="s02__change"
+                            initial={{ opacity: 0, y: 10 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.5, delay: 1.5 }}
+                          >
+                            <span className="s02__change-fig">
+                              {f.change.from}
+                              <span className="s02__change-arrow"> → </span>
+                              <span className="s02__change-to">{f.change.to}</span>
+                            </span>
+                            <p className="s02__change-cap">{f.change.caption}</p>
+                          </motion.div>
+                        )}
                       </>
                     ) : (
                       <p className="s02__text">{f.body}</p>

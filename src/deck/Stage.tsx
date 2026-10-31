@@ -6,7 +6,43 @@ import { usePointerNav } from './usePointerNav.ts'
 import { Sheet } from '../system/Sheet.tsx'
 import { TitleBlock } from '../system/TitleBlock.tsx'
 import { SCENE_COMPONENTS } from '../scenes/index.ts'
+import type { SceneId } from '../content/scenes.ts'
 import './stage.css'
+
+/**
+ * The sheet's name sits large at the top-left, and its bottom edge is
+ * TITLE_CLEAR. Sheets whose drawing reaches higher than that are scaled
+ * down just enough to clear it, about the bottom-left drawing margin, so
+ * their footers and the title block below stay where they were.
+ *
+ * The numbers are each sheet's highest edge at its last press, measured in
+ * the built deck, not guessed. Sheets missing here already start below the
+ * name. The cover carries the talk's own title and gets no sheet name; the
+ * Innovathon reel runs full-bleed and is not scaled, its framed opening
+ * already starting below the name.
+ */
+const TITLE_CLEAR = 150
+const TOP_EDGE: Partial<Record<SceneId, number>> = {
+  'three-forces': 130,
+  'ahead-of-mandate': 123,
+  'how-we-led-it': 136,
+  'where-weve-taught': 116,
+  'national-picture': 100,
+  'vision-2028': 107,
+  roadmap: 112,
+  'phase-registry': 100,
+  'phase-foundations': 100,
+  'command-centre': 120,
+  'command-centre-build': 100,
+  'measuring-success': 108,
+  risks: 75,
+}
+const FOOT = 1022
+const fit = (id: SceneId) => {
+  const top = TOP_EDGE[id]
+  return top === undefined ? 1 : (FOOT - TITLE_CLEAR) / (FOOT - top)
+}
+const NO_NAME: SceneId[] = ['cold-open']
 
 /**
  * The 1920×1080 stage, letterboxed in --deep and scaled to fit.
@@ -46,12 +82,18 @@ export function Stage() {
               exit={{ opacity: 0 }}
               transition={{ duration: reduced ? 0.18 : 0.32, ease: 'easeOut' }}
             >
-              <Scene step={step} />
+              {!NO_NAME.includes(scene.id) && <h1 className="stage__name">{scene.title}</h1>}
+              <div
+                className="scene__fit"
+                style={fit(scene.id) < 1 ? { transform: `scale(${fit(scene.id).toFixed(4)})` } : undefined}
+              >
+                <Scene step={step} />
+              </div>
             </motion.div>
           </AnimatePresence>
         </div>
 
-        <TitleBlock sheet={scene.sheet} title={scene.title} total={total} />
+        <TitleBlock sheet={scene.sheet} total={total} />
 
         {/* Blackout: '.' or B, for when you want the room looking at you. */}
         <AnimatePresence>

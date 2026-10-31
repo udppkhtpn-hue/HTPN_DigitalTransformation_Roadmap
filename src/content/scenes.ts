@@ -66,6 +66,8 @@ export interface Force {
   name: string
   figure?: Figure
   caption?: string
+  /** A second, smaller before-and-after beside the main figure. */
+  change?: { from: string; to: string; caption: string }
   body?: string
 }
 
@@ -288,13 +290,19 @@ export const SCENES: Scene[] = [
     title: 'Three forces',
     steps: 3,
     moment: 0,
-    seconds: 25,
+    seconds: 35,
     content: {
       forces: [
         {
           name: 'Pressure',
           figure: { value: 128, prefix: '+', suffix: '%', tone: 'alert' },
           caption: 'Dengue admissions, June 2026 vs the year before.',
+          change: {
+            from: '200+',
+            to: '500+',
+            caption:
+              'Births a month: almost tripled since moving from the old building to the new Women & Child Centre.',
+          },
         },
         {
           name: 'Vendor lock-in',
@@ -307,7 +315,7 @@ export const SCENES: Scene[] = [
       ],
       footer: 'Change fails when it is delegated. It succeeds when it is led.',
     },
-    notes: `Three forces made this necessary. Pressure: beds are full, staff are tired, and this June our dengue admissions rose a hundred and twenty-eight percent. Vendor lock-in: procurement is too slow for problems that change every month. And opportunity: for the first time, clinicians can build real tools in weeks. The limit is no longer technology. It's leadership.`,
+    notes: `Three forces made this necessary. Pressure: beds are full, staff are tired, and this June our dengue admissions rose a hundred and twenty-eight percent. Births have almost tripled since we moved into the new Women and Child Centre, from two hundred to more than five hundred a month. Vendor lock-in: procurement is too slow for problems that change every month. And opportunity: for the first time, clinicians can build real tools in weeks. The limit is no longer technology. It's leadership.`,
   },
 
   {

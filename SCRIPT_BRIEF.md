@@ -13,7 +13,7 @@ You are writing the spoken script for a closing keynote. The speaker presents a 
 3. **Voice.** First person, plain, confident, short sentences. A clinician-leader speaking to industry leaders, not a vendor pitching. No jargon, no hype words, no rhetorical questions to the audience.
 4. **Screen and voice.** The audience reads the screen. Don't read the on-screen text out word for word; say what it means, and let the screen carry the detail.
 5. **Pace.** Write at 140 words a minute (about 2.3 words a second). For every sheet give its word count and spoken time, and give the total at the end.
-6. **Fit the target.** The planned times below add up to **10:26**, against a target of 5:00. If they don't fit, first propose which sheets to shorten, merge or skip (and why), wait for approval, then write. Don't silently drop a sheet.
+6. **Fit the target.** The planned times below add up to **10:36**, against a target of 5:00. If they don't fit, first propose which sheets to shorten, merge or skip (and why), wait for approval, then write. Don't silently drop a sheet.
 7. **Format.** For each sheet:
 
 ```
@@ -30,7 +30,7 @@ These are real tools, used every day...
 - **Audience:** senior industry leaders (Microsoft, Grab, Shopee and others), some of whom judged the Innovathon. Not clinicians; they know platforms and scale, not Malaysian public hospitals.
 - **Speaker:** Dr Ferwahn Fairis bin Ab Karim · Acting Deputy Director, Hospital Tengku Permaisuri Norashikin, Kajang · Ministry of Health Malaysia.
 - **The argument in one line:** a 135-year-old public hospital built its own digital tools from within, ahead of national policy; the next phases must turn that culture into structure, and share it with every KKM hospital.
-- **The deck:** 20 sheets, 46 clicker presses, planned 10:26. "Press 1" on each sheet is the click that brings the sheet up.
+- **The deck:** 20 sheets, 46 clicker presses, planned 10:36. "Press 1" on each sheet is the click that brings the sheet up.
 
 ## The sheets
 
@@ -50,22 +50,22 @@ Current notes (draft to improve, not to copy):
 > Good afternoon. I'm Fairis, from Hospital Tengku Permaisuri Norashikin in Kajang, a public hospital that is a hundred and thirty-five years old. Eighteen months ago, a small team of clinicians decided not to wait for a vendor. We decided to build it ourselves. This is the story of what we built, and where it goes next.
 
 ### S-02 Three forces
-3 presses · planned 25s · about 58 words at 140 wpm · current notes 57 words
+3 presses · planned 35s · about 82 words at 140 wpm · current notes 81 words
 
 What the room sees:
-- Press 1: Pressure: +128% in red, dengue admissions, June 2026 vs the year before.
+- Press 1: Pressure: +128% in red, dengue admissions, June 2026 vs the year before; then, under it, births a month 200+ → 500+, almost tripled since the move from the old building to the new Women & Child Centre.
 - Press 2: Vendor lock-in.
 - Press 3: Opportunity, then the footer line underneath all three.
 
 On screen (text and figures, exactly as shown):
 forces:
-  - name: Pressure; figure: value: 128; prefix: +; suffix: %; tone: alert; caption: Dengue admissions, June 2026 vs the year before.
+  - name: Pressure; figure: value: 128; prefix: +; suffix: %; tone: alert; caption: Dengue admissions, June 2026 vs the year before.; change: from: 200+; to: 500+; caption: Births a month: almost tripled since moving from the old building to the new Women & Child Centre.
   - name: Vendor lock-in; body: Every change request has a price. Data can leave our control.
   - name: Opportunity; body: AI and low-code let clinicians build working tools in weeks.
 footer: Change fails when it is delegated. It succeeds when it is led.
 
 Current notes (draft to improve, not to copy):
-> Three forces made this necessary. Pressure: beds are full, staff are tired, and this June our dengue admissions rose a hundred and twenty-eight percent. Vendor lock-in: procurement is too slow for problems that change every month. And opportunity: for the first time, clinicians can build real tools in weeks. The limit is no longer technology. It's leadership.
+> Three forces made this necessary. Pressure: beds are full, staff are tired, and this June our dengue admissions rose a hundred and twenty-eight percent. Births have almost tripled since we moved into the new Women and Child Centre, from two hundred to more than five hundred a month. Vendor lock-in: procurement is too slow for problems that change every month. And opportunity: for the first time, clinicians can build real tools in weeks. The limit is no longer technology. It's leadership.
 
 ### S-03 Ahead of the mandate
 2 presses · planned 20s · about 47 words at 140 wpm · current notes 45 words
@@ -445,6 +445,6 @@ Current notes (draft to improve, not to copy):
 ## Totals
 
 - 20 sheets, 46 presses.
-- Planned time 10:26 against a 5:00 slot.
-- Current notes total 1367 words.
+- Planned time 10:36 against a 5:00 slot.
+- Current notes total 1391 words.
 - S-08 plays a reel of about 56 seconds; the speaker can talk over it or advance early to cut it short.

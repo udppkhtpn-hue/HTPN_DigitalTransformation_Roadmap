@@ -9,8 +9,8 @@
   grid-template-columns: 420px 1fr;
   align-items: start;
   gap: 48px;
-  padding: 34px 0 30px;
-  min-height: 196px;
+  padding: 30px 0 26px;
+  min-height: 176px;
 }
 
 .s02__rule {
@@ -34,7 +34,7 @@
 }
 
 .s02__figure {
-  font-size: 168px;
+  font-size: 150px;
   line-height: 0.88;
   letter-spacing: -0.03em;
 }
@@ -57,4 +57,34 @@
 .s02__note {
   margin-top: 26px;
   font-size: 50px;
+}
+
+/* Pressure carries two facts: the dengue figure, then births under it,
+   smaller, figure and caption side by side to keep the row short. */
+.s02__change {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  margin-top: 26px;
+}
+
+.s02__change-fig {
+  flex: none;
+  font-size: 76px;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  font-variation-settings: 'wght' 650, 'wdth' 100;
+  color: var(--chalk);
+  white-space: nowrap;
+}
+
+.s02__change-arrow { color: var(--line); }
+
+.s02__change-cap {
+  margin: 0;
+  max-width: 560px;
+  font-size: var(--t-dim);
+  line-height: 1.25;
+  color: var(--chalk);
+  opacity: 0.82;
 }
