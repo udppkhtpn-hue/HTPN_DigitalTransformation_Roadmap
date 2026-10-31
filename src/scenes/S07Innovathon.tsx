@@ -3,6 +3,7 @@ import { sceneContent } from './content.ts'
 import { CountUp } from '../kit/CountUp.tsx'
 import { QR } from '../kit/QR.tsx'
 import { SheetVideo } from '../kit/SheetVideo.tsx'
+import still from '../assets/innovathon-still.webp'
 import type { SceneProps } from './index.ts'
 import './s07.css'
 
@@ -18,7 +19,12 @@ const c = sceneContent('innovathon')
  * drawing and becomes the ground the drawing sits on.
  *
  * The expansion is one composited transform on a layer that is already
- * full-stage, so the video is never re-laid-out, only scaled. The text
+ * full-stage, so the video is never re-laid-out, only scaled.
+ *
+ * The still behind it is not decoration: the 14MB reel is published only
+ * with the offline build, so on the shared Pages copy — and on any machine
+ * where the file does not load — this sheet shows the hall as a photograph
+ * and everything else behaves exactly the same. The text
  * keeps the entrance timings it always had, shifted behind the recede.
  *
  * The poster is gone. Once the reel is running behind it, a dense A3 of
@@ -49,6 +55,7 @@ export function S07Innovathon({ step }: SceneProps) {
       >
         <SheetVideo
           src={`${import.meta.env.BASE_URL}${c.video}`}
+          poster={still}
           width={1920}
           height={1080}
           delay={0.1}
