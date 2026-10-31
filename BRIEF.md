@@ -78,17 +78,17 @@ flip: from: 85% outsourced; to: 85% insourced; caption: DBS Bank's shift. Our be
 Script — We ran this as a change programme, not an IT project. Leaders learned first, so we had credibility. We wrote our own syllabus, and everyone leaves having built something. We chose small, visible quick wins. And we celebrated the builders. Our benchmark was DBS Bank, which moved from eighty-five percent outsourced to eighty-five percent insourced.
 
 ### S-05 Results
-1 press · 25s · 32 words spoken (77 wpm)
+1 press · 25s · 34 words spoken (82 wpm)
 
 On screen —
 figures:
   - value: 1300; suffix: +; label: healthcare staff trained; tone: signal
   - value: 50; suffix: +; label: in-house apps in active use; tone: signal
-  - value: 35; suffix: +; label: workshops, 18 by external invitation; tone: signal
+  - value: 35; suffix: +; label: workshops, 15 by external invitation; tone: signal
   - value: 0; prefix: RM; label: software licensing cost; tone: signal
 footnote: Figures as of October 2026.
 
-Script — Eighteen months in: more than thirteen hundred staff trained, more than fifty apps in daily use, thirty-five workshops, eighteen of them because other hospitals invited us. And zero ringgit in software licences.
+Script — Eighteen months in: more than thirteen hundred staff trained, more than fifty apps in daily use, thirty-five workshops, fifteen of them because other hospitals and services invited us. And zero ringgit in software licences.
 
 ### S-06 The portfolio
 1 press · 20s · 45 words spoken (135 wpm)
@@ -195,7 +195,7 @@ Script — Here's the lesson for me as a leader. Phase one was won through cultu
 
 ## Totals
 
-626 words spoken · 5:35 planned · 24 presses
+628 words spoken · 5:35 planned · 24 presses
 
 ## Known open points
 

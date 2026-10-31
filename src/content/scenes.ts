@@ -280,14 +280,14 @@ export const SCENES: Scene[] = [
         {
           value: 35,
           suffix: '+',
-          label: 'workshops, 18 by external invitation',
+          label: 'workshops, 15 by external invitation',
           tone: 'signal',
         },
         { value: 0, prefix: 'RM', label: 'software licensing cost', tone: 'signal' },
       ],
       footnote: 'Figures as of October 2026.',
     },
-    notes: `Eighteen months in: more than thirteen hundred staff trained, more than fifty apps in daily use, thirty-five workshops, eighteen of them because other hospitals invited us. And zero ringgit in software licences.`,
+    notes: `Eighteen months in: more than thirteen hundred staff trained, more than fifty apps in daily use, thirty-five workshops, fifteen of them because other hospitals and services invited us. And zero ringgit in software licences.`,
   },
 
   {
