@@ -35,14 +35,17 @@ const PRESSES = {
     'The timeline draws back to April 2025, measures the 14 months between, and the three reasons appear one by one.',
   ],
   'how-we-led-it': [
-    'The four stages of the change programme, numbered, with the framework named.',
-    'A split-flap board turns "85% outsourced" into "85% insourced", with the DBS Bank caption.',
+    'The framework is named and four numbered boxes are pencilled in; only stage 1, "Leaders learn first", fills in. Under it a strip of photographs from 11 Apr – 29 May 2025 (Monash, the EDLP group, certificates) drifts slowly across the sheet, with a leader line back up to box 1.',
+    'Stage 2, "Our own syllabus", fills in. The photographs keep drifting.',
+    'Stage 3, "Quick wins", fills in.',
+    'Stage 4, "Reward the builders", fills in.',
+    'The photographs give way to "85% outsourced", which a split-flap board turns into "85% insourced" after a beat, then the DBS Bank caption.',
   ],
   results: [
-    'All four figures count up in sequence, then the footnote. One press for the whole sheet.',
+    'All four figures count up in sequence, then the footnote. A column of photographs from in-house training sessions (Oct 2025 – May 2026) drifts upwards on the right the whole time. One press for the whole sheet.',
   ],
   'where-weve-taught': [
-    'A map of Malaysia draws itself; dashed arcs fly from Kajang to each of the 15 sites in date order while a month counter and a 1-to-15 tally tick, each site naming itself as it lands; a magnifier labelled KLANG VALLEY separates the nine sites clustered there; then the subline.',
+    'A map of Malaysia draws itself; dashed arcs fly from Kajang to each of the 15 sites in date order while a month counter and a 1-to-15 tally tick, each site naming itself as it lands; a magnifier labelled KLANG VALLEY separates the nine sites clustered there; then the subline. Beside the headline, a small strip of photographs taken on the dates of the external sessions (Nov 2025 – Oct 2026) drifts across.',
     'Cyan rings pulse on the sites now running tools built on the model, and "We taught. They built." appears.',
   ],
   portfolio: [
@@ -115,6 +118,9 @@ const mmss = (s) => `${Math.floor(s / 60)}:${String(s % 60).padStart(2, '0')}`
 const OFF_SCREEN = {
   // On the roadmap, "done when" lives in the speaker cues: it did not fit at 28px.
   roadmap: ['doneWhen'],
+  // Photo date ranges: an accessible label there, not printed on the sheet.
+  results: ['photos'],
+  'where-weve-taught': ['photos'],
 }
 
 function flat(v, depth = 0, hide = []) {

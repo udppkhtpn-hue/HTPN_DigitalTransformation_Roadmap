@@ -34,9 +34,10 @@ const moment = (id, step, label, ms) => {
 const MOMENTS = [
   moment('cold-open', 0, 'title + blueprint draw', 6500),
   moment('three-forces', 0, '+128% count-up', 2500),
-  moment('how-we-led-it', 1, 'split-flap', 2000),
-  moment('results', 0, 'four count-ups', 4000),
-  moment('where-weve-taught', 0, 'map + 15 arcs', 9000),
+  moment('how-we-led-it', 0, 'stage 1 + photo reel', 3000),
+  moment('how-we-led-it', 4, 'split-flap', 3000),
+  moment('results', 0, 'four count-ups + photo column', 4000),
+  moment('where-weve-taught', 0, 'map + 15 arcs + photo strip', 9000),
   moment('portfolio', 0, 'three marquees', 3000),
   moment('the-gap', 0, 'fifty drifting dots', 3000),
   moment('national-picture', 1, '155 hospitals light up', 6500),

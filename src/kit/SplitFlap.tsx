@@ -5,6 +5,8 @@ interface Props {
   from: string
   to: string
   flipped: boolean
+  /** Seconds to hold the "from" face before turning. */
+  delay?: number
   className?: string
 }
 
@@ -39,7 +41,7 @@ function split(a: string, b: string) {
  * Both faces sit in the same grid cell so the block is as wide as the wider
  * word and nothing reflows mid-flip.
  */
-export function SplitFlap({ from, to, flipped, className }: Props) {
+export function SplitFlap({ from, to, flipped, delay = 0, className }: Props) {
   const reduced = useReducedMotion()
   const { head, fromMid, toMid } = split(from, to)
 
@@ -54,7 +56,7 @@ export function SplitFlap({ from, to, flipped, className }: Props) {
         <motion.span
           className="flap__inner"
           animate={{ rotateX: flipped ? -180 : 0 }}
-          transition={{ duration: 0.62, ease: [0.4, 0, 0.2, 1] }}
+          transition={{ duration: 0.62, delay: flipped ? delay : 0, ease: [0.4, 0, 0.2, 1] }}
         >
           <span className="flap__face flap__face--front">{fromMid}</span>
           <span className="flap__face flap__face--back">{toMid}</span>

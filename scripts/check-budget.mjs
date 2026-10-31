@@ -1,10 +1,11 @@
 /** Fails the build if the offline file outgrows what a venue laptop should carry. */
 import { statSync } from 'node:fs'
 
-// 3.1MB since the 1889 building joined sheet 1 (a 284KB drawing, inlined).
+// 3.1MB since the 1889 building joined sheet 1 (a 284KB drawing, inlined),
+// 4.0MB since the photo reels on S-04 to S-06 (28 duotone prints, 572KB).
 // Images decode during the boot screen, not on stage, and perf is re-run
-// against the bigger file, so the limit moves rather than the drawing.
-const LIMIT = 3.1 * 1024 * 1024
+// against the bigger file, so the limit moves rather than the pictures.
+const LIMIT = 4.0 * 1024 * 1024
 const size = statSync('dist-single/index.html').size
 const mb = (n) => `${(n / 1024 / 1024).toFixed(2)}MB`
 

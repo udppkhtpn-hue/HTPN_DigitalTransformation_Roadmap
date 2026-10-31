@@ -84,12 +84,16 @@ export interface AheadOfMandate {
 export interface HowWeLedIt {
   framework: string
   stages: { name: string; detail: string }[]
+  /** Dates of the photographs under stage 1, as taken. */
+  photos: string
   flip: { from: string; to: string; caption: string }
 }
 
 export interface Results {
   figures: Figure[]
   footnote: string
+  /** Dates of the photographs in the column, as taken. */
+  photos: string
 }
 
 export interface WhereTaught {
@@ -97,6 +101,8 @@ export interface WhereTaught {
   subline: string
   adoptedLine: string
   legendAdopted: string
+  /** Dates of the photographs in the strip, as taken. */
+  photos: string
 }
 
 export interface Portfolio {
@@ -338,8 +344,8 @@ export const SCENES: Scene[] = [
     id: 'how-we-led-it',
     sheet: 'S-04',
     title: 'How we led it',
-    steps: 2,
-    moment: 1,
+    steps: 5,
+    moment: 4,
     seconds: 25,
     content: {
       framework: "Kotter's eight steps",
@@ -355,6 +361,7 @@ export const SCENES: Scene[] = [
         { name: 'Quick wins', detail: 'shipped in weeks' },
         { name: 'Reward the builders', detail: 'a national Innovathon' },
       ],
+      photos: '11 Apr – 29 May 2025',
       flip: {
         from: '85% outsourced',
         to: '85% insourced',
@@ -384,6 +391,7 @@ export const SCENES: Scene[] = [
         { value: 0, prefix: 'RM', label: 'software licensing cost', tone: 'signal' },
       ],
       footnote: 'Figures as of October 2026.',
+      photos: 'Oct 2025 – May 2026',
     },
     notes: `Eighteen months in: more than thirteen hundred staff trained, more than fifty apps in daily use, thirty-five workshops, fifteen of them because other hospitals and services invited us. And zero ringgit in software licences.`,
   },
@@ -400,6 +408,7 @@ export const SCENES: Scene[] = [
       subline: '15 external sessions in 12 months. 5 in the last two.',
       adoptedLine: 'We taught. They built.',
       legendAdopted: 'cyan ring = runs a tool built on our model',
+      photos: 'Nov 2025 – Oct 2026',
     },
     notes: `And then people started inviting us. Fifteen sessions in twelve months: hospitals, community groups, and whole national services. Northern, central and southern O&G. Family Medicine. Medical Services. From Alor Setar to Johor Bahru, and across the sea to Kuching. Five of those were in the last two months alone. And here's what happened next. The hospitals we taught started building their own tools, in Marudi, Sri Aman, Mukah, Penang and Johor. We taught. They built.`,
   },

@@ -2,13 +2,18 @@ import { motion } from 'motion/react'
 import { sceneContent } from './content.ts'
 import { CountUp } from '../kit/CountUp.tsx'
 import { DrawPath } from '../kit/DrawPath.tsx'
+import { PhotoReel } from '../kit/PhotoReel.tsx'
+import { TRAINING } from '../content/photos.ts'
 import './s05.css'
 
 const c = sceneContent('results')
 
 const X0 = 200
-const COL = 760
+const COL = 600
+const RULE = 1040
 const ROW_Y = [470, 760]
+// Matches .s05__reel's width in s05.css.
+const REEL_W = 548
 
 /**
  * Four figures landing on a measured baseline, 0.6s apart.
@@ -16,6 +21,10 @@ const ROW_Y = [470, 760]
  * They are dimensions on the drawing rather than stat cards: a rule, a tick
  * down to it from each figure, and the number sitting above the tick. The
  * whole scene is one step — the sequence runs itself while the room reads.
+ *
+ * The training rooms behind the numbers drift up a column on the right,
+ * over the title block: the figures are the claim, the photographs are
+ * the people in it.
  */
 export function S05Results() {
   return (
@@ -24,7 +33,7 @@ export function S05Results() {
         {ROW_Y.map((y, r) => (
           <DrawPath
             key={y}
-            d={`M ${X0} ${y} L ${X0 + 1500} ${y}`}
+            d={`M ${X0} ${y} L ${X0 + RULE} ${y}`}
             delay={r * 1.2}
             duration={1.0}
             opacity={0.45}
@@ -75,6 +84,15 @@ export function S05Results() {
       >
         {c.footnote}
       </motion.p>
+
+      <PhotoReel
+        photos={TRAINING}
+        axis="y"
+        size={REEL_W}
+        label={`Photographs from training sessions, ${c.photos}`}
+        className="s05__reel"
+        delay={0.6}
+      />
     </div>
   )
 }

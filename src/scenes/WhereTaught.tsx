@@ -10,6 +10,8 @@ import { sceneContent } from './content.ts'
 import { HOME, SITES, type SiteKind } from '../content/sites.ts'
 import { MAP } from '../content/map.ts'
 import { WidthType } from '../kit/WidthType.tsx'
+import { PhotoReel } from '../kit/PhotoReel.tsx'
+import { SESSIONS } from '../content/photos.ts'
 import type { SceneProps } from './index.ts'
 import './wheretaught.css'
 
@@ -108,6 +110,17 @@ export function WhereTaught({ step }: SceneProps) {
           {c.heading}
         </WidthType>
       </h1>
+
+      {/* The rooms themselves, small and to one side: the map is the claim. */}
+      <PhotoReel
+        photos={SESSIONS}
+        size={150}
+        gap={12}
+        speed={28}
+        label={`Photographs from the external sessions, ${c.photos}`}
+        className="wt__reel"
+        delay={MAP_IN * t}
+      />
 
       <svg className="sc__svg" viewBox="0 0 1920 1080" aria-hidden="true">
         {/* land */}

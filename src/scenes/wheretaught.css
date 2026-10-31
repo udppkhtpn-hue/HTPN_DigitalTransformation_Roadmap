@@ -5,6 +5,9 @@
   font-size: 96px; line-height: 1; letter-spacing: -0.025em; color: var(--chalk);
 }
 
+/* Beside the heading, above Borneo: the one band the map leaves free. */
+.wt__reel { left: 1265px; top: 78px; width: 575px; height: 150px; }
+
 /* ── the drawing ─────────────────────────────────────────────────── */
 .wt__outline {
   fill: rgba(124, 196, 242, 0.04);

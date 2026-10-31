@@ -3,7 +3,6 @@
 .s04__stage {
   position: absolute;
   width: 372px;
-  height: 300px;
   padding: 28px 28px 26px;
   display: flex;
   flex-direction: column;
@@ -16,6 +15,8 @@
   color: var(--line);
   opacity: 0.8;
 }
+
+.s04__stage--pending .s04__n { opacity: 0.3; }
 
 .s04__name {
   font-size: 46px;
@@ -32,9 +33,15 @@
   color: var(--line);
 }
 
+.s04__pencil {
+  fill: none; stroke: var(--line); stroke-width: 1;
+  stroke-dasharray: 6 8; opacity: 0.22;
+}
+
+/* Above the row now: under it is where stage 1's photographs run. */
 .s04__framework {
   position: absolute;
-  top: 566px;
+  top: 136px;
   left: 200px;
   margin: 0;
   font-family: var(--font-mono);
@@ -68,3 +75,18 @@
   font-size: var(--t-lead);
   color: var(--signal);
 }
+
+.s04__evidence { position: absolute; inset: 0; pointer-events: none; }
+
+.s04__dates {
+  position: absolute;
+  margin: 0;
+  font-family: var(--font-mono);
+  font-size: var(--t-dim);
+  color: var(--line);
+  letter-spacing: 0.04em;
+  white-space: nowrap;
+}
+
+/* The width of the four boxes, so the photographs sit under the row. */
+.s04__reel { left: 200px; top: 618px; width: 1596px; height: 232px; }

@@ -30,7 +30,7 @@ These are real tools, used every day...
 - **Audience:** senior industry leaders (Microsoft, Grab, Shopee and others), some of whom judged the Innovathon. Not clinicians; they know platforms and scale, not Malaysian public hospitals.
 - **Speaker:** Dr Ferwahn Fairis bin Ab Karim · Acting Deputy Director, Hospital Tengku Permaisuri Norashikin, Kajang · Ministry of Health Malaysia.
 - **The argument in one line:** a 135-year-old public hospital built its own digital tools from within, ahead of national policy; the next phases must turn that culture into structure, and share it with every KKM hospital.
-- **The deck:** 20 sheets, 43 clicker presses, planned 10:26. "Press 1" on each sheet is the click that brings the sheet up.
+- **The deck:** 20 sheets, 46 clicker presses, planned 10:26. "Press 1" on each sheet is the click that brings the sheet up.
 
 ## The sheets
 
@@ -86,11 +86,14 @@ Current notes (draft to improve, not to copy):
 > In June this year, the Prime Minister directed that all government digital services be built in-house, for data sovereignty, source code access and civil service talent. We started fourteen months earlier. We weren't reacting to the policy. We were already a working example of it.
 
 ### S-04 How we led it
-2 presses · planned 25s · about 58 words at 140 wpm · current notes 55 words
+5 presses · planned 25s · about 58 words at 140 wpm · current notes 55 words
 
 What the room sees:
-- Press 1: The four stages of the change programme, numbered, with the framework named.
-- Press 2: A split-flap board turns "85% outsourced" into "85% insourced", with the DBS Bank caption.
+- Press 1: The framework is named and four numbered boxes are pencilled in; only stage 1, "Leaders learn first", fills in. Under it a strip of photographs from 11 Apr – 29 May 2025 (Monash, the EDLP group, certificates) drifts slowly across the sheet, with a leader line back up to box 1.
+- Press 2: Stage 2, "Our own syllabus", fills in. The photographs keep drifting.
+- Press 3: Stage 3, "Quick wins", fills in.
+- Press 4: Stage 4, "Reward the builders", fills in.
+- Press 5: The photographs give way to "85% outsourced", which a split-flap board turns into "85% insourced" after a beat, then the DBS Bank caption.
 
 On screen (text and figures, exactly as shown):
 framework: Kotter's eight steps
@@ -99,6 +102,7 @@ stages:
   - name: Our own syllabus; detail: everyone leaves having built something
   - name: Quick wins; detail: shipped in weeks
   - name: Reward the builders; detail: a national Innovathon
+photos: 11 Apr – 29 May 2025
 flip: from: 85% outsourced; to: 85% insourced; caption: DBS Bank's shift. Our benchmark.
 
 Current notes (draft to improve, not to copy):
@@ -108,7 +112,7 @@ Current notes (draft to improve, not to copy):
 1 press · planned 25s · about 58 words at 140 wpm · current notes 34 words
 
 What the room sees:
-- Press 1: All four figures count up in sequence, then the footnote. One press for the whole sheet.
+- Press 1: All four figures count up in sequence, then the footnote. A column of photographs from in-house training sessions (Oct 2025 – May 2026) drifts upwards on the right the whole time. One press for the whole sheet.
 
 On screen (text and figures, exactly as shown):
 figures:
@@ -125,7 +129,7 @@ Current notes (draft to improve, not to copy):
 2 presses · planned 35s · about 82 words at 140 wpm · current notes 75 words
 
 What the room sees:
-- Press 1: A map of Malaysia draws itself; dashed arcs fly from Kajang to each of the 15 sites in date order while a month counter and a 1-to-15 tally tick, each site naming itself as it lands; a magnifier labelled KLANG VALLEY separates the nine sites clustered there; then the subline.
+- Press 1: A map of Malaysia draws itself; dashed arcs fly from Kajang to each of the 15 sites in date order while a month counter and a 1-to-15 tally tick, each site naming itself as it lands; a magnifier labelled KLANG VALLEY separates the nine sites clustered there; then the subline. Beside the headline, a small strip of photographs taken on the dates of the external sessions (Nov 2025 – Oct 2026) drifts across.
 - Press 2: Cyan rings pulse on the sites now running tools built on the model, and "We taught. They built." appears.
 
 On screen (text and figures, exactly as shown):
@@ -440,7 +444,7 @@ Current notes (draft to improve, not to copy):
 
 ## Totals
 
-- 20 sheets, 43 presses.
+- 20 sheets, 46 presses.
 - Planned time 10:26 against a 5:00 slot.
 - Current notes total 1367 words.
 - S-08 plays a reel of about 56 seconds; the speaker can talk over it or advance early to cut it short.

@@ -1,0 +1,35 @@
+.reel { position: absolute; overflow: hidden; }
+
+/* The window fades at both ends so frames arrive and leave rather than
+   being cut by a hard edge. */
+.reel--x {
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 5%, #000 95%, transparent);
+  mask-image: linear-gradient(90deg, transparent, #000 5%, #000 95%, transparent);
+}
+.reel--y {
+  -webkit-mask-image: linear-gradient(180deg, transparent, #000 7%, #000 93%, transparent);
+  mask-image: linear-gradient(180deg, transparent, #000 7%, #000 93%, transparent);
+}
+
+.reel__track {
+  display: flex;
+  will-change: transform;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+.reel--x .reel__track { flex-direction: row; width: max-content; animation-name: reel-x; }
+.reel--y .reel__track { flex-direction: column; animation-name: reel-y; }
+
+@keyframes reel-x { to { transform: translate3d(var(--reel-run), 0, 0); } }
+@keyframes reel-y { to { transform: translate3d(0, var(--reel-run), 0); } }
+
+/* A print on the drawing: hairline border, like the KIK prints on the roadmap. */
+.reel__frame {
+  display: block; flex: none;
+  border: 1px solid rgba(124, 196, 242, 0.55);
+  user-select: none; -webkit-user-drag: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reel__track { animation: none; }
+}

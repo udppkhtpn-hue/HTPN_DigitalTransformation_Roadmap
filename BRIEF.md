@@ -5,7 +5,7 @@ leaders (Microsoft, Grab, Shopee) at the Executive Digital Leadership Programme.
 Speaker: Dr Ferwahn Fairis bin Ab Karim, Acting Deputy Director, Hospital Tengku
 Permaisuri Norashikin (HTPN), Kajang, Ministry of Health Malaysia.
 
-20 sheets · 43 clicker presses · planned 10:26 against a 5:00 slot
+20 sheets · 46 clicker presses · planned 10:26 against a 5:00 slot
 
 ## Ground rules for this deck
 
@@ -64,7 +64,7 @@ tags: data sovereignty · access to source code · civil service talent
 Script — In June this year, the Prime Minister directed that all government digital services be built in-house, for data sovereignty, source code access and civil service talent. We started fourteen months earlier. We weren't reacting to the policy. We were already a working example of it.
 
 ### S-04 How we led it
-2 presses · 25s · 55 words spoken (132 wpm)
+5 presses · 25s · 55 words spoken (132 wpm)
 
 On screen —
 framework: Kotter's eight steps
@@ -73,6 +73,7 @@ stages:
   - name: Our own syllabus; detail: everyone leaves having built something
   - name: Quick wins; detail: shipped in weeks
   - name: Reward the builders; detail: a national Innovathon
+photos: 11 Apr – 29 May 2025
 flip: from: 85% outsourced; to: 85% insourced; caption: DBS Bank's shift. Our benchmark.
 
 Script — We ran this as a change programme, not an IT project. Leaders learned first, so we had credibility. We wrote our own syllabus, and everyone leaves having built something. We chose small, visible quick wins. And we celebrated the builders. Our benchmark was DBS Bank, which moved from eighty-five percent outsourced to eighty-five percent insourced.
@@ -87,6 +88,7 @@ figures:
   - value: 35; suffix: +; label: workshops, 15 by external invitation; tone: signal
   - value: 0; prefix: RM; label: software licensing cost; tone: signal
 footnote: Figures as of October 2026.
+photos: Oct 2025 – May 2026
 
 Script — Eighteen months in: more than thirteen hundred staff trained, more than fifty apps in daily use, thirty-five workshops, fifteen of them because other hospitals and services invited us. And zero ringgit in software licences.
 
@@ -98,6 +100,7 @@ heading: Invited, not imposed.
 subline: 15 external sessions in 12 months. 5 in the last two.
 adoptedLine: We taught. They built.
 legendAdopted: cyan ring = runs a tool built on our model
+photos: Nov 2025 – Oct 2026
 
 Script — And then people started inviting us. Fifteen sessions in twelve months: hospitals, community groups, and whole national services. Northern, central and southern O&G. Family Medicine. Medical Services. From Alor Setar to Johor Bahru, and across the sea to Kuching. Five of those were in the last two months alone. And here's what happened next. The hospitals we taught started building their own tools, in Marudi, Sri Aman, Mukah, Penang and Johor. We taught. They built.
 
@@ -330,7 +333,7 @@ Script — Here's the lesson for me as a leader. Phase one was won through cultu
 
 ## Totals
 
-1367 words spoken · 10:26 planned · 43 presses
+1367 words spoken · 10:26 planned · 46 presses
 
 ## Known open points
 
