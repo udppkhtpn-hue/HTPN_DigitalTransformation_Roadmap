@@ -12,6 +12,7 @@
 export type SceneId =
   | 'cold-open'
   | 'three-forces'
+  | 'national-picture'
   | 'ahead-of-mandate'
   | 'how-we-led-it'
   | 'results'
@@ -156,6 +157,16 @@ export interface Roadmap {
   enablers: string[]
 }
 
+export interface NationalPicture {
+  heading: string
+  total: { value: number; label: string }
+  withThis: { value: number; label: string }
+  manual: { value: number; label: string }
+  rollout: { caption: string; years: { year: string; add: number }[] }
+  budget: { amount: string; label: string }
+  depth: { line: string; foundAt: string; sites: string[]; closer: string }
+}
+
 export interface PhaseRegistry {
   heading: string
   kicker: string
@@ -204,6 +215,7 @@ export interface LessonAndClose {
 export type Scene =
   | (Base & { id: 'cold-open'; content: ColdOpen })
   | (Base & { id: 'three-forces'; content: ThreeForces })
+  | (Base & { id: 'national-picture'; content: NationalPicture })
   | (Base & { id: 'ahead-of-mandate'; content: AheadOfMandate })
   | (Base & { id: 'how-we-led-it'; content: HowWeLedIt })
   | (Base & { id: 'results'; content: Results })
@@ -269,8 +281,40 @@ export const SCENES: Scene[] = [
   },
 
   {
-    id: 'ahead-of-mandate',
+    id: 'national-picture',
     sheet: 'S-03',
+    title: 'The national picture',
+    steps: 3,
+    moment: 0,
+    seconds: 30,
+    content: {
+      heading: '135 of 155 hospitals are still manual.',
+      total: { value: 155, label: 'MOH hospitals' },
+      withThis: { value: 20, label: 'have THIS, the Total Hospital Information System' },
+      manual: { value: 135, label: 'still manual' },
+      rollout: {
+        caption: 'THIS rollout target, hospitals added each year',
+        years: [
+          { year: '2026', add: 16 },
+          { year: '2027', add: 26 },
+          { year: '2028', add: 44 },
+          { year: '2029', add: 49 },
+        ],
+      },
+      budget: { amount: 'RM 1 billion', label: 'budget for THIS' },
+      depth: {
+        line: 'Even in hospitals that have THIS, it did not cover the whole work process.',
+        foundAt: 'We found it at',
+        sites: ['Hospital Cyberjaya', 'Hospital Port Dickson', 'WCC, HTPN Kajang'],
+        closer: 'Which is why the apps are useful.',
+      },
+    },
+    notes: `The Ministry runs a hundred and fifty-five hospitals. Twenty have the Total Hospital Information System, THIS. A hundred and thirty-five are still manual. THIS is rolling out: sixteen hospitals this year, then twenty-six, forty-four and forty-nine, on a budget of one billion ringgit. Even where it is live, it did not cover the whole work process. We found that at Hospital Cyberjaya, Hospital Port Dickson and our own WCC. Which is why these apps are useful.`,
+  },
+
+  {
+    id: 'ahead-of-mandate',
+    sheet: 'S-04',
     title: 'Ahead of the mandate',
     steps: 2,
     moment: 1,
@@ -300,7 +344,7 @@ export const SCENES: Scene[] = [
 
   {
     id: 'how-we-led-it',
-    sheet: 'S-04',
+    sheet: 'S-05',
     title: 'How we led it',
     steps: 2,
     moment: 1,
@@ -330,7 +374,7 @@ export const SCENES: Scene[] = [
 
   {
     id: 'results',
-    sheet: 'S-05',
+    sheet: 'S-06',
     title: 'Results',
     steps: 1,
     moment: 0,
@@ -354,7 +398,7 @@ export const SCENES: Scene[] = [
 
   {
     id: 'where-weve-taught',
-    sheet: 'S-06',
+    sheet: 'S-07',
     title: "Where we've taught",
     steps: 2,
     moment: 0,
@@ -370,7 +414,7 @@ export const SCENES: Scene[] = [
 
   {
     id: 'portfolio',
-    sheet: 'S-07',
+    sheet: 'S-08',
     title: 'The portfolio',
     steps: 1,
     moment: 0,
@@ -425,7 +469,7 @@ export const SCENES: Scene[] = [
 
   {
     id: 'innovathon',
-    sheet: 'S-08',
+    sheet: 'S-09',
     title: 'Innovathon',
     steps: 2,
     moment: 1,
@@ -457,7 +501,7 @@ export const SCENES: Scene[] = [
 
   {
     id: 'the-gap',
-    sheet: 'S-09',
+    sheet: 'S-10',
     title: 'The gap',
     steps: 2,
     moment: 1,
@@ -484,7 +528,7 @@ export const SCENES: Scene[] = [
 
   {
     id: 'vision-2028',
-    sheet: 'S-10',
+    sheet: 'S-11',
     title: 'Vision 2028',
     steps: 4,
     moment: 1,
@@ -531,7 +575,7 @@ export const SCENES: Scene[] = [
 
   {
     id: 'roadmap',
-    sheet: 'S-11',
+    sheet: 'S-12',
     title: 'Roadmap',
     steps: 5,
     moment: 1,
@@ -610,13 +654,13 @@ export const SCENES: Scene[] = [
       ],
     },
     cues:
-      "Phase 1 in full, from sheets 3 to 8. Started April 2025, fourteen months before the Cabinet directive of 5 June 2026. Leaders learned first (Monash, EDLP with MIT Sloan and ASB, LSE); our own syllabus, so everyone leaves having built something; quick wins shipped in weeks; a national Innovathon to reward the builders. 1,300+ staff trained, 50+ in-house apps in active use, 35+ workshops (15 by external invitation), RM0 software licensing. Innovathon 2026, 21 July: 200 delegates, 28 finalists, 9 winners, 13 external judges, covered by BERNAMA. Done when. Phase 3: every tool is registered, owned, and tagged by reach. Phase 4: the Command Centre is used daily and flow beats baseline, and at least one general app runs at another KKM hospital. Phase 5: other KKM sites adopt it.",
+      "Phase 1 in full, from sheets 4 to 9. Started April 2025, fourteen months before the Cabinet directive of 5 June 2026. Leaders learned first (Monash, EDLP with MIT Sloan and ASB, LSE); our own syllabus, so everyone leaves having built something; quick wins shipped in weeks; a national Innovathon to reward the builders. 1,300+ staff trained, 50+ in-house apps in active use, 35+ workshops (15 by external invitation), RM0 software licensing. Innovathon 2026, 21 July: 200 delegates, 28 finalists, 9 winners, 13 external judges, covered by BERNAMA. Done when. Phase 3: every tool is registered, owned, and tagged by reach. Phase 4: the Command Centre is used daily and flow beats baseline, and at least one general app runs at another KKM hospital. Phase 5: other KKM sites adopt it.",
     notes: `So the roadmap runs on two tracks. One is HTPN as the lighthouse; the other is KKM, scaling what travels. Phase one is everything you've just seen: we started before the mandate, trained thirteen hundred staff, built fifty apps, and other hospitals now run our model. Phase two has already started. On the nineteenth of October, twenty of our Innovathon builders learned how to protect their work as intellectual property and prepare for the KKM Innovation Carnival. Phase three governs what we've built, and tags every app by how far it can travel. Phase four builds our Command Centre and, in parallel, packages patient-journey apps for other hospitals. Phase five is a playbook for every hospital type in the Ministry.`,
   },
 
   {
     id: 'phase-registry',
-    sheet: 'S-12',
+    sheet: 'S-13',
     title: 'Phase 3: the registry',
     steps: 2,
     moment: 0,
@@ -645,7 +689,7 @@ export const SCENES: Scene[] = [
 
   {
     id: 'phase-foundations',
-    sheet: 'S-13',
+    sheet: 'S-14',
     title: 'Phase 3: the foundations',
     steps: 2,
     moment: 0,
@@ -679,7 +723,7 @@ export const SCENES: Scene[] = [
 
   {
     id: 'command-centre',
-    sheet: 'S-14',
+    sheet: 'S-15',
     title: 'Command Centre',
     steps: 2,
     moment: 0,
@@ -710,7 +754,7 @@ export const SCENES: Scene[] = [
 
   {
     id: 'command-centre-build',
-    sheet: 'S-15',
+    sheet: 'S-16',
     title: 'Command Centre: how we build it',
     steps: 2,
     moment: 0,
@@ -737,7 +781,7 @@ export const SCENES: Scene[] = [
 
   {
     id: 'predict-and-scale',
-    sheet: 'S-16',
+    sheet: 'S-17',
     title: 'Predict and scale',
     steps: 1,
     moment: 0,
@@ -756,7 +800,7 @@ export const SCENES: Scene[] = [
 
   {
     id: 'lesson-and-close',
-    sheet: 'S-17',
+    sheet: 'S-18',
     title: 'Lesson & close',
     steps: 3,
     moment: 1,

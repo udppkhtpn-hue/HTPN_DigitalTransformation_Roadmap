@@ -1,0 +1,55 @@
+.np { position: absolute; inset: 0; padding: 0; }
+.np__layer { position: absolute; inset: 0; }
+
+.np__head {
+  position: absolute; top: 104px; left: 200px; width: 1300px; margin: 0;
+  font-size: 96px; line-height: 1.02; letter-spacing: -0.025em; color: var(--chalk);
+  text-wrap: balance;
+}
+
+.np__stat { position: absolute; top: 706px; display: flex; align-items: baseline; gap: 22px; }
+.np__stat--a { left: 200px; }
+.np__stat--b { left: 880px; }
+.np__num { font-size: 104px; line-height: 0.95; }
+.np__cap {
+  font-size: var(--t-dim); line-height: 1.22; color: var(--line); max-width: 360px;
+  font-variation-settings: 'wght' 400, 'wdth' 92;
+}
+
+.np__rollcap {
+  position: absolute; left: 200px; top: 700px; margin: 0;
+  font-family: var(--font-mono); font-size: var(--t-dim); color: var(--line); letter-spacing: 0.02em;
+}
+.np__years { position: absolute; left: 200px; top: 748px; display: flex; gap: 56px; }
+.np__year { display: flex; flex-direction: column; gap: 2px; min-width: 190px; }
+.np__year-n { font-family: var(--font-mono); font-size: var(--t-dim); color: var(--line); }
+.np__year-add {
+  font-size: 84px; line-height: 0.95; color: var(--signal);
+  font-variation-settings: 'wght' 650, 'wdth' 104; font-variant-numeric: tabular-nums;
+}
+.np__budget {
+  position: absolute; left: 1290px; top: 748px; display: flex; flex-direction: column; gap: 4px;
+}
+.np__budget-amt {
+  font-size: 64px; line-height: 1; color: var(--chalk);
+  font-variation-settings: 'wght' 650, 'wdth' 96;
+}
+
+.np__depth {
+  position: absolute; left: 200px; top: 690px; width: 1340px; margin: 0;
+  font-size: 52px; line-height: 1.12; color: var(--chalk); text-wrap: balance;
+  font-variation-settings: 'wght' 560, 'wdth' 92;
+}
+.np__sites {
+  position: absolute; left: 200px; top: 814px; display: flex; flex-wrap: wrap; align-items: center; gap: 10px 10px;
+}
+.np__found { font-family: var(--font-mono); font-size: var(--t-dim); color: var(--line); margin-right: 6px; }
+.np__site {
+  padding: 5px 13px; border: 1px solid rgba(124, 196, 242, 0.6);
+  font-size: var(--t-dim); color: var(--chalk);
+  font-variation-settings: 'wght' 500, 'wdth' 92;
+}
+.np__closer {
+  position: absolute; left: 200px; top: 908px; margin: 0;
+  font-family: var(--font-human); font-style: italic; font-size: 54px; line-height: 1.1; color: var(--signal);
+}

@@ -3,6 +3,7 @@ import type { SceneId } from '../content/scenes.ts'
 
 import { S01ColdOpen } from './S01ColdOpen.tsx'
 import { S02ThreeForces } from './S02ThreeForces.tsx'
+import { NationalPicture } from './NationalPicture.tsx'
 import { S03AheadOfMandate } from './S03AheadOfMandate.tsx'
 import { S04HowWeLedIt } from './S04HowWeLedIt.tsx'
 import { S05Results } from './S05Results.tsx'
@@ -31,6 +32,7 @@ export interface SceneProps {
 export const SCENE_COMPONENTS: Record<SceneId, ComponentType<SceneProps>> = {
   'cold-open': S01ColdOpen,
   'three-forces': S02ThreeForces,
+  'national-picture': NationalPicture,
   'ahead-of-mandate': S03AheadOfMandate,
   'how-we-led-it': S04HowWeLedIt,
   results: S05Results,

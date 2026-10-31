@@ -1,8 +1,8 @@
 /**
- * The fifty dots across sheets 9 to 14, forwards and backwards.
+ * The fifty dots across sheets 10 to 15, forwards and backwards.
  *
- * Sheet 9 scatters them, sheet 12 files them into three tiers, sheet 14 pulls
- * them onto six streams, and the sheets between (10, 11, 13) do not draw
+ * Sheet 10 scatters them, sheet 13 files them into three tiers, sheet 15 pulls
+ * them onto six streams, and the sheets between (11, 12, 14) do not draw
  * them. Each sheet has to begin from wherever the previous dot sheet left
  * the dots, in both directions, so this reads the real circle positions out
  * of the DOM at the moment each sheet mounts and again once it has settled.
@@ -22,7 +22,7 @@ const server = createServer((_, res) => {
 
 const browser = await chromium.launch()
 const page = await browser.newPage({ viewport: { width: 1920, height: 1080 } })
-await page.goto('http://localhost:4460/#/s/9/0')
+await page.goto('http://localhost:4460/#/s/10/0')
 await page.waitForSelector('.stage')
 
 const SCATTER = DOTS.map((d) => [d.x, d.y])
@@ -57,20 +57,20 @@ const go = async (sheet, rootSel, r, label, mountExpect, settleExpect, settleMs)
 }
 
 console.log('forwards')
-await go(9, '.s08', 7, 'S-09 gap       ', SCATTER, SCATTER, 800)
-await go(12, '.pr', 7, 'S-12 registry  ', SCATTER, TIERS, 4600)
-await go(14, '.s10', 6, 'S-14 command   ', TIERS, STREAMS, 3200)
+await go(10, '.s08', 7, 'S-10 gap       ', SCATTER, SCATTER, 800)
+await go(13, '.pr', 7, 'S-13 registry  ', SCATTER, TIERS, 4600)
+await go(15, '.s10', 6, 'S-15 command   ', TIERS, STREAMS, 3200)
 
 console.log('backwards')
-await go(12, '.pr', 7, 'S-12 registry  ', SCATTER, TIERS, 4600)
-await go(9, '.s08', 7, 'S-09 gap       ', SCATTER, SCATTER, 800)
+await go(13, '.pr', 7, 'S-13 registry  ', SCATTER, TIERS, 4600)
+await go(10, '.s08', 7, 'S-10 gap       ', SCATTER, SCATTER, 800)
 
 // A direct jump skips the sheets in between and must still be consistent.
-console.log('direct jump 9 → 14')
-await go(14, '.s10', 6, 'S-14 command   ', TIERS, STREAMS, 3200)
+console.log('direct jump 10 → 15')
+await go(15, '.s10', 6, 'S-15 command   ', TIERS, STREAMS, 3200)
 
-// The parked sheets draw no dots at all.
-for (const [n, sel] of [[10, '.v28'], [11, '.rm'], [13, '.pf']]) {
+// The parked sheets (11, 12, 14) draw no dots at all.
+for (const [n, sel] of [[11, '.v28'], [12, '.rm'], [14, '.pf']]) {
   await page.evaluate((s) => { location.hash = `#/s/${s}/0` }, n)
   await page.waitForSelector(sel, { timeout: 8000 })
   await page.waitForTimeout(500)

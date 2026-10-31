@@ -2,8 +2,8 @@
  * The fifty apps.
  *
  * Three sheets draw them and each begins where the previous one left them:
- * scattered on the gap sheet (S-09), filed into three risk tiers on the
- * registry (S-12), pulled onto six streams on the Command Centre (S-14).
+ * scattered on the gap sheet (S-10), filed into three risk tiers on the
+ * registry (S-13), pulled onto six streams on the Command Centre (S-15).
  * The sheets between draw none. All of them read the coordinates in this
  * file, so a dot keeps its identity across the whole argument: the gap, the
  * governance and the answer are the same fifty objects seen three times.
@@ -11,10 +11,10 @@
 
 export interface Dot {
   id: number
-  /** Scattered position, S-09. */
+  /** Scattered position, S-10. */
   x: number
   y: number
-  /** Which of the six streams this app feeds on S-14. */
+  /** Which of the six streams this app feeds on S-15. */
   stream: number
   /** How far along its stream it sits, 0 at the outer end, 1 at the hub. */
   t: number
