@@ -21,6 +21,7 @@
     "check": "npm run typecheck && npm run build:single && npm run budget && npm run perf",
     "poster": "node scripts/make-poster.mjs",
     "brief": "node scripts/brief.mjs",
+    "script-brief": "node scripts/script-brief.mjs",
     "map": "node scripts/make-map.mjs"
   },
   "dependencies": {

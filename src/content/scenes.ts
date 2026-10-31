@@ -127,6 +127,7 @@ export interface TheGap {
 }
 
 export interface Vision2028 {
+  heading: string
   vision: string
   hospitalsCaption: string
   hospitals: { type: string; detail: string }[]
@@ -557,6 +558,7 @@ export const SCENES: Scene[] = [
     moment: 1,
     seconds: 40,
     content: {
+      heading: 'A lighthouse, not an island',
       vision:
         'An intelligent public hospital that sees its patient flow in real time and owns its digital solutions, and a lighthouse whose proven tools any KKM hospital can adopt.',
       hospitalsCaption: 'One ministry. Very different hospitals.',

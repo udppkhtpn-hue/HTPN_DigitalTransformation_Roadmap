@@ -170,6 +170,7 @@ Script — Now zoom out from our hospital to the whole country. The Ministry run
 4 presses · 40s · 94 words spoken (141 wpm)
 
 On screen —
+heading: A lighthouse, not an island
 vision: An intelligent public hospital that sees its patient flow in real time and owns its digital solutions, and a lighthouse whose proven tools any KKM hospital can adopt.
 hospitalsCaption: One ministry. Very different hospitals.
 hospitals:

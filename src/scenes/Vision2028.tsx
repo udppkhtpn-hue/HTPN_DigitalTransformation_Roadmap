@@ -86,7 +86,7 @@ export function Vision2028({ step }: SceneProps) {
     <div className="sc v28">
       <h1 className="v28__head">
         <WidthType from={{ wdth: 62, wght: 700 }} to={{ wdth: 112, wght: 660 }} duration={0.85} delay={0.2 * t}>
-          A lighthouse, not an island
+          {c.heading}
         </WidthType>
       </h1>
 
