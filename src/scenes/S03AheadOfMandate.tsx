@@ -3,6 +3,7 @@ import { sceneContent } from './content.ts'
 import { DrawPath } from '../kit/DrawPath.tsx'
 import { Dimension } from '../kit/Dimension.tsx'
 import type { SceneProps } from './index.ts'
+import news from '../assets/news-directive.webp'
 import './s03.css'
 
 const c = sceneContent('ahead-of-mandate')
@@ -12,10 +13,9 @@ const X1 = 330
 const X2 = 1430
 
 /**
- * The headline is typeset, not screenshotted. The original slide used a news
- * photograph of the Prime Minister; setting the words instead keeps the sheet
- * in one visual language and avoids putting a real person's photograph on a
- * slide to make a point about our own timing.
+ * The headline is typeset so it reads from the back of the room, with the
+ * press photograph from the report beside it as corroboration — the claim
+ * set large, the evidence pinned next to it.
  *
  * The reveal runs backwards, the way the script tells it: the Cabinet
  * directive of 5 June 2026 lands first, and only then does the timeline
@@ -81,6 +81,20 @@ export function S03AheadOfMandate({ step }: SceneProps) {
           <blockquote className="s03__headline">{c.clipping.headline}</blockquote>
           <figcaption className="s03__source">{c.clipping.source}</figcaption>
         </motion.figure>
+
+      {/* The cutting itself, as corroboration. The headline is typeset so it
+          reads from the back of the room; this is here to show it is real. */}
+      <motion.figure
+        className="s03__photo"
+        initial={{ opacity: 0, y: 14, rotate: -2.4 }}
+        animate={{ opacity: 1, y: 0, rotate: -1.6 }}
+        transition={{ duration: 0.7, delay: 0.55, ease: [0.16, 1, 0.3, 1] }}
+      >
+        <img
+          src={news}
+          alt="Press conference announcing the directive, reported by The Star"
+        />
+      </motion.figure>
 
       <motion.ul
           className="s03__tags"
