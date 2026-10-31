@@ -12,6 +12,7 @@
 import { chromium } from 'playwright'
 import { createServer } from 'node:http'
 import { readFileSync } from 'node:fs'
+import { SCENES } from '../src/content/scenes.ts'
 
 const HTML = readFileSync('dist-single/index.html')
 const server = createServer((_, res) => {
@@ -19,25 +20,36 @@ const server = createServer((_, res) => {
   res.end(HTML)
 }).listen(4456)
 
+// Sheets are found by scene id, not hard-coded: moving a sheet renumbers
+// everything after it, and the labels here used to go quietly wrong.
+const at = (id, step = 0) => {
+  const n = SCENES.findIndex((s) => s.id === id) + 1
+  if (!n) throw new Error(`no scene "${id}"`)
+  return [`S-${String(n).padStart(2, '0')}`, `#/s/${n}/${step}`]
+}
+const moment = (id, step, label, ms) => {
+  const [s, hash] = at(id, step)
+  return [`${s} ${label}`, hash, ms]
+}
 const MOMENTS = [
-  ['S-01 title + blueprint draw', '#/s/1/0', 6500],
-  ['S-02 +128% count-up', '#/s/2/0', 2500],
-  ['S-03 155 hospitals light up', '#/s/3/1', 5000],
-  ['S-05 split-flap', '#/s/5/1', 2000],
-  ['S-06 four count-ups', '#/s/6/0', 4000],
-  ['S-07 map + 15 arcs', '#/s/7/0', 9000],
-  ['S-08 three marquees', '#/s/8/0', 3000],
-  ['S-10 fifty drifting dots', '#/s/10/0', 3000],
-  ['S-11 hospitals on the line', '#/s/11/1', 4000],
-  ['S-11 reach rings', '#/s/11/2', 3500],
-  ['S-12 pin drop + prints', '#/s/12/1', 3500],
-  ['S-12 ACHIEVED stamp', '#/s/12/0', 2000],
-  ['S-13 dots sort into tiers', '#/s/13/0', 4800],
-  ['S-14 piles drive down', '#/s/14/0', 5000],
-  ['S-15 converge + pulses', '#/s/15/0', 3000],
-  ['S-16 timeline + stamps', '#/s/16/0', 4000],
-  ['S-17 width-axis headline', '#/s/17/0', 3000],
-  ['S-18 strike-through', '#/s/18/1', 2500],
+  moment('cold-open', 0, 'title + blueprint draw', 6500),
+  moment('three-forces', 0, '+128% count-up', 2500),
+  moment('how-we-led-it', 1, 'split-flap', 2000),
+  moment('results', 0, 'four count-ups', 4000),
+  moment('where-weve-taught', 0, 'map + 15 arcs', 9000),
+  moment('portfolio', 0, 'three marquees', 3000),
+  moment('the-gap', 0, 'fifty drifting dots', 3000),
+  moment('national-picture', 1, '155 hospitals light up', 6500),
+  moment('vision-2028', 1, 'hospitals on the line', 4000),
+  moment('vision-2028', 2, 'reach rings', 3500),
+  moment('roadmap', 1, 'pin drop + prints', 3500),
+  moment('roadmap', 0, 'ACHIEVED stamp', 2000),
+  moment('phase-registry', 0, 'dots sort into tiers', 4800),
+  moment('phase-foundations', 0, 'piles drive down', 5000),
+  moment('command-centre', 0, 'converge + pulses', 3000),
+  moment('command-centre-build', 0, 'timeline + stamps', 4000),
+  moment('predict-and-scale', 0, 'width-axis headline', 3000),
+  moment('lesson-and-close', 1, 'strike-through', 2500),
 ]
 
 const browser = await chromium.launch()

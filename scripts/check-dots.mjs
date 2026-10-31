@@ -13,6 +13,14 @@ import { chromium } from 'playwright'
 import { createServer } from 'node:http'
 import { readFileSync } from 'node:fs'
 import { DOTS, streamPosition, tierPosition } from '../src/kit/dots.ts'
+import { SCENES } from '../src/content/scenes.ts'
+
+/** Sheet number by scene id, so reordering sheets cannot break this test. */
+const sheetOf = (id) => SCENES.findIndex((s) => s.id === id) + 1
+const GAP = sheetOf('the-gap')
+const REGISTRY = sheetOf('phase-registry')
+const COMMAND = sheetOf('command-centre')
+const label = (n) => `S-${String(n).padStart(2, '0')}`
 
 const HTML = readFileSync('dist-single/index.html')
 const server = createServer((_, res) => {
@@ -22,7 +30,7 @@ const server = createServer((_, res) => {
 
 const browser = await chromium.launch()
 const page = await browser.newPage({ viewport: { width: 1920, height: 1080 } })
-await page.goto('http://localhost:4460/#/s/10/0')
+await page.goto(`http://localhost:4460/#/s/${GAP}/0`)
 await page.waitForSelector('.stage')
 
 const SCATTER = DOTS.map((d) => [d.x, d.y])
@@ -57,20 +65,21 @@ const go = async (sheet, rootSel, r, label, mountExpect, settleExpect, settleMs)
 }
 
 console.log('forwards')
-await go(10, '.s08', 7, 'S-10 gap       ', SCATTER, SCATTER, 800)
-await go(13, '.pr', 7, 'S-13 registry  ', SCATTER, TIERS, 4600)
-await go(15, '.s10', 6, 'S-15 command   ', TIERS, STREAMS, 3200)
+await go(GAP, '.s08', 7, `${label(GAP)} gap       `, SCATTER, SCATTER, 800)
+await go(REGISTRY, '.pr', 7, `${label(REGISTRY)} registry  `, SCATTER, TIERS, 4600)
+await go(COMMAND, '.s10', 6, `${label(COMMAND)} command   `, TIERS, STREAMS, 3200)
 
 console.log('backwards')
-await go(13, '.pr', 7, 'S-13 registry  ', SCATTER, TIERS, 4600)
-await go(10, '.s08', 7, 'S-10 gap       ', SCATTER, SCATTER, 800)
+await go(REGISTRY, '.pr', 7, `${label(REGISTRY)} registry  `, SCATTER, TIERS, 4600)
+await go(GAP, '.s08', 7, `${label(GAP)} gap       `, SCATTER, SCATTER, 800)
 
 // A direct jump skips the sheets in between and must still be consistent.
-console.log('direct jump 10 → 15')
-await go(15, '.s10', 6, 'S-15 command   ', TIERS, STREAMS, 3200)
+console.log(`direct jump ${GAP} → ${COMMAND}`)
+await go(COMMAND, '.s10', 6, `${label(COMMAND)} command   `, TIERS, STREAMS, 3200)
 
-// The parked sheets (11, 12, 14) draw no dots at all.
-for (const [n, sel] of [[11, '.v28'], [12, '.rm'], [14, '.pf']]) {
+// The parked sheets draw no dots at all.
+for (const [id, sel] of [['national-picture', '.np'], ['vision-2028', '.v28'], ['roadmap', '.rm'], ['phase-foundations', '.pf']]) {
+  const n = sheetOf(id)
   await page.evaluate((s) => { location.hash = `#/s/${s}/0` }, n)
   await page.waitForSelector(sel, { timeout: 8000 })
   await page.waitForTimeout(500)

@@ -3,7 +3,6 @@ import type { SceneId } from '../content/scenes.ts'
 
 import { S01ColdOpen } from './S01ColdOpen.tsx'
 import { S02ThreeForces } from './S02ThreeForces.tsx'
-import { NationalPicture } from './NationalPicture.tsx'
 import { S03AheadOfMandate } from './S03AheadOfMandate.tsx'
 import { S04HowWeLedIt } from './S04HowWeLedIt.tsx'
 import { S05Results } from './S05Results.tsx'
@@ -11,6 +10,7 @@ import { WhereTaught } from './WhereTaught.tsx'
 import { S06Portfolio } from './S06Portfolio.tsx'
 import { S07Innovathon } from './S07Innovathon.tsx'
 import { S08TheGap } from './S08TheGap.tsx'
+import { NationalPicture } from './NationalPicture.tsx'
 import { Vision2028 } from './Vision2028.tsx'
 import { Roadmap } from './Roadmap.tsx'
 import { PhaseRegistry } from './PhaseRegistry.tsx'
@@ -32,7 +32,6 @@ export interface SceneProps {
 export const SCENE_COMPONENTS: Record<SceneId, ComponentType<SceneProps>> = {
   'cold-open': S01ColdOpen,
   'three-forces': S02ThreeForces,
-  'national-picture': NationalPicture,
   'ahead-of-mandate': S03AheadOfMandate,
   'how-we-led-it': S04HowWeLedIt,
   results: S05Results,
@@ -40,6 +39,7 @@ export const SCENE_COMPONENTS: Record<SceneId, ComponentType<SceneProps>> = {
   portfolio: S06Portfolio,
   innovathon: S07Innovathon,
   'the-gap': S08TheGap,
+  'national-picture': NationalPicture,
   'vision-2028': Vision2028,
   roadmap: Roadmap,
   'phase-registry': PhaseRegistry,

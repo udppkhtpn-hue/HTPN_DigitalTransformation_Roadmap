@@ -5,7 +5,7 @@ leaders (Microsoft, Grab, Shopee) at the Executive Digital Leadership Programme.
 Speaker: Dr Ferwahn Fairis bin Ab Karim, Acting Deputy Director, Hospital Tengku
 Permaisuri Norashikin (HTPN), Kajang, Ministry of Health Malaysia.
 
-18 sheets · 40 clicker presses · planned 9:00 against a 5:00 slot
+18 sheets · 40 clicker presses · planned 9:20 against a 5:00 slot
 
 ## Ground rules for this deck
 
@@ -50,25 +50,7 @@ footer: Change fails when it is delegated. It succeeds when it is led.
 
 Script — Three forces made this necessary. Pressure: beds are full, staff are tired, and this June our dengue admissions rose a hundred and twenty-eight percent. Vendor lock-in: procurement is too slow for problems that change every month. And opportunity: for the first time, clinicians can build real tools in weeks. The limit is no longer technology. It's leadership.
 
-### S-03 The national picture
-3 presses · 30s · 76 words spoken (152 wpm)
-
-On screen —
-heading: 135 of 155 hospitals are still manual.
-total: value: 155; label: MOH hospitals
-withThis: value: 20; label: have THIS, the Total Hospital Information System
-manual: value: 135; label: still manual
-rollout: caption: THIS rollout target, hospitals added each year; years:
-    - year: 2026; add: 16
-    - year: 2027; add: 26
-    - year: 2028; add: 44
-    - year: 2029; add: 49
-budget: amount: RM 1 billion; label: budget for THIS
-depth: line: Even in hospitals that have THIS, it did not cover the whole work process.; foundAt: We found it at; sites: Hospital Cyberjaya · Hospital Port Dickson · WCC, HTPN Kajang; closer: Which is why the apps are useful.
-
-Script — The Ministry runs a hundred and fifty-five hospitals. Twenty have the Total Hospital Information System, THIS. A hundred and thirty-five are still manual. THIS is rolling out: sixteen hospitals this year, then twenty-six, forty-four and forty-nine, on a budget of one billion ringgit. Even where it is live, it did not cover the whole work process. We found that at Hospital Cyberjaya, Hospital Port Dickson and our own WCC. Which is why these apps are useful.
-
-### S-04 Ahead of the mandate
+### S-03 Ahead of the mandate
 2 presses · 20s · 45 words spoken (135 wpm)
 
 On screen —
@@ -81,7 +63,7 @@ tags: data sovereignty · access to source code · civil service talent
 
 Script — In June this year, the Prime Minister directed that all government digital services be built in-house, for data sovereignty, source code access and civil service talent. We started fourteen months earlier. We weren't reacting to the policy. We were already a working example of it.
 
-### S-05 How we led it
+### S-04 How we led it
 2 presses · 25s · 55 words spoken (132 wpm)
 
 On screen —
@@ -95,7 +77,7 @@ flip: from: 85% outsourced; to: 85% insourced; caption: DBS Bank's shift. Our be
 
 Script — We ran this as a change programme, not an IT project. Leaders learned first, so we had credibility. We wrote our own syllabus, and everyone leaves having built something. We chose small, visible quick wins. And we celebrated the builders. Our benchmark was DBS Bank, which moved from eighty-five percent outsourced to eighty-five percent insourced.
 
-### S-06 Results
+### S-05 Results
 1 press · 25s · 34 words spoken (82 wpm)
 
 On screen —
@@ -108,7 +90,7 @@ footnote: Figures as of October 2026.
 
 Script — Eighteen months in: more than thirteen hundred staff trained, more than fifty apps in daily use, thirty-five workshops, fifteen of them because other hospitals and services invited us. And zero ringgit in software licences.
 
-### S-07 Where we've taught
+### S-06 Where we've taught
 2 presses · 35s · 75 words spoken (129 wpm)
 
 On screen —
@@ -119,7 +101,7 @@ legendAdopted: cyan ring = runs a tool built on our model
 
 Script — And then people started inviting us. Fifteen sessions in twelve months: hospitals, community groups, and whole national services. Northern, central and southern O&G. Family Medicine. Medical Services. From Alor Setar to Johor Bahru, and across the sea to Kuching. Five of those were in the last two months alone. And here's what happened next. The hospitals we taught started building their own tools, in Marudi, Sri Aman, Mukah, Penang and Johor. We taught. They built.
 
-### S-08 The portfolio
+### S-07 The portfolio
 1 press · 20s · 45 words spoken (135 wpm)
 
 On screen —
@@ -132,7 +114,7 @@ line: Built by clinicians, for clinicians.
 
 Script — These are real tools, used daily: theatre scheduling, an AI blood-loss estimator, an emergency department dashboard. And some of them weren't built by us. They were built by hospitals in Penang, Johor and Sarawak that learned our model. Scan the code and look for yourself.
 
-### S-09 Innovathon
+### S-08 Innovathon
 2 presses · 60s · 36 words spoken (36 wpm)
 
 On screen —
@@ -151,7 +133,7 @@ url: https://udppkhtpn-hue.github.io/innovathon2026/
 
 Script — In July we took it national. Innovathon 2026: two hundred delegates, twenty-eight finalists, thirteen judges from industry, academia and government, some of them in this room. Several winners came from other hospitals that adopted our model.
 
-### S-10 The gap
+### S-09 The gap
 2 presses · 25s · 55 words spoken (132 wpm)
 
 On screen —
@@ -165,6 +147,24 @@ gaps:
 lens: MIT CISR lens: strong shared insights, a growing developer community; weak operational backbone and accountability.
 
 Script — But success created a new problem, one you'll all recognise. Fifty apps is not one hospital. Our tools sit on separate spreadsheets. Many depend on a single builder. Governance hasn't caught up, and we lack the evidence to know what to scale. In MIT's terms, we have the community. We don't yet have the backbone.
+
+### S-10 The national picture
+3 presses · 50s · 122 words spoken (146 wpm)
+
+On screen —
+heading: 135 of 155 hospitals are still manual.
+total: value: 155; label: MOH hospitals
+withThis: value: 20; label: have THIS, the Total Hospital Information System
+manual: value: 135; label: still manual
+rollout: caption: THIS rollout target, hospitals added each year; years:
+    - year: 2026; add: 16
+    - year: 2027; add: 26
+    - year: 2028; add: 44
+    - year: 2029; add: 49
+budget: amount: RM 1 billion; label: budget for THIS
+depth: line: Even in hospitals that have THIS, it did not cover the whole work process.; foundAt: We found it at; sites: Hospital Cyberjaya · Hospital Port Dickson · WCC, HTPN Kajang; closer: Our apps fill the gaps around it.
+
+Script — Now zoom out from our hospital to the whole country. The Ministry runs a hundred and fifty-five hospitals. Twenty have THIS, the Total Hospital Information System. A hundred and thirty-five are still manual. THIS is coming: sixteen hospitals this year, then twenty-six, forty-four and forty-nine, on a budget of one billion ringgit. That's the right investment, and we're not competing with it. But even where THIS is live, it doesn't cover the whole work process. We saw that ourselves at Hospital Cyberjaya, at Port Dickson, and in our own Women and Child Centre. So our apps fill two gaps: the years before THIS arrives, and the work it was never designed to cover. And that's why our roadmap can't stop at Kajang.
 
 ### S-11 Vision 2028
 4 presses · 40s · 94 words spoken (141 wpm)
@@ -209,7 +209,7 @@ enablers: people · process · technology · data · governance · funding and p
 
 Script — So the roadmap runs on two tracks. One is HTPN as the lighthouse; the other is KKM, scaling what travels. Phase one is everything you've just seen: we started before the mandate, trained thirteen hundred staff, built fifty apps, and other hospitals now run our model. Phase two has already started. On the nineteenth of October, twenty of our Innovathon builders learned how to protect their work as intellectual property and prepare for the KKM Innovation Carnival. Phase three governs what we've built, and tags every app by how far it can travel. Phase four builds our Command Centre and, in parallel, packages patient-journey apps for other hospitals. Phase five is a playbook for every hospital type in the Ministry.
 
-Presenter cues (not on screen) — Phase 1 in full, from sheets 4 to 9. Started April 2025, fourteen months before the Cabinet directive of 5 June 2026. Leaders learned first (Monash, EDLP with MIT Sloan and ASB, LSE); our own syllabus, so everyone leaves having built something; quick wins shipped in weeks; a national Innovathon to reward the builders. 1,300+ staff trained, 50+ in-house apps in active use, 35+ workshops (15 by external invitation), RM0 software licensing. Innovathon 2026, 21 July: 200 delegates, 28 finalists, 9 winners, 13 external judges, covered by BERNAMA. Done when. Phase 3: every tool is registered, owned, and tagged by reach. Phase 4: the Command Centre is used daily and flow beats baseline, and at least one general app runs at another KKM hospital. Phase 5: other KKM sites adopt it.
+Presenter cues (not on screen) — Phase 1 in full, from sheets 3 to 8. Started April 2025, fourteen months before the Cabinet directive of 5 June 2026. Leaders learned first (Monash, EDLP with MIT Sloan and ASB, LSE); our own syllabus, so everyone leaves having built something; quick wins shipped in weeks; a national Innovathon to reward the builders. 1,300+ staff trained, 50+ in-house apps in active use, 35+ workshops (15 by external invitation), RM0 software licensing. Innovathon 2026, 21 July: 200 delegates, 28 finalists, 9 winners, 13 external judges, covered by BERNAMA. Done when. Phase 3: every tool is registered, owned, and tagged by reach. Phase 4: the Command Centre is used daily and flow beats baseline, and at least one general app runs at another KKM hospital. Phase 5: other KKM sites adopt it.
 
 ### S-13 Phase 3: the registry
 2 presses · 30s · 69 words spoken (138 wpm)
@@ -297,11 +297,11 @@ Script — Here's the lesson for me as a leader. Phase one was won through cultu
 
 ## Totals
 
-1170 words spoken · 9:00 planned · 40 presses
+1216 words spoken · 9:20 planned · 40 presses
 
 ## Known open points
 
-- Planned running time is 9:00 against a 5:00 slot, 4:00 over.
+- Planned running time is 9:20 against a 5:00 slot, 4:20 over.
 - Fastest-spoken sheets: S-12 (180 wpm), S-16 (176 wpm), S-01 (168 wpm).
-- S-09 plays a reel that runs longer than its script; it sits on its own press and can be cut short by advancing early.
+- S-08 plays a reel that runs longer than its script; it sits on its own press and can be cut short by advancing early.
 - S-12: some lines did not fit on the sheet at 28px and live in the presenter cues, not on screen.

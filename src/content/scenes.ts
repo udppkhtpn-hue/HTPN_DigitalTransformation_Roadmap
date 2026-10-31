@@ -12,7 +12,6 @@
 export type SceneId =
   | 'cold-open'
   | 'three-forces'
-  | 'national-picture'
   | 'ahead-of-mandate'
   | 'how-we-led-it'
   | 'results'
@@ -20,6 +19,7 @@ export type SceneId =
   | 'portfolio'
   | 'innovathon'
   | 'the-gap'
+  | 'national-picture'
   | 'vision-2028'
   | 'roadmap'
   | 'phase-registry'
@@ -215,7 +215,6 @@ export interface LessonAndClose {
 export type Scene =
   | (Base & { id: 'cold-open'; content: ColdOpen })
   | (Base & { id: 'three-forces'; content: ThreeForces })
-  | (Base & { id: 'national-picture'; content: NationalPicture })
   | (Base & { id: 'ahead-of-mandate'; content: AheadOfMandate })
   | (Base & { id: 'how-we-led-it'; content: HowWeLedIt })
   | (Base & { id: 'results'; content: Results })
@@ -223,6 +222,7 @@ export type Scene =
   | (Base & { id: 'portfolio'; content: Portfolio })
   | (Base & { id: 'innovathon'; content: Innovathon })
   | (Base & { id: 'the-gap'; content: TheGap })
+  | (Base & { id: 'national-picture'; content: NationalPicture })
   | (Base & { id: 'vision-2028'; content: Vision2028 })
   | (Base & { id: 'roadmap'; content: Roadmap })
   | (Base & { id: 'phase-registry'; content: PhaseRegistry })
@@ -281,40 +281,8 @@ export const SCENES: Scene[] = [
   },
 
   {
-    id: 'national-picture',
-    sheet: 'S-03',
-    title: 'The national picture',
-    steps: 3,
-    moment: 0,
-    seconds: 30,
-    content: {
-      heading: '135 of 155 hospitals are still manual.',
-      total: { value: 155, label: 'MOH hospitals' },
-      withThis: { value: 20, label: 'have THIS, the Total Hospital Information System' },
-      manual: { value: 135, label: 'still manual' },
-      rollout: {
-        caption: 'THIS rollout target, hospitals added each year',
-        years: [
-          { year: '2026', add: 16 },
-          { year: '2027', add: 26 },
-          { year: '2028', add: 44 },
-          { year: '2029', add: 49 },
-        ],
-      },
-      budget: { amount: 'RM 1 billion', label: 'budget for THIS' },
-      depth: {
-        line: 'Even in hospitals that have THIS, it did not cover the whole work process.',
-        foundAt: 'We found it at',
-        sites: ['Hospital Cyberjaya', 'Hospital Port Dickson', 'WCC, HTPN Kajang'],
-        closer: 'Which is why the apps are useful.',
-      },
-    },
-    notes: `The Ministry runs a hundred and fifty-five hospitals. Twenty have the Total Hospital Information System, THIS. A hundred and thirty-five are still manual. THIS is rolling out: sixteen hospitals this year, then twenty-six, forty-four and forty-nine, on a budget of one billion ringgit. Even where it is live, it did not cover the whole work process. We found that at Hospital Cyberjaya, Hospital Port Dickson and our own WCC. Which is why these apps are useful.`,
-  },
-
-  {
     id: 'ahead-of-mandate',
-    sheet: 'S-04',
+    sheet: 'S-03',
     title: 'Ahead of the mandate',
     steps: 2,
     moment: 1,
@@ -344,7 +312,7 @@ export const SCENES: Scene[] = [
 
   {
     id: 'how-we-led-it',
-    sheet: 'S-05',
+    sheet: 'S-04',
     title: 'How we led it',
     steps: 2,
     moment: 1,
@@ -374,7 +342,7 @@ export const SCENES: Scene[] = [
 
   {
     id: 'results',
-    sheet: 'S-06',
+    sheet: 'S-05',
     title: 'Results',
     steps: 1,
     moment: 0,
@@ -398,7 +366,7 @@ export const SCENES: Scene[] = [
 
   {
     id: 'where-weve-taught',
-    sheet: 'S-07',
+    sheet: 'S-06',
     title: "Where we've taught",
     steps: 2,
     moment: 0,
@@ -414,7 +382,7 @@ export const SCENES: Scene[] = [
 
   {
     id: 'portfolio',
-    sheet: 'S-08',
+    sheet: 'S-07',
     title: 'The portfolio',
     steps: 1,
     moment: 0,
@@ -469,7 +437,7 @@ export const SCENES: Scene[] = [
 
   {
     id: 'innovathon',
-    sheet: 'S-09',
+    sheet: 'S-08',
     title: 'Innovathon',
     steps: 2,
     moment: 1,
@@ -501,7 +469,7 @@ export const SCENES: Scene[] = [
 
   {
     id: 'the-gap',
-    sheet: 'S-10',
+    sheet: 'S-09',
     title: 'The gap',
     steps: 2,
     moment: 1,
@@ -524,6 +492,38 @@ export const SCENES: Scene[] = [
       lens: 'MIT CISR lens: strong shared insights, a growing developer community; weak operational backbone and accountability.',
     },
     notes: `But success created a new problem, one you'll all recognise. Fifty apps is not one hospital. Our tools sit on separate spreadsheets. Many depend on a single builder. Governance hasn't caught up, and we lack the evidence to know what to scale. In MIT's terms, we have the community. We don't yet have the backbone.`,
+  },
+
+  {
+    id: 'national-picture',
+    sheet: 'S-10',
+    title: 'The national picture',
+    steps: 3,
+    moment: 0,
+    seconds: 50,
+    content: {
+      heading: '135 of 155 hospitals are still manual.',
+      total: { value: 155, label: 'MOH hospitals' },
+      withThis: { value: 20, label: 'have THIS, the Total Hospital Information System' },
+      manual: { value: 135, label: 'still manual' },
+      rollout: {
+        caption: 'THIS rollout target, hospitals added each year',
+        years: [
+          { year: '2026', add: 16 },
+          { year: '2027', add: 26 },
+          { year: '2028', add: 44 },
+          { year: '2029', add: 49 },
+        ],
+      },
+      budget: { amount: 'RM 1 billion', label: 'budget for THIS' },
+      depth: {
+        line: 'Even in hospitals that have THIS, it did not cover the whole work process.',
+        foundAt: 'We found it at',
+        sites: ['Hospital Cyberjaya', 'Hospital Port Dickson', 'WCC, HTPN Kajang'],
+        closer: 'Our apps fill the gaps around it.',
+      },
+    },
+    notes: `Now zoom out from our hospital to the whole country. The Ministry runs a hundred and fifty-five hospitals. Twenty have THIS, the Total Hospital Information System. A hundred and thirty-five are still manual. THIS is coming: sixteen hospitals this year, then twenty-six, forty-four and forty-nine, on a budget of one billion ringgit. That's the right investment, and we're not competing with it. But even where THIS is live, it doesn't cover the whole work process. We saw that ourselves at Hospital Cyberjaya, at Port Dickson, and in our own Women and Child Centre. So our apps fill two gaps: the years before THIS arrives, and the work it was never designed to cover. And that's why our roadmap can't stop at Kajang.`,
   },
 
   {
@@ -654,7 +654,7 @@ export const SCENES: Scene[] = [
       ],
     },
     cues:
-      "Phase 1 in full, from sheets 4 to 9. Started April 2025, fourteen months before the Cabinet directive of 5 June 2026. Leaders learned first (Monash, EDLP with MIT Sloan and ASB, LSE); our own syllabus, so everyone leaves having built something; quick wins shipped in weeks; a national Innovathon to reward the builders. 1,300+ staff trained, 50+ in-house apps in active use, 35+ workshops (15 by external invitation), RM0 software licensing. Innovathon 2026, 21 July: 200 delegates, 28 finalists, 9 winners, 13 external judges, covered by BERNAMA. Done when. Phase 3: every tool is registered, owned, and tagged by reach. Phase 4: the Command Centre is used daily and flow beats baseline, and at least one general app runs at another KKM hospital. Phase 5: other KKM sites adopt it.",
+      "Phase 1 in full, from sheets 3 to 8. Started April 2025, fourteen months before the Cabinet directive of 5 June 2026. Leaders learned first (Monash, EDLP with MIT Sloan and ASB, LSE); our own syllabus, so everyone leaves having built something; quick wins shipped in weeks; a national Innovathon to reward the builders. 1,300+ staff trained, 50+ in-house apps in active use, 35+ workshops (15 by external invitation), RM0 software licensing. Innovathon 2026, 21 July: 200 delegates, 28 finalists, 9 winners, 13 external judges, covered by BERNAMA. Done when. Phase 3: every tool is registered, owned, and tagged by reach. Phase 4: the Command Centre is used daily and flow beats baseline, and at least one general app runs at another KKM hospital. Phase 5: other KKM sites adopt it.",
     notes: `So the roadmap runs on two tracks. One is HTPN as the lighthouse; the other is KKM, scaling what travels. Phase one is everything you've just seen: we started before the mandate, trained thirteen hundred staff, built fifty apps, and other hospitals now run our model. Phase two has already started. On the nineteenth of October, twenty of our Innovathon builders learned how to protect their work as intellectual property and prepare for the KKM Innovation Carnival. Phase three governs what we've built, and tags every app by how far it can travel. Phase four builds our Command Centre and, in parallel, packages patient-journey apps for other hospitals. Phase five is a playbook for every hospital type in the Ministry.`,
   },
 
