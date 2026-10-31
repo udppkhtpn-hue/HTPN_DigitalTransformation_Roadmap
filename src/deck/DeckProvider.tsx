@@ -164,6 +164,17 @@ export function DeckProvider({ children }: { children: ReactNode }) {
           e.preventDefault()
           setBlackout((v) => !v)
           break
+        case '[':
+        case ']': {
+          // Trim the bed live: the right level depends on the room's PA,
+          // which you only find out once you are standing in it.
+          e.preventDefault()
+          const d = k === ']' ? 0.05 : -0.05
+          document.querySelectorAll('video').forEach((v) => {
+            v.volume = Math.min(1, Math.max(0, Math.round((v.volume + d) * 100) / 100))
+          })
+          break
+        }
         case 'm':
         case 'M':
           e.preventDefault()

@@ -16,6 +16,8 @@ interface Props {
   frameVisible?: boolean
   /** Play with sound. Falls back to muted if the browser refuses. */
   sound?: boolean
+  /** Level for that sound. It sits under a speaking voice, not beside it. */
+  volume?: number
   /** Compensates when a CSS transform scales the whole element down. */
   strokeWidth?: number
   className?: string
@@ -42,6 +44,7 @@ export function SheetVideo({
   startDelay,
   frameVisible = true,
   sound = false,
+  volume = 0.3,
   strokeWidth = 1,
   className,
 }: Props) {
@@ -61,6 +64,7 @@ export function SheetVideo({
         // Always start muted: that is the only form of autoplay no browser
         // blocks. Unmute immediately afterwards if sound was asked for.
         v.muted = true
+        v.volume = volume
         await v.play()
         if (!sound) return
         v.muted = false
@@ -78,7 +82,7 @@ export function SheetVideo({
       }
     }, start * 1000)
     return () => clearTimeout(t)
-  }, [start, reduced, sound])
+  }, [start, reduced, sound, volume])
 
   return (
     <motion.div
