@@ -164,6 +164,15 @@ export function DeckProvider({ children }: { children: ReactNode }) {
           e.preventDefault()
           setBlackout((v) => !v)
           break
+        case 'm':
+        case 'M':
+          e.preventDefault()
+          document
+            .querySelectorAll('video')
+            .forEach((v) => {
+              v.muted = !v.muted
+            })
+          break
         case 'n':
         case 'N':
           e.preventDefault()

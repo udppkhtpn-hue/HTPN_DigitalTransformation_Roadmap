@@ -14,6 +14,8 @@ interface Props {
   startDelay?: number
   /** The drawn frame, faded out once the video stops being an object. */
   frameVisible?: boolean
+  /** Play with sound. Falls back to muted if the browser refuses. */
+  sound?: boolean
   /** Compensates when a CSS transform scales the whole element down. */
   strokeWidth?: number
   className?: string
@@ -39,6 +41,7 @@ export function SheetVideo({
   delay = 0,
   startDelay,
   frameVisible = true,
+  sound = false,
   strokeWidth = 1,
   className,
 }: Props) {
@@ -53,13 +56,29 @@ export function SheetVideo({
     // Belt and braces: the autoPlay attribute covers the normal mount, and
     // this covers the case where the element mounts mid-session and the
     // attribute is ignored. Muted means neither is ever blocked.
-    const t = setTimeout(() => {
-      v.play().catch(() => {
+    const t = setTimeout(async () => {
+      try {
+        // Always start muted: that is the only form of autoplay no browser
+        // blocks. Unmute immediately afterwards if sound was asked for.
+        v.muted = true
+        await v.play()
+        if (!sound) return
+        v.muted = false
+        // Chrome pauses a video that unmutes without user activation. By
+        // S-07 a clicker press has already provided it, but if this deck is
+        // ever opened straight onto the sheet, fall back to silent playback
+        // rather than no playback.
+        await new Promise((r) => setTimeout(r, 60))
+        if (v.paused) {
+          v.muted = true
+          await v.play().catch(() => {})
+        }
+      } catch {
         /* a paused poster frame is an acceptable outcome, not a failure */
-      })
+      }
     }, start * 1000)
     return () => clearTimeout(t)
-  }, [start, reduced])
+  }, [start, reduced, sound])
 
   return (
     <motion.div
