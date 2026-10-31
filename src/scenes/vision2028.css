@@ -1,0 +1,70 @@
+.v28 { position: absolute; inset: 0; padding: 0; }
+
+.v28__layer { position: absolute; inset: 0; }
+
+.v28__head {
+  position: absolute; top: 112px; left: 200px; margin: 0;
+  font-size: 100px; line-height: 1; letter-spacing: -0.025em; color: var(--chalk);
+}
+
+/* The vision is the human sentence, so it is the serif. Four fixed lines
+   that never re-wrap while the size animates. */
+.v28__vision {
+  position: absolute; top: 252px; left: 200px; margin: 0;
+  font-family: var(--font-human);
+  font-size: 40px; line-height: 1.2; color: var(--chalk);
+  white-space: nowrap;
+}
+.v28__vline { display: block; }
+
+.v28__hosp {
+  position: absolute; top: 626px;
+  display: flex; flex-direction: column; gap: 4px;
+}
+.v28__hosp-type {
+  font-size: 34px; line-height: 1.12; color: var(--chalk);
+  font-variation-settings: 'wght' 600, 'wdth' 92;
+}
+.v28__hosp-detail {
+  font-size: var(--t-dim); line-height: 1.25; color: var(--line);
+  font-variation-settings: 'wght' 400, 'wdth' 92;
+}
+
+.v28__caption {
+  position: absolute; left: 200px; top: 790px;
+  font-size: 58px; line-height: 1; color: var(--chalk); letter-spacing: -0.015em;
+}
+
+.v28__marker {
+  position: absolute; transform: translateX(-50%);
+  font-family: var(--font-mono); font-size: var(--t-dim); color: var(--chalk);
+  letter-spacing: 0.04em;
+}
+
+.v28__ring { position: absolute; display: flex; flex-direction: column; gap: 6px; }
+.v28__ring-name {
+  font-size: 36px; line-height: 1.1; color: var(--chalk);
+  font-variation-settings: 'wght' 600, 'wdth' 92;
+}
+.v28__ring-body {
+  font-size: var(--t-dim); line-height: 1.28; color: var(--line);
+  font-variation-settings: 'wght' 400, 'wdth' 90;
+}
+
+.v28__footer {
+  position: absolute; left: 200px; top: 590px; margin: 0;
+  font-family: var(--font-human); font-style: italic;
+  font-size: 54px; line-height: 1.1; color: var(--signal);
+}
+
+.v28__obj { position: absolute; display: flex; flex-direction: column; gap: 2px; }
+.v28__obj-verb { font-size: 50px; line-height: 1.05; color: var(--chalk); }
+.v28__obj-rest {
+  font-size: var(--t-dim); line-height: 1.25; color: var(--chalk);
+  font-variation-settings: 'wght' 400, 'wdth' 92;
+}
+.v28__obj-note {
+  margin-top: 4px;
+  font-size: var(--t-dim); line-height: 1.25; color: var(--line);
+  font-variation-settings: 'wght' 400, 'wdth' 90;
+}

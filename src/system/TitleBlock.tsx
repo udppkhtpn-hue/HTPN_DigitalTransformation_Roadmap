@@ -18,13 +18,13 @@ interface Props {
 export function TitleBlock({ sheet, title, total }: Props) {
   return (
     <div className="tblock">
-      <svg className="tblock__frame" viewBox="0 0 560 154" aria-hidden="true">
+      <svg className="tblock__frame" viewBox="0 0 600 154" aria-hidden="true">
         {/* Redrawn on every scene change — `key` restarts the draw. */}
         <motion.rect
           key={sheet}
           x="0.5"
           y="0.5"
-          width="559"
+          width="599"
           height="153"
           fill="none"
           stroke="var(--line)"
@@ -36,7 +36,7 @@ export function TitleBlock({ sheet, title, total }: Props) {
         <line
           x1="0"
           y1="52"
-          x2="560"
+          x2="600"
           y2="52"
           stroke="var(--line)"
           strokeWidth="1"

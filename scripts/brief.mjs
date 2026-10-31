@@ -59,7 +59,7 @@ out.push(`only for the dengue figure. Numbers arrive as dimensions on a drawing 
 out.push(`stat cards. A title block bottom-right carries the sheet number instead of a`)
 out.push(`progress bar. One orchestrated animation per sheet; everything else holds still.`)
 out.push(``)
-out.push(`## The twelve sheets`)
+out.push(`## The ${SHEET_COUNT} sheets`)
 out.push(``)
 
 for (const s of SCENES) {
@@ -71,6 +71,10 @@ for (const s of SCENES) {
   out.push(flat(s.content))
   out.push(``)
   out.push(`Script — ${s.notes}`)
+  if (s.cues) {
+    out.push(``)
+    out.push(`Presenter cues (not on screen) — ${s.cues}`)
+  }
   out.push(``)
 }
 
@@ -80,12 +84,17 @@ out.push(`${SCENES.reduce((n, s) => n + words(s.notes), 0)} words spoken · ${mm
 out.push(``)
 out.push(`## Known open points`)
 out.push(``)
-out.push(`- Planned running time is over the 5:00 slot. S-07's reel runs 55.9s against ~20s`)
-out.push(`  of script, so most of the overrun is there; it sits on its own press and can be`)
-out.push(`  cut short by advancing early.`)
-out.push(`- S-01 (168 wpm) and S-12 (160 wpm) are the fastest sheets and are the open and`)
-out.push(`  the close — the two that most need room to breathe.`)
-out.push(`- S-09 phase 1 has no "done when" line; it carries an ACHIEVED stamp instead.`)
+const over = PLANNED_SECONDS - 300
+out.push(`- Planned running time is ${mmss(PLANNED_SECONDS)} against a 5:00 slot${over > 0 ? `, ${mmss(over)} over` : ''}.`)
+const fastest = [...SCENES]
+  .map((s) => ({ s, wpm: Math.round((words(s.notes) / s.seconds) * 60) }))
+  .sort((a, b) => b.wpm - a.wpm)
+  .slice(0, 3)
+out.push(`- Fastest-spoken sheets: ${fastest.map((f) => `${f.s.sheet} (${f.wpm} wpm)`).join(', ')}.`)
+const innov = SCENES.find((s) => s.id === 'innovathon')
+if (innov) out.push(`- ${innov.sheet} plays a reel that runs longer than its script; it sits on its own press and can be cut short by advancing early.`)
+const cued = SCENES.filter((s) => s.cues)
+if (cued.length) out.push(`- ${cued.map((s) => s.sheet).join(', ')}: some lines did not fit on the sheet at 28px and live in the presenter cues, not on screen.`)
 out.push(``)
 
 writeFileSync('BRIEF.md', out.join('\n'))

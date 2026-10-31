@@ -19,6 +19,7 @@ export type SceneId =
   | 'portfolio'
   | 'innovathon'
   | 'the-gap'
+  | 'vision-2028'
   | 'roadmap'
   | 'command-centre'
   | 'predict-and-scale'
@@ -42,6 +43,8 @@ interface Base {
   moment: number
   seconds: number
   notes: string
+  /** Seen in the presenter panel only: lines that did not fit on the sheet at 28px. */
+  cues?: string
 }
 
 // ─── Per-scene content ──────────────────────────────────────────────────────
@@ -117,15 +120,36 @@ export interface TheGap {
   lens: string
 }
 
+export interface Vision2028 {
+  vision: string
+  hospitalsCaption: string
+  hospitals: { type: string; detail: string }[]
+  rings: { name: string; body: string }[]
+  footer: string
+  objectives: { verb: string; rest: string; note?: string }[]
+}
+
 export interface Roadmap {
+  rails: { htpn: string; kkm: string }
   phases: {
     n: number
     name: string
     dates: string
     achieved?: boolean
-    body: string
+    htpn: string
+    kkm: string
     doneWhen: string
   }[]
+  /** The pin that drops between Phase 1 and Phase 2. */
+  milestone: {
+    pin: string
+    title: string
+    where: string
+    attendance: string
+    speakers: { name: string; role: string }[]
+    line: string
+    stamp: string
+  }
   enablers: string[]
 }
 
@@ -162,6 +186,7 @@ export type Scene =
   | (Base & { id: 'portfolio'; content: Portfolio })
   | (Base & { id: 'innovathon'; content: Innovathon })
   | (Base & { id: 'the-gap'; content: TheGap })
+  | (Base & { id: 'vision-2028'; content: Vision2028 })
   | (Base & { id: 'roadmap'; content: Roadmap })
   | (Base & { id: 'command-centre'; content: CommandCentre })
   | (Base & { id: 'predict-and-scale'; content: PredictAndScale })
@@ -430,44 +455,115 @@ export const SCENES: Scene[] = [
   },
 
   {
-    id: 'roadmap',
+    id: 'vision-2028',
     sheet: 'S-10',
-    title: 'Roadmap',
+    title: 'Vision 2028',
     steps: 4,
-    moment: 0,
-    seconds: 30,
+    moment: 1,
+    seconds: 40,
     content: {
+      vision:
+        'An intelligent public hospital that sees its patient flow in real time and owns its digital solutions, and a lighthouse whose proven tools any KKM hospital can adopt.',
+      hospitalsCaption: 'One ministry. Very different hospitals.',
+      hospitals: [
+        { type: 'Type 4 district hospital', detail: '30–150 beds' },
+        { type: 'Type 3', detail: 'minor specialty disciplines' },
+        { type: 'Type 2', detail: 'major specialty disciplines' },
+        { type: 'State hospital (Type 1)', detail: '1,000+ beds' },
+      ],
+      rings: [
+        {
+          name: 'Facility-specific',
+          body: "Built for HTPN's own setup. Stays local.",
+        },
+        {
+          name: 'Service- or discipline-specific',
+          body: 'Travels to every hospital running that service (e.g. our O&G tools, already used by the national O&G service).',
+        },
+        {
+          name: 'General',
+          body: 'Patient-journey apps any KKM hospital can use, from district to state.',
+        },
+      ],
+      footer: 'Build locally. Scale what travels.',
+      objectives: [
+        { verb: 'Govern', rest: 'what we build' },
+        { verb: 'Integrate', rest: 'for patient flow' },
+        { verb: 'Prove', rest: 'the value' },
+        { verb: 'Sustain', rest: 'the capability' },
+        {
+          verb: 'Scale',
+          rest: 'what travels',
+          note: '(general and service-specific apps, packaged for any KKM hospital)',
+        },
+      ],
+    },
+    notes: `Before the route, the destination. By 2028 we want two things at once: a hospital that sees its patient flow in real time and owns its own solutions, and a lighthouse other hospitals can learn from. But KKM hospitals are not the same. A district hospital may have thirty beds. A state hospital has more than a thousand. So not every app should travel. Some are built for our setup. Some belong to a discipline, like our O&G tools, already used nationally. And some, like patient-journey apps, work anywhere. Build locally. Scale what travels.`,
+  },
+
+  {
+    id: 'roadmap',
+    sheet: 'S-11',
+    title: 'Roadmap',
+    steps: 5,
+    moment: 1,
+    seconds: 40,
+    content: {
+      rails: { htpn: 'HTPN · the lighthouse', kkm: 'KKM · scale what travels' },
       phases: [
         {
           n: 1,
           name: 'Ignite',
           dates: 'Apr 2025–Jul 2026',
           achieved: true,
-          body: 'Culture and capability proven.',
+          htpn: 'Culture and capability proven: 1,300+ trained, 50+ apps.',
+          kkm: 'Model adopted by Hospital Pulau Pinang, Kepala Batas, Sultanah Aminah, JKN Sarawak and the national O&G, FMS and Internal Medicine services; Innovathon 2026.',
           doneWhen: '',
         },
         {
           n: 2,
           name: 'Consolidate & Govern',
           dates: 'Nov 2026–Jun 2027',
-          body: 'App registry with 3 risk tiers (Experimental / Departmental / Hospital-critical), build lifecycle, PDPA data governance with on-prem AI for sensitive data, impact baselines.',
-          doneWhen: 'every tool is registered and owned',
+          htpn: 'App registry with 3 risk tiers, build lifecycle, PDPA data governance with on-prem AI for sensitive data, impact baselines.',
+          kkm: 'Tag every app by reach (facility, service, general); protect key innovations through MyIPO; enter Karnival Inovasi KKM for national exposure.',
+          doneWhen: 'every tool is registered, owned, and tagged by reach',
         },
         {
           n: 3,
           name: 'Integrate',
           dates: 'Jul 2027–Jun 2028',
-          body: 'HTPN Command Centre.',
-          doneWhen: "it's used daily and flow beats baseline",
+          htpn: 'HTPN Command Centre.',
+          kkm: 'Package general patient-journey apps as configurable templates other hospitals can deploy; service-specific apps offered through their national services.',
+          doneWhen:
+            'the Command Centre is used daily and flow beats baseline, and at least one general app runs at another KKM hospital',
         },
         {
           n: 4,
           name: 'Predict & Scale',
           dates: 'from Jul 2028',
-          body: 'Forecasting, governed clinical AI, KKM-wide playbook.',
+          htpn: 'Forecasting, governed clinical AI.',
+          kkm: 'A hub-and-spoke playbook for every hospital type, from 30-bed district to 1,000-bed state hospital.',
           doneWhen: 'other KKM sites adopt it',
         },
       ],
+      milestone: {
+        pin: '19 Oct 2026',
+        title: 'MyIPO & Innovation Workshop',
+        where: '19 October 2026 · WCC, HTPN Kajang',
+        attendance: '~20 Innovathon participants',
+        speakers: [
+          {
+            name: 'Ts. Mohd Azirudin bin Sahhudin',
+            role: 'Principal Lecturer, Politeknik Port Dickson',
+          },
+          {
+            name: 'Puan Norshariza binti Jamhuri',
+            role: 'Oncology Dietetics Specialist, Hospital Kuala Lumpur',
+          },
+        ],
+        line: 'Protecting our innovations as IP, and preparing entries for Karnival Inovasi KKM.',
+        stamp: 'Follow-up done',
+      },
       enablers: [
         'people',
         'process',
@@ -477,12 +573,14 @@ export const SCENES: Scene[] = [
         'funding and partnerships',
       ],
     },
-    notes: `So here's the roadmap. Phase one is done. Phase two governs what we've built: every tool registered, tiered by risk, with an owner and a backup. Phase three is the flagship: integration. Phase four adds prediction and takes the model across the Ministry. Every phase has a clear test for done.`,
+    cues:
+      'Done when. Phase 2: every tool is registered, owned, and tagged by reach. Phase 3: the Command Centre is used daily and flow beats baseline, and at least one general app runs at another KKM hospital. Phase 4: other KKM sites adopt it.',
+    notes: `So the roadmap runs on two tracks. One is HTPN as the lighthouse; the other is KKM, scaling what travels. Phase one is done, and other hospitals already use our model. And the next step has already started. On the nineteenth of October, twenty of our Innovathon builders learned how to protect their work as intellectual property and prepare for the KKM Innovation Carnival. Phase two governs what we've built, and tags every app by how far it can travel. Phase three builds our Command Centre and, in parallel, packages patient-journey apps for other hospitals. Phase four is a playbook for every hospital type in the Ministry.`,
   },
 
   {
     id: 'command-centre',
-    sheet: 'S-11',
+    sheet: 'S-12',
     title: 'Command Centre',
     steps: 2,
     moment: 0,
@@ -513,7 +611,7 @@ export const SCENES: Scene[] = [
 
   {
     id: 'predict-and-scale',
-    sheet: 'S-12',
+    sheet: 'S-13',
     title: 'Predict and scale',
     steps: 1,
     moment: 0,
@@ -532,7 +630,7 @@ export const SCENES: Scene[] = [
 
   {
     id: 'lesson-and-close',
-    sheet: 'S-13',
+    sheet: 'S-14',
     title: 'Lesson & close',
     steps: 3,
     moment: 1,

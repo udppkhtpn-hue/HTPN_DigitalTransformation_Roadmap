@@ -49,6 +49,8 @@ export function Presenter() {
 
             <p className="pres__notes">{scene.notes}</p>
 
+            {scene.cues && <p className="pres__cues">{scene.cues}</p>}
+
             {next && (
               <p className="pres__next">
                 Next — {next.sheet} {next.title}

@@ -10,7 +10,8 @@ import { WhereTaught } from './WhereTaught.tsx'
 import { S06Portfolio } from './S06Portfolio.tsx'
 import { S07Innovathon } from './S07Innovathon.tsx'
 import { S08TheGap } from './S08TheGap.tsx'
-import { S09Roadmap } from './S09Roadmap.tsx'
+import { Vision2028 } from './Vision2028.tsx'
+import { Roadmap } from './Roadmap.tsx'
 import { S10CommandCentre } from './S10CommandCentre.tsx'
 import { S11PredictAndScale } from './S11PredictAndScale.tsx'
 import { S12LessonAndClose } from './S12LessonAndClose.tsx'
@@ -34,7 +35,8 @@ export const SCENE_COMPONENTS: Record<SceneId, ComponentType<SceneProps>> = {
   portfolio: S06Portfolio,
   innovathon: S07Innovathon,
   'the-gap': S08TheGap,
-  roadmap: S09Roadmap,
+  'vision-2028': Vision2028,
+  roadmap: Roadmap,
   'command-centre': S10CommandCentre,
   'predict-and-scale': S11PredictAndScale,
   'lesson-and-close': S12LessonAndClose,

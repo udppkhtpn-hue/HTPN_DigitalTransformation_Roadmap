@@ -1,0 +1,94 @@
+.rm { position: absolute; inset: 0; padding: 0; }
+
+.rm__col { position: absolute; top: 0; height: 1080px; pointer-events: none; }
+
+.rm__head {
+  position: absolute; top: 118px; left: 0; width: 100%;
+  display: flex; flex-direction: column; gap: 2px;
+}
+.rm__n { font-family: var(--font-mono); font-size: var(--t-dim); color: var(--line); letter-spacing: 0.05em; }
+.rm__head.is-achieved .rm__n { color: var(--signal); }
+.rm__name {
+  font-size: 44px; line-height: 1.08; color: var(--chalk);
+  font-variation-settings: 'wght' 600, 'wdth' 84;
+}
+.rm__dates { font-family: var(--font-mono); font-size: var(--t-dim); color: var(--line); opacity: 0.9; }
+
+.rm__rail {
+  position: absolute; left: 0; width: 100%; margin: 0; padding-left: 22px;
+  font-size: var(--t-dim); line-height: 1.22;
+  font-variation-settings: 'wght' 400, 'wdth' 90;
+}
+.rm__rail--htpn { color: var(--chalk); }
+.rm__rail--kkm { color: var(--line); }
+.rm__rail-name {
+  display: block; margin-bottom: 4px;
+  font-style: normal; font-size: var(--t-dim);
+  font-variation-settings: 'wght' 600, 'wdth' 90; opacity: 0.85;
+}
+
+.rm__stamp {
+  position: absolute; left: 150px; top: 126px;
+  padding: 4px 14px; border: 3px solid var(--signal);
+  font-family: var(--font-mono); font-size: 36px; font-weight: 700;
+  letter-spacing: 0.08em; color: var(--signal); transform-origin: center;
+}
+
+/* ── press 2: the workshop that has already happened ─────────────── */
+.rm__ms { position: absolute; inset: 0; }
+.rm__pin-date {
+  position: absolute; left: 505px; top: 232px;
+  font-family: var(--font-mono); font-size: var(--t-dim); color: var(--signal);
+  letter-spacing: 0.03em; white-space: nowrap;
+}
+
+.rm__print {
+  position: absolute; margin: 0; padding: 8px;
+  background: var(--drafting); border: 1px solid rgba(124, 196, 242, 0.6);
+}
+.rm__print img { display: block; }
+.rm__print--a { left: 756px; top: 204px; }
+.rm__print--b { left: 776px; top: 540px; }
+.rm__clip {
+  position: absolute; left: 50%; top: -12px; width: 64px; height: 20px;
+  margin-left: -32px; border: 1.5px solid var(--line); background: var(--drafting);
+}
+
+.rm__card {
+  position: absolute; left: 1140px; top: 196px; width: 620px;
+  display: flex; flex-direction: column; gap: 10px;
+}
+.rm__card-title {
+  font-size: 44px; line-height: 1.08; color: var(--chalk);
+  font-variation-settings: 'wght' 600, 'wdth' 82;
+  white-space: nowrap;
+}
+.rm__card-where { font-family: var(--font-mono); font-size: var(--t-dim); color: var(--line); }
+.rm__card-att { font-size: var(--t-dim); color: var(--chalk); font-variation-settings: 'wght' 500, 'wdth' 92; }
+.rm__speaker {
+  display: flex; flex-direction: column; margin-top: 8px;
+  font-size: var(--t-dim); line-height: 1.22; color: var(--line);
+  font-variation-settings: 'wght' 400, 'wdth' 90;
+}
+.rm__speaker b { font-size: 32px; font-weight: 400; color: var(--chalk); font-variation-settings: 'wght' 600, 'wdth' 92; }
+.rm__card-line {
+  margin-top: 18px;
+  font-family: var(--font-human); font-size: 42px; line-height: 1.18; color: var(--chalk);
+  text-wrap: balance;
+}
+.rm__done {
+  align-self: flex-start; margin-top: 22px; padding: 4px 16px;
+  border: 2px solid var(--signal);
+  font-family: var(--font-mono); font-size: var(--t-dim); font-weight: 700;
+  letter-spacing: 0.06em; color: var(--signal); transform-origin: left center;
+}
+
+.rm__enablers {
+  position: absolute; left: 200px; top: 836px;
+  display: flex; flex-wrap: wrap; gap: 10px 12px;
+  margin: 0; padding: 0; list-style: none; max-width: 1060px;
+}
+.rm__enablers li {
+  padding: 6px 18px; border: 1px solid rgba(124, 196, 242, 0.4);
+  font-family: var(--font-mono); font-size: var(--t-dim); color: var(--line);
+}

@@ -5,7 +5,7 @@ leaders (Microsoft, Grab, Shopee) at the Executive Digital Leadership Programme.
 Speaker: Dr Ferwahn Fairis bin Ab Karim, Acting Deputy Director, Hospital Tengku
 Permaisuri Norashikin (HTPN), Kajang, Ministry of Health Malaysia.
 
-13 sheets · 26 clicker presses · planned 6:10 against a 5:00 slot
+14 sheets · 31 clicker presses · planned 7:00 against a 5:00 slot
 
 ## Ground rules for this deck
 
@@ -25,7 +25,7 @@ only for the dengue figure. Numbers arrive as dimensions on a drawing rather tha
 stat cards. A title block bottom-right carries the sheet number instead of a
 progress bar. One orchestrated animation per sheet; everything else holds still.
 
-## The twelve sheets
+## The 14 sheets
 
 ### S-01 Cold open
 1 press · 20s · 56 words spoken (168 wpm)
@@ -148,20 +148,51 @@ lens: MIT CISR lens: strong shared insights, a growing developer community; weak
 
 Script — But success created a new problem, one you'll all recognise. Fifty apps is not one hospital. Our tools sit on separate spreadsheets. Many depend on a single builder. Governance hasn't caught up, and we lack the evidence to know what to scale. In MIT's terms, we have the community. We don't yet have the backbone.
 
-### S-10 Roadmap
-4 presses · 30s · 51 words spoken (102 wpm)
+### S-10 Vision 2028
+4 presses · 40s · 94 words spoken (141 wpm)
 
 On screen —
+vision: An intelligent public hospital that sees its patient flow in real time and owns its digital solutions, and a lighthouse whose proven tools any KKM hospital can adopt.
+hospitalsCaption: One ministry. Very different hospitals.
+hospitals:
+  - type: Type 4 district hospital; detail: 30–150 beds
+  - type: Type 3; detail: minor specialty disciplines
+  - type: Type 2; detail: major specialty disciplines
+  - type: State hospital (Type 1); detail: 1,000+ beds
+rings:
+  - name: Facility-specific; body: Built for HTPN's own setup. Stays local.
+  - name: Service- or discipline-specific; body: Travels to every hospital running that service (e.g. our O&G tools, already used by the national O&G service).
+  - name: General; body: Patient-journey apps any KKM hospital can use, from district to state.
+footer: Build locally. Scale what travels.
+objectives:
+  - verb: Govern; rest: what we build
+  - verb: Integrate; rest: for patient flow
+  - verb: Prove; rest: the value
+  - verb: Sustain; rest: the capability
+  - verb: Scale; rest: what travels; note: (general and service-specific apps, packaged for any KKM hospital)
+
+Script — Before the route, the destination. By 2028 we want two things at once: a hospital that sees its patient flow in real time and owns its own solutions, and a lighthouse other hospitals can learn from. But KKM hospitals are not the same. A district hospital may have thirty beds. A state hospital has more than a thousand. So not every app should travel. Some are built for our setup. Some belong to a discipline, like our O&G tools, already used nationally. And some, like patient-journey apps, work anywhere. Build locally. Scale what travels.
+
+### S-11 Roadmap
+5 presses · 40s · 107 words spoken (161 wpm)
+
+On screen —
+rails: htpn: HTPN · the lighthouse; kkm: KKM · scale what travels
 phases:
-  - n: 1; name: Ignite; dates: Apr 2025–Jul 2026; achieved: true; body: Culture and capability proven.
-  - n: 2; name: Consolidate & Govern; dates: Nov 2026–Jun 2027; body: App registry with 3 risk tiers (Experimental / Departmental / Hospital-critical), build lifecycle, PDPA data governance with on-prem AI for sensitive data, impact baselines.; doneWhen: every tool is registered and owned
-  - n: 3; name: Integrate; dates: Jul 2027–Jun 2028; body: HTPN Command Centre.; doneWhen: it's used daily and flow beats baseline
-  - n: 4; name: Predict & Scale; dates: from Jul 2028; body: Forecasting, governed clinical AI, KKM-wide playbook.; doneWhen: other KKM sites adopt it
+  - n: 1; name: Ignite; dates: Apr 2025–Jul 2026; achieved: true; htpn: Culture and capability proven: 1,300+ trained, 50+ apps.; kkm: Model adopted by Hospital Pulau Pinang, Kepala Batas, Sultanah Aminah, JKN Sarawak and the national O&G, FMS and Internal Medicine services; Innovathon 2026.
+  - n: 2; name: Consolidate & Govern; dates: Nov 2026–Jun 2027; htpn: App registry with 3 risk tiers, build lifecycle, PDPA data governance with on-prem AI for sensitive data, impact baselines.; kkm: Tag every app by reach (facility, service, general); protect key innovations through MyIPO; enter Karnival Inovasi KKM for national exposure.; doneWhen: every tool is registered, owned, and tagged by reach
+  - n: 3; name: Integrate; dates: Jul 2027–Jun 2028; htpn: HTPN Command Centre.; kkm: Package general patient-journey apps as configurable templates other hospitals can deploy; service-specific apps offered through their national services.; doneWhen: the Command Centre is used daily and flow beats baseline, and at least one general app runs at another KKM hospital
+  - n: 4; name: Predict & Scale; dates: from Jul 2028; htpn: Forecasting, governed clinical AI.; kkm: A hub-and-spoke playbook for every hospital type, from 30-bed district to 1,000-bed state hospital.; doneWhen: other KKM sites adopt it
+milestone: pin: 19 Oct 2026; title: MyIPO & Innovation Workshop; where: 19 October 2026 · WCC, HTPN Kajang; attendance: ~20 Innovathon participants; speakers:
+    - name: Ts. Mohd Azirudin bin Sahhudin; role: Principal Lecturer, Politeknik Port Dickson
+    - name: Puan Norshariza binti Jamhuri; role: Oncology Dietetics Specialist, Hospital Kuala Lumpur; line: Protecting our innovations as IP, and preparing entries for Karnival Inovasi KKM.; stamp: Follow-up done
 enablers: people · process · technology · data · governance · funding and partnerships
 
-Script — So here's the roadmap. Phase one is done. Phase two governs what we've built: every tool registered, tiered by risk, with an owner and a backup. Phase three is the flagship: integration. Phase four adds prediction and takes the model across the Ministry. Every phase has a clear test for done.
+Script — So the roadmap runs on two tracks. One is HTPN as the lighthouse; the other is KKM, scaling what travels. Phase one is done, and other hospitals already use our model. And the next step has already started. On the nineteenth of October, twenty of our Innovathon builders learned how to protect their work as intellectual property and prepare for the KKM Innovation Carnival. Phase two governs what we've built, and tags every app by how far it can travel. Phase three builds our Command Centre and, in parallel, packages patient-journey apps for other hospitals. Phase four is a playbook for every hospital type in the Ministry.
 
-### S-11 Command Centre
+Presenter cues (not on screen) — Done when. Phase 2: every tool is registered, owned, and tagged by reach. Phase 3: the Command Centre is used daily and flow beats baseline, and at least one general app runs at another KKM hospital. Phase 4: other KKM sites adopt it.
+
+### S-12 Command Centre
 2 presses · 35s · 74 words spoken (127 wpm)
 
 On screen —
@@ -179,7 +210,7 @@ footer: Reads from existing tools · read-only HIS feeds · audit-logged access
 
 Script — This is where we're going. The HTPN Command Centre. Six data streams we already own — beds, the emergency department, theatres, transport, discharge and staffing — into one real-time view of patient flow, with automatic surge alerts built on our own dengue thresholds. Why? Because focused flow work already cut boarding time by thirteen point three percent. And during this year's dengue surge, every decision ran on bed data gathered by hand. Never again.
 
-### S-12 Predict and scale
+### S-13 Predict and scale
 1 press · 20s · 40 words spoken (120 wpm)
 
 On screen —
@@ -188,7 +219,7 @@ items: admission and bed-demand forecasting · governed clinical AI with clinici
 
 Script — With a year of clean, integrated data, we move from seeing now to anticipating next: forecasting admissions, putting clinical AI into production with a clinician always signing off, and packaging all of it as a playbook for every Ministry hospital.
 
-### S-13 Lesson & close
+### S-14 Lesson & close
 3 presses · 30s · 80 words spoken (160 wpm)
 
 On screen —
@@ -206,13 +237,11 @@ Script — Here's the lesson for me as a leader. Phase one was won through cultu
 
 ## Totals
 
-703 words spoken · 6:10 planned · 26 presses
+853 words spoken · 7:00 planned · 31 presses
 
 ## Known open points
 
-- Planned running time is over the 5:00 slot. S-07's reel runs 55.9s against ~20s
-  of script, so most of the overrun is there; it sits on its own press and can be
-  cut short by advancing early.
-- S-01 (168 wpm) and S-12 (160 wpm) are the fastest sheets and are the open and
-  the close — the two that most need room to breathe.
-- S-09 phase 1 has no "done when" line; it carries an ACHIEVED stamp instead.
+- Planned running time is 7:00 against a 5:00 slot, 2:00 over.
+- Fastest-spoken sheets: S-01 (168 wpm), S-11 (161 wpm), S-14 (160 wpm).
+- S-08 plays a reel that runs longer than its script; it sits on its own press and can be cut short by advancing early.
+- S-11: some lines did not fit on the sheet at 28px and live in the presenter cues, not on screen.

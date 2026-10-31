@@ -73,3 +73,13 @@
   opacity: 0.55;
   letter-spacing: 0.04em;
 }
+
+/* Lines that did not fit on the sheet: shown to the speaker, never the room. */
+.pres__cues {
+  margin: 12px 0 0;
+  padding-top: 12px;
+  border-top: 1px solid rgba(124, 196, 242, 0.25);
+  font-size: 18px;
+  line-height: 1.4;
+  color: var(--line);
+}

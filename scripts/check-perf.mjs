@@ -24,12 +24,16 @@ const MOMENTS = [
   ['S-02 +128% count-up', '#/s/2/0', 2500],
   ['S-04 split-flap', '#/s/4/1', 2000],
   ['S-05 four count-ups', '#/s/5/0', 4000],
-  ['S-06 three marquees', '#/s/6/0', 3000],
-  ['S-08 fifty drifting dots', '#/s/8/0', 3000],
-  ['S-09 ACHIEVED stamp', '#/s/9/0', 2000],
-  ['S-10 converge + pulses', '#/s/10/0', 3000],
-  ['S-11 width-axis headline', '#/s/11/0', 3000],
-  ['S-12 strike-through', '#/s/12/1', 2500],
+  ['S-06 map + 15 arcs', '#/s/6/0', 9000],
+  ['S-07 three marquees', '#/s/7/0', 3000],
+  ['S-09 fifty drifting dots', '#/s/9/0', 3000],
+  ['S-10 hospitals on the line', '#/s/10/1', 4000],
+  ['S-10 reach rings', '#/s/10/2', 3500],
+  ['S-11 pin drop + prints', '#/s/11/1', 3500],
+  ['S-11 ACHIEVED stamp', '#/s/11/0', 2000],
+  ['S-12 converge + pulses', '#/s/12/0', 3000],
+  ['S-13 width-axis headline', '#/s/13/0', 3000],
+  ['S-14 strike-through', '#/s/14/1', 2500],
 ]
 
 const browser = await chromium.launch()
