@@ -8,6 +8,9 @@ import './s03.css'
 
 const c = sceneContent('ahead-of-mandate')
 
+/** April 2025 finishes landing at ~1.35s; the tags follow it. */
+const TAGS_IN = 1.55
+
 const LINE_Y = 556
 const X1 = 330
 const X2 = 1430
@@ -98,18 +101,28 @@ export function S03AheadOfMandate({ step }: SceneProps) {
         />
       </motion.figure>
 
-      <motion.ul
-          className="s03__tags"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.5, delay: 0.7 }}
-        >
-          {c.tags.map((t) => (
-            <li key={t} className="s03__tag">
+      {/* The three reasons the directive gives, landing one at a time once
+          April 2025 is on the sheet — they are what the two dates have in
+          common, so they arrive after both are there. */}
+      {back && (
+        <ul className="s03__tags">
+          {c.tags.map((t, i) => (
+            <motion.li
+              key={t}
+              className="s03__tag"
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{
+                duration: 0.45,
+                delay: TAGS_IN + i * 0.22,
+                ease: [0.16, 1, 0.3, 1],
+              }}
+            >
               {t}
-            </li>
+            </motion.li>
           ))}
-        </motion.ul>
+        </ul>
+      )}
     </div>
   )
 }
