@@ -1,0 +1,38 @@
+.pf { position: absolute; inset: 0; padding: 0; }
+
+.pf__head {
+  position: absolute; top: 104px; left: 200px; width: 1300px; margin: 0;
+  font-size: 84px; line-height: 1.02; letter-spacing: -0.02em; color: var(--chalk);
+}
+
+/* Cropped to the ground floor: the image is positioned inside a clip box. */
+.pf__section { position: absolute; overflow: hidden; }
+.pf__section img { position: absolute; left: 0; max-width: none; display: block; }
+
+.pf__pile {
+  position: absolute; top: 698px; width: 350px;
+  display: flex; flex-direction: column; gap: 5px; text-align: left;
+}
+.pf__pile-name {
+  font-size: 38px; line-height: 1.05; color: var(--chalk);
+  font-variation-settings: 'wght' 600, 'wdth' 90;
+}
+.pf__pile-body {
+  font-size: var(--t-dim); line-height: 1.25; color: var(--line);
+  font-variation-settings: 'wght' 400, 'wdth' 90;
+}
+.pf__pile-tick {
+  margin-top: 4px; font-size: var(--t-dim); line-height: 1.25; color: var(--signal);
+  text-wrap: balance;
+  font-variation-settings: 'wght' 500, 'wdth' 90;
+}
+
+.pf__done {
+  position: absolute; left: 200px; top: 930px; width: 1040px; margin: 0;
+  font-size: 30px; line-height: 1.22; color: var(--chalk);
+  font-variation-settings: 'wght' 450, 'wdth' 92;
+}
+.pf__done i {
+  font-family: var(--font-mono); font-style: normal; color: var(--signal);
+  letter-spacing: 0.02em; margin-right: 6px;
+}

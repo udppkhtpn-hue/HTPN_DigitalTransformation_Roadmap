@@ -1,0 +1,53 @@
+.cb { position: absolute; inset: 0; padding: 0; }
+
+.cb__head {
+  position: absolute; top: 104px; left: 200px; margin: 0;
+  font-size: 84px; line-height: 1.02; letter-spacing: -0.02em; color: var(--chalk);
+}
+.cb__kicker {
+  position: absolute; top: 226px; left: 200px; margin: 0;
+  font-family: var(--font-mono); font-size: var(--t-dim); color: var(--line);
+  letter-spacing: 0.03em;
+}
+
+.cb__end {
+  position: absolute; top: 444px;
+  font-family: var(--font-mono); font-size: var(--t-dim); color: var(--line);
+  letter-spacing: 0.04em; white-space: nowrap;
+}
+.cb__end--from { left: 200px; }
+.cb__end--to { right: 160px; }
+
+.cb__stamp {
+  position: absolute; width: 56px; height: 56px;
+  display: flex; align-items: center; justify-content: center;
+  border: 3px solid var(--signal);
+  font-family: var(--font-mono); font-size: 34px; font-weight: 700; color: var(--signal);
+  background: var(--drafting);
+}
+
+.cb__milestone {
+  position: absolute; margin: 0;
+  font-size: 42px; line-height: 1.14; color: var(--chalk); text-wrap: balance;
+  font-variation-settings: 'wght' 560, 'wdth' 90;
+}
+
+.cb__rules {
+  position: absolute; left: 200px; top: 668px; width: 1540px;
+  display: grid; grid-template-columns: 1fr 1fr; gap: 20px 56px;
+}
+.cb__rule {
+  margin: 0; padding-left: 22px; border-left: 3px solid var(--signal);
+  font-family: var(--font-human); font-style: italic;
+  font-size: 36px; line-height: 1.2; color: var(--chalk);
+}
+
+.cb__done {
+  position: absolute; left: 200px; top: 904px; width: 1040px; margin: 0;
+  font-size: 30px; line-height: 1.22; color: var(--chalk);
+  font-variation-settings: 'wght' 450, 'wdth' 92;
+}
+.cb__done i {
+  font-family: var(--font-mono); font-style: normal; color: var(--signal);
+  letter-spacing: 0.02em; margin-right: 6px;
+}

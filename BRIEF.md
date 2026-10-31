@@ -5,7 +5,7 @@ leaders (Microsoft, Grab, Shopee) at the Executive Digital Leadership Programme.
 Speaker: Dr Ferwahn Fairis bin Ab Karim, Acting Deputy Director, Hospital Tengku
 Permaisuri Norashikin (HTPN), Kajang, Ministry of Health Malaysia.
 
-14 sheets · 31 clicker presses · planned 7:00 against a 5:00 slot
+17 sheets · 37 clicker presses · planned 8:30 against a 5:00 slot
 
 ## Ground rules for this deck
 
@@ -25,7 +25,7 @@ only for the dengue figure. Numbers arrive as dimensions on a drawing rather tha
 stat cards. A title block bottom-right carries the sheet number instead of a
 progress bar. One orchestrated animation per sheet; everything else holds still.
 
-## The 14 sheets
+## The 17 sheets
 
 ### S-01 Cold open
 1 press · 20s · 56 words spoken (168 wpm)
@@ -193,7 +193,35 @@ Script — So the roadmap runs on two tracks. One is HTPN as the lighthouse; the
 
 Presenter cues (not on screen) — Phase 1 in full, from sheets 3 to 8. Started April 2025, fourteen months before the Cabinet directive of 5 June 2026. Leaders learned first (Monash, EDLP with MIT Sloan and ASB, LSE); our own syllabus, so everyone leaves having built something; quick wins shipped in weeks; a national Innovathon to reward the builders. 1,300+ staff trained, 50+ in-house apps in active use, 35+ workshops (15 by external invitation), RM0 software licensing. Innovathon 2026, 21 July: 200 delegates, 28 finalists, 9 winners, 13 external judges, covered by BERNAMA. Done when. Phase 3: every tool is registered, owned, and tagged by reach. Phase 4: the Command Centre is used daily and flow beats baseline, and at least one general app runs at another KKM hospital. Phase 5: other KKM sites adopt it.
 
-### S-12 Command Centre
+### S-12 Phase 3: the registry
+2 presses · 30s · 69 words spoken (138 wpm)
+
+On screen —
+heading: A registry with governance in proportion to risk
+kicker: Phase 3 · Consolidate and Govern · Nov 2026 – Jun 2027
+tiers:
+  - name: Experimental; body: Learning and testing with dummy or de-identified data. Built freely.
+  - name: Departmental; body: Routine use in one unit. Needs a named owner, documentation and a backup maintainer.
+  - name: Hospital-critical; body: Cross-department or patient safety. Full governance, security review and impact measures.
+footer: Experiments stay easy. Critical tools meet a full standard.
+
+Script — Phase three turns grassroots tools into a portfolio the hospital can rely on. Every tool is registered and placed in one of three tiers. Experiments stay easy: dummy data, build freely. A tool used routinely in one unit needs a named owner, documentation and a backup. And anything hospital-critical, crossing departments or touching patient safety, gets full governance, a security review and impact measures. Governance in proportion to risk.
+
+### S-13 Phase 3: the foundations
+2 presses · 30s · 71 words spoken (142 wpm)
+
+On screen —
+heading: Four foundations under everything we build
+piles:
+  - name: Build lifecycle; body: Version control, demo vs production, handover notes.
+  - name: Data governance; body: PDPA data classes; on-premises AI for sensitive data.
+  - name: Registration; body: RKB, MyIPO, and a standing link with JP ICT.; tick: MyIPO workshop held 19 Oct 2026
+  - name: Impact baselines; body: Our 20-week roster study as the template.
+doneWhen: Done when: every tool is registered, and every hospital-critical tool has an owner, a backup and a baseline.
+
+Script — Underneath the registry sit four foundations nobody will see, and everything rests on them. A standard build lifecycle, so a tool survives its builder. Data governance under the PDPA, with an on-premises route for sensitive AI work. Formal registration and a standing partnership with our IT colleagues at JP ICT, and we've already started on intellectual property. And a standard way to measure impact, based on our own twenty-week roster study.
+
+### S-14 Command Centre
 2 presses · 35s · 74 words spoken (127 wpm)
 
 On screen —
@@ -211,7 +239,20 @@ footer: Reads from existing tools · read-only HIS feeds · audit-logged access
 
 Script — This is where we're going. The HTPN Command Centre. Six data streams we already own — beds, the emergency department, theatres, transport, discharge and staffing — into one real-time view of patient flow, with automatic surge alerts built on our own dengue thresholds. Why? Because focused flow work already cut boarding time by thirteen point three percent. And during this year's dengue surge, every decision ran on bed data gathered by hand. Never again.
 
-### S-13 Predict and scale
+### S-15 Command Centre: how we build it
+2 presses · 30s · 88 words spoken (176 wpm)
+
+On screen —
+heading: Small first, governed from day one
+kicker: Phase 4 · Integrate · Jul 2027 – Jun 2028
+range: from: Jul 2027; to: Jun 2028
+milestones: Minimum viable view: beds and ED flow first · Automated surge alerts live before the 2027–2028 dengue season
+rules: Reads from existing tools; read-only HIS feeds where agreed. · Aggregate views for managers; audit-logged access to identifiable data. · Alerts use our own dengue Yellow and Orange thresholds. · An architecture review to choose an approved data layer as spreadsheets hit their limits.
+doneWhen: Done when: used in daily bed meetings, alerts are automatic, and boarding time and ED stay beat baseline.
+
+Script — We won't build it all at once. A minimum viable view of beds and emergency department flow comes first, with surge alerts live before the next dengue season. It reads from the tools we already have, takes read-only feeds from the hospital information system where agreed, and logs every access to identifiable data. And because spreadsheets will hit their limits, Phase four includes an architecture review to choose a proper data layer. It's done when it's used every morning in the bed meeting, and the numbers beat baseline.
+
+### S-16 Predict and scale
 1 press · 20s · 40 words spoken (120 wpm)
 
 On screen —
@@ -220,7 +261,7 @@ items: admission and bed-demand forecasting · governed clinical AI with clinici
 
 Script — With a year of clean, integrated data, we move from seeing now to anticipating next: forecasting admissions, putting clinical AI into production with a clinician always signing off, and packaging all of it as a playbook for every Ministry hospital.
 
-### S-14 Lesson & close
+### S-17 Lesson & close
 3 presses · 30s · 80 words spoken (160 wpm)
 
 On screen —
@@ -238,11 +279,11 @@ Script — Here's the lesson for me as a leader. Phase one was won through cultu
 
 ## Totals
 
-866 words spoken · 7:00 planned · 31 presses
+1094 words spoken · 8:30 planned · 37 presses
 
 ## Known open points
 
-- Planned running time is 7:00 against a 5:00 slot, 2:00 over.
-- Fastest-spoken sheets: S-11 (180 wpm), S-01 (168 wpm), S-14 (160 wpm).
+- Planned running time is 8:30 against a 5:00 slot, 3:30 over.
+- Fastest-spoken sheets: S-11 (180 wpm), S-15 (176 wpm), S-01 (168 wpm).
 - S-08 plays a reel that runs longer than its script; it sits on its own press and can be cut short by advancing early.
 - S-11: some lines did not fit on the sheet at 28px and live in the presenter cues, not on screen.

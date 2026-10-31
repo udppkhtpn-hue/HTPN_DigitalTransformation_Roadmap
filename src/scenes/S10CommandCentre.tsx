@@ -1,6 +1,6 @@
 import { motion, useReducedMotion } from 'motion/react'
 import { sceneContent } from './content.ts'
-import { DOTS, HUB, STREAM_ORIGINS, streamPosition } from '../kit/dots.ts'
+import { DOTS, HUB, STREAM_ORIGINS, streamPosition, tierPosition } from '../kit/dots.ts'
 import type { SceneProps } from './index.ts'
 import './s10.css'
 
@@ -9,9 +9,9 @@ const c = sceneContent('command-centre')
 /**
  * The peak.
  *
- * The fifty dots enter at exactly the positions they held on S-08 and are
- * pulled onto six streams running into the hub — the same objects, finally
- * organised. The travelling pulses are six animated dash offsets rather than
+ * The fifty dots enter at exactly the positions the registry sheet filed
+ * them in (its three tiers) and are pulled onto six streams running into
+ * the hub — the same objects, finally organised. The travelling pulses are six animated dash offsets rather than
  * sixty moving elements, which keeps a continuous animation affordable.
  */
 export function S10CommandCentre({ step }: SceneProps) {
@@ -55,12 +55,13 @@ export function S10CommandCentre({ step }: SceneProps) {
         {/* the fifty, pulled onto their streams */}
         {DOTS.map((d) => {
           const p = streamPosition(d)
+          const from = tierPosition(d)
           return (
             <motion.circle
               key={d.id}
               r={6}
               fill="var(--line)"
-              initial={{ cx: d.x, cy: d.y, opacity: 0.85 }}
+              initial={{ cx: from.x, cy: from.y, opacity: 0.85 }}
               animate={{ cx: p.x, cy: p.y, opacity: 0.95 }}
               transition={{
                 duration: reduced ? 0.2 : 1.15,

@@ -16,6 +16,7 @@
     "notes": "node scripts/count-notes.ts",
     "perf": "node scripts/check-perf.mjs",
     "touch": "node scripts/check-touch.mjs",
+    "dots": "node scripts/check-dots.mjs",
     "budget": "node scripts/check-budget.mjs",
     "check": "npm run typecheck && npm run build:single && npm run budget && npm run perf",
     "poster": "node scripts/make-poster.mjs",

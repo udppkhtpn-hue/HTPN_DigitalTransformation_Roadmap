@@ -21,7 +21,10 @@ export type SceneId =
   | 'the-gap'
   | 'vision-2028'
   | 'roadmap'
+  | 'phase-registry'
+  | 'phase-foundations'
   | 'command-centre'
+  | 'command-centre-build'
   | 'predict-and-scale'
   | 'lesson-and-close'
 
@@ -153,6 +156,28 @@ export interface Roadmap {
   enablers: string[]
 }
 
+export interface PhaseRegistry {
+  heading: string
+  kicker: string
+  tiers: { name: string; body: string }[]
+  footer: string
+}
+
+export interface PhaseFoundations {
+  heading: string
+  piles: { name: string; body: string; tick?: string }[]
+  doneWhen: string
+}
+
+export interface CommandCentreBuild {
+  heading: string
+  kicker: string
+  range: { from: string; to: string }
+  milestones: string[]
+  rules: string[]
+  doneWhen: string
+}
+
 export interface CommandCentre {
   hub: { name: string; strapline: string }
   streams: { name: string; source: string }[]
@@ -188,7 +213,10 @@ export type Scene =
   | (Base & { id: 'the-gap'; content: TheGap })
   | (Base & { id: 'vision-2028'; content: Vision2028 })
   | (Base & { id: 'roadmap'; content: Roadmap })
+  | (Base & { id: 'phase-registry'; content: PhaseRegistry })
+  | (Base & { id: 'phase-foundations'; content: PhaseFoundations })
   | (Base & { id: 'command-centre'; content: CommandCentre })
+  | (Base & { id: 'command-centre-build'; content: CommandCentreBuild })
   | (Base & { id: 'predict-and-scale'; content: PredictAndScale })
   | (Base & { id: 'lesson-and-close'; content: LessonAndClose })
 
@@ -587,8 +615,71 @@ export const SCENES: Scene[] = [
   },
 
   {
-    id: 'command-centre',
+    id: 'phase-registry',
     sheet: 'S-12',
+    title: 'Phase 3: the registry',
+    steps: 2,
+    moment: 0,
+    seconds: 30,
+    content: {
+      heading: 'A registry with governance in proportion to risk',
+      kicker: 'Phase 3 · Consolidate and Govern · Nov 2026 – Jun 2027',
+      tiers: [
+        {
+          name: 'Experimental',
+          body: 'Learning and testing with dummy or de-identified data. Built freely.',
+        },
+        {
+          name: 'Departmental',
+          body: 'Routine use in one unit. Needs a named owner, documentation and a backup maintainer.',
+        },
+        {
+          name: 'Hospital-critical',
+          body: 'Cross-department or patient safety. Full governance, security review and impact measures.',
+        },
+      ],
+      footer: 'Experiments stay easy. Critical tools meet a full standard.',
+    },
+    notes: `Phase three turns grassroots tools into a portfolio the hospital can rely on. Every tool is registered and placed in one of three tiers. Experiments stay easy: dummy data, build freely. A tool used routinely in one unit needs a named owner, documentation and a backup. And anything hospital-critical, crossing departments or touching patient safety, gets full governance, a security review and impact measures. Governance in proportion to risk.`,
+  },
+
+  {
+    id: 'phase-foundations',
+    sheet: 'S-13',
+    title: 'Phase 3: the foundations',
+    steps: 2,
+    moment: 0,
+    seconds: 30,
+    content: {
+      heading: 'Four foundations under everything we build',
+      piles: [
+        {
+          name: 'Build lifecycle',
+          body: 'Version control, demo vs production, handover notes.',
+        },
+        {
+          name: 'Data governance',
+          body: 'PDPA data classes; on-premises AI for sensitive data.',
+        },
+        {
+          name: 'Registration',
+          body: 'RKB, MyIPO, and a standing link with JP ICT.',
+          tick: 'MyIPO workshop held 19 Oct 2026',
+        },
+        {
+          name: 'Impact baselines',
+          body: 'Our 20-week roster study as the template.',
+        },
+      ],
+      doneWhen:
+        'Done when: every tool is registered, and every hospital-critical tool has an owner, a backup and a baseline.',
+    },
+    notes: `Underneath the registry sit four foundations nobody will see, and everything rests on them. A standard build lifecycle, so a tool survives its builder. Data governance under the PDPA, with an on-premises route for sensitive AI work. Formal registration and a standing partnership with our IT colleagues at JP ICT, and we've already started on intellectual property. And a standard way to measure impact, based on our own twenty-week roster study.`,
+  },
+
+  {
+    id: 'command-centre',
+    sheet: 'S-14',
     title: 'Command Centre',
     steps: 2,
     moment: 0,
@@ -618,8 +709,35 @@ export const SCENES: Scene[] = [
   },
 
   {
+    id: 'command-centre-build',
+    sheet: 'S-15',
+    title: 'Command Centre: how we build it',
+    steps: 2,
+    moment: 0,
+    seconds: 30,
+    content: {
+      heading: 'Small first, governed from day one',
+      kicker: 'Phase 4 · Integrate · Jul 2027 – Jun 2028',
+      range: { from: 'Jul 2027', to: 'Jun 2028' },
+      milestones: [
+        'Minimum viable view: beds and ED flow first',
+        'Automated surge alerts live before the 2027–2028 dengue season',
+      ],
+      rules: [
+        'Reads from existing tools; read-only HIS feeds where agreed.',
+        'Aggregate views for managers; audit-logged access to identifiable data.',
+        'Alerts use our own dengue Yellow and Orange thresholds.',
+        'An architecture review to choose an approved data layer as spreadsheets hit their limits.',
+      ],
+      doneWhen:
+        'Done when: used in daily bed meetings, alerts are automatic, and boarding time and ED stay beat baseline.',
+    },
+    notes: `We won't build it all at once. A minimum viable view of beds and emergency department flow comes first, with surge alerts live before the next dengue season. It reads from the tools we already have, takes read-only feeds from the hospital information system where agreed, and logs every access to identifiable data. And because spreadsheets will hit their limits, Phase four includes an architecture review to choose a proper data layer. It's done when it's used every morning in the bed meeting, and the numbers beat baseline.`,
+  },
+
+  {
     id: 'predict-and-scale',
-    sheet: 'S-13',
+    sheet: 'S-16',
     title: 'Predict and scale',
     steps: 1,
     moment: 0,
@@ -638,7 +756,7 @@ export const SCENES: Scene[] = [
 
   {
     id: 'lesson-and-close',
-    sheet: 'S-14',
+    sheet: 'S-17',
     title: 'Lesson & close',
     steps: 3,
     moment: 1,

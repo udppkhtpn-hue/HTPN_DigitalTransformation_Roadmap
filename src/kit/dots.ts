@@ -1,18 +1,20 @@
 /**
  * The fifty apps.
  *
- * Scattered on S-08 ("50 apps ≠ one hospital"), then pulled into six streams
- * on S-10. Both scenes read these exact coordinates, so a dot keeps its
- * identity across the scene change — the gap and the answer to it are the
- * same fifty objects, which is the argument the talk is making.
+ * Three sheets draw them and each begins where the previous one left them:
+ * scattered on the gap sheet (S-09), filed into three risk tiers on the
+ * registry (S-12), pulled onto six streams on the Command Centre (S-14).
+ * The sheets between draw none. All of them read the coordinates in this
+ * file, so a dot keeps its identity across the whole argument: the gap, the
+ * governance and the answer are the same fifty objects seen three times.
  */
 
 export interface Dot {
   id: number
-  /** Scattered position, S-08. */
+  /** Scattered position, S-09. */
   x: number
   y: number
-  /** Which of the six streams this app feeds on S-10. */
+  /** Which of the six streams this app feeds on S-14. */
   stream: number
   /** How far along its stream it sits, 0 at the outer end, 1 at the hub. */
   t: number
@@ -56,5 +58,30 @@ export function streamPosition(d: Dot): { x: number; y: number } {
   return {
     x: o.x + (HUB.x - o.x) * d.t,
     y: o.y + (HUB.y - o.y) * d.t,
+  }
+}
+
+/**
+ * The three risk tiers on the registry sheet.
+ *
+ * Fifty dots, three horizontal bands. The split is even by construction
+ * (id mod 3) because nothing in the source says how many apps sit in each
+ * tier, and a lopsided pyramid would quietly assert a number nobody gave.
+ */
+export const TIER_BANDS = [
+  { y0: 370, h: 150 },
+  { y0: 540, h: 150 },
+  { y0: 710, h: 150 },
+]
+
+export const tierOf = (d: Dot) => d.id % 3
+
+/** Where a dot sits once it has been filed into its tier. */
+export function tierPosition(d: Dot): { x: number; y: number } {
+  const k = Math.floor(d.id / 3)
+  const b = TIER_BANDS[tierOf(d)]
+  return {
+    x: 860 + Math.floor(k / 2) * 105,
+    y: b.y0 + b.h / 2 + (k % 2 ? 32 : -32),
   }
 }

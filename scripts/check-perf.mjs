@@ -31,9 +31,12 @@ const MOMENTS = [
   ['S-10 reach rings', '#/s/10/2', 3500],
   ['S-11 pin drop + prints', '#/s/11/1', 3500],
   ['S-11 ACHIEVED stamp', '#/s/11/0', 2000],
-  ['S-12 converge + pulses', '#/s/12/0', 3000],
-  ['S-13 width-axis headline', '#/s/13/0', 3000],
-  ['S-14 strike-through', '#/s/14/1', 2500],
+  ['S-12 dots sort into tiers', '#/s/12/0', 4800],
+  ['S-13 piles drive down', '#/s/13/0', 5000],
+  ['S-14 converge + pulses', '#/s/14/0', 3000],
+  ['S-15 timeline + stamps', '#/s/15/0', 4000],
+  ['S-16 width-axis headline', '#/s/16/0', 3000],
+  ['S-17 strike-through', '#/s/17/1', 2500],
 ]
 
 const browser = await chromium.launch()

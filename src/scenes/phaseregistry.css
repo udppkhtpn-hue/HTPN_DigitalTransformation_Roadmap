@@ -1,0 +1,34 @@
+.pr { position: absolute; inset: 0; padding: 0; }
+
+.pr__head {
+  position: absolute; top: 104px; left: 200px; width: 1300px; margin: 0;
+  font-size: 84px; line-height: 1.02; letter-spacing: -0.02em; color: var(--chalk);
+}
+.pr__kicker {
+  position: absolute; top: 300px; left: 200px; margin: 0;
+  font-family: var(--font-mono); font-size: var(--t-dim); color: var(--line);
+  letter-spacing: 0.03em;
+}
+
+.pr__tier {
+  position: absolute; left: 226px; width: 590px;
+  display: flex; flex-direction: column; gap: 6px;
+}
+.pr__tier-name {
+  font-size: 40px; line-height: 1.05; color: var(--chalk);
+  font-variation-settings: 'wght' 600, 'wdth' 90;
+}
+.pr__tier-name i {
+  font-family: var(--font-mono); font-style: normal; font-weight: 400;
+  font-size: var(--t-dim); color: var(--line); margin-right: 10px;
+}
+.pr__tier-body {
+  font-size: var(--t-dim); line-height: 1.25; color: var(--line);
+  font-variation-settings: 'wght' 400, 'wdth' 90;
+}
+
+.pr__footer {
+  position: absolute; left: 200px; top: 896px; margin: 0;
+  font-family: var(--font-human); font-style: italic;
+  font-size: 50px; line-height: 1.1; color: var(--signal); max-width: 1040px;
+}

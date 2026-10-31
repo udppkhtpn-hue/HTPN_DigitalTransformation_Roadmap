@@ -12,6 +12,9 @@ import { S07Innovathon } from './S07Innovathon.tsx'
 import { S08TheGap } from './S08TheGap.tsx'
 import { Vision2028 } from './Vision2028.tsx'
 import { Roadmap } from './Roadmap.tsx'
+import { PhaseRegistry } from './PhaseRegistry.tsx'
+import { PhaseFoundations } from './PhaseFoundations.tsx'
+import { CommandCentreBuild } from './CommandCentreBuild.tsx'
 import { S10CommandCentre } from './S10CommandCentre.tsx'
 import { S11PredictAndScale } from './S11PredictAndScale.tsx'
 import { S12LessonAndClose } from './S12LessonAndClose.tsx'
@@ -37,7 +40,10 @@ export const SCENE_COMPONENTS: Record<SceneId, ComponentType<SceneProps>> = {
   'the-gap': S08TheGap,
   'vision-2028': Vision2028,
   roadmap: Roadmap,
+  'phase-registry': PhaseRegistry,
+  'phase-foundations': PhaseFoundations,
   'command-centre': S10CommandCentre,
+  'command-centre-build': CommandCentreBuild,
   'predict-and-scale': S11PredictAndScale,
   'lesson-and-close': S12LessonAndClose,
 }

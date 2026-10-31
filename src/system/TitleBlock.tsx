@@ -55,7 +55,10 @@ export function TitleBlock({ sheet, title, total }: Props) {
 
       <div className="tblock__org">HTPN · Built From Within</div>
 
-      <div className="tblock__title" title={title}>
+      <div
+        className={`tblock__title${title.length > 17 ? ' tblock__title--long' : ''}`}
+        title={title}
+      >
         {title}
       </div>
 
