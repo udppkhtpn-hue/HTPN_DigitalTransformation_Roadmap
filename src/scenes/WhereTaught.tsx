@@ -195,7 +195,14 @@ export function WhereTaught({ step }: SceneProps) {
                   style={{ transformOrigin: `${pin.ix}px ${pin.iy}px` }}
                 >
                   <Mark kind={s.kind} x={pin.ix!} y={pin.iy!} r={9} />
-                  <text x={pin.ix! + 15} y={pin.iy! + 9} className="wt__pin-n">
+                  {/* Three of these sites are within 0.05° of each other, so
+                      the numbers are fanned by the golden angle: neighbours
+                      never pick the same direction. */}
+                  <text
+                    x={pin.ix! + Math.cos(s.n * 2.3999) * 22}
+                    y={pin.iy! + Math.sin(s.n * 2.3999) * 22}
+                    className="wt__pin-n"
+                  >
                     {s.n}
                   </text>
                 </motion.g>

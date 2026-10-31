@@ -44,8 +44,8 @@ const clip = (f, west) =>
 
 /** Stage boxes. The peninsula sits left, Borneo right, a break line between. */
 const WEST_BOX = [[200, 262], [496, 742]]
-const EAST_BOX = [[742, 296], [1164, 540]]
-const INSET = { cx: 652, cy: 632, r: 124 } // Klang Valley detail circle
+const EAST_BOX = [[820, 268], [1180, 478]]
+const INSET = { cx: 660, cy: 596, r: 116 } // Klang Valley detail circle
 
 function panel(box, geom, extraFeatures) {
   const [[x0, y0], [x1, y1]] = box
