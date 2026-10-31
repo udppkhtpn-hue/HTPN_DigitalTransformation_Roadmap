@@ -3,7 +3,7 @@ import { sceneContent } from './content.ts'
 import { DrawPath } from '../kit/DrawPath.tsx'
 import { Dimension } from '../kit/Dimension.tsx'
 import type { SceneProps } from './index.ts'
-import news from '../assets/news-directive.webp'
+import cutting from '../assets/news-cutting.webp'
 import './s03.css'
 
 const c = sceneContent('ahead-of-mandate')
@@ -14,8 +14,8 @@ const X2 = 1430
 
 /**
  * The headline is typeset so it reads from the back of the room, with the
- * press photograph from the report beside it as corroboration — the claim
- * set large, the evidence pinned next to it.
+ * cutting pinned beside it as corroboration — the claim set large, the
+ * article it came from next to it.
  *
  * The reveal runs backwards, the way the script tells it: the Cabinet
  * directive of 5 June 2026 lands first, and only then does the timeline
@@ -48,7 +48,7 @@ export function S03AheadOfMandate({ step }: SceneProps) {
           <Dimension
             x1={X1}
             x2={X2}
-            y={LINE_Y - 96}
+            y={LINE_Y - 86}
             label={c.span}
             delay={1.0}
             tone="var(--signal)"
@@ -82,8 +82,10 @@ export function S03AheadOfMandate({ step }: SceneProps) {
           <figcaption className="s03__source">{c.clipping.source}</figcaption>
         </motion.figure>
 
-      {/* The cutting itself, as corroboration. The headline is typeset so it
-          reads from the back of the room; this is here to show it is real. */}
+      {/* The article cut out of the page: section, headline, date, the
+          press photograph and the lead paragraph that names the Prime
+          Minister. The sidebar, share icons and unrelated headlines are not
+          part of the story, so they are not part of the cutting. */}
       <motion.figure
         className="s03__photo"
         initial={{ opacity: 0, y: 14, rotate: -2.4 }}
@@ -91,8 +93,8 @@ export function S03AheadOfMandate({ step }: SceneProps) {
         transition={{ duration: 0.7, delay: 0.55, ease: [0.16, 1, 0.3, 1] }}
       >
         <img
-          src={news}
-          alt="Press conference announcing the directive, reported by The Star"
+          src={cutting}
+          alt="The Star, 5 June 2026: Anwar directs all government digital services to be developed in-house"
         />
       </motion.figure>
 
