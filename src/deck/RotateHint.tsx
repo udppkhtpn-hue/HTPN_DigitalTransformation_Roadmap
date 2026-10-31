@@ -7,7 +7,12 @@
  */
 export function RotateHint() {
   return (
-    <div className="rotate-hint" data-no-advance="">
+    <>
+      {/* A tablet held upright still runs the deck, just small: say so once. */}
+      <p className="rotate-tip" aria-hidden="true">
+        Turn your iPad sideways for a larger sheet
+      </p>
+      <div className="rotate-hint" data-no-advance="">
       <svg
         className="rotate-hint__icon"
         viewBox="0 0 96 96"
@@ -24,7 +29,8 @@ export function RotateHint() {
         <path d="M 22 50 A 26 26 0 0 0 48 76" strokeDasharray="3 4" />
         <path d="M 48 76 l -7 -5 M 48 76 l -5 7" />
       </svg>
-      <p style={{ margin: 0 }}>Turn your phone sideways</p>
-    </div>
+        <p style={{ margin: 0 }}>Turn your phone sideways</p>
+      </div>
+    </>
   )
 }

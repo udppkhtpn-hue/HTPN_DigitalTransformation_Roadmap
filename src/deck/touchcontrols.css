@@ -82,3 +82,28 @@
   width: 92px;
   height: 92px;
 }
+
+/* Tablet, portrait: a quiet line at the top that fades after a few seconds,
+   so it never sits over the sheet. Hidden everywhere else. */
+.rotate-tip { display: none; }
+
+@media (orientation: portrait) and (pointer: coarse) and (min-width: 700px) {
+  .rotate-tip {
+    display: block;
+    position: fixed;
+    z-index: 135;
+    top: calc(14px + env(safe-area-inset-top));
+    left: 0;
+    right: 0;
+    margin: 0;
+    text-align: center;
+    font-family: var(--font-mono);
+    font-size: 16px;
+    letter-spacing: 0.05em;
+    color: var(--line);
+    pointer-events: none;
+    animation: rotate-tip-out 0.8s ease 6s forwards;
+  }
+}
+
+@keyframes rotate-tip-out { to { opacity: 0; } }

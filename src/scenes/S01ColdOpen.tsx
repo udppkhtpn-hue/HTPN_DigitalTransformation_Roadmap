@@ -2,7 +2,7 @@ import { motion, useReducedMotion } from 'motion/react'
 import { SCENES } from '../content/scenes.ts'
 import { WidthType } from '../kit/WidthType.tsx'
 import { FramedDrawing } from '../kit/FramedDrawing.tsx'
-import blueprint from '../assets/blueprint-htpn.webp'
+import oldBuilding from '../assets/htpn-1889.webp'
 import './s01.css'
 
 const { content } = SCENES[0] as Extract<
@@ -11,11 +11,14 @@ const { content } = SCENES[0] as Extract<
 >
 
 /**
- * The building is drawn onto the sheet while the first three lines land.
+ * The hospital's first building, 1889, is drawn onto the sheet behind the
+ * title once the first three lines have been read.
  *
- * The wireframe is already cyan line work on blueprint navy, so it is
- * screened straight onto the grid rather than framed — the drawing in the
- * deck and the drawing on the wall are the same drawing.
+ * It is full-bleed cyan line work with no ground of its own (scripts/
+ * make-1889.mjs turns the source's navy into transparency), so it sits
+ * directly on the grid rather than in a frame. The sheet opens on a hospital
+ * that is a hundred and thirty-five years old; this is the building it
+ * started in.
  */
 export function S01ColdOpen() {
   const reduced = useReducedMotion()
@@ -25,10 +28,10 @@ export function S01ColdOpen() {
     <div className="s01">
       <div className="s01__building">
         <FramedDrawing
-          src={blueprint}
-          alt="Wireframe drawing of Hospital Tengku Permaisuri Norashikin"
-          width={1640}
-          height={1334}
+          src={oldBuilding}
+          alt="Wireframe drawing of the original 1889 building of Hospital Tengku Permaisuri Norashikin"
+          width={1920}
+          height={1084}
           framed={false}
           className="drawing--blueprint"
           delay={4.3 * t}

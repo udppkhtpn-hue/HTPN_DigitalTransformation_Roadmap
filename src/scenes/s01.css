@@ -7,8 +7,10 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -54%);
-  opacity: 0.62;
+  transform: translate(-50%, -50%);
+  /* The 1889 drawing is dense line work, full-bleed: held well back so the
+     title, the serif subtitle and the byline read clearly on top of it. */
+  opacity: 0.38;
 }
 
 .s01__lines {
