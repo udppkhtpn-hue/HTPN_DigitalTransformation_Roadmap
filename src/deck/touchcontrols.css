@@ -1,0 +1,84 @@
+/*
+ * Touch-only chrome. Hidden outright on anything with a fine pointer, so
+ * nothing new reaches the projector.
+ */
+.tctl {
+  display: none;
+}
+
+@media (pointer: coarse) {
+  .tctl {
+    position: fixed;
+    z-index: 130;
+    left: calc(10px + env(safe-area-inset-left));
+    bottom: calc(10px + env(safe-area-inset-bottom));
+    display: flex;
+    gap: 6px;
+    opacity: 1;
+    transition: opacity 0.45s ease;
+  }
+
+  .tctl--idle {
+    opacity: 0.15;
+  }
+
+  .tctl__b {
+    min-width: 38px;
+    min-height: 38px;
+    padding: 0 10px;
+    border: 1px solid rgba(124, 196, 242, 0.45);
+    background: rgba(10, 24, 48, 0.72);
+    color: var(--line);
+    font-family: var(--font-mono);
+    font-size: 15px;
+    line-height: 1;
+    letter-spacing: 0.04em;
+    -webkit-appearance: none;
+    appearance: none;
+    border-radius: 0;
+    cursor: pointer;
+  }
+
+  .tctl__b--word {
+    font-size: 13px;
+  }
+
+  .tctl__b:active {
+    border-color: var(--line);
+    color: var(--chalk);
+  }
+}
+
+/*
+ * Portrait phone: the stage would letterbox down to a strip. Say so, in
+ * the drawing's own voice, and get out of the way the moment it turns.
+ * Pure CSS, so rotating dismisses it with no listener to go stale.
+ */
+.rotate-hint {
+  display: none;
+}
+
+@media (orientation: portrait) and (max-width: 699px) {
+  .rotate-hint {
+    position: fixed;
+    inset: 0;
+    z-index: 140;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 22px;
+    background: var(--deep);
+    color: var(--line);
+    font-family: var(--font-mono);
+    font-size: 15px;
+    letter-spacing: 0.06em;
+    text-align: center;
+    padding: 0 28px;
+  }
+}
+
+.rotate-hint__icon {
+  width: 92px;
+  height: 92px;
+}

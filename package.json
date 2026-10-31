@@ -15,6 +15,7 @@
     "deploy": "npm run build && npm run build:single && npm run budget && gh-pages -d dist -b gh-pages --dotfiles",
     "notes": "node scripts/count-notes.ts",
     "perf": "node scripts/check-perf.mjs",
+    "touch": "node scripts/check-touch.mjs",
     "budget": "node scripts/check-budget.mjs",
     "check": "npm run typecheck && npm run build:single && npm run budget && npm run perf",
     "poster": "node scripts/make-poster.mjs",

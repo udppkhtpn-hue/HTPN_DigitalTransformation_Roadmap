@@ -6,3 +6,4 @@ dist-single/
 assets-incoming/
 .vite/
 .npmrc
+.shots/

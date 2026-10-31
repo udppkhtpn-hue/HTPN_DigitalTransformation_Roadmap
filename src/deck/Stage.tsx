@@ -1,6 +1,8 @@
+import { useRef } from 'react'
 import { AnimatePresence, motion, useReducedMotion } from 'motion/react'
 import { useDeck } from './DeckProvider.tsx'
 import { useStageScale } from './useStageScale.ts'
+import { usePointerNav } from './usePointerNav.ts'
 import { Sheet } from '../system/Sheet.tsx'
 import { TitleBlock } from '../system/TitleBlock.tsx'
 import { SCENE_COMPONENTS } from '../scenes/index.ts'
@@ -12,16 +14,22 @@ import './stage.css'
  * The sheet and the title block live outside AnimatePresence so neither is
  * torn down on a scene change — the sheet is composited once for the whole
  * talk, and the title block only redraws its border.
+ *
+ * The letterbox, not the stage, carries the tap and swipe handlers: the
+ * stage is scaled and centred, so the bands outside it are still screen the
+ * presenter's thumb can land on.
  */
 export function Stage() {
-  const scale = useStageScale()
-  const { scene, sceneIndex, step, total, blackout } = useDeck()
+  const box = useRef<HTMLDivElement>(null)
+  const scale = useStageScale(box)
+  const { scene, sceneIndex, step, total, blackout, next, prev } = useDeck()
   const reduced = useReducedMotion()
+  const nav = usePointerNav({ next, prev })
 
   const Scene = SCENE_COMPONENTS[scene.id]
 
   return (
-    <div className="letterbox">
+    <div className="letterbox" ref={box} {...nav}>
       <div
         className="stage"
         style={{ transform: `translate(-50%, -50%) scale(${scale})` }}

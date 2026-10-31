@@ -9,6 +9,7 @@ import {
   type ReactNode,
 } from 'react'
 import { SCENES, type Scene } from '../content/scenes.ts'
+import { toggleFullscreen } from './fullscreen.ts'
 
 interface Cursor {
   sceneIndex: number
@@ -23,6 +24,9 @@ interface Deck extends Cursor {
   goto: (sceneIndex: number, step?: number) => void
   blackout: boolean
   notesOpen: boolean
+  toggleNotes: () => void
+  toggleBlackout: () => void
+  fullscreen: () => void
   elapsed: number
   running: boolean
   reset: () => void
@@ -108,6 +112,10 @@ export function DeckProvider({ children }: { children: ReactNode }) {
     setCursor({ sceneIndex: si, step: clampStep(si, step) })
   }, [])
 
+  const toggleNotes = useCallback(() => setNotesOpen((v) => !v), [])
+  const toggleBlackout = useCallback(() => setBlackout((v) => !v), [])
+  const fullscreen = useCallback(() => toggleFullscreen(), [])
+
   const reset = useCallback(() => {
     setCursor({ sceneIndex: 0, step: 0 })
     setElapsed(0)
@@ -192,8 +200,7 @@ export function DeckProvider({ children }: { children: ReactNode }) {
         case 'f':
         case 'F':
           e.preventDefault()
-          if (document.fullscreenElement) void document.exitFullscreen()
-          else void document.documentElement.requestFullscreen().catch(() => {})
+          toggleFullscreen()
           break
         case 'r':
         case 'R':
@@ -278,11 +285,28 @@ export function DeckProvider({ children }: { children: ReactNode }) {
       goto,
       blackout,
       notesOpen,
+      toggleNotes,
+      toggleBlackout,
+      fullscreen,
       elapsed,
       running,
       reset,
     }),
-    [cursor, scene, next, prev, goto, blackout, notesOpen, elapsed, running, reset],
+    [
+      cursor,
+      scene,
+      next,
+      prev,
+      goto,
+      blackout,
+      notesOpen,
+      toggleNotes,
+      toggleBlackout,
+      fullscreen,
+      elapsed,
+      running,
+      reset,
+    ],
   )
 
   return <DeckContext.Provider value={value}>{children}</DeckContext.Provider>
