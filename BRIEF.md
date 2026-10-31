@@ -174,23 +174,24 @@ objectives:
 Script — Before the route, the destination. By 2028 we want two things at once: a hospital that sees its patient flow in real time and owns its own solutions, and a lighthouse other hospitals can learn from. But KKM hospitals are not the same. A district hospital may have thirty beds. A state hospital has more than a thousand. So not every app should travel. Some are built for our setup. Some belong to a discipline, like our O&G tools, already used nationally. And some, like patient-journey apps, work anywhere. Build locally. Scale what travels.
 
 ### S-11 Roadmap
-5 presses · 40s · 107 words spoken (161 wpm)
+5 presses · 40s · 120 words spoken (180 wpm)
 
 On screen —
 rails: htpn: HTPN · the lighthouse; kkm: KKM · scale what travels
 phases:
-  - n: 1; name: Ignite; dates: Apr 2025–Jul 2026; achieved: true; htpn: Culture and capability proven: 1,300+ trained, 50+ apps.; kkm: Model adopted by Hospital Pulau Pinang, Kepala Batas, Sultanah Aminah, JKN Sarawak and the national O&G, FMS and Internal Medicine services; Innovathon 2026.
-  - n: 2; name: Consolidate & Govern; dates: Nov 2026–Jun 2027; htpn: App registry with 3 risk tiers, build lifecycle, PDPA data governance with on-prem AI for sensitive data, impact baselines.; kkm: Tag every app by reach (facility, service, general); protect key innovations through MyIPO; enter Karnival Inovasi KKM for national exposure.; doneWhen: every tool is registered, owned, and tagged by reach
-  - n: 3; name: Integrate; dates: Jul 2027–Jun 2028; htpn: HTPN Command Centre.; kkm: Package general patient-journey apps as configurable templates other hospitals can deploy; service-specific apps offered through their national services.; doneWhen: the Command Centre is used daily and flow beats baseline, and at least one general app runs at another KKM hospital
-  - n: 4; name: Predict & Scale; dates: from Jul 2028; htpn: Forecasting, governed clinical AI.; kkm: A hub-and-spoke playbook for every hospital type, from 30-bed district to 1,000-bed state hospital.; doneWhen: other KKM sites adopt it
-milestone: pin: 19 Oct 2026; title: MyIPO & Innovation Workshop; where: 19 October 2026 · WCC, HTPN Kajang; attendance: ~20 Innovathon participants; speakers:
+  - n: 1; name: Ignite; dates: Apr 2025–Jul 2026; achieved: true; htpn: Started Apr 2025, ahead of the Cabinet directive. Leaders learned first, then our own syllabus. 1,300+ trained, 50+ apps, RM0 licensing. National Innovathon, 21 Jul 2026.; kkm: 15 external sessions in 12 months. Model adopted by Hospital Pulau Pinang, Kepala Batas, Sultanah Aminah, JKN Sarawak and the national O&G, FMS and Internal Medicine services.
+  - n: 2; name: MyIPO & Innovation; dates: 19 Oct 2026; htpn: Workshop held: ~20 Innovathon participants.; kkm: Protect key innovations through MyIPO; enter Karnival Inovasi KKM for national exposure.
+  - n: 3; name: Consolidate & Govern; dates: Nov 2026–Jun 2027; htpn: App registry with 3 risk tiers, build lifecycle, PDPA data governance with on-prem AI for sensitive data, impact baselines.; kkm: Tag every app by reach (facility, service, general).; doneWhen: every tool is registered, owned, and tagged by reach
+  - n: 4; name: Integrate; dates: Jul 2027–Jun 2028; htpn: HTPN Command Centre.; kkm: Package general patient-journey apps as configurable templates other hospitals can deploy; service-specific apps offered through their national services.; doneWhen: the Command Centre is used daily and flow beats baseline, and at least one general app runs at another KKM hospital
+  - n: 5; name: Predict & Scale; dates: from Jul 2028; htpn: Forecasting, governed clinical AI.; kkm: A hub-and-spoke playbook for every hospital type, from 30-bed district to 1,000-bed state hospital.; doneWhen: other KKM sites adopt it
+milestone: underway: Already under way; title: MyIPO & Innovation Workshop; where: 19 October 2026 · WCC, HTPN Kajang; attendance: ~20 Innovathon participants; speakers:
     - name: Ts. Mohd Azirudin bin Sahhudin; role: Principal Lecturer, Politeknik Port Dickson
     - name: Puan Norshariza binti Jamhuri; role: Oncology Dietetics Specialist, Hospital Kuala Lumpur; line: Protecting our innovations as IP, and preparing entries for Karnival Inovasi KKM.; stamp: Follow-up done
 enablers: people · process · technology · data · governance · funding and partnerships
 
-Script — So the roadmap runs on two tracks. One is HTPN as the lighthouse; the other is KKM, scaling what travels. Phase one is done, and other hospitals already use our model. And the next step has already started. On the nineteenth of October, twenty of our Innovathon builders learned how to protect their work as intellectual property and prepare for the KKM Innovation Carnival. Phase two governs what we've built, and tags every app by how far it can travel. Phase three builds our Command Centre and, in parallel, packages patient-journey apps for other hospitals. Phase four is a playbook for every hospital type in the Ministry.
+Script — So the roadmap runs on two tracks. One is HTPN as the lighthouse; the other is KKM, scaling what travels. Phase one is everything you've just seen: we started before the mandate, trained thirteen hundred staff, built fifty apps, and other hospitals now run our model. Phase two has already started. On the nineteenth of October, twenty of our Innovathon builders learned how to protect their work as intellectual property and prepare for the KKM Innovation Carnival. Phase three governs what we've built, and tags every app by how far it can travel. Phase four builds our Command Centre and, in parallel, packages patient-journey apps for other hospitals. Phase five is a playbook for every hospital type in the Ministry.
 
-Presenter cues (not on screen) — Done when. Phase 2: every tool is registered, owned, and tagged by reach. Phase 3: the Command Centre is used daily and flow beats baseline, and at least one general app runs at another KKM hospital. Phase 4: other KKM sites adopt it.
+Presenter cues (not on screen) — Phase 1 in full, from sheets 3 to 8. Started April 2025, fourteen months before the Cabinet directive of 5 June 2026. Leaders learned first (Monash, EDLP with MIT Sloan and ASB, LSE); our own syllabus, so everyone leaves having built something; quick wins shipped in weeks; a national Innovathon to reward the builders. 1,300+ staff trained, 50+ in-house apps in active use, 35+ workshops (15 by external invitation), RM0 software licensing. Innovathon 2026, 21 July: 200 delegates, 28 finalists, 9 winners, 13 external judges, covered by BERNAMA. Done when. Phase 3: every tool is registered, owned, and tagged by reach. Phase 4: the Command Centre is used daily and flow beats baseline, and at least one general app runs at another KKM hospital. Phase 5: other KKM sites adopt it.
 
 ### S-12 Command Centre
 2 presses · 35s · 74 words spoken (127 wpm)
@@ -225,7 +226,7 @@ Script — With a year of clean, integrated data, we move from seeing now to ant
 On screen —
 before: Phase 1 was won through culture.
 strike: culture
-after: Phases 2 to 4 must be won through architecture.
+after: Phases 2 to 5 must be won through architecture.
 lines: Add structure, keep the spirit · Make IT a partner · Turn goodwill into roles
 closing: Built from within. · Shared with all of KKM.
 thanks: Thank you.
@@ -237,11 +238,11 @@ Script — Here's the lesson for me as a leader. Phase one was won through cultu
 
 ## Totals
 
-853 words spoken · 7:00 planned · 31 presses
+866 words spoken · 7:00 planned · 31 presses
 
 ## Known open points
 
 - Planned running time is 7:00 against a 5:00 slot, 2:00 over.
-- Fastest-spoken sheets: S-01 (168 wpm), S-11 (161 wpm), S-14 (160 wpm).
+- Fastest-spoken sheets: S-11 (180 wpm), S-01 (168 wpm), S-14 (160 wpm).
 - S-08 plays a reel that runs longer than its script; it sits on its own press and can be cut short by advancing early.
 - S-11: some lines did not fit on the sheet at 28px and live in the presenter cues, not on screen.

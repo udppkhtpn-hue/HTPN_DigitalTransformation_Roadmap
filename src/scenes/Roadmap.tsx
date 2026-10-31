@@ -8,31 +8,37 @@ import './roadmap.css'
 
 const c = sceneContent('roadmap')
 
-// Four columns across the 1560px drawing, 30px gutters.
+// Five columns across the 1560px drawing, 20px gutters. Phase 1 is wide
+// because it carries everything that has already been done; Phase 2 is
+// narrow because its detail lives in the card that opens beside it.
 const COLS = [
-  { x: 200, w: 380 },
-  { x: 610, w: 400 },
-  { x: 1040, w: 340 },
-  { x: 1410, w: 350 },
+  { x: 200, w: 410 },
+  { x: 630, w: 230 },
+  { x: 880, w: 300 },
+  { x: 1200, w: 290 },
+  { x: 1510, w: 250 },
 ]
-/** Press on which each phase arrives. Press 2 (step 1) is the pin, between 1 and 2. */
-const PHASE_STEP = [0, 2, 3, 4]
+/** One phase per press. Press 2 is Phase 2 and the workshop card with it. */
+const PHASE_STEP = [0, 1, 2, 3, 4]
 
 const UPPER = 300 // y of the HTPN rail
-const LOWER = 530 // y of the KKM rail
-const PIN = { x: 595, y: UPPER }
+const LOWER = 566 // y of the KKM rail
+/** The pin drops onto Phase 2's rail: the workshop is the phase. */
+const PIN = { x: COLS[1].x + COLS[1].w - 22, y: UPPER }
 
 /**
- * Two tracks, one roadmap.
+ * Two tracks, five phases.
  *
  * Each phase carries an upper rail (HTPN, the lighthouse, in chalk) and a
  * lower one (KKM, what travels, in cyan), tied together by a thin amber
- * line. The sheet's moment is press 2: a pin drops into the gap between
- * Phase 1 and Phase 2 for a workshop that has already happened, because the
+ * line. Phase 1 is everything already done, summarised from sheets 3 to 8.
+ * The sheet's moment is press 2: Phase 2 is a workshop that has already
+ * happened, so a pin drops onto it and its card opens, because the
  * strongest thing a roadmap can show is that it has started.
  *
- * "Done when" lines do not appear here. At 28px, with two rails per phase,
- * they cost the sheet its legibility, so they live in the presenter cues.
+ * "Done when" lines and the full Phase 1 record do not appear here. At 28px,
+ * with two rails per phase, they cost the sheet its legibility, so they
+ * live in the presenter cues.
  */
 export function Roadmap({ step }: SceneProps) {
   const reduced = useReducedMotion()
@@ -127,16 +133,16 @@ export function Roadmap({ step }: SceneProps) {
             transition={{ duration: 0.25 }}
           >
             <motion.span
-              className="rm__pin-date"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.4, delay: 0.55 * t }}
+              className="rm__underway"
+              initial={{ opacity: 0, y: reduced ? 0 : 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.3 * t }}
             >
-              {m.pin}
+              {m.underway}
             </motion.span>
 
             <svg className="sc__svg" viewBox="0 0 1920 1080" aria-hidden="true">
-              <DrawPath d="M 720 170 H 1760 V 810 H 720 Z" delay={0.5} duration={1.1} opacity={0.3} />
+              <DrawPath d="M 890 170 H 1760 V 800 H 890 Z" delay={0.5} duration={1.1} opacity={0.3} />
             </svg>
 
             {/* two prints held by drafting clips, never in full colour */}
@@ -146,7 +152,7 @@ export function Roadmap({ step }: SceneProps) {
               animate={{ opacity: 1, y: 0, rotate: -3 }}
               transition={{ duration: 0.7, delay: 0.7 * t, ease: [0.16, 1, 0.3, 1] }}
             >
-              <img src={kik1} alt="" width={220} height={293} />
+              <img src={kik1} alt="" width={200} height={267} />
               <i className="rm__clip" />
             </motion.figure>
             <motion.figure
@@ -155,7 +161,7 @@ export function Roadmap({ step }: SceneProps) {
               animate={{ opacity: 1, y: 0, rotate: 2 }}
               transition={{ duration: 0.7, delay: 0.95 * t, ease: [0.16, 1, 0.3, 1] }}
             >
-              <img src={kik2} alt="" width={290} height={218} />
+              <img src={kik2} alt="" width={230} height={173} />
               <i className="rm__clip" />
             </motion.figure>
 
