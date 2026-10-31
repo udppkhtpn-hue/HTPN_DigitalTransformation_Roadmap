@@ -116,7 +116,7 @@ export function WhereTaught({ step }: SceneProps) {
         photos={SESSIONS}
         size={150}
         gap={12}
-        speed={28}
+        speed={70}
         label={`Photographs from the external sessions, ${c.photos}`}
         className="wt__reel"
         delay={MAP_IN * t}

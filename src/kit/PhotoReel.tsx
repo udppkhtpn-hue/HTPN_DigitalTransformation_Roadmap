@@ -33,7 +33,7 @@ export function PhotoReel({
   axis = 'x',
   size,
   gap = 16,
-  speed = 34,
+  speed = 85,
   delay = 0,
   label,
   className,
