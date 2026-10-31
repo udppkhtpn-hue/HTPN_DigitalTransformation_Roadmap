@@ -75,7 +75,7 @@ export function NationalPicture({ step }: SceneProps) {
                 cx={cx}
                 cy={cy}
                 r={R}
-                fill={live ? 'var(--line)' : 'var(--signal)'}
+                fill={live ? 'var(--line)' : `var(--np-y${y + 1})`}
                 stroke="var(--line)"
                 strokeWidth={1.4}
                 vectorEffect="non-scaling-stroke"
@@ -124,7 +124,9 @@ export function NationalPicture({ step }: SceneProps) {
                   transition={{ duration: 0.45, delay: (YEAR_AT[k] - 0.1) * t }}
                 >
                   <span className="np__year-n">{y.year}</span>
-                  <span className="np__year-add">+{y.add}</span>
+                  <span className="np__year-add" style={{ color: `var(--np-y${k + 1})` }}>
+                    +{y.add}
+                  </span>
                 </motion.div>
               ))}
             </div>

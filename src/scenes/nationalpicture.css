@@ -1,4 +1,13 @@
-.np { position: absolute; inset: 0; padding: 0; }
+.np {
+  position: absolute; inset: 0; padding: 0;
+  /* One hue, four tones: --signal stepped from pale to deep, so each
+     year of the rollout reads as its own block without leaving the palette.
+     The same tone colours the year's mark block and its "+N". */
+  --np-y1: #fbe6c0;
+  --np-y2: #f9c872;
+  --np-y3: #f5a524; /* --signal itself */
+  --np-y4: #b06c0c;
+}
 .np__layer { position: absolute; inset: 0; }
 
 .np__head {
