@@ -90,8 +90,8 @@ Current notes (draft to improve, not to copy):
 
 What the room sees:
 - Press 1: The framework is named and four numbered boxes are pencilled in; only stage 1, "Leaders learn first", fills in. Under it a strip of photographs from 11 Apr – 29 May 2025 (Monash, the EDLP group, certificates) drifts slowly across the sheet, with a leader line back up to box 1.
-- Press 2: Stage 2, "Our own syllabus", fills in. The photographs keep drifting.
-- Press 3: Stage 3, "Quick wins", fills in.
+- Press 2: Stage 2, "Our own syllabus", fills in, and the tentative two-day syllabus (Day 1: AI literacy, NotebookLM, productivity prompting, interactive dashboard; Day 2: AI pipeline concepts, landing page, group quick-win projects, presentations, closing) is pinned up on the right. The photographs keep drifting.
+- Press 3: The syllabus goes. Stage 3, "Quick wins", fills in.
 - Press 4: Stage 4, "Reward the builders", fills in.
 - Press 5: The photographs give way to "85% outsourced", which a split-flap board turns into "85% insourced" after a beat, then the DBS Bank caption.
 

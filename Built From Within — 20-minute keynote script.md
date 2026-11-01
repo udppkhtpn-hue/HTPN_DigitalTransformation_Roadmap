@@ -60,11 +60,11 @@ We ran this as a change programme, not an IT project. Underneath it sits Kotter'
 
 First, leaders learn first. Before asking anyone to change, we went back to school: Monash, this programme with MIT Sloan and ASB, and LSE. Credibility before mandate.
 
-*\[Press 2: Stage 2, "Our own syllabus".\]*
+*\[Press 2: Stage 2, "Our own syllabus", with the tentative two-day syllabus pinned up beside it.\]*
 
 Second, our own syllabus, with one rule. Everyone leaves having built something. Not watched a demo. Built.
 
-*\[Press 3: Stage 3, "Quick wins".\]*
+*\[Press 3: The syllabus goes; Stage 3, "Quick wins".\]*
 
 Third, quick wins. Small scope, shipped in weeks, visible to the people on the wards.
 

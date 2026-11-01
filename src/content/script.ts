@@ -81,10 +81,10 @@ export const SCRIPT: Record<string, SheetScript> = {
         "We ran this as a change programme, not an IT project. Underneath it sits Kotter's eight steps. In practice, it came down to four moves.",
         "First, leaders learn first. Before asking anyone to change, we went back to school: Monash, this programme with MIT Sloan and ASB, and LSE. Credibility before mandate.",
       ] },
-      { step: 1, cue: "Stage 2, \"Our own syllabus\".", paras: [
+      { step: 1, cue: "Stage 2, \"Our own syllabus\", with the tentative two-day syllabus pinned up beside it.", paras: [
         "Second, our own syllabus, with one rule. Everyone leaves having built something. Not watched a demo. Built.",
       ] },
-      { step: 2, cue: "Stage 3, \"Quick wins\".", paras: [
+      { step: 2, cue: "The syllabus goes; Stage 3, \"Quick wins\".", paras: [
         "Third, quick wins. Small scope, shipped in weeks, visible to the people on the wards.",
       ] },
       { step: 3, cue: "Stage 4, \"Reward the builders\".", paras: [

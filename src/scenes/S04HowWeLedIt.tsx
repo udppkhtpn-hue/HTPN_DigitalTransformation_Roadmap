@@ -1,6 +1,7 @@
-import { motion, useReducedMotion } from 'motion/react'
+import { AnimatePresence, motion, useReducedMotion } from 'motion/react'
 import { sceneContent } from './content.ts'
 import { LEADERS } from '../content/photos.ts'
+import syllabus from '../assets/syllabus.webp'
 import { DrawPath } from '../kit/DrawPath.tsx'
 import { PhotoReel } from '../kit/PhotoReel.tsx'
 import { SplitFlap } from '../kit/SplitFlap.tsx'
@@ -146,6 +147,27 @@ export function S04HowWeLedIt({ step }: SceneProps) {
           delay={0.8}
         />
       </motion.div>
+
+      {/* the two-day syllabus, pinned up for the one press it is talked about */}
+      <AnimatePresence>
+        {step === 1 && (
+          <motion.figure
+            className="s04__syllabus"
+            initial={{ opacity: 0, y: 24 * t, rotate: 0.5 }}
+            animate={{ opacity: 1, y: 0, rotate: 1.2 }}
+            exit={{ opacity: 0, y: 12 * t, transition: { duration: 0.3 } }}
+            transition={{ duration: 0.6, delay: 0.35 * t, ease: [0.16, 1, 0.3, 1] }}
+          >
+            <img
+              src={syllabus}
+              alt="Tentative two-day syllabus: AI literacy, NotebookLM, productivity prompting, vibe coding and group quick-win projects"
+              width={490}
+              height={722}
+            />
+            <i className="s04__syllabus-clip" />
+          </motion.figure>
+        )}
+      </AnimatePresence>
 
       <motion.div
         className="s04__flip"
