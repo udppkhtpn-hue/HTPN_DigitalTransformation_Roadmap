@@ -1,4 +1,4 @@
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import {
   animate,
   motion,
@@ -17,11 +17,18 @@ import './wheretaught.css'
 
 const c = sceneContent('where-weve-taught')
 
+// Timings below are in "base" seconds; every one is multiplied by SLOW, so
+// the whole sheet runs at half speed (0.5x) from this one number.
+const SLOW = 2
 const MAP_IN = 1.2
 const FIRST = 1.5
 const GAP = 0.4
 const FLIGHT = 0.45
 const LAST = FIRST + (SITES.length - 1) * GAP + FLIGHT
+/** When the arcs replay, the map is already drawn, so they start sooner. */
+const REPLAY_FIRST = 0.6
+/** Seconds the finished tally sits before the arcs fly again. */
+const HOLD = 4
 
 /** Kajang to the nearest point on the magnifier's rim, not to a fixed corner. */
 const LEADER = (() => {
@@ -80,18 +87,37 @@ export function WhereTaught({ step }: SceneProps) {
   const reduced = useReducedMotion()
   const adopted = step >= 1
 
+  // Which pass of the arcs we are on. After the fifteenth lands and the
+  // tally has held for a few seconds the arcs, pins and counter run again,
+  // for as long as the sheet is on its first press. The second press is the
+  // verdict, so from there everything stays finished.
+  const [run, setRun] = useState(0)
+  const first = run === 0 ? FIRST : REPLAY_FIRST
+  const still = reduced || adopted
+
   // Drives the date counter, the tally and the "now arriving" line together.
-  const i = useMotionValue(reduced ? SITES.length : 0)
+  const i = useMotionValue(still ? SITES.length : 0)
   useEffect(() => {
-    if (reduced) return
+    if (still) {
+      i.set(SITES.length)
+      return
+    }
     i.set(0)
+    const flight = (SITES.length - 1) * GAP + FLIGHT
     const a = animate(i, SITES.length, {
-      duration: (SITES.length - 1) * GAP + FLIGHT,
-      delay: FIRST,
+      duration: flight * SLOW,
+      delay: first * SLOW,
       ease: 'linear',
     })
-    return () => a.stop()
-  }, [i, reduced])
+    const again = window.setTimeout(
+      () => setRun((r) => r + 1),
+      (first + flight) * SLOW * 1000 + HOLD * 1000,
+    )
+    return () => {
+      a.stop()
+      window.clearTimeout(again)
+    }
+  }, [i, still, run, first])
 
   const landed = useTransform(i, (v) => Math.min(SITES.length, Math.max(0, Math.ceil(v))))
   const tally = useTransform(landed, (v) => String(v).padStart(2, '0'))
@@ -101,7 +127,7 @@ export function WhereTaught({ step }: SceneProps) {
   const nowName = useTransform(landed, (v) => (v === 0 ? '' : SITES[v - 1].name))
   const nowDates = useTransform(landed, (v) => (v === 0 ? '' : SITES[v - 1].dates))
 
-  const t = reduced ? 0 : 1
+  const t = reduced ? 0 : SLOW
 
   return (
     <div className="sc wt">
@@ -193,21 +219,23 @@ export function WhereTaught({ step }: SceneProps) {
         {/* arcs and pins, in date order */}
         {SITES.map((s, k) => {
           const pin = MAP.pins[k]
-          const at = FIRST + k * GAP
+          const at = first + k * GAP
+          // On the verdict press the arcs are simply there, already landed.
+          const go = adopted ? 0 : t
           return (
-            <g key={s.n}>
+            <g key={`${s.n}-${run}-${adopted ? 'f' : 'a'}`}>
               <motion.path
                 d={arcPath(MAP.home.mainX, MAP.home.mainY, pin.x, pin.y)}
                 className="wt__arc"
-                initial={reduced ? { opacity: 0 } : { pathLength: 0, opacity: 0.75 }}
-                animate={reduced ? { opacity: 0.75 } : { pathLength: 1, opacity: 0.75 }}
-                transition={{ duration: FLIGHT * t + 0.01, delay: at * t, ease: 'easeOut' }}
+                initial={reduced || adopted ? { opacity: 0 } : { pathLength: 0, opacity: 0.75 }}
+                animate={reduced || adopted ? { opacity: 0.75 } : { pathLength: 1, opacity: 0.75 }}
+                transition={{ duration: FLIGHT * go + 0.01, delay: at * go, ease: 'easeOut' }}
               />
               <motion.g
                 className="wt__pin"
-                initial={{ opacity: 0, scale: reduced ? 1 : 0.4 }}
+                initial={{ opacity: 0, scale: reduced || adopted ? 1 : 0.4 }}
                 animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.3, delay: (at + FLIGHT) * t }}
+                transition={{ duration: adopted ? 0.01 : 0.3, delay: (at + FLIGHT) * go }}
                 style={{ transformOrigin: `${pin.x}px ${pin.y}px` }}
               >
                 <Mark kind={s.kind} x={pin.x} y={pin.y} r={7} />
@@ -216,9 +244,9 @@ export function WhereTaught({ step }: SceneProps) {
               {pin.ix !== null && (
                 <motion.g
                   className="wt__pin"
-                  initial={{ opacity: 0, scale: reduced ? 1 : 0.4 }}
+                  initial={{ opacity: 0, scale: reduced || adopted ? 1 : 0.4 }}
                   animate={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 0.3, delay: (at + FLIGHT) * t }}
+                  transition={{ duration: adopted ? 0.01 : 0.3, delay: (at + FLIGHT) * go }}
                   style={{ transformOrigin: `${pin.ix}px ${pin.iy}px` }}
                 >
                   <Mark kind={s.kind} x={pin.ix!} y={pin.iy!} r={9} />
