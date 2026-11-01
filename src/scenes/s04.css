@@ -19,7 +19,7 @@
 .s04__stage--pending .s04__n { opacity: 0.3; }
 
 .s04__name {
-  font-size: 46px;
+  font-size: 44px;
   line-height: 1.08;
   font-variation-settings: 'wght' 600, 'wdth' 88;
   color: var(--chalk);
@@ -27,7 +27,7 @@
 
 .s04__detail {
   margin-top: auto;
-  font-size: var(--t-small);
+  font-size: 30px;
   line-height: 1.32;
   font-variation-settings: 'wght' 400, 'wdth' 96;
   color: var(--line);
@@ -104,3 +104,15 @@
   position: absolute; left: 50%; top: -12px; width: 64px; height: 20px;
   margin-left: -32px; border: 1.5px solid var(--line); background: var(--drafting);
 }
+
+/* Once stage 3 arrives the photographs hold the left half, under boxes 1
+   and 2, and the right half is the Padlet's. */
+.s04__reel { transition: width 0.5s ease; }
+.s04__reel--short { width: 780px !important; }
+
+.s04__padlet { position: absolute; inset: 0; }
+.s04__padlet-shot {
+  position: absolute; left: 1016px; top: 618px; display: block;
+  border: 1px solid rgba(124, 196, 242, 0.55);
+}
+.s04__padlet-qr { position: absolute; left: 1580px; top: 618px; width: 216px; }

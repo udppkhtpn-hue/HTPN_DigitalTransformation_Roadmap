@@ -88,6 +88,8 @@ export interface HowWeLedIt {
   stages: { name: string; detail: string }[]
   /** Dates of the photographs under stage 1, as taken. */
   photos: string
+  /** Under the QR code beside stage 3 (the workshop Padlet). */
+  padlet: string
   flip: { from: string; to: string; caption: string }
 }
 
@@ -364,12 +366,13 @@ export const SCENES: Scene[] = [
         },
         {
           name: 'Our own syllabus',
-          detail: 'everyone leaves having built something',
+          detail: 'Google Workspace, vibe coding and web application development',
         },
-        { name: 'Quick wins', detail: 'shipped in weeks' },
+        { name: 'Quick wins', detail: 'everyone leaves having built something' },
         { name: 'Reward the builders', detail: 'a national Innovathon' },
       ],
       photos: '11 Apr – 29 May 2025',
+      padlet: 'Scan: workshop Padlet',
       flip: {
         from: '85% outsourced',
         to: '85% insourced',

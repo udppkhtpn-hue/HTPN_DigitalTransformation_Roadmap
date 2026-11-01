@@ -11,6 +11,7 @@ import QRCode from 'qrcode'
 const URLS = {
   showcase: 'https://htpn-showcase-v2.vercel.app/',
   innovathon: 'https://udppkhtpn-hue.github.io/innovathon2026/',
+  padlet: 'https://padlet.com/drsyafiz/bengkel-produktiviti-digital-ai-untuk-transformasi-perkhidma-s024ha3em14j8gw35eyo',
 }
 
 /** One rect per dark module, merged into a single path. */

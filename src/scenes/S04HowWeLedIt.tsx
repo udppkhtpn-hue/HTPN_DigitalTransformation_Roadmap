@@ -2,6 +2,8 @@ import { AnimatePresence, motion, useReducedMotion } from 'motion/react'
 import { sceneContent } from './content.ts'
 import { LEADERS } from '../content/photos.ts'
 import syllabus from '../assets/syllabus.webp'
+import padlet from '../assets/padlet.webp'
+import { QR } from '../kit/QR.tsx'
 import { DrawPath } from '../kit/DrawPath.tsx'
 import { PhotoReel } from '../kit/PhotoReel.tsx'
 import { SplitFlap } from '../kit/SplitFlap.tsx'
@@ -143,10 +145,40 @@ export function S04HowWeLedIt({ step }: SceneProps) {
           photos={LEADERS}
           size={REEL_H}
           label={`Photographs, ${c.photos}`}
-          className="s04__reel"
+          className={`s04__reel${step >= 2 ? ' s04__reel--short' : ''}`}
           delay={0.8}
         />
       </motion.div>
+
+      {/* stage 3's evidence: the workshop Padlet, and a code to open it */}
+      <AnimatePresence>
+        {step === 2 || step === 3 ? (
+          <motion.div
+            className="s04__padlet"
+            key="padlet"
+            initial={{ opacity: 0, y: 20 * t }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, transition: { duration: 0.3 } }}
+            transition={{ duration: 0.55, delay: step === 2 ? 0.3 * t : 0, ease: [0.16, 1, 0.3, 1] }}
+          >
+            <svg className="sc__svg" viewBox="0 0 1920 1080" aria-hidden="true">
+              <DrawPath
+                d={`M ${X0 + 2 * (BOX_W + GAP) + BOX_W / 2} ${BOX_Y + BOX_H} L ${X0 + 2 * (BOX_W + GAP) + BOX_W / 2} ${REEL_Y}`}
+                duration={0.35}
+                opacity={0.7}
+              />
+            </svg>
+            <img
+              className="s04__padlet-shot"
+              src={padlet}
+              alt="The workshop Padlet: slide decks from the programme, one card per module"
+              width={540}
+              height={197}
+            />
+            <QR code="padlet" size={216} className="s04__padlet-qr" caption={c.padlet} />
+          </motion.div>
+        ) : null}
+      </AnimatePresence>
 
       {/* the two-day syllabus, pinned up for the one press it is talked about */}
       <AnimatePresence>

@@ -71,10 +71,11 @@ On screen —
 framework: Kotter's eight steps
 stages:
   - name: Leaders learn first; detail: Monash, EDLP with MIT Sloan & ASB, LSE
-  - name: Our own syllabus; detail: everyone leaves having built something
-  - name: Quick wins; detail: shipped in weeks
+  - name: Our own syllabus; detail: Google Workspace, vibe coding and web application development
+  - name: Quick wins; detail: everyone leaves having built something
   - name: Reward the builders; detail: a national Innovathon
 photos: 11 Apr – 29 May 2025
+padlet: Scan: workshop Padlet
 flip: from: 85% outsourced; to: 85% insourced; caption: DBS Bank's shift. Our benchmark.
 
 Script — We ran this as a change programme, not an IT project. Leaders learned first, so we had credibility. We wrote our own syllabus, and everyone leaves having built something. We chose small, visible quick wins. And we celebrated the builders. Our benchmark was DBS Bank, which moved from eighty-five percent outsourced to eighty-five percent insourced.
