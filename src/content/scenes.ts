@@ -512,7 +512,7 @@ export const SCENES: Scene[] = [
     id: 'the-gap',
     sheet: 'S-09',
     title: 'The gap',
-    steps: 2,
+    steps: 5,
     moment: 1,
     seconds: 66,
     content: {

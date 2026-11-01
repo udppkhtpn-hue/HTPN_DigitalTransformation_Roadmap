@@ -5,7 +5,7 @@ leaders (Microsoft, Grab, Shopee) at the Executive Digital Leadership Programme.
 Speaker: Dr Ferwahn Fairis bin Ab Karim, Acting Deputy Director, Hospital Tengku
 Permaisuri Norashikin (HTPN), Kajang, Ministry of Health Malaysia.
 
-20 sheets · 46 clicker presses · planned 20:10 against a 5:00 slot
+20 sheets · 49 clicker presses · planned 20:10 against a 5:00 slot
 
 ## Ground rules for this deck
 
@@ -138,7 +138,7 @@ url: https://udppkhtpn-hue.github.io/innovathon2026/
 Script — In July we took it national. Innovathon 2026: two hundred delegates, twenty-eight finalists, thirteen judges from industry, academia and government, some of them in this room. Several winners came from other hospitals that adopted our model.
 
 ### S-09 The gap
-2 presses · 66s · 55 words spoken (50 wpm)
+5 presses · 66s · 55 words spoken (50 wpm)
 
 On screen —
 dots: 50
@@ -334,7 +334,7 @@ Script — Here's the lesson for me as a leader. Phase one was won through cultu
 
 ## Totals
 
-1391 words spoken · 20:10 planned · 46 presses
+1391 words spoken · 20:10 planned · 49 presses
 
 ## Known open points
 

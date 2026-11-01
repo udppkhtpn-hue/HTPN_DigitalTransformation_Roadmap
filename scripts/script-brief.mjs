@@ -57,7 +57,10 @@ const PRESSES = {
   ],
   'the-gap': [
     'Fifty drifting dots, one per app, under the headline "50 apps ≠ one hospital".',
-    'The dots dim and the four gaps appear, then the MIT CISR lens line.',
+    'The dots dim and the first gap, "Fragmentation", appears.',
+    'The second gap, "Sustainability".',
+    'The third gap, "Governance".',
+    'The fourth gap, "Evidence", then the MIT CISR lens line.',
   ],
   'national-picture': [
     '155 circles, one per MOH hospital; the 20 that have THIS fill in; the counters 20 and 135.',

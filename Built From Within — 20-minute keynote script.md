@@ -4,7 +4,7 @@ Nov 1, 2026 · @Fairis
 
 ## How to use this script
 
-The script runs 20 minutes: 2,757 spoken words at 140 words a minute (19:41), plus about 30 seconds where the Innovathon reel plays on its own. It covers all 20 sheets and 46 presses, and every figure in it comes from the deck brief.
+The script runs 20 minutes: 2,757 spoken words at 140 words a minute (19:41), plus about 30 seconds where the Innovathon reel plays on its own. It covers all 20 sheets and 49 presses, and every figure in it comes from the deck brief.
 
 Each sheet shows its spoken time and word count. The line in square brackets is what the press brings up, so click at the start of the paragraph beneath it. The last line of each sheet leads into the next click.
 
@@ -140,9 +140,21 @@ Slow down here. This is where the room decides whether to trust you.
 
 Success created a new problem. It is one everyone in this room will recognise. Fifty apps is not one hospital. Each dot is a tool that works on its own.
 
-*\[Press 2: The dots dim; the four gaps and the MIT CISR line appear\]*
+*\[Press 2: The dots dim; the first gap, "Fragmentation", appears\]*
 
-There are four gaps. Fragmentation: separate spreadsheets that rarely talk to each other or to the hospital information system. Sustainability: many tools depend on one builder. If that person moves on, the tool stalls. Governance: registration, PDPA data classes and rules for AI have not caught up, which leaves us open to being called shadow IT. And evidence: few tools have before-and-after measures, so we cannot yet say with confidence which ones to scale.
+There are four gaps. Fragmentation: separate spreadsheets that rarely talk to each other or to the hospital information system.
+
+*\[Press 3: The second gap, "Sustainability"\]*
+
+Sustainability: many tools depend on one builder. If that person moves on, the tool stalls.
+
+*\[Press 4: The third gap, "Governance"\]*
+
+Governance: registration, PDPA data classes and rules for AI have not caught up, which leaves us open to being called shadow IT.
+
+*\[Press 5: The fourth gap, "Evidence", then the MIT CISR line\]*
+
+And evidence: few tools have before-and-after measures, so we cannot yet say with confidence which ones to scale.
 
 MIT CISR gives us a useful lens. We are strong in shared insights, and we have a growing developer community. We are weak in operational backbone and accountability. We have the community. We do not yet have the backbone.
 

@@ -30,7 +30,7 @@ These are real tools, used every day...
 - **Audience:** senior industry leaders (Microsoft, Grab, Shopee and others), some of whom judged the Innovathon. Not clinicians; they know platforms and scale, not Malaysian public hospitals.
 - **Speaker:** Dr Ferwahn Fairis bin Ab Karim · Acting Deputy Director, Hospital Tengku Permaisuri Norashikin, Kajang · Ministry of Health Malaysia.
 - **The argument in one line:** a 135-year-old public hospital built its own digital tools from within, ahead of national policy; the next phases must turn that culture into structure, and share it with every KKM hospital.
-- **The deck:** 20 sheets, 46 clicker presses, planned 20:10. "Press 1" on each sheet is the click that brings the sheet up.
+- **The deck:** 20 sheets, 49 clicker presses, planned 20:10. "Press 1" on each sheet is the click that brings the sheet up.
 
 ## The sheets
 
@@ -183,11 +183,14 @@ Current notes (draft to improve, not to copy):
 > In July we took it national. Innovathon 2026: two hundred delegates, twenty-eight finalists, thirteen judges from industry, academia and government, some of them in this room. Several winners came from other hospitals that adopted our model.
 
 ### S-09 The gap
-2 presses · planned 66s · about 154 words at 140 wpm · current notes 55 words
+5 presses · planned 66s · about 154 words at 140 wpm · current notes 55 words
 
 What the room sees:
 - Press 1: Fifty drifting dots, one per app, under the headline "50 apps ≠ one hospital".
-- Press 2: The dots dim and the four gaps appear, then the MIT CISR lens line.
+- Press 2: The dots dim and the first gap, "Fragmentation", appears.
+- Press 3: The second gap, "Sustainability".
+- Press 4: The third gap, "Governance".
+- Press 5: The fourth gap, "Evidence", then the MIT CISR lens line.
 
 On screen (text and figures, exactly as shown):
 dots: 50
@@ -444,7 +447,7 @@ Current notes (draft to improve, not to copy):
 
 ## Totals
 
-- 20 sheets, 46 presses.
+- 20 sheets, 49 presses.
 - Planned time 20:10 against a 5:00 slot.
 - Current notes total 1391 words.
 - S-08 plays a reel of about 56 seconds; the speaker can talk over it or advance early to cut it short.

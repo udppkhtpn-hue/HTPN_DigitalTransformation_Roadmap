@@ -18,6 +18,9 @@ const c = sceneContent('the-gap')
 export function S08TheGap({ step }: SceneProps) {
   const reduced = useReducedMotion()
   const open = step >= 1
+  // One gap per click, in the order the speaker names them; the lens
+  // arrives with the last, because it is the verdict on all four.
+  const allIn = step >= c.gaps.length
 
   return (
     <div className="sc s08">
@@ -58,33 +61,31 @@ export function S08TheGap({ step }: SceneProps) {
         </WidthType>
       </h1>
 
-      {open && (
-        <div className="s08__gaps">
-          {c.gaps.map((g, i) => (
+      <div className="s08__gaps">
+        {c.gaps.map((g, i) =>
+          step > i ? (
             <motion.div
               className="s08__gap"
               key={g.name}
               initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{
-                duration: 0.5,
-                delay: i * 0.1,
-                ease: [0.16, 1, 0.3, 1],
-              }}
+              transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
             >
               <span className="s08__gap-name">{g.name}</span>
               <span className="s08__gap-body">{g.body}</span>
             </motion.div>
-          ))}
-        </div>
-      )}
+          ) : (
+            <span className="s08__gap-slot" key={g.name} aria-hidden="true" />
+          ),
+        )}
+      </div>
 
-      {open && (
+      {allIn && (
         <motion.p
           className="s08__lens"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ duration: 0.5, delay: 0.55 }}
+          transition={{ duration: 0.5, delay: 0.4 }}
         >
           {c.lens}
         </motion.p>

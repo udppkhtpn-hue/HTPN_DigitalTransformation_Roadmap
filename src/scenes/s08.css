@@ -46,6 +46,10 @@
   border-top: 1px solid rgba(124, 196, 242, 0.5);
 }
 
+.s08__gap-slot {
+  border-top: 1px dashed rgba(124, 196, 242, 0.22);
+}
+
 .s08__gap-name {
   font-size: 48px;
   line-height: 1.04;

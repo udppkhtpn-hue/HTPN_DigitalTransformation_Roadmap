@@ -171,8 +171,17 @@ export const SCRIPT: Record<string, SheetScript> = {
       { step: 0, cue: "Fifty drifting dots under \"50 apps ≠ one hospital\"", paras: [
         "Success created a new problem. It is one everyone in this room will recognise. Fifty apps is not one hospital. Each dot is a tool that works on its own.",
       ] },
-      { step: 1, cue: "The dots dim; the four gaps and the MIT CISR line appear", paras: [
-        "There are four gaps. Fragmentation: separate spreadsheets that rarely talk to each other or to the hospital information system. Sustainability: many tools depend on one builder. If that person moves on, the tool stalls. Governance: registration, PDPA data classes and rules for AI have not caught up, which leaves us open to being called shadow IT. And evidence: few tools have before-and-after measures, so we cannot yet say with confidence which ones to scale.",
+      { step: 1, cue: "The dots dim; the first gap, \"Fragmentation\", appears", paras: [
+        "There are four gaps. Fragmentation: separate spreadsheets that rarely talk to each other or to the hospital information system.",
+      ] },
+      { step: 2, cue: "The second gap, \"Sustainability\"", paras: [
+        "Sustainability: many tools depend on one builder. If that person moves on, the tool stalls.",
+      ] },
+      { step: 3, cue: "The third gap, \"Governance\"", paras: [
+        "Governance: registration, PDPA data classes and rules for AI have not caught up, which leaves us open to being called shadow IT.",
+      ] },
+      { step: 4, cue: "The fourth gap, \"Evidence\", then the MIT CISR line", paras: [
+        "And evidence: few tools have before-and-after measures, so we cannot yet say with confidence which ones to scale.",
         "MIT CISR gives us a useful lens. We are strong in shared insights, and we have a growing developer community. We are weak in operational backbone and accountability. We have the community. We do not yet have the backbone.",
         "And when you zoom out from Kajang, the gap gets much bigger.",
       ] },
