@@ -116,3 +116,9 @@
   border: 1px solid rgba(124, 196, 242, 0.55);
 }
 .s04__padlet-qr { position: absolute; left: 1580px; top: 618px; width: 216px; }
+
+/* The model, as drawn, under the sheet's name and clear of the title block. */
+.s04__model {
+  position: absolute; left: 200px; top: 150px; display: block;
+  border: 1px solid rgba(124, 196, 242, 0.4);
+}

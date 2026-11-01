@@ -4,7 +4,7 @@ Nov 1, 2026 · @Fairis
 
 ## How to use this script
 
-The script runs 20 minutes: 2,757 spoken words at 140 words a minute (19:41), plus about 30 seconds where the Innovathon reel plays on its own. It covers all 20 sheets and 49 presses, and every figure in it comes from the deck brief.
+The script runs 20 minutes: 2,757 spoken words at 140 words a minute (19:41), plus about 30 seconds where the Innovathon reel plays on its own. It covers all 20 sheets and 50 presses, and every figure in it comes from the deck brief.
 
 Each sheet shows its spoken time and word count. The line in square brackets is what the press brings up, so click at the start of the paragraph beneath it. The last line of each sheet leads into the next click.
 
@@ -54,27 +54,31 @@ The third is opportunity. For the first time, AI and low-code tools let a clinic
 
 ### S-04 How we led it  (61s, 142 words)
 
-*\[Press 1: Four boxes are pencilled in with Kotter's eight steps named; stage 1, "Leaders learn first", fills in and the 2025 photographs start to drift underneath.\]*
+*\[Press 1: Kotter's 8-Step Change Model fills the sheet. Let the room take it in.\]*
 
-We ran this as a change programme, not an IT project. Underneath it sits Kotter's eight steps. In practice, it came down to four moves.
+We ran this as a change programme, not an IT project. Underneath it sits Kotter's eight steps.
+
+*\[Press 2: The model goes; four numbered boxes are pencilled in; stage 1, "Leaders learn first", fills in and the 2025 photographs start to drift underneath.\]*
+
+In practice, it came down to four moves.
 
 First, leaders learn first. Before asking anyone to change, we went back to school: Monash, this programme with MIT Sloan and ASB, and LSE. Credibility before mandate.
 
-*\[Press 2: Stage 2, "Our own syllabus", with the tentative two-day syllabus pinned up beside it.\]*
+*\[Press 3: Stage 2, "Our own syllabus", with the tentative two-day syllabus pinned up beside it.\]*
 
 Second, our own syllabus. Google Workspace, vibe coding and web application development.
 
-*\[Press 3: The syllabus goes; Stage 3, "Quick wins", fills in with a screenshot of the workshop Padlet and a QR code under it, left up for the next click too.\]*
+*\[Press 4: The syllabus goes; Stage 3, "Quick wins", fills in with a screenshot of the workshop Padlet and a QR code under it, left up for the next click too.\]*
 
 Third, quick wins, with one rule. Everyone leaves having built something. Not watched a demo. Built. Small scope, shipped in weeks, visible to the people on the wards. The workshop materials are on this Padlet, and the code takes you straight to it.
 
-*\[Press 4: Stage 4, "Reward the builders".\]*
+*\[Press 5: Stage 4, "Reward the builders".\]*
 
 Fourth, reward the builders. That became a national Innovathon.
 
 For a picture of insourcing at scale, we looked to a bank.
 
-*\[Press 5: The photographs give way; the split-flap turns 85% outsourced into 85% insourced.\]*
+*\[Press 6: The photographs give way; the split-flap turns 85% outsourced into 85% insourced.\]*
 
 DBS Bank moved from eighty-five percent outsourced to eighty-five percent insourced. A bank, not a hospital. But the lesson travels. The capability you build inside is the capability you keep. Here is what ours looks like today.
 

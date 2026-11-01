@@ -77,21 +77,24 @@ export const SCRIPT: Record<string, SheetScript> = {
     reel: 0,
     words: 165,
     blocks: [
-      { step: 0, cue: "Four boxes are pencilled in with Kotter's eight steps named; stage 1, \"Leaders learn first\", fills in and the 2025 photographs start to drift underneath.", paras: [
-        "We ran this as a change programme, not an IT project. Underneath it sits Kotter's eight steps. In practice, it came down to four moves.",
+      { step: 0, cue: "Kotter's 8-Step Change Model fills the sheet. Let the room take it in.", paras: [
+        "We ran this as a change programme, not an IT project. Underneath it sits Kotter's eight steps.",
+      ] },
+      { step: 1, cue: "The model goes; four numbered boxes are pencilled in; stage 1, \"Leaders learn first\", fills in and the 2025 photographs start to drift underneath.", paras: [
+        "In practice, it came down to four moves.",
         "First, leaders learn first. Before asking anyone to change, we went back to school: Monash, this programme with MIT Sloan and ASB, and LSE. Credibility before mandate.",
       ] },
-      { step: 1, cue: "Stage 2, \"Our own syllabus\", with the tentative two-day syllabus pinned up beside it.", paras: [
+      { step: 2, cue: "Stage 2, \"Our own syllabus\", with the tentative two-day syllabus pinned up beside it.", paras: [
         "Second, our own syllabus. Google Workspace, vibe coding and web application development.",
       ] },
-      { step: 2, cue: "The syllabus goes; Stage 3, \"Quick wins\", fills in with a screenshot of the workshop Padlet and a QR code under it, left up for the next click too.", paras: [
+      { step: 3, cue: "The syllabus goes; Stage 3, \"Quick wins\", fills in with a screenshot of the workshop Padlet and a QR code under it, left up for the next click too.", paras: [
         "Third, quick wins, with one rule. Everyone leaves having built something. Not watched a demo. Built. Small scope, shipped in weeks, visible to the people on the wards. The workshop materials are on this Padlet, and the code takes you straight to it.",
       ] },
-      { step: 3, cue: "Stage 4, \"Reward the builders\".", paras: [
+      { step: 4, cue: "Stage 4, \"Reward the builders\".", paras: [
         "Fourth, reward the builders. That became a national Innovathon.",
         "For a picture of insourcing at scale, we looked to a bank.",
       ] },
-      { step: 4, cue: "The photographs give way; the split-flap turns 85% outsourced into 85% insourced.", paras: [
+      { step: 5, cue: "The photographs give way; the split-flap turns 85% outsourced into 85% insourced.", paras: [
         "DBS Bank moved from eighty-five percent outsourced to eighty-five percent insourced. A bank, not a hospital. But the lesson travels. The capability you build inside is the capability you keep. Here is what ours looks like today.",
       ] },
     ],

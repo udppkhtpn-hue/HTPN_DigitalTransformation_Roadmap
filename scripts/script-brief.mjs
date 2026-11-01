@@ -35,7 +35,8 @@ const PRESSES = {
     'The timeline draws back to April 2025, measures the 14 months between, and the three reasons appear one by one.',
   ],
   'how-we-led-it': [
-    'The framework is named and four numbered boxes are pencilled in; only stage 1, "Leaders learn first", fills in. Under it a strip of photographs from 11 Apr – 29 May 2025 (Monash, the EDLP group, certificates) drifts slowly across the sheet, with a leader line back up to box 1.',
+    "Kotter's 8-Step Change Model, as a single drawn graphic (eight rising steps: sense of urgency, guiding coalition, strategic vision, volunteer army, removing barriers, easy wins, increase the pace, institute change; grouped as create the right climate, engage and enable others, implement and sustain), alone on the sheet.",
+    'The model goes. The framework is named and four numbered boxes are pencilled in; only stage 1, "Leaders learn first", fills in. Under it a strip of photographs from 11 Apr – 29 May 2025 (Monash, the EDLP group, certificates) drifts slowly across the sheet, with a leader line back up to box 1.',
     'Stage 2, "Our own syllabus" (Google Workspace, vibe coding and web application development), fills in, and the tentative two-day syllabus (Day 1: AI literacy, NotebookLM, productivity prompting, interactive dashboard; Day 2: AI pipeline concepts, landing page, group quick-win projects, presentations, closing) is pinned up on the right. The photographs keep drifting.',
     'The syllabus goes. Stage 3, "Quick wins" (everyone leaves having built something), fills in, with a screenshot of the workshop Padlet and a QR code to it beside the photographs.',
     'Stage 4, "Reward the builders", fills in.',

@@ -30,7 +30,7 @@ These are real tools, used every day...
 - **Audience:** senior industry leaders (Microsoft, Grab, Shopee and others), some of whom judged the Innovathon. Not clinicians; they know platforms and scale, not Malaysian public hospitals.
 - **Speaker:** Dr Ferwahn Fairis bin Ab Karim · Acting Deputy Director, Hospital Tengku Permaisuri Norashikin, Kajang · Ministry of Health Malaysia.
 - **The argument in one line:** a 135-year-old public hospital built its own digital tools from within, ahead of national policy; the next phases must turn that culture into structure, and share it with every KKM hospital.
-- **The deck:** 20 sheets, 49 clicker presses, planned 20:10. "Press 1" on each sheet is the click that brings the sheet up.
+- **The deck:** 20 sheets, 50 clicker presses, planned 20:10. "Press 1" on each sheet is the click that brings the sheet up.
 
 ## The sheets
 
@@ -86,14 +86,15 @@ Current notes (draft to improve, not to copy):
 > Three forces made this necessary. Pressure: beds are full, staff are tired, and this June our dengue admissions rose a hundred and twenty-eight percent. Births have almost tripled since we moved into the new Women and Child Centre, from two hundred to more than five hundred a month. Vendor lock-in: procurement is too slow for problems that change every month. And opportunity: for the first time, clinicians can build real tools in weeks. The limit is no longer technology. It's leadership.
 
 ### S-04 How we led it
-5 presses · planned 61s · about 142 words at 140 wpm · current notes 55 words
+6 presses · planned 61s · about 142 words at 140 wpm · current notes 55 words
 
 What the room sees:
-- Press 1: The framework is named and four numbered boxes are pencilled in; only stage 1, "Leaders learn first", fills in. Under it a strip of photographs from 11 Apr – 29 May 2025 (Monash, the EDLP group, certificates) drifts slowly across the sheet, with a leader line back up to box 1.
-- Press 2: Stage 2, "Our own syllabus" (Google Workspace, vibe coding and web application development), fills in, and the tentative two-day syllabus (Day 1: AI literacy, NotebookLM, productivity prompting, interactive dashboard; Day 2: AI pipeline concepts, landing page, group quick-win projects, presentations, closing) is pinned up on the right. The photographs keep drifting.
-- Press 3: The syllabus goes. Stage 3, "Quick wins" (everyone leaves having built something), fills in, with a screenshot of the workshop Padlet and a QR code to it beside the photographs.
-- Press 4: Stage 4, "Reward the builders", fills in.
-- Press 5: The photographs give way to "85% outsourced", which a split-flap board turns into "85% insourced" after a beat, then the DBS Bank caption.
+- Press 1: Kotter's 8-Step Change Model, as a single drawn graphic (eight rising steps: sense of urgency, guiding coalition, strategic vision, volunteer army, removing barriers, easy wins, increase the pace, institute change; grouped as create the right climate, engage and enable others, implement and sustain), alone on the sheet.
+- Press 2: The model goes. The framework is named and four numbered boxes are pencilled in; only stage 1, "Leaders learn first", fills in. Under it a strip of photographs from 11 Apr – 29 May 2025 (Monash, the EDLP group, certificates) drifts slowly across the sheet, with a leader line back up to box 1.
+- Press 3: Stage 2, "Our own syllabus" (Google Workspace, vibe coding and web application development), fills in, and the tentative two-day syllabus (Day 1: AI literacy, NotebookLM, productivity prompting, interactive dashboard; Day 2: AI pipeline concepts, landing page, group quick-win projects, presentations, closing) is pinned up on the right. The photographs keep drifting.
+- Press 4: The syllabus goes. Stage 3, "Quick wins" (everyone leaves having built something), fills in, with a screenshot of the workshop Padlet and a QR code to it beside the photographs.
+- Press 5: Stage 4, "Reward the builders", fills in.
+- Press 6: The photographs give way to "85% outsourced", which a split-flap board turns into "85% insourced" after a beat, then the DBS Bank caption.
 
 On screen (text and figures, exactly as shown):
 framework: Kotter's eight steps
@@ -448,7 +449,7 @@ Current notes (draft to improve, not to copy):
 
 ## Totals
 
-- 20 sheets, 49 presses.
+- 20 sheets, 50 presses.
 - Planned time 20:10 against a 5:00 slot.
 - Current notes total 1391 words.
 - S-08 plays a reel of about 56 seconds; the speaker can talk over it or advance early to cut it short.

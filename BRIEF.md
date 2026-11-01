@@ -5,7 +5,7 @@ leaders (Microsoft, Grab, Shopee) at the Executive Digital Leadership Programme.
 Speaker: Dr Ferwahn Fairis bin Ab Karim, Acting Deputy Director, Hospital Tengku
 Permaisuri Norashikin (HTPN), Kajang, Ministry of Health Malaysia.
 
-20 sheets · 49 clicker presses · planned 20:10 against a 5:00 slot
+20 sheets · 50 clicker presses · planned 20:10 against a 5:00 slot
 
 ## Ground rules for this deck
 
@@ -65,7 +65,7 @@ footer: Change fails when it is delegated. It succeeds when it is led.
 Script — Three forces made this necessary. Pressure: beds are full, staff are tired, and this June our dengue admissions rose a hundred and twenty-eight percent. Births have almost tripled since we moved into the new Women and Child Centre, from two hundred to more than five hundred a month. Vendor lock-in: procurement is too slow for problems that change every month. And opportunity: for the first time, clinicians can build real tools in weeks. The limit is no longer technology. It's leadership.
 
 ### S-04 How we led it
-5 presses · 61s · 55 words spoken (54 wpm)
+6 presses · 61s · 55 words spoken (54 wpm)
 
 On screen —
 framework: Kotter's eight steps
@@ -335,7 +335,7 @@ Script — Here's the lesson for me as a leader. Phase one was won through cultu
 
 ## Totals
 
-1391 words spoken · 20:10 planned · 49 presses
+1391 words spoken · 20:10 planned · 50 presses
 
 ## Known open points
 

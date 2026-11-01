@@ -354,8 +354,8 @@ export const SCENES: Scene[] = [
     id: 'how-we-led-it',
     sheet: 'S-04',
     title: 'How we led it',
-    steps: 5,
-    moment: 4,
+    steps: 6,
+    moment: 5,
     seconds: 61,
     content: {
       framework: "Kotter's eight steps",

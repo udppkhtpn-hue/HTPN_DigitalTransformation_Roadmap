@@ -3,6 +3,7 @@ import { sceneContent } from './content.ts'
 import { LEADERS } from '../content/photos.ts'
 import syllabus from '../assets/syllabus.webp'
 import padlet from '../assets/padlet.webp'
+import kotter from '../assets/kotter.webp'
 import { QR } from '../kit/QR.tsx'
 import { DrawPath } from '../kit/DrawPath.tsx'
 import { PhotoReel } from '../kit/PhotoReel.tsx'
@@ -28,12 +29,19 @@ const FLIP = 4
  * a time, as the speaker reaches them. All four are pencilled in from the
  * start, so the room can see how many are coming.
  *
+ * The sheet opens on Kotter's model alone, as drawn, so the room sees the
+ * whole framework first; the first press takes it away and the four moves
+ * that came out of it begin. Everything below counts from that press:
+ * `step` is 0 on stage 1, and -1 while the model is up.
+ *
  * Stage 1 brings its evidence with it: the photographs from those weeks,
  * drifting under the row with a leader back to the box they belong to. They
  * stay while the other stages land, and make way for the split-flap on the
  * last press, which is the scene's moment.
  */
-export function S04HowWeLedIt({ step }: SceneProps) {
+export function S04HowWeLedIt({ step: press }: SceneProps) {
+  const step = press - 1
+  const model = press === 0
   const reduced = useReducedMotion()
   const flipped = step >= FLIP
   const reel = step < FLIP
@@ -41,9 +49,26 @@ export function S04HowWeLedIt({ step }: SceneProps) {
 
   return (
     <div className="sc s04">
+      <AnimatePresence>
+        {model && (
+          <motion.img
+            key="kotter"
+            className="s04__model"
+            src={kotter}
+            alt="Kotter's 8-Step Change Model: create a sense of urgency, build a guiding coalition, form a strategic vision, enlist a volunteer army, enable action by removing barriers, generate easy wins, increase the pace, institute change"
+            width={1400}
+            height={754}
+            initial={{ opacity: 0, y: 16 * t }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, transition: { duration: 0.3 } }}
+            transition={{ duration: 0.7, delay: 0.25 * t, ease: [0.16, 1, 0.3, 1] }}
+          />
+        )}
+      </AnimatePresence>
+
       <svg className="sc__svg" viewBox="0 0 1920 1080" aria-hidden="true">
         {/* pencilled outlines of what is still to come */}
-        {c.stages.map((_, i) => {
+        {!model && c.stages.map((_, i) => {
           const x = X0 + i * (BOX_W + GAP)
           return (
             <rect
@@ -78,7 +103,7 @@ export function S04HowWeLedIt({ step }: SceneProps) {
         })}
       </svg>
 
-      {c.stages.map((s, i) => (
+      {!model && c.stages.map((s, i) => (
         <div
           className={`s04__stage ${step < i ? 's04__stage--pending' : ''}`}
           key={s.name}
@@ -108,20 +133,22 @@ export function S04HowWeLedIt({ step }: SceneProps) {
         </div>
       ))}
 
-      <motion.p
-        className="s04__framework"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 0.5, delay: 0.1 * t }}
-      >
-        {c.framework}
-      </motion.p>
+      {!model && (
+        <motion.p
+          className="s04__framework"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.5, delay: 0.1 * t }}
+        >
+          {c.framework}
+        </motion.p>
+      )}
 
       {/* stage 1's photographs, with a leader back up to its box */}
       <motion.div
         className="s04__evidence"
         initial={false}
-        animate={{ opacity: reel ? 1 : 0, y: reel ? 0 : 24 * t }}
+        animate={{ opacity: reel && !model ? 1 : 0, y: reel ? 0 : 24 * t }}
         transition={{ duration: 0.45 }}
       >
         <svg className="sc__svg" viewBox="0 0 1920 1080" aria-hidden="true">
