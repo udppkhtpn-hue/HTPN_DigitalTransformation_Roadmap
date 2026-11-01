@@ -60,7 +60,6 @@ export function S07Innovathon({ step }: SceneProps) {
           height={1080}
           delay={0.1}
           startDelay={0.35}
-          sound
           frameVisible={!back}
           strokeWidth={1.7}
         />
