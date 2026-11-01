@@ -49,25 +49,7 @@ byline: Dr Ferwahn Fairis bin Ab Karim · Acting Deputy Director, Hospital Tengk
 Current notes (draft to improve, not to copy):
 > Good afternoon. I'm Fairis, from Hospital Tengku Permaisuri Norashikin in Kajang, a public hospital that is a hundred and thirty-five years old. Eighteen months ago, a small team of clinicians decided not to wait for a vendor. We decided to build it ourselves. This is the story of what we built, and where it goes next.
 
-### S-02 Three forces
-3 presses · planned 69s · about 161 words at 140 wpm · current notes 81 words
-
-What the room sees:
-- Press 1: Pressure: +128% in red, dengue admissions, June 2026 vs the year before; then, under it, births a month 200+ → 500+, almost tripled since the move from the old building to the new Women & Child Centre.
-- Press 2: Vendor lock-in.
-- Press 3: Opportunity, then the footer line underneath all three.
-
-On screen (text and figures, exactly as shown):
-forces:
-  - name: Pressure; figure: value: 128; prefix: +; suffix: %; tone: alert; caption: Dengue admissions, June 2026 vs the year before.; change: from: 200+; to: 500+; caption: Births a month: almost tripled since moving from the old building to the new Women & Child Centre.
-  - name: Vendor lock-in; body: Every change request has a price. Data can leave our control.
-  - name: Opportunity; body: AI and low-code let clinicians build working tools in weeks.
-footer: Change fails when it is delegated. It succeeds when it is led.
-
-Current notes (draft to improve, not to copy):
-> Three forces made this necessary. Pressure: beds are full, staff are tired, and this June our dengue admissions rose a hundred and twenty-eight percent. Births have almost tripled since we moved into the new Women and Child Centre, from two hundred to more than five hundred a month. Vendor lock-in: procurement is too slow for problems that change every month. And opportunity: for the first time, clinicians can build real tools in weeks. The limit is no longer technology. It's leadership.
-
-### S-03 Ahead of the mandate
+### S-02 Ahead of the mandate
 2 presses · planned 38s · about 89 words at 140 wpm · current notes 45 words
 
 What the room sees:
@@ -84,6 +66,24 @@ tags: data sovereignty · access to source code · civil service talent
 
 Current notes (draft to improve, not to copy):
 > In June this year, the Prime Minister directed that all government digital services be built in-house, for data sovereignty, source code access and civil service talent. We started fourteen months earlier. We weren't reacting to the policy. We were already a working example of it.
+
+### S-03 Three forces
+3 presses · planned 69s · about 161 words at 140 wpm · current notes 81 words
+
+What the room sees:
+- Press 1: Pressure: +128% in red, dengue admissions, June 2026 vs the year before; then, under it, births a month 200+ → 500+, almost tripled since the move from the old building to the new Women & Child Centre.
+- Press 2: Vendor lock-in.
+- Press 3: Opportunity, then the footer line underneath all three.
+
+On screen (text and figures, exactly as shown):
+forces:
+  - name: Pressure; figure: value: 128; prefix: +; suffix: %; tone: alert; caption: Dengue admissions, June 2026 vs the year before.; change: from: 200+; to: 500+; caption: Births a month: almost tripled since moving from the old building to the new Women & Child Centre.
+  - name: Vendor lock-in; body: Every change request has a price. Data can leave our control.
+  - name: Opportunity; body: AI and low-code let clinicians build working tools in weeks.
+footer: Change fails when it is delegated. It succeeds when it is led.
+
+Current notes (draft to improve, not to copy):
+> Three forces made this necessary. Pressure: beds are full, staff are tired, and this June our dengue admissions rose a hundred and twenty-eight percent. Births have almost tripled since we moved into the new Women and Child Centre, from two hundred to more than five hundred a month. Vendor lock-in: procurement is too slow for problems that change every month. And opportunity: for the first time, clinicians can build real tools in weeks. The limit is no longer technology. It's leadership.
 
 ### S-04 How we led it
 5 presses · planned 61s · about 142 words at 140 wpm · current notes 55 words

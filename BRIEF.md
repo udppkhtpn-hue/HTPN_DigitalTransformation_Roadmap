@@ -39,19 +39,7 @@ byline: Dr Ferwahn Fairis bin Ab Karim · Acting Deputy Director, Hospital Tengk
 
 Script — Good afternoon. I'm Fairis, from Hospital Tengku Permaisuri Norashikin in Kajang, a public hospital that is a hundred and thirty-five years old. Eighteen months ago, a small team of clinicians decided not to wait for a vendor. We decided to build it ourselves. This is the story of what we built, and where it goes next.
 
-### S-02 Three forces
-3 presses · 69s · 81 words spoken (70 wpm)
-
-On screen —
-forces:
-  - name: Pressure; figure: value: 128; prefix: +; suffix: %; tone: alert; caption: Dengue admissions, June 2026 vs the year before.; change: from: 200+; to: 500+; caption: Births a month: almost tripled since moving from the old building to the new Women & Child Centre.
-  - name: Vendor lock-in; body: Every change request has a price. Data can leave our control.
-  - name: Opportunity; body: AI and low-code let clinicians build working tools in weeks.
-footer: Change fails when it is delegated. It succeeds when it is led.
-
-Script — Three forces made this necessary. Pressure: beds are full, staff are tired, and this June our dengue admissions rose a hundred and twenty-eight percent. Births have almost tripled since we moved into the new Women and Child Centre, from two hundred to more than five hundred a month. Vendor lock-in: procurement is too slow for problems that change every month. And opportunity: for the first time, clinicians can build real tools in weeks. The limit is no longer technology. It's leadership.
-
-### S-03 Ahead of the mandate
+### S-02 Ahead of the mandate
 2 presses · 38s · 45 words spoken (71 wpm)
 
 On screen —
@@ -63,6 +51,18 @@ clipping: headline: Anwar directs all government digital services to be develope
 tags: data sovereignty · access to source code · civil service talent
 
 Script — In June this year, the Prime Minister directed that all government digital services be built in-house, for data sovereignty, source code access and civil service talent. We started fourteen months earlier. We weren't reacting to the policy. We were already a working example of it.
+
+### S-03 Three forces
+3 presses · 69s · 81 words spoken (70 wpm)
+
+On screen —
+forces:
+  - name: Pressure; figure: value: 128; prefix: +; suffix: %; tone: alert; caption: Dengue admissions, June 2026 vs the year before.; change: from: 200+; to: 500+; caption: Births a month: almost tripled since moving from the old building to the new Women & Child Centre.
+  - name: Vendor lock-in; body: Every change request has a price. Data can leave our control.
+  - name: Opportunity; body: AI and low-code let clinicians build working tools in weeks.
+footer: Change fails when it is delegated. It succeeds when it is led.
+
+Script — Three forces made this necessary. Pressure: beds are full, staff are tired, and this June our dengue admissions rose a hundred and twenty-eight percent. Births have almost tripled since we moved into the new Women and Child Centre, from two hundred to more than five hundred a month. Vendor lock-in: procurement is too slow for problems that change every month. And opportunity: for the first time, clinicians can build real tools in weeks. The limit is no longer technology. It's leadership.
 
 ### S-04 How we led it
 5 presses · 61s · 55 words spoken (54 wpm)

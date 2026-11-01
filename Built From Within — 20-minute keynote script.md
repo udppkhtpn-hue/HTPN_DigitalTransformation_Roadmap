@@ -26,9 +26,19 @@ Good afternoon. My name is Fairis. I'm the Acting Deputy Director of Hospital Te
 
 Eighteen months ago, a small team of clinicians in that hospital made a decision. We would not wait for a vendor. We would build our own digital tools, ourselves, from within.
 
-In the next twenty minutes I'll show you what that produced, what it exposed, and where we take it next. It starts with why we had no choice.
+In the next twenty minutes I'll show you what that produced, what it exposed, and where we take it next. It starts with a date.
 
-### S-02 Three forces  (69s, 163 words)
+### S-02 Ahead of the mandate  (38s, 88 words)
+
+*\[Press 1: The 5 June 2026 Cabinet directive, with the newspaper cutting\]*
+
+On the fifth of June this year, the Cabinet directed that all government digital services be developed in-house. Three reasons were given: data sovereignty, government access to source code, and building talent inside the civil service.
+
+*\[Press 2: The timeline draws back to April 2025 and measures 14 months\]*
+
+We started in April 2025. Fourteen months before the directive. And those three reasons were already exactly why we were doing it. We weren't reacting to a policy. By the time it arrived, we were already a working example of it. So why did we start so early? Because we had no choice.
+
+### S-03 Three forces  (69s, 163 words)
 
 *\[Press 1: Pressure, +128% in red\]*
 
@@ -40,17 +50,7 @@ The second is vendor lock-in. In a public hospital, a new system means procureme
 
 *\[Press 3: Opportunity, then the footer line\]*
 
-The third is opportunity. For the first time, AI and low-code tools let a clinician build a working tool in weeks. So the limit was no longer technology. It was leadership. Change fails when it is delegated. It succeeds when it is led. So we decided to lead it. And as it turned out, we were early.
-
-### S-03 Ahead of the mandate  (38s, 88 words)
-
-*\[Press 1: The 5 June 2026 Cabinet directive, with the newspaper cutting\]*
-
-On the fifth of June this year, the Cabinet directed that all government digital services be developed in-house. Three reasons were given: data sovereignty, government access to source code, and building talent inside the civil service.
-
-*\[Press 2: The timeline draws back to April 2025 and measures 14 months\]*
-
-We started in April 2025. Fourteen months before the directive. And those three reasons were already exactly why we were doing it. We weren't reacting to a policy. By the time it arrived, we were already a working example of it. So let me show you how we spent those fourteen months.
+The third is opportunity. For the first time, AI and low-code tools let a clinician build a working tool in weeks. So the limit was no longer technology. It was leadership. Change fails when it is delegated. It succeeds when it is led. So we decided to lead it. Here is how.
 
 ### S-04 How we led it  (61s, 142 words)
 
@@ -335,8 +335,8 @@ The whole talk runs 20:11: 19:41 spoken plus about 30 seconds of the reel playin
 | Sheet | Words | Spoken time |
 | --- | --- | --- |
 | S-01 Cold open | 105 | 0:45 |
-| S-02 Three forces | 163 | 1:09 |
-| S-03 Ahead of the mandate | 88 | 0:38 |
+| S-02 Ahead of the mandate | 88 | 0:38 |
+| S-03 Three forces | 163 | 1:09 |
 | S-04 How we led it | 142 | 1:01 |
 | S-05 Results | 79 | 0:34 |
 | S-06 Where we've taught | 128 | 0:55 |

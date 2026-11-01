@@ -27,22 +27,37 @@ export const SCRIPT: Record<string, SheetScript> = {
     title: "Cold open",
     seconds: 45,
     reel: 0,
-    words: 105,
+    words: 102,
     act: { title: "Act 1 · Why and how we started", note: "" },
     blocks: [
       { step: 0, cue: "three lines land, the 1889 building draws in, then the title. Start speaking when the title appears.", paras: [
         "Good afternoon. My name is Fairis. I'm the Acting Deputy Director of Hospital Tengku Permaisuri Norashikin in Kajang. It's a public hospital, part of the Ministry of Health, and it is a hundred and thirty-five years old. The drawing behind me is where it all started.",
         "Eighteen months ago, a small team of clinicians in that hospital made a decision. We would not wait for a vendor. We would build our own digital tools, ourselves, from within.",
-        "In the next twenty minutes I'll show you what that produced, what it exposed, and where we take it next. It starts with why we had no choice.",
+        "In the next twenty minutes I'll show you what that produced, what it exposed, and where we take it next. It starts with a date.",
       ] },
     ],
   },
   "S-02": {
     sheet: "S-02",
+    title: "Ahead of the mandate",
+    seconds: 38,
+    reel: 0,
+    words: 89,
+    blocks: [
+      { step: 0, cue: "The 5 June 2026 Cabinet directive, with the newspaper cutting", paras: [
+        "On the fifth of June this year, the Cabinet directed that all government digital services be developed in-house. Three reasons were given: data sovereignty, government access to source code, and building talent inside the civil service.",
+      ] },
+      { step: 1, cue: "The timeline draws back to April 2025 and measures 14 months", paras: [
+        "We started in April 2025. Fourteen months before the directive. And those three reasons were already exactly why we were doing it. We weren't reacting to a policy. By the time it arrived, we were already a working example of it. So why did we start so early? Because we had no choice.",
+      ] },
+    ],
+  },
+  "S-03": {
+    sheet: "S-03",
     title: "Three forces",
     seconds: 69,
     reel: 0,
-    words: 167,
+    words: 162,
     blocks: [
       { step: 0, cue: "Pressure, +128% in red", paras: [
         "Three forces pushed us. The first is pressure. Our beds are full and our staff are tired. Then this June, dengue arrived. Admissions were up a hundred and twenty-eight percent on the year before. That kind of surge bends any system. And births have almost tripled since we moved from the old building into the new Women and Child Centre, from two hundred to more than five hundred a month.",
@@ -51,22 +66,7 @@ export const SCRIPT: Record<string, SheetScript> = {
         "The second is vendor lock-in. In a public hospital, a new system means procurement. Procurement is slow, and every change request after that has a price. And when the system belongs to someone else, our data can leave our control.",
       ] },
       { step: 2, cue: "Opportunity, then the footer line", paras: [
-        "The third is opportunity. For the first time, AI and low-code tools let a clinician build a working tool in weeks. So the limit was no longer technology. It was leadership. Change fails when it is delegated. It succeeds when it is led. So we decided to lead it. And as it turned out, we were early.",
-      ] },
-    ],
-  },
-  "S-03": {
-    sheet: "S-03",
-    title: "Ahead of the mandate",
-    seconds: 38,
-    reel: 0,
-    words: 88,
-    blocks: [
-      { step: 0, cue: "The 5 June 2026 Cabinet directive, with the newspaper cutting", paras: [
-        "On the fifth of June this year, the Cabinet directed that all government digital services be developed in-house. Three reasons were given: data sovereignty, government access to source code, and building talent inside the civil service.",
-      ] },
-      { step: 1, cue: "The timeline draws back to April 2025 and measures 14 months", paras: [
-        "We started in April 2025. Fourteen months before the directive. And those three reasons were already exactly why we were doing it. We weren't reacting to a policy. By the time it arrived, we were already a working example of it. So let me show you how we spent those fourteen months.",
+        "The third is opportunity. For the first time, AI and low-code tools let a clinician build a working tool in weeks. So the limit was no longer technology. It was leadership. Change fails when it is delegated. It succeeds when it is led. So we decided to lead it. Here is how.",
       ] },
     ],
   },

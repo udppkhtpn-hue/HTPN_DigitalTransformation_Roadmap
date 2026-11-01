@@ -11,8 +11,8 @@
 
 export type SceneId =
   | 'cold-open'
-  | 'three-forces'
   | 'ahead-of-mandate'
+  | 'three-forces'
   | 'how-we-led-it'
   | 'results'
   | 'where-weve-taught'
@@ -244,8 +244,8 @@ export interface LessonAndClose {
 
 export type Scene =
   | (Base & { id: 'cold-open'; content: ColdOpen })
-  | (Base & { id: 'three-forces'; content: ThreeForces })
   | (Base & { id: 'ahead-of-mandate'; content: AheadOfMandate })
+  | (Base & { id: 'three-forces'; content: ThreeForces })
   | (Base & { id: 'how-we-led-it'; content: HowWeLedIt })
   | (Base & { id: 'results'; content: Results })
   | (Base & { id: 'where-weve-taught'; content: WhereTaught })
@@ -285,8 +285,38 @@ export const SCENES: Scene[] = [
   },
 
   {
-    id: 'three-forces',
+    id: 'ahead-of-mandate',
     sheet: 'S-02',
+    title: 'Ahead of the mandate',
+    steps: 2,
+    moment: 1,
+    seconds: 38,
+    content: {
+      nodes: [
+        {
+          date: 'April 2025',
+          label: 'HTPN starts in-house, clinician-led digital and AI development',
+        },
+        {
+          date: '5 June 2026',
+          label:
+            'Cabinet directs all government digital services to be developed in-house',
+        },
+      ],
+      span: '14 months',
+      clipping: {
+        headline:
+          'Anwar directs all government digital services to be developed in-house',
+        source: 'The Star, 5 June 2026',
+      },
+      tags: ['data sovereignty', 'access to source code', 'civil service talent'],
+    },
+    notes: `In June this year, the Prime Minister directed that all government digital services be built in-house, for data sovereignty, source code access and civil service talent. We started fourteen months earlier. We weren't reacting to the policy. We were already a working example of it.`,
+  },
+
+  {
+    id: 'three-forces',
+    sheet: 'S-03',
     title: 'Three forces',
     steps: 3,
     moment: 0,
@@ -316,36 +346,6 @@ export const SCENES: Scene[] = [
       footer: 'Change fails when it is delegated. It succeeds when it is led.',
     },
     notes: `Three forces made this necessary. Pressure: beds are full, staff are tired, and this June our dengue admissions rose a hundred and twenty-eight percent. Births have almost tripled since we moved into the new Women and Child Centre, from two hundred to more than five hundred a month. Vendor lock-in: procurement is too slow for problems that change every month. And opportunity: for the first time, clinicians can build real tools in weeks. The limit is no longer technology. It's leadership.`,
-  },
-
-  {
-    id: 'ahead-of-mandate',
-    sheet: 'S-03',
-    title: 'Ahead of the mandate',
-    steps: 2,
-    moment: 1,
-    seconds: 38,
-    content: {
-      nodes: [
-        {
-          date: 'April 2025',
-          label: 'HTPN starts in-house, clinician-led digital and AI development',
-        },
-        {
-          date: '5 June 2026',
-          label:
-            'Cabinet directs all government digital services to be developed in-house',
-        },
-      ],
-      span: '14 months',
-      clipping: {
-        headline:
-          'Anwar directs all government digital services to be developed in-house',
-        source: 'The Star, 5 June 2026',
-      },
-      tags: ['data sovereignty', 'access to source code', 'civil service talent'],
-    },
-    notes: `In June this year, the Prime Minister directed that all government digital services be built in-house, for data sovereignty, source code access and civil service talent. We started fourteen months earlier. We weren't reacting to the policy. We were already a working example of it.`,
   },
 
   {
