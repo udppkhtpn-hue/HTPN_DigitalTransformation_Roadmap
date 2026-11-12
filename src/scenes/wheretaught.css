@@ -43,6 +43,10 @@
   font-family: var(--font-mono); font-size: var(--t-dim);
   fill: var(--chalk); dominant-baseline: middle; text-anchor: middle;
 }
+.wt__pin-n--main {
+  fill: var(--chalk); paint-order: stroke;
+  stroke: var(--drafting); stroke-width: 5px; stroke-linejoin: round;
+}
 .wt__pin-lead { stroke: var(--chalk); stroke-width: 1; opacity: 0.55; fill: none; }
 .wt__ring { fill: none; stroke: var(--line); stroke-width: 2; }
 

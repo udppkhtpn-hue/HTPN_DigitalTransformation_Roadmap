@@ -115,7 +115,7 @@ On screen —
 heading: Invited, not imposed.
 subline: 15 external sessions in 12 months. 5 in the last two.
 adoptedLine: We taught. They built.
-legendAdopted: cyan ring = runs a tool built on our model
+legendAdopted: runs a tool built on our model
 photos: Nov 2025 – Oct 2026
 
 Script — And then people started inviting us. Fifteen sessions in twelve months: hospitals, community groups, and whole national services. Northern, central and southern O&G. Family Medicine. Medical Services. From Alor Setar to Johor Bahru, and across the sea to Kuching. Five of those were in the last two months alone. And here's what happened next. The hospitals we taught started building their own tools, in Marudi, Sri Aman, Mukah, Penang and Johor. We taught. They built.

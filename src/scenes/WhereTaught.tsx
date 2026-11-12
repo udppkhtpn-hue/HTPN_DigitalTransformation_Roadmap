@@ -22,8 +22,9 @@ const c = sceneContent('where-weve-taught')
 const SLOW = 2
 const MAP_IN = 1.2
 const FIRST = 1.5
-const GAP = 0.4
-const FLIGHT = 0.45
+// One arc at a time: each starts only once the one before has landed.
+const FLIGHT = 0.42
+const GAP = 0.5
 const LAST = FIRST + (SITES.length - 1) * GAP + FLIGHT
 /** When the arcs replay, the map is already drawn, so they start sooner. */
 const REPLAY_FIRST = 0.6
@@ -39,6 +40,21 @@ const LEADER = (() => {
   const y = MAP.inset.cy - (dy / d) * MAP.inset.r
   return `M ${MAP.home.mainX} ${MAP.home.mainY} L ${x.toFixed(1)} ${y.toFixed(1)}`
 })()
+
+/**
+ * Numbers for the pins on the main map. The nine in the Klang Valley are
+ * numbered in the magnifier; these six stand alone, so each label is set
+ * off its pin toward open sea, clear of its neighbour (1 and 4 in Penang,
+ * 2 and 14 in Johor).
+ */
+const MAIN_LABEL: Record<number, { dx: number; dy: number; anchor: 'start' | 'end' | 'middle' }> = {
+  9: { dx: -18, dy: -4, anchor: 'end' },
+  1: { dx: 18, dy: -6, anchor: 'start' },
+  4: { dx: -18, dy: 14, anchor: 'end' },
+  14: { dx: -12, dy: 28, anchor: 'end' },
+  2: { dx: 12, dy: 28, anchor: 'start' },
+  6: { dx: -6, dy: 30, anchor: 'middle' },
+}
 
 /** End a leader 15px short of its label, so it never runs into the digits. */
 const shorten = (x1: number, x2: number, y1: number, y2: number): [number, number] => {
@@ -239,6 +255,16 @@ export function WhereTaught({ step }: SceneProps) {
                 style={{ transformOrigin: `${pin.x}px ${pin.y}px` }}
               >
                 <Mark kind={s.kind} x={pin.x} y={pin.y} r={7} />
+                {pin.ix === null && MAIN_LABEL[s.n] && (
+                  <text
+                    x={pin.x + MAIN_LABEL[s.n].dx}
+                    y={pin.y + MAIN_LABEL[s.n].dy}
+                    className="wt__pin-n wt__pin-n--main"
+                    style={{ textAnchor: MAIN_LABEL[s.n].anchor }}
+                  >
+                    {s.n}
+                  </text>
+                )}
               </motion.g>
 
               {pin.ix !== null && (

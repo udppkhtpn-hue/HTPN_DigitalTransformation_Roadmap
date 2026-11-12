@@ -145,14 +145,14 @@ Current notes (draft to improve, not to copy):
 2 presses · planned 55s · about 128 words at 140 wpm · current notes 75 words
 
 What the room sees:
-- Press 1: A map of Malaysia draws itself; dashed arcs fly from Kajang to each of the 15 sites in date order while a month counter and a 1-to-15 tally tick, each site naming itself as it lands; a magnifier labelled KLANG VALLEY separates the nine sites clustered there; then the subline. The arcs run at half speed (about 16 seconds for all 15), hold for 4 seconds, then fly again from the start, looping until the next click. Beside the headline, a small strip of photographs taken on the dates of the external sessions (Nov 2025 – Oct 2026) drifts across.
+- Press 1: A map of Malaysia draws itself; dashed arcs fly from Kajang to each of the 15 sites in date order while a month counter and a 1-to-15 tally tick, each site naming itself as it lands; a magnifier labelled KLANG VALLEY separates the nine sites clustered there; then the subline. The arcs fly one at a time, each starting only when the one before has landed (about 18 seconds for all 15), every site numbered as it lands, hold for 4 seconds, then fly again from the start, looping until the next click. Beside the headline, a small strip of photographs taken on the dates of the external sessions (Nov 2025 – Oct 2026) drifts across.
 - Press 2: Cyan rings pulse on the sites now running tools built on the model, and "We taught. They built." appears.
 
 On screen (text and figures, exactly as shown):
 heading: Invited, not imposed.
 subline: 15 external sessions in 12 months. 5 in the last two.
 adoptedLine: We taught. They built.
-legendAdopted: cyan ring = runs a tool built on our model
+legendAdopted: runs a tool built on our model
 
 Current notes (draft to improve, not to copy):
 > And then people started inviting us. Fifteen sessions in twelve months: hospitals, community groups, and whole national services. Northern, central and southern O&G. Family Medicine. Medical Services. From Alor Setar to Johor Bahru, and across the sea to Kuching. Five of those were in the last two months alone. And here's what happened next. The hospitals we taught started building their own tools, in Marudi, Sri Aman, Mukah, Penang and Johor. We taught. They built.
