@@ -28,7 +28,7 @@ These are real tools, used every day...
 
 - **Event:** closing keynote of the Executive Digital Leadership Programme.
 - **Audience:** senior industry leaders (Microsoft, Grab, Shopee and others), some of whom judged the Innovathon. Not clinicians; they know platforms and scale, not Malaysian public hospitals.
-- **Speaker:** Dr Ferwahn Fairis bin Ab Karim · Acting Deputy Director, Hospital Tengku Permaisuri Norashikin, Kajang · Ministry of Health Malaysia.
+- **Speaker:** Dr Ferwahn Fairis bin Ab Karim · Acting Deputy Director, Hospital Tengku Permaisuri Norashikin, Kajang · Ministry of Health Malaysia, presenting for the Healthcare Intelligence Office.
 - **The argument in one line:** a 135-year-old public hospital built its own digital tools from within, ahead of national policy; the next phases must turn that culture into structure, and share it with every KKM hospital.
 - **The deck:** 20 sheets, 50 clicker presses, planned 20:25. "Press 1" on each sheet is the click that brings the sheet up.
 
@@ -44,7 +44,7 @@ On screen (text and figures, exactly as shown):
 lines: A public hospital. · 135 years old. · No vendor to wait for.
 title: Built From Within
 subtitle: HTPN Digital Roadmap 2025–2028
-byline: Dr Ferwahn Fairis bin Ab Karim · Acting Deputy Director, Hospital Tengku Permaisuri Norashikin, Kajang · Ministry of Health Malaysia
+byline: Healthcare Intelligence Office · Hospital Tengku Permaisuri Norashikin, Kajang · Ministry of Health Malaysia
 
 Current notes (draft to improve, not to copy):
 > Good afternoon. I'm Fairis, from Hospital Tengku Permaisuri Norashikin in Kajang, a public hospital that is a hundred and thirty-five years old. Eighteen months ago, a small team of clinicians decided not to wait for a vendor. We decided to build it ourselves. This is the story of what we built, and where it goes next.

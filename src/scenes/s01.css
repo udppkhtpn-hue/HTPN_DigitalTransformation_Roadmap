@@ -65,4 +65,5 @@
   font-variation-settings: 'wght' 400, 'wdth' 94;
   color: var(--chalk);
   opacity: 0.78;
+  text-wrap: balance;
 }

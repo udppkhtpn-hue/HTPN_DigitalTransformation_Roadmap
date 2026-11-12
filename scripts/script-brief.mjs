@@ -158,7 +158,9 @@ if (problems.length) {
   process.exit(1)
 }
 
-const speaker = SCENES.find((s) => s.id === 'cold-open').content.byline
+// The cover credits the office; the person on stage is still named here.
+const speaker =
+  'Dr Ferwahn Fairis bin Ab Karim · Acting Deputy Director, Hospital Tengku Permaisuri Norashikin, Kajang · Ministry of Health Malaysia, presenting for the Healthcare Intelligence Office'
 const out = []
 out.push(`# Script brief: "Built From Within", HTPN Digital Roadmap 2025–2028`)
 out.push(``)

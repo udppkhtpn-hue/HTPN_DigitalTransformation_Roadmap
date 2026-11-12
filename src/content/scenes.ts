@@ -308,7 +308,7 @@ export const SCENES: Scene[] = [
       title: 'Built From Within',
       subtitle: 'HTPN Digital Roadmap 2025–2028',
       byline:
-        'Dr Ferwahn Fairis bin Ab Karim · Acting Deputy Director, Hospital Tengku Permaisuri Norashikin, Kajang · Ministry of Health Malaysia',
+        'Healthcare Intelligence Office · Hospital Tengku Permaisuri Norashikin, Kajang · Ministry of Health Malaysia',
     },
     notes: `Good afternoon. I'm Fairis, from Hospital Tengku Permaisuri Norashikin in Kajang, a public hospital that is a hundred and thirty-five years old. Eighteen months ago, a small team of clinicians decided not to wait for a vendor. We decided to build it ourselves. This is the story of what we built, and where it goes next.`,
   },
