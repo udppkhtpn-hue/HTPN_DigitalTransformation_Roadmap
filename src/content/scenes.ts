@@ -409,8 +409,8 @@ export const SCENES: Scene[] = [
             { name: 'Dr Ferwahn Fairis bin Ab Karim', role: 'Coordinator', photo: 'fairis' },
             { name: 'Dr Naim bin Abdul Malek', role: 'Technical & Training', photo: 'naim' },
             { name: 'Dr Muhammad Syafiz bin Ruzain', role: 'Technical & Training', photo: 'syafiz' },
-            { name: 'Megat Hafiz', role: 'Facilitator', photo: 'megat' },
-            { name: 'Kenny Tuang Ling Ee', role: 'Facilitator', photo: 'kenny' },
+            { name: 'SN Megat Sharul Hafiz bin Megat Putra', role: 'Facilitator · Staff Nurse', photo: 'megat' },
+            { name: 'Kenny Tuang Ling Ee', role: 'Facilitator · Pharmacist', photo: 'kenny' },
           ],
           closer: {
             lead: 'Clinicians and nursing staff leading digital transformation from within',
