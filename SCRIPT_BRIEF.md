@@ -13,7 +13,7 @@ You are writing the spoken script for a closing keynote. The speaker presents a 
 3. **Voice.** First person, plain, confident, short sentences. A clinician-leader speaking to industry leaders, not a vendor pitching. No jargon, no hype words, no rhetorical questions to the audience.
 4. **Screen and voice.** The audience reads the screen. Don't read the on-screen text out word for word; say what it means, and let the screen carry the detail.
 5. **Pace.** Write at 140 words a minute (about 2.3 words a second). For every sheet give its word count and spoken time, and give the total at the end.
-6. **Fit the target.** The planned times below add up to **20:36**, against a target of 5:00. If they don't fit, first propose which sheets to shorten, merge or skip (and why), wait for approval, then write. Don't silently drop a sheet.
+6. **Fit the target.** The planned times below add up to **20:41**, against a target of 5:00. If they don't fit, first propose which sheets to shorten, merge or skip (and why), wait for approval, then write. Don't silently drop a sheet.
 7. **Format.** For each sheet:
 
 ```
@@ -30,7 +30,7 @@ These are real tools, used every day...
 - **Audience:** senior industry leaders (Microsoft, Grab, Shopee and others), some of whom judged the Innovathon. Not clinicians; they know platforms and scale, not Malaysian public hospitals.
 - **Speaker:** Dr Ferwahn Fairis bin Ab Karim · Acting Deputy Director, Hospital Tengku Permaisuri Norashikin, Kajang · Ministry of Health Malaysia, presenting for the Healthcare Intelligence Office.
 - **The argument in one line:** a 135-year-old public hospital built its own digital tools from within, ahead of national policy; the next phases must turn that culture into structure, and share it with every KKM hospital.
-- **The deck:** 20 sheets, 52 clicker presses, planned 20:36. "Press 1" on each sheet is the click that brings the sheet up.
+- **The deck:** 20 sheets, 54 clicker presses, planned 20:41. "Press 1" on each sheet is the click that brings the sheet up.
 
 ## The sheets
 
@@ -158,16 +158,18 @@ Current notes (draft to improve, not to copy):
 > And then people started inviting us. Fifteen sessions in twelve months: hospitals, community groups, and whole national services. Northern, central and southern O&G. Family Medicine. Medical Services. From Alor Setar to Johor Bahru, and across the sea to Kuching. Five of those were in the last two months alone. And here's what happened next. The hospitals we taught started building their own tools, in Marudi, Sri Aman, Mukah, Penang and Johor. We taught. They built.
 
 ### S-07 The portfolio
-3 presses · planned 50s · about 117 words at 140 wpm · current notes 45 words
+5 presses · planned 55s · about 128 words at 140 wpm · current notes 45 words
 
 What the room sees:
-- Press 1: A split-flap departures board, every character its own flipping tile: "Apps 01–17 of 50", one row per app with its number, name and category (Patient journey in amber, Clinician journey in white, Management productivity in blue). App names built at HTPN are white, those built by the hospitals we taught are blue, with a key: 17 built at HTPN, 33 built by the hospitals we taught. The showcase QR code and "Built by clinicians, for clinicians." sit underneath.
-- Press 2: The same board turns over to apps 18–34, running from clinician journey into management productivity.
-- Press 3: Apps 35–50, all management productivity.
+- Press 1: A split-flap departures board, every character its own flipping tile, ten rows a page: "Apps 01–10 of 50", each row with its number, name and category (Patient journey in amber, Clinician journey in white, Management productivity in blue). App names built at HTPN are white, those built by the hospitals we taught are blue, with a key: 17 built at HTPN, 33 built by the hospitals we taught. The showcase QR code and "Built by clinicians, for clinicians." sit underneath.
+- Press 2: The same board turns over to apps 11–20, clinician journey.
+- Press 3: Apps 21–30, into management productivity.
+- Press 4: Apps 31–40.
+- Press 5: Apps 41–50.
 
 On screen (text and figures, exactly as shown):
 pages:
-  - title: Apps 01–17; rows:
+  - title: Apps 01–10; rows:
       - no: 01; name: GynaeClerk; by: htpn; category: Patient journey
       - no: 02; name: AntenatalClerk; by: htpn; category: Patient journey
       - no: 03; name: Fetal Kick Chart; by: htpn; category: Patient journey
@@ -178,6 +180,7 @@ pages:
       - no: 08; name: Klinik Reumatologi pre-consultation; by: partner; category: Patient journey
       - no: 09; name: CardioFlow HF Clinic Portal; by: partner; category: Patient journey
       - no: 10; name: Skin Diary Generator; by: htpn; category: Clinician journey
+  - title: Apps 11–20; rows:
       - no: 11; name: OT Scheduling System; by: htpn; category: Clinician journey
       - no: 12; name: Gynae Census Web Form; by: htpn; category: Clinician journey
       - no: 13; name: EBL Estimator AI; by: htpn; category: Clinician journey
@@ -185,10 +188,10 @@ pages:
       - no: 15; name: Clinical Document Checker; by: htpn; category: Clinician journey
       - no: 16; name: Phlebotomy Appointment System; by: partner; category: Clinician journey
       - no: 17; name: PhysioMeasurePro; by: partner; category: Clinician journey
-  - title: Apps 18–34; rows:
       - no: 18; name: Akasia Ward MO Task Manager; by: partner; category: Clinician journey
       - no: 19; name: e-Lampiran D (drug formulary); by: partner; category: Clinician journey
       - no: 20; name: Pocket Nurse; by: partner; category: Clinician journey
+  - title: Apps 21–30; rows:
       - no: 21; name: MedPulse MAR; by: partner; category: Clinician journey
       - no: 22; name: TBIS 10A-1 Digital; by: partner; category: Clinician journey
       - no: 23; name: Dashboard ED; by: htpn; category: Management productivity
@@ -199,17 +202,18 @@ pages:
       - no: 28; name: Slide Deck OCR PDF Editor; by: htpn; category: Management productivity
       - no: 29; name: Portal Aktiviti JPPOBG; by: htpn; category: Management productivity
       - no: 30; name: Patient Safety Incident Reporting; by: partner; category: Management productivity
+  - title: Apps 31–40; rows:
       - no: 31; name: HTPN Digital Showcase Website; by: htpn; category: Management productivity
       - no: 32; name: E-Kehadiran Kursus; by: partner; category: Management productivity
       - no: 33; name: Mental Wellbeing Monitoring Portal; by: partner; category: Management productivity
       - no: 34; name: MedMove Pro; by: partner; category: Management productivity
-  - title: Apps 35–50; rows:
       - no: 35; name: MEDEVAC E-Request Portal; by: partner; category: Management productivity
       - no: 36; name: MOH HIRARC Portal; by: partner; category: Management productivity
       - no: 37; name: HPP OSH-Alert; by: partner; category: Management productivity
       - no: 38; name: Sistem eBooking; by: partner; category: Management productivity
       - no: 39; name: Ward Jasmin pharmacy stock; by: partner; category: Management productivity
       - no: 40; name: Psychiatry Department Dashboard (HPD); by: partner; category: Management productivity
+  - title: Apps 41–50; rows:
       - no: 41; name: OT Unit Staff Movement & Leave; by: partner; category: Management productivity
       - no: 42; name: Aduan HPD complaints; by: partner; category: Management productivity
       - no: 43; name: Vehicle Booking; by: partner; category: Management productivity
@@ -518,7 +522,7 @@ Current notes (draft to improve, not to copy):
 
 ## Totals
 
-- 20 sheets, 52 presses.
-- Planned time 20:36 against a 5:00 slot.
+- 20 sheets, 54 presses.
+- Planned time 20:41 against a 5:00 slot.
 - Current notes total 1391 words.
 - S-08 plays a reel of about 56 seconds; the speaker can talk over it or advance early to cut it short.

@@ -8,7 +8,7 @@
 .s06__count { margin-left: 14px; color: var(--signal); }
 
 .s06__page {
-  position: absolute; left: 1520px; top: 214px; margin: 0;
+  position: absolute; left: 1640px; top: 214px; margin: 0;
   font-family: var(--font-mono); font-size: 18px; letter-spacing: 0.1em;
   text-transform: uppercase; color: var(--line); opacity: 0.8;
 }
@@ -34,7 +34,7 @@
   text-transform: uppercase; color: var(--line); opacity: 0.8; white-space: nowrap;
 }
 
-.s06__board { position: absolute; left: 200px; top: 244px; }
+.s06__board { position: absolute; left: 200px; top: 252px; }
 
 /* Tile colours by column and row. */
 .fb__t.fb--dim { color: var(--line); opacity: 0.7; }
@@ -43,7 +43,11 @@
 .fb__t.fb--clinician { color: var(--chalk); }
 .fb__t.fb--management { color: var(--line); }
 
-.s06__board .fb__row { gap: 40px; }
+.s06__board { gap: 8px; }
+.s06__board .fb__row { gap: 28px; }
+/* Ten rows to a page, so each tile can be large enough to read. */
+.s06__board .fb__t { width: 22px; height: 46px; }
+.s06__board .fb__c { font-size: 31px; }
 
 .s06__sr {
   position: absolute; width: 1px; height: 1px; overflow: hidden;

@@ -4,7 +4,7 @@ Nov 1, 2026 · @Fairis
 
 ## How to use this script
 
-The script runs about 20 minutes: 2,826 spoken words at 140 words a minute (20:11), plus about 30 seconds where the Innovathon reel plays on its own. It covers all 20 sheets and 52 presses, and every figure in it comes from the deck brief.
+The script runs about 20 minutes: 2,826 spoken words at 140 words a minute (20:11), plus about 30 seconds where the Innovathon reel plays on its own. It covers all 20 sheets and 54 presses, and every figure in it comes from the deck brief.
 
 Each sheet shows its spoken time and word count. The line in square brackets is what the press brings up, so click at the start of the paragraph beneath it. The last line of each sheet leads into the next click.
 
@@ -108,19 +108,27 @@ Then came the part that matters most. The hospitals we taught started building t
 
 Here is what has been built.
 
-### S-07 The portfolio  (50s, 117 words)
+### S-07 The portfolio  (55s, 117 words)
 
-*\[Press 1: A departures board flaps in: apps 01–17 of 50, each with its category, patient journey then clinician journey. White names were built at HTPN, blue ones by the hospitals we taught.\]*
+*\[Press 1: A departures board flaps in: apps 01–10 of 50, each with its category. White names were built at HTPN, blue ones by the hospitals we taught.\]*
 
-These are real tools in daily use, and all fifty are now in one registry, in three categories. For patients: GynaeClerk, AntenatalClerk, a fetal kick chart. For clinicians: theatre scheduling, an AI blood-loss estimator, a clinical document checker.
+These are real tools in daily use, and all fifty are now in one registry, in three categories. For patients: GynaeClerk, AntenatalClerk, a fetal kick chart.
 
-*\[Press 2: The board turns over to apps 18–34, into management productivity\]*
+*\[Press 2: The board turns over to apps 11–20, clinician journey\]*
 
-For management: an emergency department dashboard, rostering, governance audits. And look at the colours. Seventeen were built here. The other thirty-three, in blue, were built by the hospitals we taught.
+For clinicians: theatre scheduling, an AI blood-loss estimator, a clinical document checker.
 
-*\[Press 3: Apps 35–50\]*
+*\[Press 3: Apps 21–30, into management productivity\]*
 
-Hospital Port Dickson alone has built fourteen. Built by clinicians, for clinicians. The QR code takes you to every one of them. Scan it now, or after the session.
+For management: an emergency department dashboard, rostering, governance audits.
+
+*\[Press 4: Apps 31–40\]*
+
+And look at the colours. Seventeen were built here. The other thirty-three, in blue, were built by the hospitals we taught. Hospital Port Dickson alone has built fourteen.
+
+*\[Press 5: Apps 41–50\]*
+
+Built by clinicians, for clinicians. The QR code takes you to every one of them. Scan it now, or after the session.
 
 So we brought these builders into one room.
 
@@ -360,7 +368,7 @@ The whole talk runs 20:41: 20:11 spoken plus about 30 seconds of the reel playin
 | S-04 How we led it | 177 | 1:16 |
 | S-05 Results | 79 | 0:34 |
 | S-06 Where we've taught | 128 | 0:55 |
-| S-07 The portfolio | 117 | 0:50 |
+| S-07 The portfolio | 117 | 0:55 |
 | S-08 Innovathon | 108 | 0:46 + 0:30 reel |
 | S-09 The gap | 155 | 1:06 |
 | S-10 The national picture | 156 | 1:07 |

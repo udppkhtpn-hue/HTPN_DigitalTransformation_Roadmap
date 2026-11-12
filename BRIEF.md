@@ -5,7 +5,7 @@ leaders (Microsoft, Grab, Shopee) at the Executive Digital Leadership Programme.
 Speaker: Dr Ferwahn Fairis bin Ab Karim, Acting Deputy Director, Hospital Tengku
 Permaisuri Norashikin (HTPN), Kajang, Ministry of Health Malaysia.
 
-20 sheets · 52 clicker presses · planned 20:36 against a 5:00 slot
+20 sheets · 54 clicker presses · planned 20:41 against a 5:00 slot
 
 ## Ground rules for this deck
 
@@ -121,11 +121,11 @@ photos: Nov 2025 – Oct 2026
 Script — And then people started inviting us. Fifteen sessions in twelve months: hospitals, community groups, and whole national services. Northern, central and southern O&G. Family Medicine. Medical Services. From Alor Setar to Johor Bahru, and across the sea to Kuching. Five of those were in the last two months alone. And here's what happened next. The hospitals we taught started building their own tools, in Marudi, Sri Aman, Mukah, Penang and Johor. We taught. They built.
 
 ### S-07 The portfolio
-3 presses · 50s · 45 words spoken (54 wpm)
+5 presses · 55s · 45 words spoken (49 wpm)
 
 On screen —
 pages:
-  - title: Apps 01–17; rows:
+  - title: Apps 01–10; rows:
       - no: 01; name: GynaeClerk; by: htpn; category: Patient journey
       - no: 02; name: AntenatalClerk; by: htpn; category: Patient journey
       - no: 03; name: Fetal Kick Chart; by: htpn; category: Patient journey
@@ -136,6 +136,7 @@ pages:
       - no: 08; name: Klinik Reumatologi pre-consultation; by: partner; category: Patient journey
       - no: 09; name: CardioFlow HF Clinic Portal; by: partner; category: Patient journey
       - no: 10; name: Skin Diary Generator; by: htpn; category: Clinician journey
+  - title: Apps 11–20; rows:
       - no: 11; name: OT Scheduling System; by: htpn; category: Clinician journey
       - no: 12; name: Gynae Census Web Form; by: htpn; category: Clinician journey
       - no: 13; name: EBL Estimator AI; by: htpn; category: Clinician journey
@@ -143,10 +144,10 @@ pages:
       - no: 15; name: Clinical Document Checker; by: htpn; category: Clinician journey
       - no: 16; name: Phlebotomy Appointment System; by: partner; category: Clinician journey
       - no: 17; name: PhysioMeasurePro; by: partner; category: Clinician journey
-  - title: Apps 18–34; rows:
       - no: 18; name: Akasia Ward MO Task Manager; by: partner; category: Clinician journey
       - no: 19; name: e-Lampiran D (drug formulary); by: partner; category: Clinician journey
       - no: 20; name: Pocket Nurse; by: partner; category: Clinician journey
+  - title: Apps 21–30; rows:
       - no: 21; name: MedPulse MAR; by: partner; category: Clinician journey
       - no: 22; name: TBIS 10A-1 Digital; by: partner; category: Clinician journey
       - no: 23; name: Dashboard ED; by: htpn; category: Management productivity
@@ -157,17 +158,18 @@ pages:
       - no: 28; name: Slide Deck OCR PDF Editor; by: htpn; category: Management productivity
       - no: 29; name: Portal Aktiviti JPPOBG; by: htpn; category: Management productivity
       - no: 30; name: Patient Safety Incident Reporting; by: partner; category: Management productivity
+  - title: Apps 31–40; rows:
       - no: 31; name: HTPN Digital Showcase Website; by: htpn; category: Management productivity
       - no: 32; name: E-Kehadiran Kursus; by: partner; category: Management productivity
       - no: 33; name: Mental Wellbeing Monitoring Portal; by: partner; category: Management productivity
       - no: 34; name: MedMove Pro; by: partner; category: Management productivity
-  - title: Apps 35–50; rows:
       - no: 35; name: MEDEVAC E-Request Portal; by: partner; category: Management productivity
       - no: 36; name: MOH HIRARC Portal; by: partner; category: Management productivity
       - no: 37; name: HPP OSH-Alert; by: partner; category: Management productivity
       - no: 38; name: Sistem eBooking; by: partner; category: Management productivity
       - no: 39; name: Ward Jasmin pharmacy stock; by: partner; category: Management productivity
       - no: 40; name: Psychiatry Department Dashboard (HPD); by: partner; category: Management productivity
+  - title: Apps 41–50; rows:
       - no: 41; name: OT Unit Staff Movement & Leave; by: partner; category: Management productivity
       - no: 42; name: Aduan HPD complaints; by: partner; category: Management productivity
       - no: 43; name: Vehicle Booking; by: partner; category: Management productivity
@@ -402,11 +404,11 @@ Script — Here's the lesson for me as a leader. Phase one was won through cultu
 
 ## Totals
 
-1391 words spoken · 20:36 planned · 52 presses
+1391 words spoken · 20:41 planned · 54 presses
 
 ## Known open points
 
-- Planned running time is 20:36 against a 5:00 slot, 15:36 over.
+- Planned running time is 20:41 against a 5:00 slot, 15:41 over.
 - Fastest-spoken sheets: S-10 (109 wpm), S-18 (95 wpm), S-16 (93 wpm).
 - S-08 plays a reel that runs longer than its script; it sits on its own press and can be cut short by advancing early.
 - S-12: some lines did not fit on the sheet at 28px and live in the presenter cues, not on screen.

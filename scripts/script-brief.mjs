@@ -50,9 +50,11 @@ const PRESSES = {
     'Cyan rings pulse on the sites now running tools built on the model, and "We taught. They built." appears.',
   ],
   portfolio: [
-    'A split-flap departures board, every character its own flipping tile: "Apps 01–17 of 50", one row per app with its number, name and category (Patient journey in amber, Clinician journey in white, Management productivity in blue). App names built at HTPN are white, those built by the hospitals we taught are blue, with a key: 17 built at HTPN, 33 built by the hospitals we taught. The showcase QR code and "Built by clinicians, for clinicians." sit underneath.',
-    'The same board turns over to apps 18–34, running from clinician journey into management productivity.',
-    'Apps 35–50, all management productivity.',
+    'A split-flap departures board, every character its own flipping tile, ten rows a page: "Apps 01–10 of 50", each row with its number, name and category (Patient journey in amber, Clinician journey in white, Management productivity in blue). App names built at HTPN are white, those built by the hospitals we taught are blue, with a key: 17 built at HTPN, 33 built by the hospitals we taught. The showcase QR code and "Built by clinicians, for clinicians." sit underneath.',
+    'The same board turns over to apps 11–20, clinician journey.',
+    'Apps 21–30, into management productivity.',
+    'Apps 31–40.',
+    'Apps 41–50.',
   ],
   innovathon: [
     'The Innovathon reel plays, framed, alone on the sheet. It runs for about a minute.',

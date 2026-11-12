@@ -501,13 +501,13 @@ export const SCENES: Scene[] = [
     id: 'portfolio',
     sheet: 'S-07',
     title: 'The portfolio',
-    steps: 3,
+    steps: 5,
     moment: 0,
-    seconds: 50,
+    seconds: 55,
     content: {
       pages: [
         {
-          title: 'Apps 01–17',
+          title: 'Apps 01–10',
           rows: [
             { no: '01', name: "GynaeClerk", by: 'htpn', category: 'Patient journey' },
             { no: '02', name: "AntenatalClerk", by: 'htpn', category: 'Patient journey' },
@@ -519,6 +519,11 @@ export const SCENES: Scene[] = [
             { no: '08', name: "Klinik Reumatologi pre-consultation", by: 'partner', category: 'Patient journey' },
             { no: '09', name: "CardioFlow HF Clinic Portal", by: 'partner', category: 'Patient journey' },
             { no: '10', name: "Skin Diary Generator", by: 'htpn', category: 'Clinician journey' },
+          ],
+        },
+        {
+          title: 'Apps 11–20',
+          rows: [
             { no: '11', name: "OT Scheduling System", by: 'htpn', category: 'Clinician journey' },
             { no: '12', name: "Gynae Census Web Form", by: 'htpn', category: 'Clinician journey' },
             { no: '13', name: "EBL Estimator AI", by: 'htpn', category: 'Clinician journey' },
@@ -526,14 +531,14 @@ export const SCENES: Scene[] = [
             { no: '15', name: "Clinical Document Checker", by: 'htpn', category: 'Clinician journey' },
             { no: '16', name: "Phlebotomy Appointment System", by: 'partner', category: 'Clinician journey' },
             { no: '17', name: "PhysioMeasurePro", by: 'partner', category: 'Clinician journey' },
-          ],
-        },
-        {
-          title: 'Apps 18–34',
-          rows: [
             { no: '18', name: "Akasia Ward MO Task Manager", by: 'partner', category: 'Clinician journey' },
             { no: '19', name: "e-Lampiran D (drug formulary)", by: 'partner', category: 'Clinician journey' },
             { no: '20', name: "Pocket Nurse", by: 'partner', category: 'Clinician journey' },
+          ],
+        },
+        {
+          title: 'Apps 21–30',
+          rows: [
             { no: '21', name: "MedPulse MAR", by: 'partner', category: 'Clinician journey' },
             { no: '22', name: "TBIS 10A-1 Digital", by: 'partner', category: 'Clinician journey' },
             { no: '23', name: "Dashboard ED", by: 'htpn', category: 'Management productivity' },
@@ -544,21 +549,26 @@ export const SCENES: Scene[] = [
             { no: '28', name: "Slide Deck OCR PDF Editor", by: 'htpn', category: 'Management productivity' },
             { no: '29', name: "Portal Aktiviti JPPOBG", by: 'htpn', category: 'Management productivity' },
             { no: '30', name: "Patient Safety Incident Reporting", by: 'partner', category: 'Management productivity' },
+          ],
+        },
+        {
+          title: 'Apps 31–40',
+          rows: [
             { no: '31', name: "HTPN Digital Showcase Website", by: 'htpn', category: 'Management productivity' },
             { no: '32', name: "E-Kehadiran Kursus", by: 'partner', category: 'Management productivity' },
             { no: '33', name: "Mental Wellbeing Monitoring Portal", by: 'partner', category: 'Management productivity' },
             { no: '34', name: "MedMove Pro", by: 'partner', category: 'Management productivity' },
-          ],
-        },
-        {
-          title: 'Apps 35–50',
-          rows: [
             { no: '35', name: "MEDEVAC E-Request Portal", by: 'partner', category: 'Management productivity' },
             { no: '36', name: "MOH HIRARC Portal", by: 'partner', category: 'Management productivity' },
             { no: '37', name: "HPP OSH-Alert", by: 'partner', category: 'Management productivity' },
             { no: '38', name: "Sistem eBooking", by: 'partner', category: 'Management productivity' },
             { no: '39', name: "Ward Jasmin pharmacy stock", by: 'partner', category: 'Management productivity' },
             { no: '40', name: "Psychiatry Department Dashboard (HPD)", by: 'partner', category: 'Management productivity' },
+          ],
+        },
+        {
+          title: 'Apps 41–50',
+          rows: [
             { no: '41', name: "OT Unit Staff Movement & Leave", by: 'partner', category: 'Management productivity' },
             { no: '42', name: "Aduan HPD complaints", by: 'partner', category: 'Management productivity' },
             { no: '43', name: "Vehicle Booking", by: 'partner', category: 'Management productivity' },

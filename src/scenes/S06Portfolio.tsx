@@ -14,10 +14,10 @@ const COLUMNS: FlapColumn[] = [
   { width: 23 },
 ]
 const ROWS = Math.max(...c.pages.map((p) => p.rows.length))
-/** Left edge of each column on the stage: tile 19px, gap 2px, column gap 40px. */
-const PITCH = 21
+/** Left edge of each column on the stage: tile 22px, gap 2px, column gap 28px. */
+const PITCH = 24
 const COL_X = COLUMNS.reduce<number[]>((xs, _, k) => {
-  xs.push(k === 0 ? 200 : xs[k - 1] + COLUMNS[k - 1].width * PITCH - 2 + 40)
+  xs.push(k === 0 ? 200 : xs[k - 1] + COLUMNS[k - 1].width * PITCH - 2 + 28)
   return xs
 }, [])
 const CAT_TONE: Record<string, string> = {
@@ -29,7 +29,8 @@ const CAT_TONE: Record<string, string> = {
 /**
  * The registry as a departures board, one page a press.
  *
- * All fifty in showcase order, 01 to 50, seventeen to a page, so the
+ * All fifty in showcase order, 01 to 50, ten to a page in tiles large
+ * enough to read from the back, so the
  * categories come round in turn: patient journey, clinician journey,
  * management productivity, each in its own colour in the last column. The
  * app name says who built it: chalk for HTPN, cyan for the hospitals we
