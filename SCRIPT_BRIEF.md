@@ -13,7 +13,7 @@ You are writing the spoken script for a closing keynote. The speaker presents a 
 3. **Voice.** First person, plain, confident, short sentences. A clinician-leader speaking to industry leaders, not a vendor pitching. No jargon, no hype words, no rhetorical questions to the audience.
 4. **Screen and voice.** The audience reads the screen. Don't read the on-screen text out word for word; say what it means, and let the screen carry the detail.
 5. **Pace.** Write at 140 words a minute (about 2.3 words a second). For every sheet give its word count and spoken time, and give the total at the end.
-6. **Fit the target.** The planned times below add up to **20:25**, against a target of 5:00. If they don't fit, first propose which sheets to shorten, merge or skip (and why), wait for approval, then write. Don't silently drop a sheet.
+6. **Fit the target.** The planned times below add up to **20:29**, against a target of 5:00. If they don't fit, first propose which sheets to shorten, merge or skip (and why), wait for approval, then write. Don't silently drop a sheet.
 7. **Format.** For each sheet:
 
 ```
@@ -30,7 +30,7 @@ These are real tools, used every day...
 - **Audience:** senior industry leaders (Microsoft, Grab, Shopee and others), some of whom judged the Innovathon. Not clinicians; they know platforms and scale, not Malaysian public hospitals.
 - **Speaker:** Dr Ferwahn Fairis bin Ab Karim · Acting Deputy Director, Hospital Tengku Permaisuri Norashikin, Kajang · Ministry of Health Malaysia, presenting for the Healthcare Intelligence Office.
 - **The argument in one line:** a 135-year-old public hospital built its own digital tools from within, ahead of national policy; the next phases must turn that culture into structure, and share it with every KKM hospital.
-- **The deck:** 20 sheets, 50 clicker presses, planned 20:25. "Press 1" on each sheet is the click that brings the sheet up.
+- **The deck:** 20 sheets, 50 clicker presses, planned 20:29. "Press 1" on each sheet is the click that brings the sheet up.
 
 ## The sheets
 
@@ -158,16 +158,65 @@ Current notes (draft to improve, not to copy):
 > And then people started inviting us. Fifteen sessions in twelve months: hospitals, community groups, and whole national services. Northern, central and southern O&G. Family Medicine. Medical Services. From Alor Setar to Johor Bahru, and across the sea to Kuching. Five of those were in the last two months alone. And here's what happened next. The hospitals we taught started building their own tools, in Marudi, Sri Aman, Mukah, Penang and Johor. We taught. They built.
 
 ### S-07 The portfolio
-1 press · planned 39s · about 91 words at 140 wpm · current notes 45 words
+1 press · planned 43s · about 100 words at 140 wpm · current notes 45 words
 
 What the room sees:
-- Press 1: Three scrolling lanes of app names (patient, doctor, management), a screenshot of the showcase site with its QR code, and the closing line.
+- Press 1: "50 apps in the registry" counts up, with a key: 17 built at HTPN (white), 33 built by the hospitals we taught (blue). Then all fifty app names from the HTPN App Registry assemble one after another into a single field of type, HTPN's first, and keep gently brightening and dimming out of step. Beside them, the showcase site and its QR code; then "Built by clinicians, for clinicians."
 
 On screen (text and figures, exactly as shown):
-lanes:
-  - name: Patient's journey; items: GynaeClerk · AntenatalClerk · Fetal Kick Chart · Medexa
-  - name: Doctor's journey; items: OT Scheduling System · EBL Estimator AI · TherapyAI · Clinical Document Checker · Skin Diary Generator · Gynae Census
-  - name: Management productivity; items: Dashboard ED · Roster Scheduling · CGR Web Form · DLP Dashboard · MedMove Pro · MEDEVAC E-Request · HIRARC Portal · OSH-Alert
+apps:
+  - name: GynaeClerk; by: htpn
+  - name: AntenatalClerk; by: htpn
+  - name: Fetal Kick Chart; by: htpn
+  - name: Skin Diary Generator; by: htpn
+  - name: OT Scheduling System; by: htpn
+  - name: Gynae Census Web Form; by: htpn
+  - name: EBL Estimator AI; by: htpn
+  - name: TherapyAI; by: htpn
+  - name: Clinical Document Checker; by: htpn
+  - name: Dashboard ED; by: htpn
+  - name: Dashboard DLP; by: htpn
+  - name: Roster Scheduling Web App; by: htpn
+  - name: CGR Web Form; by: htpn
+  - name: DLP Reporting Web Form; by: htpn
+  - name: Slide Deck OCR PDF Editor; by: htpn
+  - name: Portal Aktiviti JPPOBG; by: htpn
+  - name: HTPN Digital Showcase Website; by: htpn
+  - name: Pocket Nurse; by: partner; facility: BPF JKN Selangor
+  - name: PhysioMeasurePro; by: partner; facility: Hospital Aman Sarawak
+  - name: TBIS 10A-1 Digital; by: partner; facility: Hospital Cyberjaya
+  - name: Duty Rotator; by: partner; facility: Hospital Cyberjaya
+  - name: PathoLab Pro; by: partner; facility: Hospital Cyberjaya
+  - name: Phlebotomy Appointment System; by: partner; facility: Hospital Marudi
+  - name: MOH HIRARC Portal; by: partner; facility: Hospital Mukah
+  - name: Kempen Derma Darah; by: partner; facility: Hospital Port Dickson
+  - name: Maternal Assessment Center registration; by: partner; facility: Hospital Port Dickson
+  - name: Klinik Diabetes Pintar; by: partner; facility: Hospital Port Dickson
+  - name: Akasia Ward MO Task Manager; by: partner; facility: Hospital Port Dickson
+  - name: e-Lampiran D (drug formulary); by: partner; facility: Hospital Port Dickson
+  - name: MedPulse MAR; by: partner; facility: Hospital Port Dickson
+  - name: Psychiatry Department Dashboard (HPD); by: partner; facility: Hospital Port Dickson
+  - name: OT Unit Staff Movement & Leave; by: partner; facility: Hospital Port Dickson
+  - name: Aduan HPD complaints; by: partner; facility: Hospital Port Dickson
+  - name: Vehicle Booking; by: partner; facility: Hospital Port Dickson
+  - name: Credentialing & Privileging Portal; by: partner; facility: Hospital Port Dickson
+  - name: Nursing Daily Census (HPD); by: partner; facility: Hospital Port Dickson
+  - name: IQC Glucometer POCT; by: partner; facility: Hospital Port Dickson
+  - name: Memory Clinic Intake; by: partner; facility: Hospital Port Dickson / NMS
+  - name: HPP OSH-Alert; by: partner; facility: Hospital Pulau Pinang
+  - name: Sistem eBooking; by: partner; facility: Hospital Pulau Pinang
+  - name: Patient Safety Incident Reporting; by: partner; facility: Hospital Sultanah Aminah JB
+  - name: E-Kehadiran Kursus; by: partner; facility: JKN Sarawak
+  - name: Mental Wellbeing Monitoring Portal; by: partner; facility: JKN Sarawak
+  - name: MedMove Pro; by: partner; facility: JKN Sarawak
+  - name: MEDEVAC E-Request Portal; by: partner; facility: JKN Sarawak
+  - name: Klinik Reumatologi pre-consultation; by: partner; facility: National Medical Services
+  - name: CardioFlow HF Clinic Portal; by: partner; facility: National Medical Services
+  - name: Ward Jasmin pharmacy stock; by: partner; facility: Not stated
+  - name: Internal Medicine Duty Planner; by: partner; facility: Not stated
+  - name: SJAM KPW Dispatch & Analytics; by: partner; facility: St John Ambulance, WP
+total: value: 50; label: apps in the registry; tone: signal
+legend: htpn: 17 built at HTPN; partner: 33 built by the hospitals we taught
 centre: url: https://htpn-showcase-v2.vercel.app/
 line: Built by clinicians, for clinicians.
 
@@ -464,6 +513,6 @@ Current notes (draft to improve, not to copy):
 ## Totals
 
 - 20 sheets, 50 presses.
-- Planned time 20:25 against a 5:00 slot.
+- Planned time 20:29 against a 5:00 slot.
 - Current notes total 1391 words.
 - S-08 plays a reel of about 56 seconds; the speaker can talk over it or advance early to cut it short.

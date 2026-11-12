@@ -137,7 +137,10 @@ export interface WhereTaught {
 }
 
 export interface Portfolio {
-  lanes: { name: string; items: string[]; speed: number }[]
+  /** Every app in the HTPN App Registry (Phase 3), as it names them. */
+  apps: { name: string; by: 'htpn' | 'partner'; facility?: string }[]
+  total: Figure
+  legend: { htpn: string; partner: string }
   centre: { image: string; url: string }
   line: string
 }
@@ -489,46 +492,62 @@ export const SCENES: Scene[] = [
     title: 'The portfolio',
     steps: 1,
     moment: 0,
-    seconds: 39,
+    seconds: 43,
     content: {
-      lanes: [
-        {
-          name: "Patient's journey",
-          speed: 54,
-          items: [
-            'GynaeClerk',
-            'AntenatalClerk',
-            'Fetal Kick Chart',
-            'Medexa',
-          ],
-        },
-        {
-          name: "Doctor's journey",
-          speed: 68,
-          items: [
-            'OT Scheduling System',
-            'EBL Estimator AI',
-            'TherapyAI',
-            'Clinical Document Checker',
-            'Skin Diary Generator',
-            'Gynae Census',
-          ],
-        },
-        {
-          name: 'Management productivity',
-          speed: 61,
-          items: [
-            'Dashboard ED',
-            'Roster Scheduling',
-            'CGR Web Form',
-            'DLP Dashboard',
-            'MedMove Pro',
-            'MEDEVAC E-Request',
-            'HIRARC Portal',
-            'OSH-Alert',
-          ],
-        },
+      apps: [
+        { name: "GynaeClerk", by: 'htpn' },
+        { name: "AntenatalClerk", by: 'htpn' },
+        { name: "Fetal Kick Chart", by: 'htpn' },
+        { name: "Skin Diary Generator", by: 'htpn' },
+        { name: "OT Scheduling System", by: 'htpn' },
+        { name: "Gynae Census Web Form", by: 'htpn' },
+        { name: "EBL Estimator AI", by: 'htpn' },
+        { name: "TherapyAI", by: 'htpn' },
+        { name: "Clinical Document Checker", by: 'htpn' },
+        { name: "Dashboard ED", by: 'htpn' },
+        { name: "Dashboard DLP", by: 'htpn' },
+        { name: "Roster Scheduling Web App", by: 'htpn' },
+        { name: "CGR Web Form", by: 'htpn' },
+        { name: "DLP Reporting Web Form", by: 'htpn' },
+        { name: "Slide Deck OCR PDF Editor", by: 'htpn' },
+        { name: "Portal Aktiviti JPPOBG", by: 'htpn' },
+        { name: "HTPN Digital Showcase Website", by: 'htpn' },
+        { name: "Pocket Nurse", by: 'partner', facility: "BPF JKN Selangor" },
+        { name: "PhysioMeasurePro", by: 'partner', facility: "Hospital Aman Sarawak" },
+        { name: "TBIS 10A-1 Digital", by: 'partner', facility: "Hospital Cyberjaya" },
+        { name: "Duty Rotator", by: 'partner', facility: "Hospital Cyberjaya" },
+        { name: "PathoLab Pro", by: 'partner', facility: "Hospital Cyberjaya" },
+        { name: "Phlebotomy Appointment System", by: 'partner', facility: "Hospital Marudi" },
+        { name: "MOH HIRARC Portal", by: 'partner', facility: "Hospital Mukah" },
+        { name: "Kempen Derma Darah", by: 'partner', facility: "Hospital Port Dickson" },
+        { name: "Maternal Assessment Center registration", by: 'partner', facility: "Hospital Port Dickson" },
+        { name: "Klinik Diabetes Pintar", by: 'partner', facility: "Hospital Port Dickson" },
+        { name: "Akasia Ward MO Task Manager", by: 'partner', facility: "Hospital Port Dickson" },
+        { name: "e-Lampiran D (drug formulary)", by: 'partner', facility: "Hospital Port Dickson" },
+        { name: "MedPulse MAR", by: 'partner', facility: "Hospital Port Dickson" },
+        { name: "Psychiatry Department Dashboard (HPD)", by: 'partner', facility: "Hospital Port Dickson" },
+        { name: "OT Unit Staff Movement & Leave", by: 'partner', facility: "Hospital Port Dickson" },
+        { name: "Aduan HPD complaints", by: 'partner', facility: "Hospital Port Dickson" },
+        { name: "Vehicle Booking", by: 'partner', facility: "Hospital Port Dickson" },
+        { name: "Credentialing & Privileging Portal", by: 'partner', facility: "Hospital Port Dickson" },
+        { name: "Nursing Daily Census (HPD)", by: 'partner', facility: "Hospital Port Dickson" },
+        { name: "IQC Glucometer POCT", by: 'partner', facility: "Hospital Port Dickson" },
+        { name: "Memory Clinic Intake", by: 'partner', facility: "Hospital Port Dickson / NMS" },
+        { name: "HPP OSH-Alert", by: 'partner', facility: "Hospital Pulau Pinang" },
+        { name: "Sistem eBooking", by: 'partner', facility: "Hospital Pulau Pinang" },
+        { name: "Patient Safety Incident Reporting", by: 'partner', facility: "Hospital Sultanah Aminah JB" },
+        { name: "E-Kehadiran Kursus", by: 'partner', facility: "JKN Sarawak" },
+        { name: "Mental Wellbeing Monitoring Portal", by: 'partner', facility: "JKN Sarawak" },
+        { name: "MedMove Pro", by: 'partner', facility: "JKN Sarawak" },
+        { name: "MEDEVAC E-Request Portal", by: 'partner', facility: "JKN Sarawak" },
+        { name: "Klinik Reumatologi pre-consultation", by: 'partner', facility: "National Medical Services" },
+        { name: "CardioFlow HF Clinic Portal", by: 'partner', facility: "National Medical Services" },
+        { name: "Ward Jasmin pharmacy stock", by: 'partner', facility: "Not stated" },
+        { name: "Internal Medicine Duty Planner", by: 'partner', facility: "Not stated" },
+        { name: "SJAM KPW Dispatch & Analytics", by: 'partner', facility: "St John Ambulance, WP" },
       ],
+      total: { value: 50, label: 'apps in the registry', tone: 'signal' },
+      legend: { htpn: '17 built at HTPN', partner: '33 built by the hospitals we taught' },
       centre: {
         image: 'shot-showcase.webp',
         url: 'https://htpn-showcase-v2.vercel.app/',

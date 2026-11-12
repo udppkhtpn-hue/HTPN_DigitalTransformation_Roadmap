@@ -38,7 +38,7 @@ const MOMENTS = [
   moment('how-we-led-it', 5, 'split-flap', 3000),
   moment('results', 0, 'four count-ups + photo column', 4000),
   moment('where-weve-taught', 0, 'map + 15 arcs + photo strip', 17000),
-  moment('portfolio', 0, 'three marquees', 3000),
+  moment('portfolio', 0, 'fifty names assemble + glow', 6000),
   moment('the-gap', 0, 'fifty drifting dots', 3000),
   moment('national-picture', 1, '155 hospitals light up', 6500),
   moment('vision-2028', 1, 'hospitals on the line', 4000),

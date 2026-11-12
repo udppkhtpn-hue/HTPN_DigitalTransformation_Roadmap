@@ -134,13 +134,13 @@ export const SCRIPT: Record<string, SheetScript> = {
   "S-07": {
     sheet: "S-07",
     title: "The portfolio",
-    seconds: 39,
+    seconds: 43,
     reel: 0,
-    words: 91,
+    words: 98,
     blocks: [
-      { step: 0, cue: "Three scrolling lanes of app names and the showcase QR code", paras: [
+      { step: 0, cue: "All fifty app names assemble one by one, HTPN's seventeen in white and the partners' thirty-three in blue, beside the showcase QR code", paras: [
         "These are real tools in daily use, sorted by whose day they improve. For patients: GynaeClerk, AntenatalClerk, a fetal kick chart. For doctors: theatre scheduling, an AI blood-loss estimator, a clinical document checker. For management: an emergency department dashboard, rostering, governance audits.",
-        "And look closely. Some of these weren't built by us at all. They came from the hospitals we taught.",
+        "And look at the colours. All fifty are now in one registry. Seventeen were built here. The other thirty-three were built by the hospitals we taught.",
         "Built by clinicians, for clinicians. The QR code takes you to every one of them. Scan it now, or after the session.",
         "So we brought these builders into one room.",
       ] },

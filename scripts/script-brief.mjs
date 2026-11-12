@@ -50,7 +50,7 @@ const PRESSES = {
     'Cyan rings pulse on the sites now running tools built on the model, and "We taught. They built." appears.',
   ],
   portfolio: [
-    'Three scrolling lanes of app names (patient, doctor, management), a screenshot of the showcase site with its QR code, and the closing line.',
+    '"50 apps in the registry" counts up, with a key: 17 built at HTPN (white), 33 built by the hospitals we taught (blue). Then all fifty app names from the HTPN App Registry assemble one after another into a single field of type, HTPN\'s first, and keep gently brightening and dimming out of step. Beside them, the showcase site and its QR code; then "Built by clinicians, for clinicians."',
   ],
   innovathon: [
     'The Innovathon reel plays, framed, alone on the sheet. It runs for about a minute.',

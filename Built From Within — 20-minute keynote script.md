@@ -108,13 +108,13 @@ Then came the part that matters most. The hospitals we taught started building t
 
 Here is what has been built.
 
-### S-07 The portfolio  (39s, 91 words)
+### S-07 The portfolio  (43s, 101 words)
 
-*\[Press 1: Three scrolling lanes of app names and the showcase QR code\]*
+*\[Press 1: All fifty app names assemble one by one, HTPN's seventeen in white and the partners' thirty-three in blue, beside the showcase QR code\]*
 
 These are real tools in daily use, sorted by whose day they improve. For patients: GynaeClerk, AntenatalClerk, a fetal kick chart. For doctors: theatre scheduling, an AI blood-loss estimator, a clinical document checker. For management: an emergency department dashboard, rostering, governance audits.
 
-And look closely. Some of these weren't built by us at all. They came from the hospitals we taught.
+And look at the colours. All fifty are now in one registry. Seventeen were built here. The other thirty-three were built by the hospitals we taught.
 
 Built by clinicians, for clinicians. The QR code takes you to every one of them. Scan it now, or after the session.
 
