@@ -12,14 +12,20 @@ const COLUMNS: FlapColumn[] = [
   { width: 2, align: 'right' },
   { width: 39 },
   { width: 27 },
-  { width: 2 },
+  { width: 23 },
 ]
 const ROWS = Math.max(...c.pages.map((p) => p.rows.length))
-/** Left edge of each column on the stage: tile 19px, gap 2px, column gap 18px. */
+/** Left edge of each column on the stage: tile 15.5px, gap 1.5px, column gap 16px. */
+const PITCH = 17
 const COL_X = COLUMNS.reduce<number[]>((xs, _, k) => {
-  xs.push(k === 0 ? 200 : xs[k - 1] + COLUMNS[k - 1].width * 21 - 2 + 18)
+  xs.push(k === 0 ? 200 : xs[k - 1] + COLUMNS[k - 1].width * PITCH - 1.5 + 16)
   return xs
 }, [])
+const CAT_TONE: Record<string, string> = {
+  'Patient journey': 'fb--patient',
+  'Clinician journey': 'fb--clinician',
+  'Management productivity': 'fb--management',
+}
 
 const PARTNERS = c.pages.slice(1).reduce((n, p) => n + p.rows.length, 0)
 
@@ -27,7 +33,9 @@ const PARTNERS = c.pages.slice(1).reduce((n, p) => n + p.rows.length, 0)
  * The registry as a departures board, one page a press.
  *
  * Page 1 is what HTPN built, pages 2 and 3 what the hospitals we taught
- * built. Each press re-flaps the same board in place, so the change of
+ * built. Rows run in showcase order, so each page falls into the three
+ * categories in turn: patient journey, clinician journey, management
+ * productivity, each in its own colour in the last column. Each press re-flaps the same board in place, so the change of
  * page ripples down it the way a station board turns over: the room sees
  * the second and third pages arrive on the board the first one was on,
  * which is the argument, that most of the portfolio is not ours.
@@ -44,7 +52,7 @@ export function S06Portfolio({ step }: SceneProps) {
         { text: r.no, tone: 'fb--dim' },
         { text: r.name, tone: htpn ? '' : 'fb--partner' },
         { text: r.at, tone: 'fb--at' },
-        { text: r.tier, tone: r.tier === 'T3' ? 'fb--t3' : r.tier === 'T1' ? 'fb--dim' : '' },
+        { text: r.category, tone: CAT_TONE[r.category] },
       ]),
     [page, htpn],
   )
@@ -79,8 +87,8 @@ export function S06Portfolio({ step }: SceneProps) {
       </motion.p>
 
       <div className="s06__heads" aria-hidden="true">
-        {[c.columns.no, c.columns.name, c.columns.at, c.columns.tier].map((h, k) => (
-          <span key={h} style={{ left: COL_X[k] - 200 }} className={k === 3 ? 's06__head-tier' : undefined}>
+        {[c.columns.no, c.columns.name, c.columns.at, c.columns.category].map((h, k) => (
+          <span key={h} style={{ left: COL_X[k] - 200 }}>
             {h}
           </span>
         ))}
@@ -92,7 +100,7 @@ export function S06Portfolio({ step }: SceneProps) {
       <ul className="s06__sr">
         {page.rows.map((r) => (
           <li key={r.no}>
-            {r.no} {r.name}, {r.at}, {r.tier}
+            {r.no} {r.name}, {r.at}, {r.category}
           </li>
         ))}
       </ul>

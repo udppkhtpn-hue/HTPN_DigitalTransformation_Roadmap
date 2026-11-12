@@ -50,7 +50,7 @@ const PRESSES = {
     'Cyan rings pulse on the sites now running tools built on the model, and "We taught. They built." appears.',
   ],
   portfolio: [
-    'A split-flap departures board, every character its own flipping tile, page 1 of 3 ("50 apps in the registry"): "Built at HTPN 17", one row per app with registry number, app name, where it was built and the proposed tier (T3 in amber). The showcase QR code and "Built by clinicians, for clinicians." sit underneath.',
+    'A split-flap departures board, every character its own flipping tile, page 1 of 3 ("50 apps in the registry"): "Built at HTPN 17", one row per app with its number, app name, where it was built and its category (Patient journey in amber, Clinician journey in white, Management productivity in blue); rows run in showcase order, so each page falls into the three categories in turn. The showcase QR code and "Built by clinicians, for clinicians." sit underneath.',
     'The same board turns over to page 2: "Built by the hospitals we taught 1–17 of 33", the apps from Hospital Port Dickson (14) and Hospital Cyberjaya (3).',
     'Page 3: "18–33 of 33", the apps from Penang, Johor, Sarawak, Selangor, Marudi, Mukah, St John Ambulance and the national services, and two with no facility recorded.',
   ],

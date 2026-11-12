@@ -110,7 +110,7 @@ Here is what has been built.
 
 ### S-07 The portfolio  (50s, 117 words)
 
-*\[Press 1: A departures board flaps in: page 1 of 3, the seventeen apps built at HTPN, with where each was built and its proposed tier\]*
+*\[Press 1: A departures board flaps in: page 1 of 3, the seventeen apps built at HTPN, each with where it was built and its category: patient journey, clinician journey or management productivity\]*
 
 These are real tools in daily use, and all fifty are now in one registry. Seventeen were built here. For patients: GynaeClerk, AntenatalClerk, a fetal kick chart. For doctors: theatre scheduling, an AI blood-loss estimator, a clinical document checker. For management: an emergency department dashboard, rostering, governance audits.
 

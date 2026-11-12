@@ -138,7 +138,7 @@ export const SCRIPT: Record<string, SheetScript> = {
     reel: 0,
     words: 108,
     blocks: [
-      { step: 0, cue: "A departures board flaps in: page 1 of 3, the seventeen apps built at HTPN, with where each was built and its proposed tier", paras: [
+      { step: 0, cue: "A departures board flaps in: page 1 of 3, the seventeen apps built at HTPN, each with where it was built and its category: patient journey, clinician journey or management productivity", paras: [
         "These are real tools in daily use, and all fifty are now in one registry. Seventeen were built here. For patients: GynaeClerk, AntenatalClerk, a fetal kick chart. For doctors: theatre scheduling, an AI blood-loss estimator, a clinical document checker. For management: an emergency department dashboard, rostering, governance audits.",
       ] },
       { step: 1, cue: "The board turns over to page 2: seventeen apps built by Hospital Port Dickson and Hospital Cyberjaya", paras: [

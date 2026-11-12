@@ -161,67 +161,67 @@ Current notes (draft to improve, not to copy):
 3 presses · planned 50s · about 117 words at 140 wpm · current notes 45 words
 
 What the room sees:
-- Press 1: A split-flap departures board, every character its own flipping tile, page 1 of 3 ("50 apps in the registry"): "Built at HTPN 17", one row per app with registry number, app name, where it was built and the proposed tier (T3 in amber). The showcase QR code and "Built by clinicians, for clinicians." sit underneath.
+- Press 1: A split-flap departures board, every character its own flipping tile, page 1 of 3 ("50 apps in the registry"): "Built at HTPN 17", one row per app with its number, app name, where it was built and its category (Patient journey in amber, Clinician journey in white, Management productivity in blue); rows run in showcase order, so each page falls into the three categories in turn. The showcase QR code and "Built by clinicians, for clinicians." sit underneath.
 - Press 2: The same board turns over to page 2: "Built by the hospitals we taught 1–17 of 33", the apps from Hospital Port Dickson (14) and Hospital Cyberjaya (3).
 - Press 3: Page 3: "18–33 of 33", the apps from Penang, Johor, Sarawak, Selangor, Marudi, Mukah, St John Ambulance and the national services, and two with no facility recorded.
 
 On screen (text and figures, exactly as shown):
 pages:
   - title: Built at HTPN; rows:
-      - no: 01; name: GynaeClerk; at: HTPN Kajang; tier: T2
-      - no: 02; name: AntenatalClerk; at: HTPN Kajang; tier: T2
-      - no: 03; name: Fetal Kick Chart; at: HTPN Kajang; tier: T3
-      - no: 10; name: Skin Diary Generator; at: HTPN Kajang; tier: T2
-      - no: 11; name: OT Scheduling System; at: HTPN Kajang; tier: T3
-      - no: 12; name: Gynae Census Web Form; at: HTPN Kajang; tier: T2
-      - no: 13; name: EBL Estimator AI; at: HTPN Kajang; tier: T3
-      - no: 14; name: TherapyAI; at: HTPN Kajang; tier: T3
-      - no: 15; name: Clinical Document Checker; at: HTPN Kajang; tier: T1
-      - no: 23; name: Dashboard ED; at: HTPN Kajang; tier: T3
-      - no: 24; name: Dashboard DLP; at: HTPN Kajang; tier: T2
-      - no: 25; name: Roster Scheduling Web App; at: HTPN Kajang; tier: T2
-      - no: 26; name: CGR Web Form; at: HTPN Kajang; tier: T2
-      - no: 27; name: DLP Reporting Web Form; at: HTPN Kajang; tier: T2
-      - no: 28; name: Slide Deck OCR PDF Editor; at: HTPN Kajang; tier: T1
-      - no: 29; name: Portal Aktiviti JPPOBG; at: HTPN Kajang; tier: T2
-      - no: 31; name: HTPN Digital Showcase Website; at: HTPN Kajang; tier: T2
+      - no: 01; name: GynaeClerk; at: HTPN Kajang; category: Patient journey
+      - no: 02; name: AntenatalClerk; at: HTPN Kajang; category: Patient journey
+      - no: 03; name: Fetal Kick Chart; at: HTPN Kajang; category: Patient journey
+      - no: 10; name: Skin Diary Generator; at: HTPN Kajang; category: Clinician journey
+      - no: 11; name: OT Scheduling System; at: HTPN Kajang; category: Clinician journey
+      - no: 12; name: Gynae Census Web Form; at: HTPN Kajang; category: Clinician journey
+      - no: 13; name: EBL Estimator AI; at: HTPN Kajang; category: Clinician journey
+      - no: 14; name: TherapyAI; at: HTPN Kajang; category: Clinician journey
+      - no: 15; name: Clinical Document Checker; at: HTPN Kajang; category: Clinician journey
+      - no: 23; name: Dashboard ED; at: HTPN Kajang; category: Management productivity
+      - no: 24; name: Dashboard DLP; at: HTPN Kajang; category: Management productivity
+      - no: 25; name: Roster Scheduling Web App; at: HTPN Kajang; category: Management productivity
+      - no: 26; name: CGR Web Form; at: HTPN Kajang; category: Management productivity
+      - no: 27; name: DLP Reporting Web Form; at: HTPN Kajang; category: Management productivity
+      - no: 28; name: Slide Deck OCR PDF Editor; at: HTPN Kajang; category: Management productivity
+      - no: 29; name: Portal Aktiviti JPPOBG; at: HTPN Kajang; category: Management productivity
+      - no: 31; name: HTPN Digital Showcase Website; at: HTPN Kajang; category: Management productivity
   - title: Built by the hospitals we taught; rows:
-      - no: 04; name: Kempen Derma Darah; at: Hospital Port Dickson; tier: T3
-      - no: 05; name: Maternal Assessment Center registration; at: Hospital Port Dickson; tier: T3
-      - no: 06; name: Klinik Diabetes Pintar; at: Hospital Port Dickson; tier: T2
-      - no: 18; name: Akasia Ward MO Task Manager; at: Hospital Port Dickson; tier: T3
-      - no: 19; name: e-Lampiran D (drug formulary); at: Hospital Port Dickson; tier: T1
-      - no: 21; name: MedPulse MAR; at: Hospital Port Dickson; tier: T3
-      - no: 40; name: Psychiatry Department Dashboard (HPD); at: Hospital Port Dickson; tier: T2
-      - no: 41; name: OT Unit Staff Movement & Leave; at: Hospital Port Dickson; tier: T2
-      - no: 42; name: Aduan HPD complaints; at: Hospital Port Dickson; tier: T2
-      - no: 43; name: Vehicle Booking; at: Hospital Port Dickson; tier: T2
-      - no: 44; name: Credentialing & Privileging Portal; at: Hospital Port Dickson; tier: T3
-      - no: 45; name: Nursing Daily Census (HPD); at: Hospital Port Dickson; tier: T3
-      - no: 46; name: IQC Glucometer POCT; at: Hospital Port Dickson; tier: T3
-      - no: 07; name: Memory Clinic Intake; at: Hospital Port Dickson / NMS; tier: T2
-      - no: 22; name: TBIS 10A-1 Digital; at: Hospital Cyberjaya; tier: T2
-      - no: 47; name: Duty Rotator; at: Hospital Cyberjaya; tier: T2
-      - no: 48; name: PathoLab Pro; at: Hospital Cyberjaya; tier: T2
+      - no: 04; name: Kempen Derma Darah; at: Hospital Port Dickson; category: Patient journey
+      - no: 05; name: Maternal Assessment Center registration; at: Hospital Port Dickson; category: Patient journey
+      - no: 06; name: Klinik Diabetes Pintar; at: Hospital Port Dickson; category: Patient journey
+      - no: 07; name: Memory Clinic Intake; at: Hospital Port Dickson / NMS; category: Patient journey
+      - no: 18; name: Akasia Ward MO Task Manager; at: Hospital Port Dickson; category: Clinician journey
+      - no: 19; name: e-Lampiran D (drug formulary); at: Hospital Port Dickson; category: Clinician journey
+      - no: 21; name: MedPulse MAR; at: Hospital Port Dickson; category: Clinician journey
+      - no: 22; name: TBIS 10A-1 Digital; at: Hospital Cyberjaya; category: Clinician journey
+      - no: 40; name: Psychiatry Department Dashboard (HPD); at: Hospital Port Dickson; category: Management productivity
+      - no: 41; name: OT Unit Staff Movement & Leave; at: Hospital Port Dickson; category: Management productivity
+      - no: 42; name: Aduan HPD complaints; at: Hospital Port Dickson; category: Management productivity
+      - no: 43; name: Vehicle Booking; at: Hospital Port Dickson; category: Management productivity
+      - no: 44; name: Credentialing & Privileging Portal; at: Hospital Port Dickson; category: Management productivity
+      - no: 45; name: Nursing Daily Census (HPD); at: Hospital Port Dickson; category: Management productivity
+      - no: 46; name: IQC Glucometer POCT; at: Hospital Port Dickson; category: Management productivity
+      - no: 47; name: Duty Rotator; at: Hospital Cyberjaya; category: Management productivity
+      - no: 48; name: PathoLab Pro; at: Hospital Cyberjaya; category: Management productivity
   - title: Built by the hospitals we taught; rows:
-      - no: 20; name: Pocket Nurse; at: BPF JKN Selangor; tier: T3
-      - no: 17; name: PhysioMeasurePro; at: Hospital Aman Sarawak; tier: T2
-      - no: 16; name: Phlebotomy Appointment System; at: Hospital Marudi; tier: T2
-      - no: 36; name: MOH HIRARC Portal; at: Hospital Mukah; tier: T2
-      - no: 37; name: HPP OSH-Alert; at: Hospital Pulau Pinang; tier: T2
-      - no: 38; name: Sistem eBooking; at: Hospital Pulau Pinang; tier: T2
-      - no: 30; name: Patient Safety Incident Reporting; at: Hospital Sultanah Aminah JB; tier: T3
-      - no: 32; name: E-Kehadiran Kursus; at: JKN Sarawak; tier: T2
-      - no: 33; name: Mental Wellbeing Monitoring Portal; at: JKN Sarawak; tier: T2
-      - no: 34; name: MedMove Pro; at: JKN Sarawak; tier: T3
-      - no: 35; name: MEDEVAC E-Request Portal; at: JKN Sarawak; tier: T3
-      - no: 08; name: Klinik Reumatologi pre-consultation; at: National Medical Services; tier: T2
-      - no: 09; name: CardioFlow HF Clinic Portal; at: National Medical Services; tier: T2
-      - no: 39; name: Ward Jasmin pharmacy stock; at: Not stated; tier: T2
-      - no: 50; name: Internal Medicine Duty Planner; at: Not stated; tier: T2
-      - no: 49; name: SJAM KPW Dispatch & Analytics; at: St John Ambulance, WP; tier: T3
+      - no: 08; name: Klinik Reumatologi pre-consultation; at: National Medical Services; category: Patient journey
+      - no: 09; name: CardioFlow HF Clinic Portal; at: National Medical Services; category: Patient journey
+      - no: 16; name: Phlebotomy Appointment System; at: Hospital Marudi; category: Clinician journey
+      - no: 17; name: PhysioMeasurePro; at: Hospital Aman Sarawak; category: Clinician journey
+      - no: 20; name: Pocket Nurse; at: BPF JKN Selangor; category: Clinician journey
+      - no: 30; name: Patient Safety Incident Reporting; at: Hospital Sultanah Aminah JB; category: Management productivity
+      - no: 32; name: E-Kehadiran Kursus; at: JKN Sarawak; category: Management productivity
+      - no: 33; name: Mental Wellbeing Monitoring Portal; at: JKN Sarawak; category: Management productivity
+      - no: 34; name: MedMove Pro; at: JKN Sarawak; category: Management productivity
+      - no: 35; name: MEDEVAC E-Request Portal; at: JKN Sarawak; category: Management productivity
+      - no: 36; name: MOH HIRARC Portal; at: Hospital Mukah; category: Management productivity
+      - no: 37; name: HPP OSH-Alert; at: Hospital Pulau Pinang; category: Management productivity
+      - no: 38; name: Sistem eBooking; at: Hospital Pulau Pinang; category: Management productivity
+      - no: 39; name: Ward Jasmin pharmacy stock; at: Not stated; category: Management productivity
+      - no: 49; name: SJAM KPW Dispatch & Analytics; at: St John Ambulance, WP; category: Management productivity
+      - no: 50; name: Internal Medicine Duty Planner; at: Not stated; category: Management productivity
 total: 50 apps in the registry
-columns: no: No.; name: App; at: Built at; tier: Tier (proposed)
+columns: no: No.; name: App; at: Built at; category: Category
 centre: url: https://htpn-showcase-v2.vercel.app/
 line: Built by clinicians, for clinicians.
 
