@@ -59,7 +59,7 @@ export const SCRIPT: Record<string, SheetScript> = {
     reel: 0,
     words: 162,
     blocks: [
-      { step: 0, cue: "Pressure, +128% in red", paras: [
+      { step: 0, cue: "Pressure, +128% in red, with two photographs under the label: fogging, and a crowded admissions corridor", paras: [
         "Three forces pushed us. The first is pressure. Our beds are full and our staff are tired. Then this June, dengue arrived. Admissions were up a hundred and twenty-eight percent on the year before. That kind of surge bends any system. And births have almost tripled since we moved from the old building into the new Women and Child Centre, from two hundred to more than five hundred a month.",
       ] },
       { step: 1, cue: "Vendor lock-in", paras: [
@@ -159,16 +159,19 @@ export const SCRIPT: Record<string, SheetScript> = {
   "S-08": {
     sheet: "S-08",
     title: "Innovathon",
-    seconds: 76,
+    seconds: 96,
     reel: 30,
-    words: 108,
+    words: 150,
     blocks: [
       { step: 0, cue: "The reel plays. Say one line, then stay silent for about 30 seconds.", paras: [
         "In July, we took it national.",
       ] },
       { step: 1, cue: "About 30 seconds in, click. The reel keeps running behind; the counters build.", paras: [
         "The AI Productivity Intelligence Innovathon, on the twenty-first of July. Two hundred delegates. Twenty-eight finalists. Nine winners. Thirteen external judges from industry, academia and government. Some of you sat on that panel, and I want to thank you for it. BERNAMA covered the day.",
-        "Several of the winners came from hospitals that had adopted our model. And the model is spreading: Hospital Pulau Pinang, Kepala Batas, Sultanah Aminah, JKN Sarawak, and the national O&G, FMS and Internal Medicine services.",
+        "The model is spreading: Hospital Pulau Pinang, Kepala Batas, Sultanah Aminah, JKN Sarawak, and the national O&G, FMS and Internal Medicine services.",
+      ] },
+      { step: 2, cue: "The winners: three categories, first to third, each with its team on stage", paras: [
+        "And these are the winners, three in each category. In the clinician journey, AMS Round Manager Pro from our pharmacy. In the patient journey, Medexa, from Hospital Kepala Batas, a hospital we had taught. In management productivity, MedMove Pro, from Hospital Sentosa. Six of the nine came from our own teams; three from other hospitals.",
         "So by July we had a culture, a portfolio and a national network. That is the good news. Now for the honest part.",
       ] },
     ],

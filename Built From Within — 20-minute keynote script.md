@@ -4,7 +4,7 @@ Nov 1, 2026 · @Fairis
 
 ## How to use this script
 
-The script runs about 20 minutes: 2,826 spoken words at 140 words a minute (20:11), plus about 30 seconds where the Innovathon reel plays on its own. It covers all 20 sheets and 54 presses, and every figure in it comes from the deck brief.
+The script runs about 20 minutes: 2,826 spoken words at 140 words a minute (20:11), plus about 30 seconds where the Innovathon reel plays on its own. It covers all 20 sheets and 55 presses, and every figure in it comes from the deck brief.
 
 Each sheet shows its spoken time and word count. The line in square brackets is what the press brings up, so click at the start of the paragraph beneath it. The last line of each sheet leads into the next click.
 
@@ -40,7 +40,7 @@ We started in April 2025. Fourteen months before the directive. And those three 
 
 ### S-03 Three forces  (69s, 163 words)
 
-*\[Press 1: Pressure, +128% in red\]*
+*\[Press 1: Pressure, +128% in red, with two photographs under the label: fogging, and a crowded admissions corridor\]*
 
 Three forces pushed us. The first is pressure. Our beds are full and our staff are tired. Then this June, dengue arrived. Admissions were up a hundred and twenty-eight percent on the year before. That kind of surge bends any system. And births have almost tripled since we moved from the old building into the new Women and Child Centre, from two hundred to more than five hundred a month.
 
@@ -132,7 +132,7 @@ Built by clinicians, for clinicians. The QR code takes you to every one of them.
 
 So we brought these builders into one room.
 
-### S-08 Innovathon  (46s + about 30s of reel, 108 words)
+### S-08 Innovathon  (66s + about 30s of reel, 152 words)
 
 *\[Press 1: The reel plays. Say one line, then stay silent for about 30 seconds.\]*
 
@@ -142,7 +142,11 @@ In July, we took it national.
 
 The AI Productivity Intelligence Innovathon, on the twenty-first of July. Two hundred delegates. Twenty-eight finalists. Nine winners. Thirteen external judges from industry, academia and government. Some of you sat on that panel, and I want to thank you for it. BERNAMA covered the day.
 
-Several of the winners came from hospitals that had adopted our model. And the model is spreading: Hospital Pulau Pinang, Kepala Batas, Sultanah Aminah, JKN Sarawak, and the national O&G, FMS and Internal Medicine services.
+The model is spreading: Hospital Pulau Pinang, Kepala Batas, Sultanah Aminah, JKN Sarawak, and the national O&G, FMS and Internal Medicine services.
+
+*\[Press 3: The winners: three categories, first to third, each with its team on stage\]*
+
+And these are the winners, three in each category. In the clinician journey, AMS Round Manager Pro from our pharmacy. In the patient journey, Medexa, from Hospital Kepala Batas, a hospital we had taught. In management productivity, MedMove Pro, from Hospital Sentosa. Six of the nine came from our own teams; three from other hospitals.
 
 So by July we had a culture, a portfolio and a national network. That is the good news. Now for the honest part.
 
@@ -369,7 +373,7 @@ The whole talk runs 20:41: 20:11 spoken plus about 30 seconds of the reel playin
 | S-05 Results | 79 | 0:34 |
 | S-06 Where we've taught | 128 | 0:55 |
 | S-07 The portfolio | 117 | 0:55 |
-| S-08 Innovathon | 108 | 0:46 + 0:30 reel |
+| S-08 Innovathon | 152 | 1:06 + 0:30 reel |
 | S-09 The gap | 155 | 1:06 |
 | S-10 The national picture | 156 | 1:07 |
 | S-11 Vision 2028 | 199 | 1:25 |

@@ -1,9 +1,18 @@
-import { motion } from 'motion/react'
+import { AnimatePresence, motion } from 'motion/react'
 import { sceneContent } from './content.ts'
 import { CountUp } from '../kit/CountUp.tsx'
 import { QR } from '../kit/QR.tsx'
 import { SheetVideo } from '../kit/SheetVideo.tsx'
 import still from '../assets/innovathon-still.webp'
+import clin1 from '../assets/win-clin-1.webp'
+import clin2 from '../assets/win-clin-2.webp'
+import clin3 from '../assets/win-clin-3.webp'
+import pat1 from '../assets/win-pat-1.webp'
+import pat2 from '../assets/win-pat-2.webp'
+import pat3 from '../assets/win-pat-3.webp'
+import mgmt1 from '../assets/win-mgmt-1.webp'
+import mgmt2 from '../assets/win-mgmt-2.webp'
+import mgmt3 from '../assets/win-mgmt-3.webp'
 import type { SceneProps } from './index.ts'
 import './s07.css'
 
@@ -42,8 +51,22 @@ const PANEL = 0.604
 /** Shift applied to the original text delays, so they follow the recede. */
 const T = 0.5
 
+const PHOTO: Record<string, string> = {
+  'clin-1': clin1, 'clin-2': clin2, 'clin-3': clin3,
+  'pat-1': pat1, 'pat-2': pat2, 'pat-3': pat3,
+  'mgmt-1': mgmt1, 'mgmt-2': mgmt2, 'mgmt-3': mgmt3,
+}
+const CAT_TONE: Record<string, string> = {
+  'Clinician journey': 'clinician',
+  'Patient journey': 'patient',
+  'Management productivity': 'management',
+}
+const ORD = ['', 'st', 'nd', 'rd']
+
 export function S07Innovathon({ step }: SceneProps) {
   const back = step >= 1
+  const stats = step === 1
+  const winners = step >= 2
 
   return (
     <div className="sc s07">
@@ -72,8 +95,22 @@ export function S07Innovathon({ step }: SceneProps) {
         transition={{ duration: 0.7, ease: 'easeOut' }}
       />
 
+      {/* Press 3: the room goes darker still, and the winners take the sheet. */}
+      <motion.div
+        className="s07__scrim s07__scrim--deep"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: winners ? 1 : 0 }}
+        transition={{ duration: 0.6, ease: 'easeOut' }}
+      />
+
       {back && (
-        <>
+        <motion.div
+          className="s07__stats"
+          initial={false}
+          animate={{ opacity: stats ? 1 : 0 }}
+          transition={{ duration: 0.35 }}
+          style={{ pointerEvents: 'none' }}
+        >
           <div className="s07__right">
             <motion.h2
               className="s07__title"
@@ -146,8 +183,58 @@ export function S07Innovathon({ step }: SceneProps) {
             caption="innovathon2026"
             className="s07__qr"
           />
-        </>
+        </motion.div>
       )}
+
+      <AnimatePresence>
+        {winners && (
+          <motion.div
+            className="s07__winners"
+            key="winners"
+            exit={{ opacity: 0, transition: { duration: 0.3 } }}
+          >
+            <motion.h2
+              className="s07__winners-head"
+              initial={{ opacity: 0, y: 12 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.35 }}
+            >
+              {c.winnersHeading}
+            </motion.h2>
+            {c.winners.map((col, i) => (
+              <div className={`s07__wcol s07__wcol--${CAT_TONE[col.category]}`} key={col.category} style={{ left: 200 + i * 515 }}>
+                <motion.div
+                  className="s07__wcat"
+                  initial={{ scaleX: 0 }}
+                  animate={{ scaleX: 1 }}
+                  transition={{ duration: 0.5, delay: 0.5 + i * 0.15, ease: [0.16, 1, 0.3, 1] }}
+                >
+                  <span>{col.category}</span>
+                </motion.div>
+                {col.entries.map((e, k) => (
+                  <motion.div
+                    className={`s07__win s07__win--${e.rank}`}
+                    key={e.app}
+                    initial={{ opacity: 0, y: 22 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: 0.85 + i * 0.15 + k * 0.32, ease: [0.16, 1, 0.3, 1] }}
+                  >
+                    <span className="s07__rank">
+                      {e.rank}
+                      <small>{ORD[e.rank]}</small>
+                    </span>
+                    <img className="s07__wphoto" src={PHOTO[e.photo]} alt="" width={192} height={128} />
+                    <span className="s07__wtext">
+                      <b>{e.app}</b>
+                      <i>{e.team}</i>
+                    </span>
+                  </motion.div>
+                ))}
+              </div>
+            ))}
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>
   )
 }

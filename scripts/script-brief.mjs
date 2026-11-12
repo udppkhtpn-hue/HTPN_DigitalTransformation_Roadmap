@@ -26,7 +26,7 @@ const PRESSES = {
     'The sheet arrives on its own and runs for about seven seconds: three lines land one after another, then fade; the original 1889 hospital building draws in behind; the title, subtitle and byline appear.',
   ],
   'three-forces': [
-    'Pressure: +128% in red, dengue admissions, June 2026 vs the year before; then, under it, births a month 200+ → 500+, almost tripled since the move from the old building to the new Women & Child Centre.',
+    'Pressure: +128% in red, dengue admissions, June 2026 vs the year before, with two photographs under the label (fogging; a crowded admissions corridor); then, under it, births a month 200+ → 500+, almost tripled since the move from the old building to the new Women & Child Centre.',
     'Vendor lock-in.',
     'Opportunity, then the footer line underneath all three.',
   ],
@@ -59,6 +59,7 @@ const PRESSES = {
   innovathon: [
     'The Innovathon reel plays, framed, alone on the sheet. It runs for about a minute.',
     'The reel expands behind a dark scrim and keeps running; the event title, date and the four counters build in front of it, then press coverage and the list of adopting sites.',
+    'The stats give way to "The winners": three columns (Clinician journey, Patient journey, Management productivity), each ranked 1st to 3rd with a photograph of the team on stage, the app and the team. Clinician: AMS Round Manager Pro (Farmasi, HTPN), ResusHero (BLS) — Code Blue (House Officers, HTPN), CLABSI Guard Pro (Infection Control, HTPN). Patient: Medexa — Medication Expiry Assistant (Hospital Kepala Batas), CRE Tracker Pro (Infection Control, HTPN), SPECTRA (Occupational Therapy, HTPN). Management: MedMove Pro (Hospital Sentosa), Data Permit & Pendaftaran Kematian (Jabatan Forensik, HTPN), IRIS (Hospital Shah Alam).',
   ],
   'the-gap': [
     'Fifty drifting dots, one per app, under the headline "50 apps ≠ one hospital".',

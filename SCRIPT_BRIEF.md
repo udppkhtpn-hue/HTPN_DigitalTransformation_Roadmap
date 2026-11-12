@@ -13,7 +13,7 @@ You are writing the spoken script for a closing keynote. The speaker presents a 
 3. **Voice.** First person, plain, confident, short sentences. A clinician-leader speaking to industry leaders, not a vendor pitching. No jargon, no hype words, no rhetorical questions to the audience.
 4. **Screen and voice.** The audience reads the screen. Don't read the on-screen text out word for word; say what it means, and let the screen carry the detail.
 5. **Pace.** Write at 140 words a minute (about 2.3 words a second). For every sheet give its word count and spoken time, and give the total at the end.
-6. **Fit the target.** The planned times below add up to **20:49**, against a target of 5:00. If they don't fit, first propose which sheets to shorten, merge or skip (and why), wait for approval, then write. Don't silently drop a sheet.
+6. **Fit the target.** The planned times below add up to **21:09**, against a target of 5:00. If they don't fit, first propose which sheets to shorten, merge or skip (and why), wait for approval, then write. Don't silently drop a sheet.
 7. **Format.** For each sheet:
 
 ```
@@ -30,7 +30,7 @@ These are real tools, used every day...
 - **Audience:** senior industry leaders (Microsoft, Grab, Shopee and others), some of whom judged the Innovathon. Not clinicians; they know platforms and scale, not Malaysian public hospitals.
 - **Speaker:** Dr Ferwahn Fairis bin Ab Karim · Acting Deputy Director, Hospital Tengku Permaisuri Norashikin, Kajang · Ministry of Health Malaysia, presenting for the Healthcare Intelligence Office.
 - **The argument in one line:** a 135-year-old public hospital built its own digital tools from within, ahead of national policy; the next phases must turn that culture into structure, and share it with every KKM hospital.
-- **The deck:** 20 sheets, 54 clicker presses, planned 20:49. "Press 1" on each sheet is the click that brings the sheet up.
+- **The deck:** 20 sheets, 55 clicker presses, planned 21:09. "Press 1" on each sheet is the click that brings the sheet up.
 
 ## The sheets
 
@@ -71,7 +71,7 @@ Current notes (draft to improve, not to copy):
 3 presses · planned 69s · about 161 words at 140 wpm · current notes 81 words
 
 What the room sees:
-- Press 1: Pressure: +128% in red, dengue admissions, June 2026 vs the year before; then, under it, births a month 200+ → 500+, almost tripled since the move from the old building to the new Women & Child Centre.
+- Press 1: Pressure: +128% in red, dengue admissions, June 2026 vs the year before, with two photographs under the label (fogging; a crowded admissions corridor); then, under it, births a month 200+ → 500+, almost tripled since the move from the old building to the new Women & Child Centre.
 - Press 2: Vendor lock-in.
 - Press 3: Opportunity, then the footer line underneath all three.
 
@@ -234,11 +234,12 @@ Current notes (draft to improve, not to copy):
 > These are real tools, used daily: theatre scheduling, an AI blood-loss estimator, an emergency department dashboard. And some of them weren't built by us. They were built by hospitals in Penang, Johor and Sarawak that learned our model. Scan the code and look for yourself.
 
 ### S-08 Innovathon
-2 presses · planned 76s · about 177 words at 140 wpm · current notes 36 words
+3 presses · planned 96s · about 224 words at 140 wpm · current notes 36 words
 
 What the room sees:
 - Press 1: The Innovathon reel plays, framed, alone on the sheet. It runs for about a minute.
 - Press 2: The reel expands behind a dark scrim and keeps running; the event title, date and the four counters build in front of it, then press coverage and the list of adopting sites.
+- Press 3: The stats give way to "The winners": three columns (Clinician journey, Patient journey, Management productivity), each ranked 1st to 3rd with a photograph of the team on stage, the app and the team. Clinician: AMS Round Manager Pro (Farmasi, HTPN), ResusHero (BLS) — Code Blue (House Officers, HTPN), CLABSI Guard Pro (Infection Control, HTPN). Patient: Medexa — Medication Expiry Assistant (Hospital Kepala Batas), CRE Tracker Pro (Infection Control, HTPN), SPECTRA (Occupational Therapy, HTPN). Management: MedMove Pro (Hospital Sentosa), Data Permit & Pendaftaran Kematian (Jabatan Forensik, HTPN), IRIS (Hospital Shah Alam).
 
 On screen (text and figures, exactly as shown):
 title: AI Productivity Intelligence Innovathon 2026
@@ -253,6 +254,20 @@ coverage: Covered by BERNAMA.
 spreadIntro: The model is spreading:
 spread: Hospital Pulau Pinang · Kepala Batas · Sultanah Aminah · JKN Sarawak · the national O&G, FMS and Internal Medicine services
 url: https://udppkhtpn-hue.github.io/innovathon2026/
+winnersHeading: The winners
+winners:
+  - category: Clinician journey; entries:
+      - rank: 1; app: AMS Round Manager Pro; team: Farmasi, HTPN; photo: clin-1
+      - rank: 2; app: ResusHero (BLS) — Code Blue; team: House Officers, HTPN; photo: clin-2
+      - rank: 3; app: CLABSI Guard Pro; team: Infection Control, HTPN; photo: clin-3
+  - category: Patient journey; entries:
+      - rank: 1; app: Medexa — Medication Expiry Assistant; team: Hospital Kepala Batas; photo: pat-1
+      - rank: 2; app: CRE Tracker Pro; team: Infection Control, HTPN; photo: pat-2
+      - rank: 3; app: SPECTRA; team: Occupational Therapy, HTPN; photo: pat-3
+  - category: Management productivity; entries:
+      - rank: 1; app: MedMove Pro; team: Hospital Sentosa; photo: mgmt-1
+      - rank: 2; app: Data Permit & Pendaftaran Kematian; team: Jabatan Forensik, HTPN; photo: mgmt-2
+      - rank: 3; app: IRIS; team: Hospital Shah Alam; photo: mgmt-3
 
 Current notes (draft to improve, not to copy):
 > In July we took it national. Innovathon 2026: two hundred delegates, twenty-eight finalists, thirteen judges from industry, academia and government, some of them in this room. Several winners came from other hospitals that adopted our model.
@@ -523,7 +538,7 @@ Current notes (draft to improve, not to copy):
 
 ## Totals
 
-- 20 sheets, 54 presses.
-- Planned time 20:49 against a 5:00 slot.
+- 20 sheets, 55 presses.
+- Planned time 21:09 against a 5:00 slot.
 - Current notes total 1391 words.
 - S-08 plays a reel of about 56 seconds; the speaker can talk over it or advance early to cut it short.

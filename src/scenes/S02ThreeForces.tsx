@@ -4,6 +4,8 @@ import { CountUp } from '../kit/CountUp.tsx'
 import { MarginNote } from '../kit/MarginNote.tsx'
 import { DrawPath } from '../kit/DrawPath.tsx'
 import type { SceneProps } from './index.ts'
+import fogging from '../assets/pressure-fogging.webp'
+import admission from '../assets/pressure-admission.webp'
 import './s02.css'
 
 const c = sceneContent('three-forces')
@@ -32,6 +34,33 @@ export function S02ThreeForces({ step }: SceneProps) {
             </svg>
 
             <span className="s02__name">{f.name}</span>
+
+            {/* Pressure is the one force you can photograph: the fogging
+                outside, the corridor inside. Two prints under the label. */}
+            {f.figure && shown && (
+              <div className="s02__prints" aria-hidden="true">
+                <motion.img
+                  className="s02__print s02__print--a"
+                  src={fogging}
+                  alt=""
+                  width={270}
+                  height={180}
+                  initial={{ opacity: 0, y: 18, rotate: -2.5 }}
+                  animate={{ opacity: 1, y: 0, rotate: -2.5 }}
+                  transition={{ duration: 0.6, delay: 0.5, ease: [0.16, 1, 0.3, 1] }}
+                />
+                <motion.img
+                  className="s02__print s02__print--b"
+                  src={admission}
+                  alt=""
+                  width={250}
+                  height={167}
+                  initial={{ opacity: 0, y: 18, rotate: 2 }}
+                  animate={{ opacity: 1, y: 0, rotate: 2 }}
+                  transition={{ duration: 0.6, delay: 0.8, ease: [0.16, 1, 0.3, 1] }}
+                />
+              </div>
+            )}
 
             <div className="s02__body">
               <AnimatePresence>

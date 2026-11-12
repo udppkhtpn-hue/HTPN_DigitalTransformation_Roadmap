@@ -88,3 +88,14 @@
   color: var(--chalk);
   opacity: 0.82;
 }
+
+/* Two prints under "Pressure", in the label column's empty space. */
+.s02__prints { position: absolute; left: 0; top: 0; width: 420px; height: 100%; pointer-events: none; }
+.s02__print {
+  position: absolute; display: block;
+  padding: 6px; background: var(--drafting);
+  border: 1px solid rgba(124, 196, 242, 0.6);
+  box-shadow: 0 12px 28px rgba(4, 10, 24, 0.5);
+}
+.s02__print--a { left: 0; top: 84px; }
+.s02__print--b { left: 150px; top: 174px; }

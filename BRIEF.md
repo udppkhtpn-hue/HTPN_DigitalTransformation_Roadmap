@@ -5,7 +5,7 @@ leaders (Microsoft, Grab, Shopee) at the Executive Digital Leadership Programme.
 Speaker: Dr Ferwahn Fairis bin Ab Karim, Acting Deputy Director, Hospital Tengku
 Permaisuri Norashikin (HTPN), Kajang, Ministry of Health Malaysia.
 
-20 sheets · 54 clicker presses · planned 20:49 against a 5:00 slot
+20 sheets · 55 clicker presses · planned 21:09 against a 5:00 slot
 
 ## Ground rules for this deck
 
@@ -189,7 +189,7 @@ line: Built by clinicians, for clinicians.
 Script — These are real tools, used daily: theatre scheduling, an AI blood-loss estimator, an emergency department dashboard. And some of them weren't built by us. They were built by hospitals in Penang, Johor and Sarawak that learned our model. Scan the code and look for yourself.
 
 ### S-08 Innovathon
-2 presses · 76s · 36 words spoken (28 wpm)
+3 presses · 96s · 36 words spoken (23 wpm)
 
 On screen —
 title: AI Productivity Intelligence Innovathon 2026
@@ -204,6 +204,20 @@ coverage: Covered by BERNAMA.
 spreadIntro: The model is spreading:
 spread: Hospital Pulau Pinang · Kepala Batas · Sultanah Aminah · JKN Sarawak · the national O&G, FMS and Internal Medicine services
 url: https://udppkhtpn-hue.github.io/innovathon2026/
+winnersHeading: The winners
+winners:
+  - category: Clinician journey; entries:
+      - rank: 1; app: AMS Round Manager Pro; team: Farmasi, HTPN; photo: clin-1
+      - rank: 2; app: ResusHero (BLS) — Code Blue; team: House Officers, HTPN; photo: clin-2
+      - rank: 3; app: CLABSI Guard Pro; team: Infection Control, HTPN; photo: clin-3
+  - category: Patient journey; entries:
+      - rank: 1; app: Medexa — Medication Expiry Assistant; team: Hospital Kepala Batas; photo: pat-1
+      - rank: 2; app: CRE Tracker Pro; team: Infection Control, HTPN; photo: pat-2
+      - rank: 3; app: SPECTRA; team: Occupational Therapy, HTPN; photo: pat-3
+  - category: Management productivity; entries:
+      - rank: 1; app: MedMove Pro; team: Hospital Sentosa; photo: mgmt-1
+      - rank: 2; app: Data Permit & Pendaftaran Kematian; team: Jabatan Forensik, HTPN; photo: mgmt-2
+      - rank: 3; app: IRIS; team: Hospital Shah Alam; photo: mgmt-3
 
 Script — In July we took it national. Innovathon 2026: two hundred delegates, twenty-eight finalists, thirteen judges from industry, academia and government, some of them in this room. Several winners came from other hospitals that adopted our model.
 
@@ -405,11 +419,11 @@ Script — Here's the lesson for me as a leader. Phase one was won through cultu
 
 ## Totals
 
-1391 words spoken · 20:49 planned · 54 presses
+1391 words spoken · 21:09 planned · 55 presses
 
 ## Known open points
 
-- Planned running time is 20:49 against a 5:00 slot, 15:49 over.
+- Planned running time is 21:09 against a 5:00 slot, 16:09 over.
 - Fastest-spoken sheets: S-10 (109 wpm), S-18 (95 wpm), S-16 (93 wpm).
 - S-08 plays a reel that runs longer than its script; it sits on its own press and can be cut short by advancing early.
 - S-12: some lines did not fit on the sheet at 28px and live in the presenter cues, not on screen.

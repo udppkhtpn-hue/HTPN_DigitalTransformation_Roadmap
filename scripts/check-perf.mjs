@@ -40,6 +40,7 @@ const MOMENTS = [
   moment('where-weve-taught', 0, 'map + 15 arcs + photo strip', 20000),
   moment('portfolio', 0, 'split-flap board, page 1', 4000),
   moment('portfolio', 1, 'board turns to page 2', 4000),
+  moment('innovathon', 2, 'winners board', 3500),
   moment('the-gap', 0, 'fifty drifting dots', 3000),
   moment('national-picture', 1, '155 hospitals light up', 6500),
   moment('vision-2028', 1, 'hospitals on the line', 4000),

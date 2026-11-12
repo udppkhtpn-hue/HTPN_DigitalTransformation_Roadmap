@@ -168,6 +168,12 @@ export interface Innovathon {
   spreadIntro: string
   spread: string[]
   url: string
+  /** The third press: the nine winners, as on the event site's winners page. */
+  winnersHeading: string
+  winners: {
+    category: string
+    entries: { rank: 1 | 2 | 3; app: string; team: string; photo: string }[]
+  }[]
 }
 
 export interface TheGap {
@@ -600,9 +606,9 @@ export const SCENES: Scene[] = [
     id: 'innovathon',
     sheet: 'S-08',
     title: 'Innovathon',
-    steps: 2,
+    steps: 3,
     moment: 1,
-    seconds: 76,
+    seconds: 96,
     content: {
       title: 'AI Productivity Intelligence Innovathon 2026',
       date: '21 July 2026',
@@ -624,6 +630,33 @@ export const SCENES: Scene[] = [
         'the national O&G, FMS and Internal Medicine services',
       ],
       url: 'https://udppkhtpn-hue.github.io/innovathon2026/',
+      winnersHeading: 'The winners',
+      winners: [
+        {
+          category: 'Clinician journey',
+          entries: [
+            { rank: 1, app: 'AMS Round Manager Pro', team: 'Farmasi, HTPN', photo: 'clin-1' },
+            { rank: 2, app: 'ResusHero (BLS) — Code Blue', team: 'House Officers, HTPN', photo: 'clin-2' },
+            { rank: 3, app: 'CLABSI Guard Pro', team: 'Infection Control, HTPN', photo: 'clin-3' },
+          ],
+        },
+        {
+          category: 'Patient journey',
+          entries: [
+            { rank: 1, app: 'Medexa — Medication Expiry Assistant', team: 'Hospital Kepala Batas', photo: 'pat-1' },
+            { rank: 2, app: 'CRE Tracker Pro', team: 'Infection Control, HTPN', photo: 'pat-2' },
+            { rank: 3, app: 'SPECTRA', team: 'Occupational Therapy, HTPN', photo: 'pat-3' },
+          ],
+        },
+        {
+          category: 'Management productivity',
+          entries: [
+            { rank: 1, app: 'MedMove Pro', team: 'Hospital Sentosa', photo: 'mgmt-1' },
+            { rank: 2, app: 'Data Permit & Pendaftaran Kematian', team: 'Jabatan Forensik, HTPN', photo: 'mgmt-2' },
+            { rank: 3, app: 'IRIS', team: 'Hospital Shah Alam', photo: 'mgmt-3' },
+          ],
+        },
+      ],
     },
     notes: `In July we took it national. Innovathon 2026: two hundred delegates, twenty-eight finalists, thirteen judges from industry, academia and government, some of them in this room. Several winners came from other hospitals that adopted our model.`,
   },

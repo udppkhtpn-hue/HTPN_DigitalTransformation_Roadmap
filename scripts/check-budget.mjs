@@ -3,10 +3,11 @@ import { statSync } from 'node:fs'
 
 // 3.1MB since the 1889 building joined sheet 1 (a 284KB drawing, inlined),
 // 4.0MB since the photo reels on S-04 to S-06 (28 duotone prints, 572KB).
-// 4.3MB since the S-04 syllabus and Padlet prints and a longer QR code.
+// 4.3MB since the S-04 syllabus and Padlet prints and a longer QR code,
+// 4.6MB since the team portraits, S-03 pressure prints and S-08 winners.
 // Images decode during the boot screen, not on stage, and perf is re-run
 // against the bigger file, so the limit moves rather than the pictures.
-const LIMIT = 4.3 * 1024 * 1024
+const LIMIT = 4.6 * 1024 * 1024
 const size = statSync('dist-single/index.html').size
 const mb = (n) => `${(n / 1024 / 1024).toFixed(2)}MB`
 
