@@ -122,3 +122,5 @@
   position: absolute; left: 200px; top: 150px; display: block;
   border: 1px solid rgba(124, 196, 242, 0.4);
 }
+
+.s04__leaders { position: absolute; inset: 0; z-index: 2; }

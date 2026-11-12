@@ -25,10 +25,6 @@ const PRESSES = {
   'cold-open': [
     'The sheet arrives on its own and runs for about seven seconds: three lines land one after another, then fade; the original 1889 hospital building draws in behind; the title, subtitle and byline appear.',
   ],
-  'who-we-are': [
-    'The Healthcare Intelligence Office, established April 2025, a dedicated in-house team: six portrait cards with name and role (Dr Hj Mohd Slv Azhar Merican Bin Abdullah, Advisor; Dr Ferwahn Fairis bin Ab Karim, Coordinator; Dr Naim bin Abdul Malek and Dr Muhammad Syafiz bin Ruzain, Technical & Training; Megat Hafiz and Kenny Tuang Ling Ee, Facilitators), then the line about clinicians and nursing staff leading digital transformation from within.',
-    'The cards give way to "Team credentials: Leaders learn first": seven programmes with who took them and whether Completed (cyan) or Ongoing (amber), then "Credibility before capability transfer".',
-  ],
   'three-forces': [
     'Pressure: +128% in red, dengue admissions, June 2026 vs the year before; then, under it, births a month 200+ → 500+, almost tripled since the move from the old building to the new Women & Child Centre.',
     'Vendor lock-in.',
@@ -40,7 +36,7 @@ const PRESSES = {
   ],
   'how-we-led-it': [
     "Kotter's 8-Step Change Model, as a single drawn graphic (eight rising steps: sense of urgency, guiding coalition, strategic vision, volunteer army, removing barriers, easy wins, increase the pace, institute change; grouped as create the right climate, engage and enable others, implement and sustain), alone on the sheet.",
-    'The model goes. The framework is named and four numbered boxes are pencilled in; only stage 1, "Leaders learn first", fills in. Under it a strip of photographs from 11 Apr – 29 May 2025 (Monash, the EDLP group, certificates) drifts slowly across the sheet, with a leader line back up to box 1.',
+    'The model goes. The framework is named and four numbered boxes are pencilled in; only stage 1, "Leaders learn first", fills in. Over the empty boxes 2 to 4 a panel runs the team as a looping kinetic sequence, one large card at a time: the Healthcare Intelligence Office (established April 2025, a dedicated in-house team); each of the six with portrait, name and role; "Clinicians and nursing staff leading digital transformation from within — Insourcing."; the seven programmes they studied, each stamped Completed or Ongoing with the faces of who took it; then "Credibility before capability transfer". Under it a strip of photographs from 11 Apr – 29 May 2025 (Monash, the EDLP group, certificates) drifts slowly across the sheet, with a leader line back up to box 1.',
     'Stage 2, "Our own syllabus" (Google Workspace, vibe coding and web application development), fills in, and the tentative two-day syllabus (Day 1: AI literacy, NotebookLM, productivity prompting, interactive dashboard; Day 2: AI pipeline concepts, landing page, group quick-win projects, presentations, closing) is pinned up on the right. The photographs keep drifting.',
     'The syllabus goes. Stage 3, "Quick wins" (everyone leaves having built something), fills in, with a screenshot of the workshop Padlet and a QR code to it beside the photographs.',
     'Stage 4, "Reward the builders", fills in.',

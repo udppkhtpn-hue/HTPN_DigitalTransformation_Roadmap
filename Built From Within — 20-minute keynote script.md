@@ -4,7 +4,7 @@ Nov 1, 2026 · @Fairis
 
 ## How to use this script
 
-The script runs about 21 minutes: 2,920 spoken words at 140 words a minute (20:51), plus about 30 seconds where the Innovathon reel plays on its own. It covers all 21 sheets and 52 presses, and every figure in it comes from the deck brief.
+The script runs about 20 minutes: 2,826 spoken words at 140 words a minute (20:11), plus about 30 seconds where the Innovathon reel plays on its own. It covers all 20 sheets and 50 presses, and every figure in it comes from the deck brief.
 
 Each sheet shows its spoken time and word count. The line in square brackets is what the press brings up, so click at the start of the paragraph beneath it. The last line of each sheet leads into the next click.
 
@@ -12,11 +12,11 @@ The talk has four acts plus a close. Acts 1 and 2 are the proof: they take about
 
 Three delivery notes:
 
-- **Let the screen go first.** On sheets with a big reveal (S-01, S-06, S-07, S-09), wait until the animation lands before you speak. The room can't read and listen at the same time.
-- **Look at the judges once.** On S-09, when you thank the Innovathon judges, look at them. It's the one personal moment in the talk.
-- **Leave a pause before the last two lines.** On S-21, after "share it with every hospital in KKM", stop for two seconds, then say "Built from within. Shared with all of KKM." slowly.
+- **Let the screen go first.** On sheets with a big reveal (S-01, S-05, S-06, S-08), wait until the animation lands before you speak. The room can't read and listen at the same time.
+- **Look at the judges once.** On S-08, when you thank the Innovathon judges, look at them. It's the one personal moment in the talk.
+- **Leave a pause before the last two lines.** On S-20, after "share it with every hospital in KKM", stop for two seconds, then say "Built from within. Shared with all of KKM." slowly.
 
-## Act 1 · Why and how we started (S-01 to S-05, about 4:19)
+## Act 1 · Why and how we started (S-01 to S-04, about 3:38)
 
 ### S-01 Cold open  (45s, 105 words)
 
@@ -36,23 +36,9 @@ On the fifth of June this year, the Cabinet directed that all government digital
 
 *\[Press 2: The timeline draws back to April 2025 and measures 14 months\]*
 
-We started in April 2025. Fourteen months before the directive. And those three reasons were already exactly why we were doing it. We weren't reacting to a policy. By the time it arrived, we were already a working example of it. So, who is "we"?
+We started in April 2025. Fourteen months before the directive. And those three reasons were already exactly why we were doing it. We weren't reacting to a policy. By the time it arrived, we were already a working example of it. So why did we start so early? Because we had no choice.
 
-### S-03 Who we are  (56s, 135 words)
-
-*\[Press 1: The Healthcare Intelligence Office: six portraits with their roles, then the line about clinicians and nursing staff.\]*
-
-We are the Healthcare Intelligence Office, established in April 2025. A dedicated in-house team. Dr Azhar is our advisor. I coordinate. Dr Naim and Dr Syafiz lead the technical work and the training. Megat Hafiz and Kenny facilitate.
-
-Clinicians and nursing staff, leading digital transformation from within. The people who understand the problem are the people building the solution.
-
-*\[Press 2: Team credentials, "Leaders learn first": seven programmes, four completed and three ongoing.\]*
-
-And we learned first. Completed: the Monash micro-credential in digital health, advanced biostatistics at UNSW, data science and AI for executives at the London School of Economics, and the Executive Digital Leadership Programme with MIT Sloan and Asia School of Business. Still going: a PhD in AI research at UPM, a Master of Business Intelligence at UTM, and deep learning research with the London School of Hygiene and Tropical Medicine.
-
-Credibility before capability transfer. Leaders must learn first, before asking others to change. And here is why we had no choice.
-
-### S-04 Three forces  (69s, 163 words)
+### S-03 Three forces  (69s, 163 words)
 
 *\[Press 1: Pressure, +128% in red\]*
 
@@ -66,17 +52,17 @@ The second is vendor lock-in. In a public hospital, a new system means procureme
 
 The third is opportunity. For the first time, AI and low-code tools let a clinician build a working tool in weeks. So the limit was no longer technology. It was leadership. Change fails when it is delegated. It succeeds when it is led. So we decided to lead it. Here is how.
 
-### S-05 How we led it  (61s, 142 words)
+### S-04 How we led it  (76s, 177 words)
 
 *\[Press 1: Kotter's 8-Step Change Model fills the sheet. Let the room take it in.\]*
 
 We ran this as a change programme, not an IT project. Underneath it sits Kotter's eight steps.
 
-*\[Press 2: The model goes; four numbered boxes are pencilled in; stage 1, "Leaders learn first", fills in and the 2025 photographs start to drift underneath.\]*
+*\[Press 2: The model goes; four numbered boxes are pencilled in; stage 1, "Leaders learn first", fills in; beside it the team and their credentials run one card at a time, and the 2025 photographs drift underneath.\]*
 
 In practice, it came down to four moves.
 
-First, leaders learn first. Before asking anyone to change, we went back to school: Monash, this programme with MIT Sloan and ASB, and LSE. Credibility before mandate.
+First, leaders learn first. That starts with us: the Healthcare Intelligence Office, a dedicated in-house team set up in April 2025. Clinicians and nursing staff, leading from within. Before asking anyone to change, we went back to school: Monash, UNSW, the London School of Economics, this programme with MIT Sloan and ASB. And we are still learning: a PhD in AI research, a Master of Business Intelligence, deep learning research with LSHTM. Credibility before mandate.
 
 *\[Press 3: Stage 2, "Our own syllabus", with the tentative two-day syllabus pinned up beside it.\]*
 
@@ -96,9 +82,9 @@ For a picture of insourcing at scale, we looked to a bank.
 
 DBS Bank moved from eighty-five percent outsourced to eighty-five percent insourced. A bank, not a hospital. But the lesson travels. The capability you build inside is the capability you keep. Here is what ours looks like today.
 
-## Act 2 · What we built (S-06 to S-09, about 3:24)
+## Act 2 · What we built (S-05 to S-08, about 3:24)
 
-### S-06 Results  (34s, 79 words)
+### S-05 Results  (34s, 79 words)
 
 *\[Press 1: All four figures count up, then the footnote. Let them land before you speak.\]*
 
@@ -106,7 +92,7 @@ More than thirteen hundred healthcare staff trained. More than fifty in-house ap
 
 These are October figures. And every one of those apps was built by people who already had a full clinical or management job. Those fifteen invitations told us something, so let me show you where they came from.
 
-### S-07 Where we've taught  (55s, 128 words)
+### S-06 Where we've taught  (55s, 128 words)
 
 *\[Press 1: The map draws; arcs fly from Kajang to 15 sites in date order; the counter ticks\]*
 
@@ -122,7 +108,7 @@ Then came the part that matters most. The hospitals we taught started building t
 
 Here is what has been built.
 
-### S-08 The portfolio  (39s, 91 words)
+### S-07 The portfolio  (39s, 91 words)
 
 *\[Press 1: Three scrolling lanes of app names and the showcase QR code\]*
 
@@ -134,7 +120,7 @@ Built by clinicians, for clinicians. The QR code takes you to every one of them.
 
 So we brought these builders into one room.
 
-### S-09 Innovathon  (46s + about 30s of reel, 108 words)
+### S-08 Innovathon  (46s + about 30s of reel, 108 words)
 
 *\[Press 1: The reel plays. Say one line, then stay silent for about 30 seconds.\]*
 
@@ -148,11 +134,11 @@ Several of the winners came from hospitals that had adopted our model. And the m
 
 So by July we had a culture, a portfolio and a national network. That is the good news. Now for the honest part.
 
-## Act 3 · The gap (S-10 to S-11, about 2:13)
+## Act 3 · The gap (S-09 to S-10, about 2:13)
 
 Slow down here. This is where the room decides whether to trust you.
 
-### S-10 The gap  (66s, 155 words)
+### S-09 The gap  (66s, 155 words)
 
 *\[Press 1: Fifty drifting dots under "50 apps ≠ one hospital"\]*
 
@@ -178,7 +164,7 @@ MIT CISR gives us a useful lens. We are strong in shared insights, and we have a
 
 And when you zoom out from Kajang, the gap gets much bigger.
 
-### S-11 The national picture  (67s, 156 words)
+### S-10 The national picture  (67s, 156 words)
 
 *\[Press 1: 155 circles; the 20 with THIS fill in; counters 20 and 135\]*
 
@@ -194,11 +180,11 @@ But here is what we found on the ground. Even in hospitals that have THIS, it do
 
 So our apps fill two gaps. The years of waiting before THIS arrives. And the work THIS was never designed to cover. That is why our roadmap cannot stop at Kajang. First, the destination.
 
-## Act 4 · The roadmap (S-12 to S-20, about 9:59)
+## Act 4 · The roadmap (S-11 to S-19, about 9:59)
 
 This is why you're on stage. Half the talk lives here.
 
-### S-12 Vision 2028  (85s, 199 words)
+### S-11 Vision 2028  (85s, 199 words)
 
 *\[Press 1: The vision sentence writes itself in\]*
 
@@ -216,7 +202,7 @@ We sort our apps by how far they can travel. Some are facility-specific. They fi
 
 That gives us five objectives. Govern what we build. Integrate for patient flow. Prove the value. Sustain the capability. And scale what travels. Here is the route, in five phases.
 
-### S-13 Roadmap  (135s, 316 words)
+### S-12 Roadmap  (135s, 316 words)
 
 *\[Press 1: Phase 1, Ignite, ACHIEVED; two rails, HTPN above and KKM below\]*
 
@@ -242,7 +228,7 @@ Phase five, Predict and Scale, starts in July 2028. At home, forecasting and gov
 
 Six enablers sit under all five, from people to funding and partnerships. Let me take you inside, starting with the least glamorous phase.
 
-### S-14 Phase 3: the registry  (50s, 117 words)
+### S-13 Phase 3: the registry  (50s, 117 words)
 
 *\[Press 1: The fifty dots return and sort into three tier bands\]*
 
@@ -256,7 +242,7 @@ The principle is governance in proportion to risk. Experiments stay easy, so peo
 
 And underneath that registry sits work nobody will ever see.
 
-### S-15 Phase 3: the foundations  (55s, 128 words)
+### S-14 Phase 3: the foundations  (55s, 128 words)
 
 *\[Press 1: Four piles drive down under the building, one at a time\]*
 
@@ -274,7 +260,7 @@ And impact baselines, using our own twenty-week roster study as the template for
 
 Phase three is done when every tool is registered, and every hospital-critical tool has an owner, a backup and a baseline. With those foundations in, we can build what this hospital actually needs.
 
-### S-16 Command Centre  (64s, 150 words)
+### S-15 Command Centre  (64s, 150 words)
 
 *\[Press 1: The fifty dots flow onto six streams that converge on the hub\]*
 
@@ -292,7 +278,7 @@ The case for it comes from our own wards. Focused flow work at PDL and Ward 72 h
 
 Here is how we build it.
 
-### S-17 Command Centre: how we build it  (57s, 134 words)
+### S-16 Command Centre: how we build it  (57s, 134 words)
 
 *\[Press 1: Jul 2027 to Jun 2028; two milestones stamped in order\]*
 
@@ -304,7 +290,7 @@ And it is governed from day one. It reads from the tools we already have, with r
 
 It is done when it is used in the daily bed meeting, the alerts are automatic, and boarding time and emergency department stay beat baseline. Once we can see the present clearly, we can start to look ahead.
 
-### S-18 Predict and scale  (44s, 102 words)
+### S-17 Predict and scale  (44s, 102 words)
 
 *\[Press 1: The headline widens from "seeing now" to "anticipating next", then the list\]*
 
@@ -314,7 +300,7 @@ That lets us forecast admissions and bed demand. It lets us move clinical AI, do
 
 Ambition is easy to put on a slide. So here is how we will hold ourselves to it.
 
-### S-19 Measuring success  (43s, 100 words)
+### S-18 Measuring success  (43s, 100 words)
 
 *\[Press 1: The schedule table draws row by row; Phase 1 in amber; then the note\]*
 
@@ -324,7 +310,7 @@ You will notice there are no targets for boarding time or length of stay. That i
 
 We also track the health of the programme itself: active builders, tools with a backup maintainer, staff satisfaction. Because the biggest risk to this roadmap is not technical.
 
-### S-20 Risks  (66s, 154 words)
+### S-19 Risks  (66s, 154 words)
 
 *\[Press 1: The red stamp lands; the first register row appears in red\]*
 
@@ -336,9 +322,9 @@ The rest will look familiar to anyone who has scaled anything. Being seen as sha
 
 None of these is a reason to slow down. Each is a reason to make the next phase about structure. And that brings me to the lesson for me as a leader.
 
-## Close (S-21, about 1:01)
+## Close (S-20, about 1:01)
 
-### S-21 Lesson & close  (61s, 143 words)
+### S-20 Lesson & close  (61s, 143 words)
 
 *\[Press 1: "Phase 1 was won through culture."\]*
 
@@ -360,38 +346,37 @@ Thank you.
 
 ## Timing and checks
 
-The whole talk runs 21:21: 20:51 spoken plus about 30 seconds of the reel playing on its own on S-09.
+The whole talk runs 20:41: 20:11 spoken plus about 30 seconds of the reel playing on its own on S-08.
 
 | Sheet | Words | Spoken time |
 | --- | --- | --- |
 | S-01 Cold open | 105 | 0:45 |
 | S-02 Ahead of the mandate | 88 | 0:38 |
-| S-03 Who we are | 135 | 0:56 |
-| S-04 Three forces | 163 | 1:09 |
-| S-05 How we led it | 142 | 1:01 |
-| S-06 Results | 79 | 0:34 |
-| S-07 Where we've taught | 128 | 0:55 |
-| S-08 The portfolio | 91 | 0:39 |
-| S-09 Innovathon | 108 | 0:46 + 0:30 reel |
-| S-10 The gap | 155 | 1:06 |
-| S-11 The national picture | 156 | 1:07 |
-| S-12 Vision 2028 | 199 | 1:25 |
-| S-13 Roadmap | 316 | 2:15 |
-| S-14 Phase 3: the registry | 117 | 0:50 |
-| S-15 Phase 3: the foundations | 128 | 0:55 |
-| S-16 Command Centre | 150 | 1:04 |
-| S-17 Command Centre: how we build it | 134 | 0:57 |
-| S-18 Predict and scale | 102 | 0:44 |
-| S-19 Measuring success | 100 | 0:43 |
-| S-20 Risks | 154 | 1:06 |
-| S-21 Lesson & close | 143 | 1:01 |
-| **Total** | **2,920** | **20:51 + 0:30 reel = 21:21** |
+| S-03 Three forces | 163 | 1:09 |
+| S-04 How we led it | 177 | 1:16 |
+| S-05 Results | 79 | 0:34 |
+| S-06 Where we've taught | 128 | 0:55 |
+| S-07 The portfolio | 91 | 0:39 |
+| S-08 Innovathon | 108 | 0:46 + 0:30 reel |
+| S-09 The gap | 155 | 1:06 |
+| S-10 The national picture | 156 | 1:07 |
+| S-11 Vision 2028 | 199 | 1:25 |
+| S-12 Roadmap | 316 | 2:15 |
+| S-13 Phase 3: the registry | 117 | 0:50 |
+| S-14 Phase 3: the foundations | 128 | 0:55 |
+| S-15 Command Centre | 150 | 1:04 |
+| S-16 Command Centre: how we build it | 134 | 0:57 |
+| S-17 Predict and scale | 102 | 0:44 |
+| S-18 Measuring success | 100 | 0:43 |
+| S-19 Risks | 154 | 1:06 |
+| S-20 Lesson & close | 143 | 1:01 |
+| **Total** | **2,826** | **20:11 + 0:30 reel = 20:41** |
 
-If you run long on the day, cut S-18 to its first two sentences and say only the stamp line on S-20 press 1. Together that saves about a minute.
+If you run long on the day, cut S-17 to its first two sentences and say only the stamp line on S-19 press 1. Together that saves about a minute.
 
 Check these before you present:
 
 - [ ] **135 years versus 1889.** S-01 says the hospital is a hundred and thirty-five years old, but the building drawing is labelled 1889, which makes it 137. Someone may do the sum. Settle on one figure in the deck and the script.
 - [ ] **"Eighteen months ago."** April 2025 to now is closer to nineteen months. "Eighteen months" is fine spoken, but don't put it on a slide.
-- [ ] **FMS on S-09.** It is read out as on screen. If the audience won't know the abbreviation, say "Family Medicine" instead.
-- [ ] **Phase 2 measures.** S-19 skips Phase 2's indicators to save time. If a judge asks, they are: the MyIPO workshop held, key innovations protected through MyIPO, and entries to Karnival Inovasi KKM.
+- [ ] **FMS on S-08.** It is read out as on screen. If the audience won't know the abbreviation, say "Family Medicine" instead.
+- [ ] **Phase 2 measures.** S-18 skips Phase 2's indicators to save time. If a judge asks, they are: the MyIPO workshop held, key innovations protected through MyIPO, and entries to Karnival Inovasi KKM.

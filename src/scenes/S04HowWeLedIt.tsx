@@ -5,6 +5,7 @@ import syllabus from '../assets/syllabus.webp'
 import padlet from '../assets/padlet.webp'
 import kotter from '../assets/kotter.webp'
 import { QR } from '../kit/QR.tsx'
+import { LeadersKinetic } from './LeadersKinetic.tsx'
 import { DrawPath } from '../kit/DrawPath.tsx'
 import { PhotoReel } from '../kit/PhotoReel.tsx'
 import { SplitFlap } from '../kit/SplitFlap.tsx'
@@ -34,7 +35,9 @@ const FLIP = 4
  * that came out of it begin. Everything below counts from that press:
  * `step` is 0 on stage 1, and -1 while the model is up.
  *
- * Stage 1 brings its evidence with it: the photographs from those weeks,
+ * Stage 1 brings its evidence with it: the team and what they studied,
+ * running one card at a time over the still-empty boxes 2 to 4, and the
+ * photographs from those weeks,
  * drifting under the row with a leader back to the box they belong to. They
  * stay while the other stages land, and make way for the split-flap on the
  * last press, which is the scene's moment.
@@ -42,6 +45,7 @@ const FLIP = 4
 export function S04HowWeLedIt({ step: press }: SceneProps) {
   const step = press - 1
   const model = press === 0
+  const leaders = step === 0
   const reduced = useReducedMotion()
   const flipped = step >= FLIP
   const reel = step < FLIP
@@ -70,6 +74,8 @@ export function S04HowWeLedIt({ step: press }: SceneProps) {
         {/* pencilled outlines of what is still to come */}
         {!model && c.stages.map((_, i) => {
           const x = X0 + i * (BOX_W + GAP)
+          // While stage 1 is spoken the team sequence sits over boxes 2 to 4.
+          if (leaders && i > 0) return null
           return (
             <rect
               key={i}
@@ -176,6 +182,29 @@ export function S04HowWeLedIt({ step: press }: SceneProps) {
           delay={0.8}
         />
       </motion.div>
+
+      {/* stage 1's people: who the office is and what they studied first */}
+      <AnimatePresence>
+        {leaders && (
+          <motion.div
+            key="leaders"
+            className="s04__leaders"
+            initial={{ opacity: 0, x: 24 * t }}
+            animate={{ opacity: 1, x: 0 }}
+            exit={{ opacity: 0, transition: { duration: 0.25 } }}
+            transition={{ duration: 0.5, delay: 0.45 * t, ease: [0.16, 1, 0.3, 1] }}
+          >
+            <svg className="sc__svg" viewBox="0 0 1920 1080" aria-hidden="true">
+              <DrawPath
+                d={`M ${X0 + BOX_W} ${BOX_Y + BOX_H / 2} L ${X0 + BOX_W + GAP} ${BOX_Y + BOX_H / 2}`}
+                duration={0.3}
+                opacity={0.7}
+              />
+            </svg>
+            <LeadersKinetic c={c.leaders} />
+          </motion.div>
+        )}
+      </AnimatePresence>
 
       {/* stage 3's evidence: the workshop Padlet, and a code to open it */}
       <AnimatePresence>

@@ -1,0 +1,73 @@
+/* Over the pencilled boxes 2 to 4, which are empty while stage 1 is spoken:
+   x 608 to 1796, the same top and bottom as the boxes. */
+.lk {
+  position: absolute; left: 608px; top: 200px; width: 1188px; height: 340px;
+  border: 1px solid rgba(124, 196, 242, 0.45);
+  background: var(--drafting);
+  overflow: hidden;
+}
+
+.lk__label {
+  position: absolute; left: 34px; top: 22px; margin: 0;
+  font-family: var(--font-mono); font-size: 22px; letter-spacing: 0.08em;
+  text-transform: uppercase; color: var(--line);
+}
+
+.lk__card { position: absolute; inset: 64px 34px 40px; }
+.lk__word { display: inline-block; margin-right: 0.26em; }
+
+/* intro */
+.lk__intro-head {
+  display: block; margin-top: 30px; font-size: 64px; line-height: 1.04;
+  letter-spacing: -0.02em; color: var(--chalk);
+  font-variation-settings: 'wght' 640, 'wdth' 92;
+}
+.lk__intro-sub { margin: 26px 0 0; font-size: 36px; color: var(--chalk); }
+.lk__intro-sub b { color: var(--signal); font-weight: 600; }
+
+/* person */
+.lk__card--person { display: flex; align-items: center; gap: 40px; }
+.lk__face {
+  flex: none; width: 210px; height: 210px; border-radius: 50%;
+  border: 2px solid rgba(124, 196, 242, 0.75);
+}
+.lk__who { display: flex; flex-direction: column; gap: 18px; }
+.lk__name {
+  font-size: 56px; line-height: 1.06; color: var(--chalk); letter-spacing: -0.01em;
+  font-variation-settings: 'wght' 620, 'wdth' 90;
+}
+.lk__role { font-family: var(--font-mono); font-size: 30px; color: var(--line); }
+
+/* the two lines that sum it up */
+.lk__card--say { display: flex; align-items: center; }
+.lk__say { margin: 0; font-size: 46px; line-height: 1.18; color: var(--chalk); text-wrap: balance; }
+.lk__say-lead { font-weight: 600; }
+.lk__say--line .lk__say-lead { color: var(--line); }
+.lk__say--signal .lk__say-lead { color: var(--signal); }
+
+/* credential */
+.lk__cred {
+  display: block; width: 900px; font-size: 44px; line-height: 1.12; color: var(--chalk);
+  font-variation-settings: 'wght' 560, 'wdth' 90;
+}
+.lk__by { position: absolute; left: 0; bottom: 0; display: flex; gap: 30px; }
+.lk__by-one {
+  display: flex; align-items: center; gap: 12px;
+  font-family: var(--font-mono); font-size: 26px; color: var(--line);
+}
+.lk__by-one img { border-radius: 50%; border: 1.5px solid rgba(124, 196, 242, 0.7); }
+.lk__stamp {
+  position: absolute; right: 0; top: 4px; padding: 6px 16px;
+  font-family: var(--font-mono); font-size: 26px; letter-spacing: 0.08em; text-transform: uppercase;
+  border: 2px solid currentColor;
+}
+.lk__stamp--completed { color: var(--line); }
+.lk__stamp--ongoing { color: var(--signal); }
+
+.lk__ticks {
+  position: absolute; left: 34px; right: 34px; bottom: 16px;
+  display: flex; gap: 6px;
+}
+.lk__ticks i { flex: 1; height: 3px; background: rgba(124, 196, 242, 0.18); }
+.lk__ticks i.is-done { background: rgba(124, 196, 242, 0.45); }
+.lk__ticks i.is-on { background: var(--signal); }

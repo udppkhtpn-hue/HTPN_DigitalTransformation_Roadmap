@@ -12,7 +12,6 @@
 export type SceneId =
   | 'cold-open'
   | 'ahead-of-mandate'
-  | 'who-we-are'
   | 'three-forces'
   | 'how-we-led-it'
   | 'results'
@@ -76,14 +75,14 @@ export interface Credential {
   status: 'Completed' | 'Ongoing'
 }
 
-export interface WhoWeAre {
+/** The team behind "Leaders learn first", shown as a running sequence on S-04. */
+export interface Leaders {
   heading: string
   /** Set in amber, then the plain line after it. */
   established: string
   since: string
   team: TeamMember[]
   closer: { lead: string; rest: string; line: string }
-  eyebrow: string
   credentialsHeading: string
   credentials: Credential[]
   credentialsCloser: { lead: string; rest: string }
@@ -117,6 +116,7 @@ export interface HowWeLedIt {
   photos: string
   /** Under the QR code beside stage 3 (the workshop Padlet). */
   padlet: string
+  leaders: Leaders
   flip: { from: string; to: string; caption: string }
 }
 
@@ -274,7 +274,6 @@ export interface LessonAndClose {
 export type Scene =
   | (Base & { id: 'cold-open'; content: ColdOpen })
   | (Base & { id: 'ahead-of-mandate'; content: AheadOfMandate })
-  | (Base & { id: 'who-we-are'; content: WhoWeAre })
   | (Base & { id: 'three-forces'; content: ThreeForces })
   | (Base & { id: 'how-we-led-it'; content: HowWeLedIt })
   | (Base & { id: 'results'; content: Results })
@@ -345,51 +344,8 @@ export const SCENES: Scene[] = [
   },
 
   {
-    id: 'who-we-are',
-    sheet: 'S-03',
-    title: 'Who we are',
-    steps: 2,
-    moment: 0,
-    seconds: 56,
-    content: {
-      heading: 'HTPN Healthcare Intelligence Office',
-      established: 'Established April 2025',
-      since: 'a dedicated in-house team',
-      team: [
-        { name: 'Dr Hj Mohd Slv Azhar Merican Bin Abdullah', role: 'Advisor', photo: 'azhar' },
-        { name: 'Dr Ferwahn Fairis bin Ab Karim', role: 'Coordinator', photo: 'fairis' },
-        { name: 'Dr Naim bin Abdul Malek', role: 'Technical & Training', photo: 'naim' },
-        { name: 'Dr Muhammad Syafiz bin Ruzain', role: 'Technical & Training', photo: 'syafiz' },
-        { name: 'Megat Hafiz', role: 'Facilitator', photo: 'megat' },
-        { name: 'Kenny Tuang Ling Ee', role: 'Facilitator', photo: 'kenny' },
-      ],
-      closer: {
-        lead: 'Clinicians and nursing staff leading digital transformation from within',
-        rest: ' — Insourcing.',
-        line: 'The people who understand the problem are the people building the solution.',
-      },
-      eyebrow: 'Investing in capability',
-      credentialsHeading: 'Team credentials: Leaders learn first',
-      credentials: [
-        { text: 'Micro-credential in Digital Health — Monash University', who: 'Dr Naim • Dr Fairis', status: 'Completed' },
-        { text: 'Advance Biostatistic (Stata & Python coding) — MHLM & MPH UNSW', who: 'Dr Naim', status: 'Completed' },
-        { text: 'Data Science & AI for Executives — In-campus Executive Programme, London School of Economics (LSE)', who: 'Dr Naim', status: 'Completed' },
-        { text: 'Executive Digital Leadership Programme (EDLP) — MIT Sloan / Asia School of Business', who: 'Dr Naim • Dr Fairis', status: 'Completed' },
-        { text: 'PhD in Medicine (AI Research) — Universiti Putra Malaysia (UPM)', who: 'Dr Fairis', status: 'Ongoing' },
-        { text: 'Master of Business Intelligence — Universiti Teknologi Malaysia (UTM)', who: 'Dr Syafiz', status: 'Ongoing' },
-        { text: 'Deep Learning Research — Collaboration with Global Health AI Group (GH2AI), London School of Hygiene & Tropical Medicine (LSHTM)', who: 'Dr Naim', status: 'Ongoing' },
-      ],
-      credentialsCloser: {
-        lead: 'Credibility before capability transfer',
-        rest: ' — leaders must learn first, before asking others to change.',
-      },
-    },
-    notes: `We are the Healthcare Intelligence Office, established in April 2025: a dedicated in-house team of clinicians and nursing staff leading digital transformation from within. We learned first, so we had credibility before asking anyone else to change.`,
-  },
-
-  {
     id: 'three-forces',
-    sheet: 'S-04',
+    sheet: 'S-03',
     title: 'Three forces',
     steps: 3,
     moment: 0,
@@ -423,11 +379,11 @@ export const SCENES: Scene[] = [
 
   {
     id: 'how-we-led-it',
-    sheet: 'S-05',
+    sheet: 'S-04',
     title: 'How we led it',
     steps: 6,
     moment: 5,
-    seconds: 61,
+    seconds: 76,
     content: {
       framework: "Kotter's eight steps",
       stages: [
@@ -444,6 +400,38 @@ export const SCENES: Scene[] = [
       ],
       photos: '11 Apr – 29 May 2025',
       padlet: 'Scan: workshop Padlet',
+      leaders: {
+          heading: 'HTPN Healthcare Intelligence Office',
+          established: 'Established April 2025',
+          since: 'a dedicated in-house team',
+          team: [
+            { name: 'Dr Hj Mohd Slv Azhar Merican Bin Abdullah', role: 'Advisor', photo: 'azhar' },
+            { name: 'Dr Ferwahn Fairis bin Ab Karim', role: 'Coordinator', photo: 'fairis' },
+            { name: 'Dr Naim bin Abdul Malek', role: 'Technical & Training', photo: 'naim' },
+            { name: 'Dr Muhammad Syafiz bin Ruzain', role: 'Technical & Training', photo: 'syafiz' },
+            { name: 'Megat Hafiz', role: 'Facilitator', photo: 'megat' },
+            { name: 'Kenny Tuang Ling Ee', role: 'Facilitator', photo: 'kenny' },
+          ],
+          closer: {
+            lead: 'Clinicians and nursing staff leading digital transformation from within',
+            rest: ' — Insourcing.',
+            line: 'The people who understand the problem are the people building the solution.',
+          },
+          credentialsHeading: 'Team credentials: Leaders learn first',
+          credentials: [
+            { text: 'Micro-credential in Digital Health — Monash University', who: 'Dr Naim • Dr Fairis', status: 'Completed' },
+            { text: 'Advance Biostatistic (Stata & Python coding) — MHLM & MPH UNSW', who: 'Dr Naim', status: 'Completed' },
+            { text: 'Data Science & AI for Executives — In-campus Executive Programme, London School of Economics (LSE)', who: 'Dr Naim', status: 'Completed' },
+            { text: 'Executive Digital Leadership Programme (EDLP) — MIT Sloan / Asia School of Business', who: 'Dr Naim • Dr Fairis', status: 'Completed' },
+            { text: 'PhD in Medicine (AI Research) — Universiti Putra Malaysia (UPM)', who: 'Dr Fairis', status: 'Ongoing' },
+            { text: 'Master of Business Intelligence — Universiti Teknologi Malaysia (UTM)', who: 'Dr Syafiz', status: 'Ongoing' },
+            { text: 'Deep Learning Research — Collaboration with Global Health AI Group (GH2AI), London School of Hygiene & Tropical Medicine (LSHTM)', who: 'Dr Naim', status: 'Ongoing' },
+          ],
+          credentialsCloser: {
+            lead: 'Credibility before capability transfer',
+            rest: ' — leaders must learn first, before asking others to change.',
+          },
+        },
       flip: {
         from: '85% outsourced',
         to: '85% insourced',
@@ -455,7 +443,7 @@ export const SCENES: Scene[] = [
 
   {
     id: 'results',
-    sheet: 'S-06',
+    sheet: 'S-05',
     title: 'Results',
     steps: 1,
     moment: 0,
@@ -480,7 +468,7 @@ export const SCENES: Scene[] = [
 
   {
     id: 'where-weve-taught',
-    sheet: 'S-07',
+    sheet: 'S-06',
     title: "Where we've taught",
     steps: 2,
     moment: 0,
@@ -497,7 +485,7 @@ export const SCENES: Scene[] = [
 
   {
     id: 'portfolio',
-    sheet: 'S-08',
+    sheet: 'S-07',
     title: 'The portfolio',
     steps: 1,
     moment: 0,
@@ -552,7 +540,7 @@ export const SCENES: Scene[] = [
 
   {
     id: 'innovathon',
-    sheet: 'S-09',
+    sheet: 'S-08',
     title: 'Innovathon',
     steps: 2,
     moment: 1,
@@ -584,7 +572,7 @@ export const SCENES: Scene[] = [
 
   {
     id: 'the-gap',
-    sheet: 'S-10',
+    sheet: 'S-09',
     title: 'The gap',
     steps: 5,
     moment: 1,
@@ -611,7 +599,7 @@ export const SCENES: Scene[] = [
 
   {
     id: 'national-picture',
-    sheet: 'S-11',
+    sheet: 'S-10',
     title: 'The national picture',
     steps: 3,
     moment: 0,
@@ -643,7 +631,7 @@ export const SCENES: Scene[] = [
 
   {
     id: 'vision-2028',
-    sheet: 'S-12',
+    sheet: 'S-11',
     title: 'Vision 2028',
     steps: 4,
     moment: 1,
@@ -691,7 +679,7 @@ export const SCENES: Scene[] = [
 
   {
     id: 'roadmap',
-    sheet: 'S-13',
+    sheet: 'S-12',
     title: 'Roadmap',
     steps: 5,
     moment: 1,
@@ -776,7 +764,7 @@ export const SCENES: Scene[] = [
 
   {
     id: 'phase-registry',
-    sheet: 'S-14',
+    sheet: 'S-13',
     title: 'Phase 3: the registry',
     steps: 2,
     moment: 0,
@@ -805,7 +793,7 @@ export const SCENES: Scene[] = [
 
   {
     id: 'phase-foundations',
-    sheet: 'S-15',
+    sheet: 'S-14',
     title: 'Phase 3: the foundations',
     steps: 2,
     moment: 0,
@@ -839,7 +827,7 @@ export const SCENES: Scene[] = [
 
   {
     id: 'command-centre',
-    sheet: 'S-16',
+    sheet: 'S-15',
     title: 'Command Centre',
     steps: 2,
     moment: 0,
@@ -870,7 +858,7 @@ export const SCENES: Scene[] = [
 
   {
     id: 'command-centre-build',
-    sheet: 'S-17',
+    sheet: 'S-16',
     title: 'Command Centre: how we build it',
     steps: 2,
     moment: 0,
@@ -897,7 +885,7 @@ export const SCENES: Scene[] = [
 
   {
     id: 'predict-and-scale',
-    sheet: 'S-18',
+    sheet: 'S-17',
     title: 'Predict and scale',
     steps: 1,
     moment: 0,
@@ -916,7 +904,7 @@ export const SCENES: Scene[] = [
 
   {
     id: 'measuring-success',
-    sheet: 'S-19',
+    sheet: 'S-18',
     title: 'Measuring success',
     steps: 1,
     moment: 0,
@@ -964,7 +952,7 @@ export const SCENES: Scene[] = [
 
   {
     id: 'risks',
-    sheet: 'S-20',
+    sheet: 'S-19',
     title: 'Risks',
     steps: 2,
     moment: 0,
@@ -1011,7 +999,7 @@ export const SCENES: Scene[] = [
 
   {
     id: 'lesson-and-close',
-    sheet: 'S-21',
+    sheet: 'S-20',
     title: 'Lesson & close',
     steps: 3,
     moment: 1,
