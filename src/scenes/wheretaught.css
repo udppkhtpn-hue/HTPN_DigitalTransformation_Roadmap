@@ -35,8 +35,8 @@
 .wt__home-ring { fill: none; stroke: var(--chalk); stroke-width: 1.4; opacity: 0.5; }
 
 .wt__arc {
-  fill: none; stroke: var(--signal); stroke-width: 1.6;
-  stroke-dasharray: 7 6; vector-effect: non-scaling-stroke;
+  fill: none; stroke: var(--signal); stroke-width: 2;
+  stroke-linecap: round; vector-effect: non-scaling-stroke;
 }
 .wt__pin { fill: var(--signal); }
 .wt__pin-n {

@@ -77,18 +77,35 @@ function Mark({ kind, x, y, r = 9 }: { kind: SiteKind; x: number; y: number; r?:
   return <path d={`M ${x} ${y - r - 1} L ${x + r + 1} ${y} L ${x} ${y + r + 1} L ${x - r - 1} ${y} z`} />
 }
 
-/** The arc's control point: bowed perpendicular, never too far. */
-function arcControl(x1: number, y1: number, x2: number, y2: number) {
+/**
+ * How far each arc bows off the straight line, in stage px; the sign picks
+ * the side. Left alone, the arcs to Penang, Kepala Batas and Alor Setar all
+ * leave Kajang on nearly the same heading and lie on top of each other, as
+ * do the two to Johor. So those are fanned out by hand: Alor Setar swings
+ * wide inland, Kepala Batas a little inland, Pulau Pinang out over the
+ * Strait; the two Johor arcs bow to opposite sides. The rest keep the
+ * default, a third of the distance, capped at 150.
+ */
+const BOW: Record<number, number> = {
+  9: 230,
+  1: 95,
+  4: -110,
+  14: 150,
+  2: -130,
+}
+
+/** The arc's control point: bowed perpendicular, by BOW or the default. */
+function arcControl(x1: number, y1: number, x2: number, y2: number, n?: number) {
   const dx = x2 - x1
   const dy = y2 - y1
   const d = Math.hypot(dx, dy) || 1
-  const k = Math.min(0.3 * d, 150)
+  const k = n !== undefined && BOW[n] !== undefined ? BOW[n] : Math.min(0.3 * d, 150)
   return { cx: (x1 + x2) / 2 - (dy / d) * k, cy: (y1 + y2) / 2 + (dx / d) * k }
 }
 
 /** Length of the quadratic arc, by sampling: what the dash pattern must cover. */
-function arcLength(x1: number, y1: number, x2: number, y2: number) {
-  const { cx, cy } = arcControl(x1, y1, x2, y2)
+function arcLength(x1: number, y1: number, x2: number, y2: number, n?: number) {
+  const { cx, cy } = arcControl(x1, y1, x2, y2, n)
   let len = 0
   let px = x1
   let py = y1
@@ -105,20 +122,19 @@ function arcLength(x1: number, y1: number, x2: number, y2: number) {
 }
 
 /**
- * A dash pattern for one arc that can be drawn on: 7-on 6-off dashes for
- * the whole length, then an equal blank. Sliding the offset from the blank
- * to the dashes draws the line out from Kajang with its dashes moving
- * toward the site. (pathLength cannot be used: it draws with its own dash
- * pattern, which a dashed stroke overrides.)
+ * A solid stroke drawn on by sliding its dash offset: one dash as long as
+ * the arc, then an equal gap. Solid rather than dashed, because fifteen
+ * dashed arcs leaving one point read as noise at the back of a room.
+ * (pathLength would do the same, but the class's dash pattern overrides it.)
  */
 function dashes(len: number) {
-  const n = Math.ceil(len / 13)
-  return `${Array.from({ length: n }, () => '7 6').join(' ')} 0 ${Math.ceil(len) + 13}`
+  const l = Math.ceil(len) + 1
+  return `${l} ${l}`
 }
 
 /** A thrown arc from Kajang to a site: quadratic, bowed perpendicular. */
-function arcPath(x1: number, y1: number, x2: number, y2: number) {
-  const { cx, cy } = arcControl(x1, y1, x2, y2)
+function arcPath(x1: number, y1: number, x2: number, y2: number, n?: number) {
+  const { cx, cy } = arcControl(x1, y1, x2, y2, n)
   return `M ${x1} ${y1} Q ${cx} ${cy} ${x2} ${y2}`
 }
 
@@ -271,16 +287,16 @@ export function WhereTaught({ step }: SceneProps) {
         {SITES.map((s, k) => {
           const pin = MAP.pins[k]
           const at = first + k * GAP
-          const len = arcLength(MAP.home.mainX, MAP.home.mainY, pin.x, pin.y)
+          const len = arcLength(MAP.home.mainX, MAP.home.mainY, pin.x, pin.y, s.n)
           // On the verdict press the arcs are simply there, already landed.
           const go = adopted ? 0 : t
           return (
             <g key={`${s.n}-${run}-${adopted ? 'f' : 'a'}`}>
               <motion.path
-                d={arcPath(MAP.home.mainX, MAP.home.mainY, pin.x, pin.y)}
+                d={arcPath(MAP.home.mainX, MAP.home.mainY, pin.x, pin.y, s.n)}
                 className="wt__arc wt__arc--draw"
                 style={{ strokeDasharray: dashes(len) }}
-                initial={{ strokeDashoffset: reduced || adopted ? 0 : Math.ceil(len / 13) * 13 + 0.5 }}
+                initial={{ strokeDashoffset: reduced || adopted ? 0 : Math.ceil(len) + 1 }}
                 animate={{ strokeDashoffset: 0 }}
                 transition={{ duration: FLIGHT * go + 0.01, delay: at * go, ease: 'easeInOut' }}
                 opacity={0.8}

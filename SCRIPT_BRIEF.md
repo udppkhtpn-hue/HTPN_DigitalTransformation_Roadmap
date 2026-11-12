@@ -145,7 +145,7 @@ Current notes (draft to improve, not to copy):
 2 presses · planned 55s · about 128 words at 140 wpm · current notes 75 words
 
 What the room sees:
-- Press 1: A map of Malaysia draws itself; dashed arcs fly from Kajang to each of the 15 sites in date order while a month counter and a 1-to-15 tally tick, each site naming itself as it lands; a magnifier labelled KLANG VALLEY separates the nine sites clustered there; then the subline. The arcs fly one at a time, each drawing itself out from Kajang over about 1.4 seconds and starting only when the one before has landed (about 30 seconds for all 15), every site numbered as it lands, hold for 4 seconds, then fly again from the start, looping until the next click. Beside the headline, a small strip of photographs taken on the dates of the external sessions (Nov 2025 – Oct 2026) drifts across.
+- Press 1: A map of Malaysia draws itself; solid amber arcs, fanned so none overlaps, fly from Kajang to each of the 15 sites in date order while a month counter and a 1-to-15 tally tick, each site naming itself as it lands; a magnifier labelled KLANG VALLEY separates the nine sites clustered there; then the subline. The arcs fly one at a time, each drawing itself out from Kajang over about 1.4 seconds and starting only when the one before has landed (about 30 seconds for all 15), every site numbered as it lands, hold for 4 seconds, then fly again from the start, looping until the next click. Beside the headline, a small strip of photographs taken on the dates of the external sessions (Nov 2025 – Oct 2026) drifts across.
 - Press 2: Cyan rings pulse on the sites now running tools built on the model, and "We taught. They built." appears.
 
 On screen (text and figures, exactly as shown):
