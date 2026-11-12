@@ -161,67 +161,68 @@ Current notes (draft to improve, not to copy):
 3 presses · planned 50s · about 117 words at 140 wpm · current notes 45 words
 
 What the room sees:
-- Press 1: A split-flap departures board, every character its own flipping tile, page 1 of 3 ("50 apps in the registry"): "Built at HTPN 17", one row per app with its number, app name, where it was built and its category (Patient journey in amber, Clinician journey in white, Management productivity in blue); rows run in showcase order, so each page falls into the three categories in turn. The showcase QR code and "Built by clinicians, for clinicians." sit underneath.
-- Press 2: The same board turns over to page 2: "Built by the hospitals we taught 1–17 of 33", the apps from Hospital Port Dickson (14) and Hospital Cyberjaya (3).
-- Press 3: Page 3: "18–33 of 33", the apps from Penang, Johor, Sarawak, Selangor, Marudi, Mukah, St John Ambulance and the national services, and two with no facility recorded.
+- Press 1: A split-flap departures board, every character its own flipping tile: "Apps 01–17 of 50", one row per app with its number, name and category (Patient journey in amber, Clinician journey in white, Management productivity in blue). App names built at HTPN are white, those built by the hospitals we taught are blue, with a key: 17 built at HTPN, 33 built by the hospitals we taught. The showcase QR code and "Built by clinicians, for clinicians." sit underneath.
+- Press 2: The same board turns over to apps 18–34, running from clinician journey into management productivity.
+- Press 3: Apps 35–50, all management productivity.
 
 On screen (text and figures, exactly as shown):
 pages:
-  - title: Built at HTPN; rows:
-      - no: 01; name: GynaeClerk; at: HTPN Kajang; category: Patient journey
-      - no: 02; name: AntenatalClerk; at: HTPN Kajang; category: Patient journey
-      - no: 03; name: Fetal Kick Chart; at: HTPN Kajang; category: Patient journey
-      - no: 10; name: Skin Diary Generator; at: HTPN Kajang; category: Clinician journey
-      - no: 11; name: OT Scheduling System; at: HTPN Kajang; category: Clinician journey
-      - no: 12; name: Gynae Census Web Form; at: HTPN Kajang; category: Clinician journey
-      - no: 13; name: EBL Estimator AI; at: HTPN Kajang; category: Clinician journey
-      - no: 14; name: TherapyAI; at: HTPN Kajang; category: Clinician journey
-      - no: 15; name: Clinical Document Checker; at: HTPN Kajang; category: Clinician journey
-      - no: 23; name: Dashboard ED; at: HTPN Kajang; category: Management productivity
-      - no: 24; name: Dashboard DLP; at: HTPN Kajang; category: Management productivity
-      - no: 25; name: Roster Scheduling Web App; at: HTPN Kajang; category: Management productivity
-      - no: 26; name: CGR Web Form; at: HTPN Kajang; category: Management productivity
-      - no: 27; name: DLP Reporting Web Form; at: HTPN Kajang; category: Management productivity
-      - no: 28; name: Slide Deck OCR PDF Editor; at: HTPN Kajang; category: Management productivity
-      - no: 29; name: Portal Aktiviti JPPOBG; at: HTPN Kajang; category: Management productivity
-      - no: 31; name: HTPN Digital Showcase Website; at: HTPN Kajang; category: Management productivity
-  - title: Built by the hospitals we taught; rows:
-      - no: 04; name: Kempen Derma Darah; at: Hospital Port Dickson; category: Patient journey
-      - no: 05; name: Maternal Assessment Center registration; at: Hospital Port Dickson; category: Patient journey
-      - no: 06; name: Klinik Diabetes Pintar; at: Hospital Port Dickson; category: Patient journey
-      - no: 07; name: Memory Clinic Intake; at: Hospital Port Dickson / NMS; category: Patient journey
-      - no: 18; name: Akasia Ward MO Task Manager; at: Hospital Port Dickson; category: Clinician journey
-      - no: 19; name: e-Lampiran D (drug formulary); at: Hospital Port Dickson; category: Clinician journey
-      - no: 21; name: MedPulse MAR; at: Hospital Port Dickson; category: Clinician journey
-      - no: 22; name: TBIS 10A-1 Digital; at: Hospital Cyberjaya; category: Clinician journey
-      - no: 40; name: Psychiatry Department Dashboard (HPD); at: Hospital Port Dickson; category: Management productivity
-      - no: 41; name: OT Unit Staff Movement & Leave; at: Hospital Port Dickson; category: Management productivity
-      - no: 42; name: Aduan HPD complaints; at: Hospital Port Dickson; category: Management productivity
-      - no: 43; name: Vehicle Booking; at: Hospital Port Dickson; category: Management productivity
-      - no: 44; name: Credentialing & Privileging Portal; at: Hospital Port Dickson; category: Management productivity
-      - no: 45; name: Nursing Daily Census (HPD); at: Hospital Port Dickson; category: Management productivity
-      - no: 46; name: IQC Glucometer POCT; at: Hospital Port Dickson; category: Management productivity
-      - no: 47; name: Duty Rotator; at: Hospital Cyberjaya; category: Management productivity
-      - no: 48; name: PathoLab Pro; at: Hospital Cyberjaya; category: Management productivity
-  - title: Built by the hospitals we taught; rows:
-      - no: 08; name: Klinik Reumatologi pre-consultation; at: National Medical Services; category: Patient journey
-      - no: 09; name: CardioFlow HF Clinic Portal; at: National Medical Services; category: Patient journey
-      - no: 16; name: Phlebotomy Appointment System; at: Hospital Marudi; category: Clinician journey
-      - no: 17; name: PhysioMeasurePro; at: Hospital Aman Sarawak; category: Clinician journey
-      - no: 20; name: Pocket Nurse; at: BPF JKN Selangor; category: Clinician journey
-      - no: 30; name: Patient Safety Incident Reporting; at: Hospital Sultanah Aminah JB; category: Management productivity
-      - no: 32; name: E-Kehadiran Kursus; at: JKN Sarawak; category: Management productivity
-      - no: 33; name: Mental Wellbeing Monitoring Portal; at: JKN Sarawak; category: Management productivity
-      - no: 34; name: MedMove Pro; at: JKN Sarawak; category: Management productivity
-      - no: 35; name: MEDEVAC E-Request Portal; at: JKN Sarawak; category: Management productivity
-      - no: 36; name: MOH HIRARC Portal; at: Hospital Mukah; category: Management productivity
-      - no: 37; name: HPP OSH-Alert; at: Hospital Pulau Pinang; category: Management productivity
-      - no: 38; name: Sistem eBooking; at: Hospital Pulau Pinang; category: Management productivity
-      - no: 39; name: Ward Jasmin pharmacy stock; at: Not stated; category: Management productivity
-      - no: 49; name: SJAM KPW Dispatch & Analytics; at: St John Ambulance, WP; category: Management productivity
-      - no: 50; name: Internal Medicine Duty Planner; at: Not stated; category: Management productivity
+  - title: Apps 01–17; rows:
+      - no: 01; name: GynaeClerk; by: htpn; category: Patient journey
+      - no: 02; name: AntenatalClerk; by: htpn; category: Patient journey
+      - no: 03; name: Fetal Kick Chart; by: htpn; category: Patient journey
+      - no: 04; name: Kempen Derma Darah; by: partner; category: Patient journey
+      - no: 05; name: Maternal Assessment Center registration; by: partner; category: Patient journey
+      - no: 06; name: Klinik Diabetes Pintar; by: partner; category: Patient journey
+      - no: 07; name: Memory Clinic Intake; by: partner; category: Patient journey
+      - no: 08; name: Klinik Reumatologi pre-consultation; by: partner; category: Patient journey
+      - no: 09; name: CardioFlow HF Clinic Portal; by: partner; category: Patient journey
+      - no: 10; name: Skin Diary Generator; by: htpn; category: Clinician journey
+      - no: 11; name: OT Scheduling System; by: htpn; category: Clinician journey
+      - no: 12; name: Gynae Census Web Form; by: htpn; category: Clinician journey
+      - no: 13; name: EBL Estimator AI; by: htpn; category: Clinician journey
+      - no: 14; name: TherapyAI; by: htpn; category: Clinician journey
+      - no: 15; name: Clinical Document Checker; by: htpn; category: Clinician journey
+      - no: 16; name: Phlebotomy Appointment System; by: partner; category: Clinician journey
+      - no: 17; name: PhysioMeasurePro; by: partner; category: Clinician journey
+  - title: Apps 18–34; rows:
+      - no: 18; name: Akasia Ward MO Task Manager; by: partner; category: Clinician journey
+      - no: 19; name: e-Lampiran D (drug formulary); by: partner; category: Clinician journey
+      - no: 20; name: Pocket Nurse; by: partner; category: Clinician journey
+      - no: 21; name: MedPulse MAR; by: partner; category: Clinician journey
+      - no: 22; name: TBIS 10A-1 Digital; by: partner; category: Clinician journey
+      - no: 23; name: Dashboard ED; by: htpn; category: Management productivity
+      - no: 24; name: Dashboard DLP; by: htpn; category: Management productivity
+      - no: 25; name: Roster Scheduling Web App; by: htpn; category: Management productivity
+      - no: 26; name: CGR Web Form; by: htpn; category: Management productivity
+      - no: 27; name: DLP Reporting Web Form; by: htpn; category: Management productivity
+      - no: 28; name: Slide Deck OCR PDF Editor; by: htpn; category: Management productivity
+      - no: 29; name: Portal Aktiviti JPPOBG; by: htpn; category: Management productivity
+      - no: 30; name: Patient Safety Incident Reporting; by: partner; category: Management productivity
+      - no: 31; name: HTPN Digital Showcase Website; by: htpn; category: Management productivity
+      - no: 32; name: E-Kehadiran Kursus; by: partner; category: Management productivity
+      - no: 33; name: Mental Wellbeing Monitoring Portal; by: partner; category: Management productivity
+      - no: 34; name: MedMove Pro; by: partner; category: Management productivity
+  - title: Apps 35–50; rows:
+      - no: 35; name: MEDEVAC E-Request Portal; by: partner; category: Management productivity
+      - no: 36; name: MOH HIRARC Portal; by: partner; category: Management productivity
+      - no: 37; name: HPP OSH-Alert; by: partner; category: Management productivity
+      - no: 38; name: Sistem eBooking; by: partner; category: Management productivity
+      - no: 39; name: Ward Jasmin pharmacy stock; by: partner; category: Management productivity
+      - no: 40; name: Psychiatry Department Dashboard (HPD); by: partner; category: Management productivity
+      - no: 41; name: OT Unit Staff Movement & Leave; by: partner; category: Management productivity
+      - no: 42; name: Aduan HPD complaints; by: partner; category: Management productivity
+      - no: 43; name: Vehicle Booking; by: partner; category: Management productivity
+      - no: 44; name: Credentialing & Privileging Portal; by: partner; category: Management productivity
+      - no: 45; name: Nursing Daily Census (HPD); by: partner; category: Management productivity
+      - no: 46; name: IQC Glucometer POCT; by: partner; category: Management productivity
+      - no: 47; name: Duty Rotator; by: partner; category: Management productivity
+      - no: 48; name: PathoLab Pro; by: partner; category: Management productivity
+      - no: 49; name: SJAM KPW Dispatch & Analytics; by: partner; category: Management productivity
+      - no: 50; name: Internal Medicine Duty Planner; by: partner; category: Management productivity
 total: 50 apps in the registry
-columns: no: No.; name: App; at: Built at; category: Category
+columns: no: No.; name: App; category: Category
+legend: htpn: 17 built at HTPN; partner: 33 built by the hospitals we taught
 centre: url: https://htpn-showcase-v2.vercel.app/
 line: Built by clinicians, for clinicians.
 

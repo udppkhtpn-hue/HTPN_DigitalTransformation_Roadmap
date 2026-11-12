@@ -110,17 +110,17 @@ Here is what has been built.
 
 ### S-07 The portfolio  (50s, 117 words)
 
-*\[Press 1: A departures board flaps in: page 1 of 3, the seventeen apps built at HTPN, each with where it was built and its category: patient journey, clinician journey or management productivity\]*
+*\[Press 1: A departures board flaps in: apps 01–17 of 50, each with its category, patient journey then clinician journey. White names were built at HTPN, blue ones by the hospitals we taught.\]*
 
-These are real tools in daily use, and all fifty are now in one registry. Seventeen were built here. For patients: GynaeClerk, AntenatalClerk, a fetal kick chart. For doctors: theatre scheduling, an AI blood-loss estimator, a clinical document checker. For management: an emergency department dashboard, rostering, governance audits.
+These are real tools in daily use, and all fifty are now in one registry, in three categories. For patients: GynaeClerk, AntenatalClerk, a fetal kick chart. For clinicians: theatre scheduling, an AI blood-loss estimator, a clinical document checker.
 
-*\[Press 2: The board turns over to page 2: seventeen apps built by Hospital Port Dickson and Hospital Cyberjaya\]*
+*\[Press 2: The board turns over to apps 18–34, into management productivity\]*
 
-The other thirty-three were built by the hospitals we taught. Hospital Port Dickson alone has built fourteen.
+For management: an emergency department dashboard, rostering, governance audits. And look at the colours. Seventeen were built here. The other thirty-three, in blue, were built by the hospitals we taught.
 
-*\[Press 3: Page 3: the last sixteen, from Penang, Johor, Sarawak, Selangor and the national services\]*
+*\[Press 3: Apps 35–50\]*
 
-And the rest come from Penang, Johor, Sarawak, Selangor and the national services. Built by clinicians, for clinicians. The QR code takes you to every one of them. Scan it now, or after the session.
+Hospital Port Dickson alone has built fourteen. Built by clinicians, for clinicians. The QR code takes you to every one of them. Scan it now, or after the session.
 
 So we brought these builders into one room.
 

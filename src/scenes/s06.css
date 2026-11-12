@@ -8,10 +8,23 @@
 .s06__count { margin-left: 14px; color: var(--signal); }
 
 .s06__page {
-  position: absolute; right: 204px; top: 158px; margin: 0;
-  font-family: var(--font-mono); font-size: 22px; letter-spacing: 0.06em;
-  text-transform: uppercase; color: var(--line);
+  position: absolute; left: 1520px; top: 214px; margin: 0;
+  font-family: var(--font-mono); font-size: 18px; letter-spacing: 0.1em;
+  text-transform: uppercase; color: var(--line); opacity: 0.8;
 }
+
+/* Who built it, read off the colour of the app name. */
+.s06__legend {
+  position: absolute; right: 204px; top: 160px; margin: 0;
+  display: flex; gap: 34px;
+  font-family: var(--font-mono); font-size: 22px; letter-spacing: 0.02em;
+}
+.s06__key { display: inline-flex; align-items: center; gap: 10px; }
+.s06__key::before { content: ''; width: 11px; height: 11px; transform: rotate(45deg); }
+.s06__key--htpn { color: var(--chalk); }
+.s06__key--htpn::before { background: var(--chalk); }
+.s06__key--partner { color: var(--line); }
+.s06__key--partner::before { background: var(--line); }
 
 /* Column labels over the board, mono, like a printed station header. */
 .s06__heads { position: absolute; left: 200px; top: 214px; width: 1600px; height: 24px; }
@@ -26,16 +39,11 @@
 /* Tile colours by column and row. */
 .fb__t.fb--dim { color: var(--line); opacity: 0.7; }
 .fb__t.fb--partner { color: var(--line); }
-.fb__t.fb--at { color: var(--line); opacity: 0.85; }
 .fb__t.fb--patient { color: var(--signal); }
 .fb__t.fb--clinician { color: var(--chalk); }
 .fb__t.fb--management { color: var(--line); }
 
-/* A smaller tile on this board, so four columns fit the sheet. */
-.s06__board .fb__row { gap: 16px; }
-.s06__board .fb__col { gap: 1.5px; }
-.s06__board .fb__t { width: 15.5px; height: 28px; }
-.s06__board .fb__c { font-size: 19px; }
+.s06__board .fb__row { gap: 40px; }
 
 .s06__sr {
   position: absolute; width: 1px; height: 1px; overflow: hidden;

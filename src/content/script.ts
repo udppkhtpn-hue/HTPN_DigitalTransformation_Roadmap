@@ -136,16 +136,16 @@ export const SCRIPT: Record<string, SheetScript> = {
     title: "The portfolio",
     seconds: 50,
     reel: 0,
-    words: 108,
+    words: 105,
     blocks: [
-      { step: 0, cue: "A departures board flaps in: page 1 of 3, the seventeen apps built at HTPN, each with where it was built and its category: patient journey, clinician journey or management productivity", paras: [
-        "These are real tools in daily use, and all fifty are now in one registry. Seventeen were built here. For patients: GynaeClerk, AntenatalClerk, a fetal kick chart. For doctors: theatre scheduling, an AI blood-loss estimator, a clinical document checker. For management: an emergency department dashboard, rostering, governance audits.",
+      { step: 0, cue: "A departures board flaps in: apps 01–17 of 50, each with its category, patient journey then clinician journey. White names were built at HTPN, blue ones by the hospitals we taught.", paras: [
+        "These are real tools in daily use, and all fifty are now in one registry, in three categories. For patients: GynaeClerk, AntenatalClerk, a fetal kick chart. For clinicians: theatre scheduling, an AI blood-loss estimator, a clinical document checker.",
       ] },
-      { step: 1, cue: "The board turns over to page 2: seventeen apps built by Hospital Port Dickson and Hospital Cyberjaya", paras: [
-        "The other thirty-three were built by the hospitals we taught. Hospital Port Dickson alone has built fourteen.",
+      { step: 1, cue: "The board turns over to apps 18–34, into management productivity", paras: [
+        "For management: an emergency department dashboard, rostering, governance audits. And look at the colours. Seventeen were built here. The other thirty-three, in blue, were built by the hospitals we taught.",
       ] },
-      { step: 2, cue: "Page 3: the last sixteen, from Penang, Johor, Sarawak, Selangor and the national services", paras: [
-        "And the rest come from Penang, Johor, Sarawak, Selangor and the national services. Built by clinicians, for clinicians. The QR code takes you to every one of them. Scan it now, or after the session.",
+      { step: 2, cue: "Apps 35–50", paras: [
+        "Hospital Port Dickson alone has built fourteen. Built by clinicians, for clinicians. The QR code takes you to every one of them. Scan it now, or after the session.",
         "So we brought these builders into one room.",
       ] },
     ],
