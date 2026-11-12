@@ -46,7 +46,7 @@ const PRESSES = {
     'All four figures count up in sequence, then the footnote. A column of photographs from in-house training sessions (Oct 2025 – May 2026) drifts upwards on the right the whole time. One press for the whole sheet.',
   ],
   'where-weve-taught': [
-    'A map of Malaysia draws itself; dashed arcs fly from Kajang to each of the 15 sites in date order while a month counter and a 1-to-15 tally tick, each site naming itself as it lands; a magnifier labelled KLANG VALLEY separates the nine sites clustered there; then the subline. The arcs fly one at a time, each starting only when the one before has landed (about 18 seconds for all 15), every site numbered as it lands, hold for 4 seconds, then fly again from the start, looping until the next click. Beside the headline, a small strip of photographs taken on the dates of the external sessions (Nov 2025 – Oct 2026) drifts across.',
+    'A map of Malaysia draws itself; dashed arcs fly from Kajang to each of the 15 sites in date order while a month counter and a 1-to-15 tally tick, each site naming itself as it lands; a magnifier labelled KLANG VALLEY separates the nine sites clustered there; then the subline. The arcs fly one at a time, each drawing itself out from Kajang over about 1.4 seconds and starting only when the one before has landed (about 30 seconds for all 15), every site numbered as it lands, hold for 4 seconds, then fly again from the start, looping until the next click. Beside the headline, a small strip of photographs taken on the dates of the external sessions (Nov 2025 – Oct 2026) drifts across.',
     'Cyan rings pulse on the sites now running tools built on the model, and "We taught. They built." appears.',
   ],
   portfolio: [

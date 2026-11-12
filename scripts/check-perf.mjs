@@ -37,7 +37,7 @@ const MOMENTS = [
   moment('how-we-led-it', 1, 'stage 1 + kinetic team + photo reel', 6000),
   moment('how-we-led-it', 5, 'split-flap', 3000),
   moment('results', 0, 'four count-ups + photo column', 4000),
-  moment('where-weve-taught', 0, 'map + 15 arcs + photo strip', 17000),
+  moment('where-weve-taught', 0, 'map + 15 arcs + photo strip', 20000),
   moment('portfolio', 0, 'split-flap board, page 1', 4000),
   moment('portfolio', 1, 'board turns to page 2', 4000),
   moment('the-gap', 0, 'fifty drifting dots', 3000),

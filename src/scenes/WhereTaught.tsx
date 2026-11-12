@@ -22,9 +22,10 @@ const c = sceneContent('where-weve-taught')
 const SLOW = 2
 const MAP_IN = 1.2
 const FIRST = 1.5
-// One arc at a time: each starts only once the one before has landed.
-const FLIGHT = 0.42
-const GAP = 0.5
+// One arc at a time, slow enough to follow with the eye: each takes 1.4s
+// to fly (0.7 at SLOW 2) and starts only once the one before has landed.
+const FLIGHT = 0.7
+const GAP = 0.85
 const LAST = FIRST + (SITES.length - 1) * GAP + FLIGHT
 /** When the arcs replay, the map is already drawn, so they start sooner. */
 const REPLAY_FIRST = 0.6
@@ -76,14 +77,48 @@ function Mark({ kind, x, y, r = 9 }: { kind: SiteKind; x: number; y: number; r?:
   return <path d={`M ${x} ${y - r - 1} L ${x + r + 1} ${y} L ${x} ${y + r + 1} L ${x - r - 1} ${y} z`} />
 }
 
-/** A thrown arc from Kajang to a site: quadratic, bowed perpendicular. */
-function arcPath(x1: number, y1: number, x2: number, y2: number) {
+/** The arc's control point: bowed perpendicular, never too far. */
+function arcControl(x1: number, y1: number, x2: number, y2: number) {
   const dx = x2 - x1
   const dy = y2 - y1
   const d = Math.hypot(dx, dy) || 1
   const k = Math.min(0.3 * d, 150)
-  const cx = (x1 + x2) / 2 - (dy / d) * k
-  const cy = (y1 + y2) / 2 + (dx / d) * k
+  return { cx: (x1 + x2) / 2 - (dy / d) * k, cy: (y1 + y2) / 2 + (dx / d) * k }
+}
+
+/** Length of the quadratic arc, by sampling: what the dash pattern must cover. */
+function arcLength(x1: number, y1: number, x2: number, y2: number) {
+  const { cx, cy } = arcControl(x1, y1, x2, y2)
+  let len = 0
+  let px = x1
+  let py = y1
+  for (let i = 1; i <= 64; i++) {
+    const t = i / 64
+    const u = 1 - t
+    const x = u * u * x1 + 2 * u * t * cx + t * t * x2
+    const y = u * u * y1 + 2 * u * t * cy + t * t * y2
+    len += Math.hypot(x - px, y - py)
+    px = x
+    py = y
+  }
+  return len
+}
+
+/**
+ * A dash pattern for one arc that can be drawn on: 7-on 6-off dashes for
+ * the whole length, then an equal blank. Sliding the offset from the blank
+ * to the dashes draws the line out from Kajang with its dashes moving
+ * toward the site. (pathLength cannot be used: it draws with its own dash
+ * pattern, which a dashed stroke overrides.)
+ */
+function dashes(len: number) {
+  const n = Math.ceil(len / 13)
+  return `${Array.from({ length: n }, () => '7 6').join(' ')} 0 ${Math.ceil(len) + 13}`
+}
+
+/** A thrown arc from Kajang to a site: quadratic, bowed perpendicular. */
+function arcPath(x1: number, y1: number, x2: number, y2: number) {
+  const { cx, cy } = arcControl(x1, y1, x2, y2)
   return `M ${x1} ${y1} Q ${cx} ${cy} ${x2} ${y2}`
 }
 
@@ -236,34 +271,19 @@ export function WhereTaught({ step }: SceneProps) {
         {SITES.map((s, k) => {
           const pin = MAP.pins[k]
           const at = first + k * GAP
+          const len = arcLength(MAP.home.mainX, MAP.home.mainY, pin.x, pin.y)
           // On the verdict press the arcs are simply there, already landed.
           const go = adopted ? 0 : t
           return (
             <g key={`${s.n}-${run}-${adopted ? 'f' : 'a'}`}>
-              {/* The arc is dashed, and a dash pattern overrides the one that
-                  pathLength draws with, so the dashed line would simply appear.
-                  Instead a solid copy draws itself inside a mask and the
-                  dashed arc shows only where that copy has reached: the line
-                  travels out from Kajang to the site. */}
-              <defs>
-                <mask id={`wt-arc-${s.n}-${run}`} maskUnits="userSpaceOnUse" x="0" y="0" width="1920" height="1080">
-                  <motion.path
-                    d={arcPath(MAP.home.mainX, MAP.home.mainY, pin.x, pin.y)}
-                    fill="none"
-                    stroke="#fff"
-                    strokeWidth={8}
-                    strokeLinecap="round"
-                    initial={{ pathLength: reduced || adopted ? 1 : 0 }}
-                    animate={{ pathLength: 1 }}
-                    transition={{ duration: FLIGHT * go + 0.01, delay: at * go, ease: 'easeInOut' }}
-                  />
-                </mask>
-              </defs>
-              <path
+              <motion.path
                 d={arcPath(MAP.home.mainX, MAP.home.mainY, pin.x, pin.y)}
-                className="wt__arc"
-                mask={`url(#wt-arc-${s.n}-${run})`}
-                opacity={0.75}
+                className="wt__arc wt__arc--draw"
+                style={{ strokeDasharray: dashes(len) }}
+                initial={{ strokeDashoffset: reduced || adopted ? 0 : Math.ceil(len / 13) * 13 + 0.5 }}
+                animate={{ strokeDashoffset: 0 }}
+                transition={{ duration: FLIGHT * go + 0.01, delay: at * go, ease: 'easeInOut' }}
+                opacity={0.8}
               />
               <motion.g
                 className="wt__pin"
