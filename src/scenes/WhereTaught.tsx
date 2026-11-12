@@ -240,12 +240,30 @@ export function WhereTaught({ step }: SceneProps) {
           const go = adopted ? 0 : t
           return (
             <g key={`${s.n}-${run}-${adopted ? 'f' : 'a'}`}>
-              <motion.path
+              {/* The arc is dashed, and a dash pattern overrides the one that
+                  pathLength draws with, so the dashed line would simply appear.
+                  Instead a solid copy draws itself inside a mask and the
+                  dashed arc shows only where that copy has reached: the line
+                  travels out from Kajang to the site. */}
+              <defs>
+                <mask id={`wt-arc-${s.n}-${run}`} maskUnits="userSpaceOnUse" x="0" y="0" width="1920" height="1080">
+                  <motion.path
+                    d={arcPath(MAP.home.mainX, MAP.home.mainY, pin.x, pin.y)}
+                    fill="none"
+                    stroke="#fff"
+                    strokeWidth={8}
+                    strokeLinecap="round"
+                    initial={{ pathLength: reduced || adopted ? 1 : 0 }}
+                    animate={{ pathLength: 1 }}
+                    transition={{ duration: FLIGHT * go + 0.01, delay: at * go, ease: 'easeInOut' }}
+                  />
+                </mask>
+              </defs>
+              <path
                 d={arcPath(MAP.home.mainX, MAP.home.mainY, pin.x, pin.y)}
                 className="wt__arc"
-                initial={reduced || adopted ? { opacity: 0 } : { pathLength: 0, opacity: 0.75 }}
-                animate={reduced || adopted ? { opacity: 0.75 } : { pathLength: 1, opacity: 0.75 }}
-                transition={{ duration: FLIGHT * go + 0.01, delay: at * go, ease: 'easeOut' }}
+                mask={`url(#wt-arc-${s.n}-${run})`}
+                opacity={0.75}
               />
               <motion.g
                 className="wt__pin"
