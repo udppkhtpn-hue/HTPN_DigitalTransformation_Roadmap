@@ -1,98 +1,114 @@
-import { motion, useReducedMotion } from 'motion/react'
+import { AnimatePresence, motion, useReducedMotion } from 'motion/react'
+import { useMemo } from 'react'
 import { sceneContent } from './content.ts'
-import { CountUp } from '../kit/CountUp.tsx'
-import { FramedDrawing } from '../kit/FramedDrawing.tsx'
+import { FlapBoard, type FlapCell, type FlapColumn } from '../kit/FlapBoard.tsx'
 import { QR } from '../kit/QR.tsx'
-import { MarginNote } from '../kit/MarginNote.tsx'
-import shot from '../assets/shot-showcase.webp'
+import type { SceneProps } from './index.ts'
 import './s06.css'
 
 const c = sceneContent('portfolio')
 
-/** Seconds between one name landing and the next. */
-const PACE = 0.07
-const FIRST = 0.9
+const COLUMNS: FlapColumn[] = [
+  { width: 2, align: 'right' },
+  { width: 39 },
+  { width: 27 },
+  { width: 2 },
+]
+const ROWS = Math.max(...c.pages.map((p) => p.rows.length))
+/** Left edge of each column on the stage: tile 19px, gap 2px, column gap 18px. */
+const COL_X = COLUMNS.reduce<number[]>((xs, _, k) => {
+  xs.push(k === 0 ? 200 : xs[k - 1] + COLUMNS[k - 1].width * 21 - 2 + 18)
+  return xs
+}, [])
+
+const PARTNERS = c.pages.slice(1).reduce((n, p) => n + p.rows.length, 0)
 
 /**
- * The whole registry, set as one field of type.
+ * The registry as a departures board, one page a press.
  *
- * All fifty names arrive one after another, in registry order, each rising
- * into place, so the room watches the portfolio being assembled rather than
- * reading a list. The seventeen built at HTPN are set in chalk and come
- * first; the thirty-three built by the hospitals we taught follow in cyan,
- * which is the point the speaker makes: most of this was not built by us.
- *
- * Once every name is down the field keeps breathing: each name brightens
- * and settles on its own slow cycle, out of step with its neighbours, like
- * lights in a building at night. That is a CSS opacity animation per name,
- * which the compositor runs without touching layout or paint.
+ * Page 1 is what HTPN built, pages 2 and 3 what the hospitals we taught
+ * built. Each press re-flaps the same board in place, so the change of
+ * page ripples down it the way a station board turns over: the room sees
+ * the second and third pages arrive on the board the first one was on,
+ * which is the argument, that most of the portfolio is not ours.
  */
-export function S06Portfolio() {
+export function S06Portfolio({ step }: SceneProps) {
   const reduced = useReducedMotion()
   const t = reduced ? 0 : 1
-  const landed = FIRST + c.apps.length * PACE
+  const page = c.pages[Math.min(step, c.pages.length - 1)]
+  const htpn = step === 0
+
+  const data = useMemo<FlapCell[][]>(
+    () =>
+      page.rows.map((r) => [
+        { text: r.no, tone: 'fb--dim' },
+        { text: r.name, tone: htpn ? '' : 'fb--partner' },
+        { text: r.at, tone: 'fb--at' },
+        { text: r.tier, tone: r.tier === 'T3' ? 'fb--t3' : r.tier === 'T1' ? 'fb--dim' : '' },
+      ]),
+    [page, htpn],
+  )
+
+  const before = c.pages.slice(1, step).reduce((n, p) => n + p.rows.length, 0)
+  const count = htpn
+    ? String(page.rows.length)
+    : `${before + 1}–${before + page.rows.length} of ${PARTNERS}`
 
   return (
     <div className="sc s06">
-      <div className="s06__head">
-        <CountUp {...c.total} className="s06__total" delay={0.2 * t} duration={1.2} />
-        <motion.span
-          className="s06__total-label"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.5, delay: 0.5 * t }}
+      <AnimatePresence mode="wait" initial={false}>
+        <motion.h1
+          key={step}
+          className="s06__title"
+          initial={{ opacity: 0, y: 10 * t }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: -8 * t, transition: { duration: 0.2 } }}
+          transition={{ duration: 0.45, ease: [0.16, 1, 0.3, 1] }}
         >
-          {c.total.label}
-        </motion.span>
-      </div>
+          {page.title} <span className="s06__count">{count}</span>
+        </motion.h1>
+      </AnimatePresence>
 
       <motion.p
-        className="s06__legend"
+        className="s06__page"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ duration: 0.5, delay: 0.7 * t }}
+        transition={{ duration: 0.4, delay: 0.3 * t }}
       >
-        <span className="s06__key s06__key--htpn">{c.legend.htpn}</span>
-        <span className="s06__key s06__key--partner">{c.legend.partner}</span>
+        Page {step + 1} / {c.pages.length} · {c.total}
       </motion.p>
 
-      <ul className="s06__field" aria-label="All fifty apps in the registry">
-        {c.apps.map((a, i) => (
-          <motion.li
-            key={a.name}
-            className={`s06__app s06__app--${a.by}`}
-            title={a.facility}
-            initial={{ opacity: 0, y: 18 * t }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.55, delay: (FIRST + i * PACE) * t, ease: [0.16, 1, 0.3, 1] }}
-          >
-            <span
-              className={reduced ? undefined : 's06__glow'}
-              style={{
-                animationDelay: `${(landed + ((i * 7) % 13) * 0.55).toFixed(2)}s`,
-                animationDuration: `${(5.5 + ((i * 5) % 9) * 0.45).toFixed(2)}s`,
-              }}
-            >
-              {a.name}
-            </span>
-          </motion.li>
+      <div className="s06__heads" aria-hidden="true">
+        {[c.columns.no, c.columns.name, c.columns.at, c.columns.tier].map((h, k) => (
+          <span key={h} style={{ left: COL_X[k] - 200 }} className={k === 3 ? 's06__head-tier' : undefined}>
+            {h}
+          </span>
+        ))}
+      </div>
+
+      <FlapBoard className="s06__board" columns={COLUMNS} rows={ROWS} data={data} delay={0.35 * t} />
+
+      {/* the same rows, for anyone not watching the board */}
+      <ul className="s06__sr">
+        {page.rows.map((r) => (
+          <li key={r.no}>
+            {r.no} {r.name}, {r.at}, {r.tier}
+          </li>
         ))}
       </ul>
 
       <motion.div
-        className="s06__panel"
-        initial={{ opacity: 0, y: 14 * t }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6, delay: 0.4 * t }}
+        className="s06__foot"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.5, delay: 1.2 * t }}
       >
-        <FramedDrawing src={shot} alt="The HTPN showcase site" width={356} height={200} delay={0.5 * t} />
-        <QR code="showcase" size={150} delay={0.9 * t} />
-        <span className="s06__url">htpn-showcase-v2.vercel.app</span>
+        <QR code="showcase" size={124} />
+        <div className="s06__foot-text">
+          <span className="s06__url">htpn-showcase-v2.vercel.app</span>
+          <span className="s06__line">{c.line}</span>
+        </div>
       </motion.div>
-
-      <MarginNote className="s06__note" delay={landed * t} width={900} rotate={-0.9}>
-        {c.line}
-      </MarginNote>
     </div>
   )
 }

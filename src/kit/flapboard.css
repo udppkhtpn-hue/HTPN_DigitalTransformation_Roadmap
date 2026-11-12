@@ -1,0 +1,22 @@
+.fb { display: flex; flex-direction: column; gap: 4px; }
+.fb__row { display: flex; gap: 18px; }
+.fb__col { display: flex; gap: 2px; }
+
+/* One flap: a dark tile with a hinge across the middle. */
+.fb__t {
+  position: relative;
+  width: 19px; height: 30px;
+  display: flex; align-items: center; justify-content: center;
+  background: #0b1a31;
+  border-radius: 2px;
+  color: var(--chalk);
+}
+.fb__t::after {
+  content: ''; position: absolute; left: 0; right: 0; top: 50%; height: 1px;
+  background: rgba(4, 10, 22, 0.9);
+}
+.fb__c {
+  display: block;
+  font-family: var(--font-mono); font-size: 22px; line-height: 1; font-weight: 500;
+  transform-origin: 50% 50%;
+}

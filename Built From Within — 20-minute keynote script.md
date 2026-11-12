@@ -4,7 +4,7 @@ Nov 1, 2026 · @Fairis
 
 ## How to use this script
 
-The script runs about 20 minutes: 2,826 spoken words at 140 words a minute (20:11), plus about 30 seconds where the Innovathon reel plays on its own. It covers all 20 sheets and 50 presses, and every figure in it comes from the deck brief.
+The script runs about 20 minutes: 2,826 spoken words at 140 words a minute (20:11), plus about 30 seconds where the Innovathon reel plays on its own. It covers all 20 sheets and 52 presses, and every figure in it comes from the deck brief.
 
 Each sheet shows its spoken time and word count. The line in square brackets is what the press brings up, so click at the start of the paragraph beneath it. The last line of each sheet leads into the next click.
 
@@ -108,15 +108,19 @@ Then came the part that matters most. The hospitals we taught started building t
 
 Here is what has been built.
 
-### S-07 The portfolio  (43s, 101 words)
+### S-07 The portfolio  (50s, 117 words)
 
-*\[Press 1: All fifty app names assemble one by one, HTPN's seventeen in white and the partners' thirty-three in blue, beside the showcase QR code\]*
+*\[Press 1: A departures board flaps in: page 1 of 3, the seventeen apps built at HTPN, with where each was built and its proposed tier\]*
 
-These are real tools in daily use, sorted by whose day they improve. For patients: GynaeClerk, AntenatalClerk, a fetal kick chart. For doctors: theatre scheduling, an AI blood-loss estimator, a clinical document checker. For management: an emergency department dashboard, rostering, governance audits.
+These are real tools in daily use, and all fifty are now in one registry. Seventeen were built here. For patients: GynaeClerk, AntenatalClerk, a fetal kick chart. For doctors: theatre scheduling, an AI blood-loss estimator, a clinical document checker. For management: an emergency department dashboard, rostering, governance audits.
 
-And look at the colours. All fifty are now in one registry. Seventeen were built here. The other thirty-three were built by the hospitals we taught.
+*\[Press 2: The board turns over to page 2: seventeen apps built by Hospital Port Dickson and Hospital Cyberjaya\]*
 
-Built by clinicians, for clinicians. The QR code takes you to every one of them. Scan it now, or after the session.
+The other thirty-three were built by the hospitals we taught. Hospital Port Dickson alone has built fourteen.
+
+*\[Press 3: Page 3: the last sixteen, from Penang, Johor, Sarawak, Selangor and the national services\]*
+
+And the rest come from Penang, Johor, Sarawak, Selangor and the national services. Built by clinicians, for clinicians. The QR code takes you to every one of them. Scan it now, or after the session.
 
 So we brought these builders into one room.
 
@@ -356,7 +360,7 @@ The whole talk runs 20:41: 20:11 spoken plus about 30 seconds of the reel playin
 | S-04 How we led it | 177 | 1:16 |
 | S-05 Results | 79 | 0:34 |
 | S-06 Where we've taught | 128 | 0:55 |
-| S-07 The portfolio | 91 | 0:39 |
+| S-07 The portfolio | 117 | 0:50 |
 | S-08 Innovathon | 108 | 0:46 + 0:30 reel |
 | S-09 The gap | 155 | 1:06 |
 | S-10 The national picture | 156 | 1:07 |

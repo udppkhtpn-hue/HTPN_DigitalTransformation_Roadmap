@@ -1,71 +1,47 @@
 .s06 { position: absolute; inset: 0; padding: 0; }
 
-.s06__head {
-  position: absolute; left: 200px; top: 142px;
-  display: flex; align-items: baseline; gap: 22px;
+.s06__title {
+  position: absolute; left: 200px; top: 140px; margin: 0;
+  font-size: 50px; line-height: 1; color: var(--chalk); letter-spacing: -0.01em;
+  font-variation-settings: 'wght' 600, 'wdth' 92;
 }
-.s06__total { font-size: 96px; line-height: 1; letter-spacing: -0.03em; }
-.s06__total-label {
-  font-size: 46px; color: var(--chalk);
-  font-variation-settings: 'wght' 560, 'wdth' 92;
+.s06__count { margin-left: 14px; color: var(--signal); }
+
+.s06__page {
+  position: absolute; right: 204px; top: 158px; margin: 0;
+  font-family: var(--font-mono); font-size: 22px; letter-spacing: 0.06em;
+  text-transform: uppercase; color: var(--line);
 }
 
-.s06__legend {
-  position: absolute; left: 200px; top: 258px; margin: 0;
-  display: flex; gap: 40px;
-  font-family: var(--font-mono); font-size: 24px; letter-spacing: 0.02em;
+/* Column labels over the board, mono, like a printed station header. */
+.s06__heads { position: absolute; left: 200px; top: 214px; width: 1520px; height: 24px; }
+.s06__heads span {
+  position: absolute; top: 0;
+  font-family: var(--font-mono); font-size: 18px; letter-spacing: 0.1em;
+  text-transform: uppercase; color: var(--line); opacity: 0.8; white-space: nowrap;
 }
-.s06__key { display: inline-flex; align-items: center; gap: 12px; }
-.s06__key::before {
-  content: ''; width: 12px; height: 12px; transform: rotate(45deg);
-}
-.s06__key--htpn { color: var(--chalk); }
-.s06__key--htpn::before { background: var(--chalk); }
-.s06__key--partner { color: var(--line); }
-.s06__key--partner::before { background: var(--line); }
+.s06__head-tier { transform: translateX(-60%); }
 
-/* All fifty names as one flowing field, a diamond between each. */
-.s06__field {
-  position: absolute; left: 200px; top: 318px; width: 1200px;
-  margin: 0; padding: 0; list-style: none;
-  display: flex; flex-wrap: wrap; align-items: baseline; column-gap: 0; row-gap: 4px;
-}
-.s06__app {
-  display: inline-flex; align-items: center;
-  font-size: 26px; line-height: 1.3; white-space: nowrap;
-  font-variation-settings: 'wght' 500, 'wdth' 88;
-}
-.s06__app::after {
-  content: ''; width: 6px; height: 6px; margin: 0 15px;
-  background: var(--line); opacity: 0.35; transform: rotate(45deg);
-}
-.s06__app:last-child::after { display: none; }
-.s06__app--htpn { color: var(--chalk); }
-.s06__app--partner { color: var(--line); }
+.s06__board { position: absolute; left: 200px; top: 244px; }
 
-/* Each name brightens and settles on its own slow cycle. */
-.s06__glow {
-  opacity: 0.62;
-  animation-name: s06-glow;
-  animation-timing-function: ease-in-out;
-  animation-iteration-count: infinite;
-  animation-fill-mode: backwards;
-}
-@keyframes s06-glow {
-  0%, 100% { opacity: 0.62; }
-  45%, 55% { opacity: 1; }
+/* Tile colours by column and row. */
+.fb__t.fb--dim { color: var(--line); opacity: 0.7; }
+.fb__t.fb--partner { color: var(--line); }
+.fb__t.fb--at { color: var(--line); opacity: 0.85; }
+.fb__t.fb--t3 { color: var(--signal); }
+
+.s06__sr {
+  position: absolute; width: 1px; height: 1px; overflow: hidden;
+  clip: rect(0 0 0 0); white-space: nowrap; margin: 0; padding: 0;
 }
 
-/* The live site, at the side of its own portfolio. */
-.s06__panel {
-  position: absolute; left: 1440px; top: 318px; width: 356px;
-  display: flex; flex-direction: column; gap: 18px;
+.s06__foot {
+  position: absolute; left: 200px; top: 848px;
+  display: flex; align-items: center; gap: 26px;
 }
-.s06__url {
-  font-family: var(--font-mono); font-size: 22px; line-height: 1.3;
-  color: var(--line); letter-spacing: 0.01em;
-}
-
-.s06__note {
-  position: absolute; left: 200px; bottom: 150px; font-size: 52px;
+.s06__foot-text { display: flex; flex-direction: column; gap: 10px; }
+.s06__url { font-family: var(--font-mono); font-size: 22px; color: var(--line); }
+.s06__line {
+  font-family: var(--font-human); font-style: italic; font-size: 44px;
+  line-height: 1; color: var(--signal);
 }

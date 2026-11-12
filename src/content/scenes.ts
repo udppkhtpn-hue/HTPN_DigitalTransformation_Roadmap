@@ -136,11 +136,21 @@ export interface WhereTaught {
   photos: string
 }
 
+export interface BoardRow {
+  /** Registry number. */
+  no: string
+  name: string
+  /** Where it was built, as the registry records it. */
+  at: string
+  /** The registry's proposed risk tier. */
+  tier: 'T1' | 'T2' | 'T3'
+}
+
 export interface Portfolio {
-  /** Every app in the HTPN App Registry (Phase 3), as it names them. */
-  apps: { name: string; by: 'htpn' | 'partner'; facility?: string }[]
-  total: Figure
-  legend: { htpn: string; partner: string }
+  /** Every app in the HTPN App Registry (Phase 3), one board page a press. */
+  pages: { title: string; rows: BoardRow[] }[]
+  total: string
+  columns: { no: string; name: string; at: string; tier: string }
   centre: { image: string; url: string }
   line: string
 }
@@ -490,64 +500,79 @@ export const SCENES: Scene[] = [
     id: 'portfolio',
     sheet: 'S-07',
     title: 'The portfolio',
-    steps: 1,
+    steps: 3,
     moment: 0,
-    seconds: 43,
+    seconds: 50,
     content: {
-      apps: [
-        { name: "GynaeClerk", by: 'htpn' },
-        { name: "AntenatalClerk", by: 'htpn' },
-        { name: "Fetal Kick Chart", by: 'htpn' },
-        { name: "Skin Diary Generator", by: 'htpn' },
-        { name: "OT Scheduling System", by: 'htpn' },
-        { name: "Gynae Census Web Form", by: 'htpn' },
-        { name: "EBL Estimator AI", by: 'htpn' },
-        { name: "TherapyAI", by: 'htpn' },
-        { name: "Clinical Document Checker", by: 'htpn' },
-        { name: "Dashboard ED", by: 'htpn' },
-        { name: "Dashboard DLP", by: 'htpn' },
-        { name: "Roster Scheduling Web App", by: 'htpn' },
-        { name: "CGR Web Form", by: 'htpn' },
-        { name: "DLP Reporting Web Form", by: 'htpn' },
-        { name: "Slide Deck OCR PDF Editor", by: 'htpn' },
-        { name: "Portal Aktiviti JPPOBG", by: 'htpn' },
-        { name: "HTPN Digital Showcase Website", by: 'htpn' },
-        { name: "Pocket Nurse", by: 'partner', facility: "BPF JKN Selangor" },
-        { name: "PhysioMeasurePro", by: 'partner', facility: "Hospital Aman Sarawak" },
-        { name: "TBIS 10A-1 Digital", by: 'partner', facility: "Hospital Cyberjaya" },
-        { name: "Duty Rotator", by: 'partner', facility: "Hospital Cyberjaya" },
-        { name: "PathoLab Pro", by: 'partner', facility: "Hospital Cyberjaya" },
-        { name: "Phlebotomy Appointment System", by: 'partner', facility: "Hospital Marudi" },
-        { name: "MOH HIRARC Portal", by: 'partner', facility: "Hospital Mukah" },
-        { name: "Kempen Derma Darah", by: 'partner', facility: "Hospital Port Dickson" },
-        { name: "Maternal Assessment Center registration", by: 'partner', facility: "Hospital Port Dickson" },
-        { name: "Klinik Diabetes Pintar", by: 'partner', facility: "Hospital Port Dickson" },
-        { name: "Akasia Ward MO Task Manager", by: 'partner', facility: "Hospital Port Dickson" },
-        { name: "e-Lampiran D (drug formulary)", by: 'partner', facility: "Hospital Port Dickson" },
-        { name: "MedPulse MAR", by: 'partner', facility: "Hospital Port Dickson" },
-        { name: "Psychiatry Department Dashboard (HPD)", by: 'partner', facility: "Hospital Port Dickson" },
-        { name: "OT Unit Staff Movement & Leave", by: 'partner', facility: "Hospital Port Dickson" },
-        { name: "Aduan HPD complaints", by: 'partner', facility: "Hospital Port Dickson" },
-        { name: "Vehicle Booking", by: 'partner', facility: "Hospital Port Dickson" },
-        { name: "Credentialing & Privileging Portal", by: 'partner', facility: "Hospital Port Dickson" },
-        { name: "Nursing Daily Census (HPD)", by: 'partner', facility: "Hospital Port Dickson" },
-        { name: "IQC Glucometer POCT", by: 'partner', facility: "Hospital Port Dickson" },
-        { name: "Memory Clinic Intake", by: 'partner', facility: "Hospital Port Dickson / NMS" },
-        { name: "HPP OSH-Alert", by: 'partner', facility: "Hospital Pulau Pinang" },
-        { name: "Sistem eBooking", by: 'partner', facility: "Hospital Pulau Pinang" },
-        { name: "Patient Safety Incident Reporting", by: 'partner', facility: "Hospital Sultanah Aminah JB" },
-        { name: "E-Kehadiran Kursus", by: 'partner', facility: "JKN Sarawak" },
-        { name: "Mental Wellbeing Monitoring Portal", by: 'partner', facility: "JKN Sarawak" },
-        { name: "MedMove Pro", by: 'partner', facility: "JKN Sarawak" },
-        { name: "MEDEVAC E-Request Portal", by: 'partner', facility: "JKN Sarawak" },
-        { name: "Klinik Reumatologi pre-consultation", by: 'partner', facility: "National Medical Services" },
-        { name: "CardioFlow HF Clinic Portal", by: 'partner', facility: "National Medical Services" },
-        { name: "Ward Jasmin pharmacy stock", by: 'partner', facility: "Not stated" },
-        { name: "Internal Medicine Duty Planner", by: 'partner', facility: "Not stated" },
-        { name: "SJAM KPW Dispatch & Analytics", by: 'partner', facility: "St John Ambulance, WP" },
+      pages: [
+        {
+          title: "Built at HTPN",
+          rows: [
+            { no: '01', name: "GynaeClerk", at: "HTPN Kajang", tier: 'T2' },
+            { no: '02', name: "AntenatalClerk", at: "HTPN Kajang", tier: 'T2' },
+            { no: '03', name: "Fetal Kick Chart", at: "HTPN Kajang", tier: 'T3' },
+            { no: '10', name: "Skin Diary Generator", at: "HTPN Kajang", tier: 'T2' },
+            { no: '11', name: "OT Scheduling System", at: "HTPN Kajang", tier: 'T3' },
+            { no: '12', name: "Gynae Census Web Form", at: "HTPN Kajang", tier: 'T2' },
+            { no: '13', name: "EBL Estimator AI", at: "HTPN Kajang", tier: 'T3' },
+            { no: '14', name: "TherapyAI", at: "HTPN Kajang", tier: 'T3' },
+            { no: '15', name: "Clinical Document Checker", at: "HTPN Kajang", tier: 'T1' },
+            { no: '23', name: "Dashboard ED", at: "HTPN Kajang", tier: 'T3' },
+            { no: '24', name: "Dashboard DLP", at: "HTPN Kajang", tier: 'T2' },
+            { no: '25', name: "Roster Scheduling Web App", at: "HTPN Kajang", tier: 'T2' },
+            { no: '26', name: "CGR Web Form", at: "HTPN Kajang", tier: 'T2' },
+            { no: '27', name: "DLP Reporting Web Form", at: "HTPN Kajang", tier: 'T2' },
+            { no: '28', name: "Slide Deck OCR PDF Editor", at: "HTPN Kajang", tier: 'T1' },
+            { no: '29', name: "Portal Aktiviti JPPOBG", at: "HTPN Kajang", tier: 'T2' },
+            { no: '31', name: "HTPN Digital Showcase Website", at: "HTPN Kajang", tier: 'T2' },
+          ],
+        },
+        {
+          title: "Built by the hospitals we taught",
+          rows: [
+            { no: '04', name: "Kempen Derma Darah", at: "Hospital Port Dickson", tier: 'T3' },
+            { no: '05', name: "Maternal Assessment Center registration", at: "Hospital Port Dickson", tier: 'T3' },
+            { no: '06', name: "Klinik Diabetes Pintar", at: "Hospital Port Dickson", tier: 'T2' },
+            { no: '18', name: "Akasia Ward MO Task Manager", at: "Hospital Port Dickson", tier: 'T3' },
+            { no: '19', name: "e-Lampiran D (drug formulary)", at: "Hospital Port Dickson", tier: 'T1' },
+            { no: '21', name: "MedPulse MAR", at: "Hospital Port Dickson", tier: 'T3' },
+            { no: '40', name: "Psychiatry Department Dashboard (HPD)", at: "Hospital Port Dickson", tier: 'T2' },
+            { no: '41', name: "OT Unit Staff Movement & Leave", at: "Hospital Port Dickson", tier: 'T2' },
+            { no: '42', name: "Aduan HPD complaints", at: "Hospital Port Dickson", tier: 'T2' },
+            { no: '43', name: "Vehicle Booking", at: "Hospital Port Dickson", tier: 'T2' },
+            { no: '44', name: "Credentialing & Privileging Portal", at: "Hospital Port Dickson", tier: 'T3' },
+            { no: '45', name: "Nursing Daily Census (HPD)", at: "Hospital Port Dickson", tier: 'T3' },
+            { no: '46', name: "IQC Glucometer POCT", at: "Hospital Port Dickson", tier: 'T3' },
+            { no: '07', name: "Memory Clinic Intake", at: "Hospital Port Dickson / NMS", tier: 'T2' },
+            { no: '22', name: "TBIS 10A-1 Digital", at: "Hospital Cyberjaya", tier: 'T2' },
+            { no: '47', name: "Duty Rotator", at: "Hospital Cyberjaya", tier: 'T2' },
+            { no: '48', name: "PathoLab Pro", at: "Hospital Cyberjaya", tier: 'T2' },
+          ],
+        },
+        {
+          title: "Built by the hospitals we taught",
+          rows: [
+            { no: '20', name: "Pocket Nurse", at: "BPF JKN Selangor", tier: 'T3' },
+            { no: '17', name: "PhysioMeasurePro", at: "Hospital Aman Sarawak", tier: 'T2' },
+            { no: '16', name: "Phlebotomy Appointment System", at: "Hospital Marudi", tier: 'T2' },
+            { no: '36', name: "MOH HIRARC Portal", at: "Hospital Mukah", tier: 'T2' },
+            { no: '37', name: "HPP OSH-Alert", at: "Hospital Pulau Pinang", tier: 'T2' },
+            { no: '38', name: "Sistem eBooking", at: "Hospital Pulau Pinang", tier: 'T2' },
+            { no: '30', name: "Patient Safety Incident Reporting", at: "Hospital Sultanah Aminah JB", tier: 'T3' },
+            { no: '32', name: "E-Kehadiran Kursus", at: "JKN Sarawak", tier: 'T2' },
+            { no: '33', name: "Mental Wellbeing Monitoring Portal", at: "JKN Sarawak", tier: 'T2' },
+            { no: '34', name: "MedMove Pro", at: "JKN Sarawak", tier: 'T3' },
+            { no: '35', name: "MEDEVAC E-Request Portal", at: "JKN Sarawak", tier: 'T3' },
+            { no: '08', name: "Klinik Reumatologi pre-consultation", at: "National Medical Services", tier: 'T2' },
+            { no: '09', name: "CardioFlow HF Clinic Portal", at: "National Medical Services", tier: 'T2' },
+            { no: '39', name: "Ward Jasmin pharmacy stock", at: "Not stated", tier: 'T2' },
+            { no: '50', name: "Internal Medicine Duty Planner", at: "Not stated", tier: 'T2' },
+            { no: '49', name: "SJAM KPW Dispatch & Analytics", at: "St John Ambulance, WP", tier: 'T3' },
+          ],
+        },
       ],
-      total: { value: 50, label: 'apps in the registry', tone: 'signal' },
-      legend: { htpn: '17 built at HTPN', partner: '33 built by the hospitals we taught' },
+      total: '50 apps in the registry',
+      columns: { no: 'No.', name: 'App', at: 'Built at', tier: 'Tier (proposed)' },
       centre: {
         image: 'shot-showcase.webp',
         url: 'https://htpn-showcase-v2.vercel.app/',
