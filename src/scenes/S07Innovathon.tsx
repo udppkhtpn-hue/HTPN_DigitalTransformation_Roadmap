@@ -62,6 +62,8 @@ const CAT_TONE: Record<string, string> = {
   'Management productivity': 'management',
 }
 const ORD = ['', 'st', 'nd', 'rd']
+/** Seconds between one category starting and the next. */
+const COL_GAP = 1.5
 
 export function S07Innovathon({ step }: SceneProps) {
   const back = step >= 1
@@ -201,37 +203,48 @@ export function S07Innovathon({ step }: SceneProps) {
             >
               {c.winnersHeading}
             </motion.h2>
-            {c.winners.map((col, i) => (
-              <div className={`s07__wcol s07__wcol--${CAT_TONE[col.category]}`} key={col.category} style={{ left: 200 + i * 515 }}>
-                <motion.div
-                  className="s07__wcat"
-                  initial={{ scaleX: 0 }}
-                  animate={{ scaleX: 1 }}
-                  transition={{ duration: 0.5, delay: 0.5 + i * 0.15, ease: [0.16, 1, 0.3, 1] }}
-                >
-                  <span>{col.category}</span>
-                </motion.div>
-                {col.entries.map((e, k) => (
+            {/* One category at a time, left to right; within each, first
+                place lands large, then second and third beneath it. */}
+            {c.winners.map((col, i) => {
+              const at = 0.5 + i * COL_GAP
+              return (
+                <div className={`s07__wcol s07__wcol--${CAT_TONE[col.category]}`} key={col.category} style={{ left: 200 + i * 515 }}>
                   <motion.div
-                    className={`s07__win s07__win--${e.rank}`}
-                    key={e.app}
-                    initial={{ opacity: 0, y: 22 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5, delay: 0.85 + i * 0.15 + k * 0.32, ease: [0.16, 1, 0.3, 1] }}
+                    className="s07__wcat"
+                    initial={{ scaleX: 0, opacity: 0 }}
+                    animate={{ scaleX: 1, opacity: 1 }}
+                    transition={{ duration: 0.5, delay: at, ease: [0.16, 1, 0.3, 1] }}
                   >
-                    <span className="s07__rank">
-                      {e.rank}
-                      <small>{ORD[e.rank]}</small>
-                    </span>
-                    <img className="s07__wphoto" src={PHOTO[e.photo]} alt="" width={192} height={128} />
-                    <span className="s07__wtext">
-                      <b>{e.app}</b>
-                      <i>{e.team}</i>
-                    </span>
+                    <span>{col.category}</span>
                   </motion.div>
-                ))}
-              </div>
-            ))}
+                  {col.entries.map((e, k) => (
+                    <motion.div
+                      className={`s07__win s07__win--${e.rank}`}
+                      key={e.app}
+                      initial={{ opacity: 0, y: 22, scale: e.rank === 1 ? 0.96 : 1 }}
+                      animate={{ opacity: 1, y: 0, scale: 1 }}
+                      transition={{ duration: 0.55, delay: at + 0.35 + k * 0.3, ease: [0.16, 1, 0.3, 1] }}
+                    >
+                      <span className="s07__rank">
+                        {e.rank}
+                        <small>{ORD[e.rank]}</small>
+                      </span>
+                      <img
+                        className="s07__wphoto"
+                        src={PHOTO[e.photo]}
+                        alt=""
+                        width={e.rank === 1 ? 462 : 135}
+                        height={e.rank === 1 ? 236 : 90}
+                      />
+                      <span className="s07__wtext">
+                        <b>{e.app}</b>
+                        <i>{e.team}</i>
+                      </span>
+                    </motion.div>
+                  ))}
+                </div>
+              )
+            })}
           </motion.div>
         )}
       </AnimatePresence>

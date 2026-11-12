@@ -144,7 +144,7 @@ The AI Productivity Intelligence Innovathon, on the twenty-first of July. Two hu
 
 The model is spreading: Hospital Pulau Pinang, Kepala Batas, Sultanah Aminah, JKN Sarawak, and the national O&G, FMS and Internal Medicine services.
 
-*\[Press 3: The winners: three categories, first to third, each with its team on stage\]*
+*\[Press 3: The winners, one category at a time: first place large in full colour, then second and third\]*
 
 And these are the winners, three in each category. In the clinician journey, AMS Round Manager Pro from our pharmacy. In the patient journey, Medexa, from Hospital Kepala Batas, a hospital we had taught. In management productivity, MedMove Pro, from Hospital Sentosa. Six of the nine came from our own teams; three from other hospitals.
 

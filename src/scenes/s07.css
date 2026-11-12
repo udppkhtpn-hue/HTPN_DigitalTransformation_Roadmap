@@ -170,21 +170,34 @@
 .s07__wcol--management { color: var(--line); }
 
 .s07__win {
-  margin-top: 14px; height: 156px; padding: 14px 14px 14px 10px;
-  display: grid; grid-template-columns: 54px 192px 1fr; gap: 14px; align-items: center;
+  margin-top: 12px; height: 118px; padding: 12px 14px 12px 10px;
+  display: grid; grid-template-columns: 54px 135px 1fr; gap: 14px; align-items: center;
   background: rgba(16, 35, 63, 0.88); border: 1px solid rgba(124, 196, 242, 0.28);
 }
-.s07__win--1 { border-color: rgba(245, 165, 36, 0.75); }
+/* First place: the photograph runs the width of the card, rank set on it,
+   name and team beneath. */
+.s07__win--1 {
+  height: auto; padding: 0 0 14px;
+  grid-template-columns: 1fr; grid-template-rows: auto auto; gap: 12px;
+  position: relative; border-color: rgba(245, 165, 36, 0.8);
+}
 .s07__rank {
-  align-self: start; font-size: 46px; line-height: 1; color: var(--chalk);
+  align-self: start; font-size: 42px; line-height: 1; color: var(--chalk);
   font-variation-settings: 'wght' 700, 'wdth' 90; text-align: center;
 }
-.s07__rank small { display: block; margin-top: 2px; font-family: var(--font-mono); font-size: 16px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--line); }
-.s07__win--1 .s07__rank { color: var(--signal); }
-.s07__wphoto { display: block; border: 1px solid rgba(124, 196, 242, 0.5); }
-.s07__wtext { display: flex; flex-direction: column; gap: 8px; min-width: 0; }
+.s07__rank small { display: block; margin-top: 2px; font-family: var(--font-mono); font-size: 15px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--line); }
+.s07__win--1 .s07__rank {
+  position: absolute; left: 12px; top: 12px; z-index: 1;
+  padding: 8px 10px 6px; background: rgba(8, 18, 36, 0.85); border: 1px solid var(--signal);
+  color: var(--signal); font-size: 46px;
+}
+.s07__wphoto { display: block; object-fit: cover; border: 1px solid rgba(124, 196, 242, 0.5); }
+.s07__win--1 .s07__wphoto { width: 100%; height: 236px; object-position: 50% 35%; border: 0; }
+.s07__wtext { display: flex; flex-direction: column; gap: 6px; min-width: 0; }
+.s07__win--1 .s07__wtext { padding: 0 18px; }
 .s07__wtext b {
-  font-size: 23px; line-height: 1.15; font-weight: normal; color: var(--chalk);
+  font-size: 22px; line-height: 1.15; font-weight: normal; color: var(--chalk);
   font-variation-settings: 'wght' 600, 'wdth' 88;
 }
+.s07__win--1 .s07__wtext b { font-size: 28px; }
 .s07__wtext i { font-style: normal; font-size: 18px; line-height: 1.25; color: var(--line); }
