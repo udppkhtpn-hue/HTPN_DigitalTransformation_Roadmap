@@ -30,7 +30,6 @@ const TOP_EDGE: Partial<Record<SceneId, number>> = {
   'national-picture': 100,
   'vision-2028': 107,
   roadmap: 112,
-  'phase-registry': 100,
   'phase-foundations': 100,
   'command-centre': 120,
   'command-centre-build': 100,

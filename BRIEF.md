@@ -5,7 +5,7 @@ leaders (Microsoft, Grab, Shopee) at the Executive Digital Leadership Programme.
 Speaker: Dr Ferwahn Fairis bin Ab Karim, Acting Deputy Director, Hospital Tengku
 Permaisuri Norashikin (HTPN), Kajang, Ministry of Health Malaysia.
 
-20 sheets · 54 clicker presses · planned 20:41 against a 5:00 slot
+20 sheets · 54 clicker presses · planned 20:49 against a 5:00 slot
 
 ## Ground rules for this deck
 
@@ -287,11 +287,12 @@ Script — So the roadmap runs on two tracks. One is HTPN as the lighthouse; the
 Presenter cues (not on screen) — Phase 1 in full, from sheets 3 to 8. Started April 2025, fourteen months before the Cabinet directive of 5 June 2026. Leaders learned first (Monash, EDLP with MIT Sloan and ASB, LSE); our own syllabus, so everyone leaves having built something; quick wins shipped in weeks; a national Innovathon to reward the builders. 1,300+ staff trained, 50+ in-house apps in active use, 35+ workshops (15 by external invitation), RM0 software licensing. Innovathon 2026, 21 July: 200 delegates, 28 finalists, 9 winners, 13 external judges, covered by BERNAMA. Done when. Phase 3: every tool is registered, owned, and tagged by reach. Phase 4: the Command Centre is used daily and flow beats baseline, and at least one general app runs at another KKM hospital. Phase 5: other KKM sites adopt it.
 
 ### S-13 Phase 3: the registry
-2 presses · 50s · 69 words spoken (83 wpm)
+2 presses · 58s · 69 words spoken (71 wpm)
 
 On screen —
 heading: A registry with governance in proportion to risk
 kicker: Phase 3 · Consolidate and Govern · Nov 2026 – Jun 2027
+note: All 50 apps registered · tiers proposed, for each owner to confirm
 tiers:
   - name: Experimental; body: Learning and testing with dummy or de-identified data. Built freely.
   - name: Departmental; body: Routine use in one unit. Needs a named owner, documentation and a backup maintainer.
@@ -404,11 +405,11 @@ Script — Here's the lesson for me as a leader. Phase one was won through cultu
 
 ## Totals
 
-1391 words spoken · 20:41 planned · 54 presses
+1391 words spoken · 20:49 planned · 54 presses
 
 ## Known open points
 
-- Planned running time is 20:41 against a 5:00 slot, 15:41 over.
+- Planned running time is 20:49 against a 5:00 slot, 15:49 over.
 - Fastest-spoken sheets: S-10 (109 wpm), S-18 (95 wpm), S-16 (93 wpm).
 - S-08 plays a reel that runs longer than its script; it sits on its own press and can be cut short by advancing early.
 - S-12: some lines did not fit on the sheet at 28px and live in the presenter cues, not on screen.

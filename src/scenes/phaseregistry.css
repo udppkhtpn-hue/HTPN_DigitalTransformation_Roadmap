@@ -1,31 +1,49 @@
 .pr { position: absolute; inset: 0; padding: 0; }
 
 .pr__head {
-  position: absolute; top: 104px; left: 200px; width: 1300px; margin: 0;
-  font-size: 84px; line-height: 1.02; letter-spacing: -0.02em; color: var(--chalk);
+  position: absolute; top: 152px; left: 200px; margin: 0;
+  font-size: 56px; line-height: 1; letter-spacing: -0.02em; color: var(--chalk);
+  font-variation-settings: 'wght' 640, 'wdth' 94; white-space: nowrap;
 }
 .pr__kicker {
-  position: absolute; top: 300px; left: 200px; margin: 0;
-  font-family: var(--font-mono); font-size: var(--t-dim); color: var(--line);
-  letter-spacing: 0.03em;
+  position: absolute; top: 220px; left: 200px; margin: 0;
+  font-family: var(--font-mono); font-size: 19px; color: var(--line);
+  letter-spacing: 0.03em; white-space: nowrap;
 }
+.pr__kicker span { opacity: 0.75; }
 
+/* The tier, its count and what it asks for, on the left of each band. */
 .pr__tier {
-  position: absolute; left: 226px; width: 590px;
+  position: absolute; left: 224px; width: 410px;
   display: flex; flex-direction: column; gap: 6px;
 }
 .pr__tier-name {
-  font-size: 40px; line-height: 1.05; color: var(--chalk);
+  font-size: 34px; line-height: 1.05; color: var(--chalk);
   font-variation-settings: 'wght' 600, 'wdth' 90;
 }
 .pr__tier-name i {
   font-family: var(--font-mono); font-style: normal; font-weight: 400;
-  font-size: var(--t-dim); color: var(--line); margin-right: 10px;
+  font-size: 22px; color: var(--line); margin-right: 8px;
 }
+.pr__count { margin-left: 10px; font-weight: 650; }
+.pr__count--t1 { color: var(--line); }
+.pr__count--t2 { color: var(--chalk); }
+.pr__count--t3 { color: var(--signal); }
 .pr__tier-body {
-  font-size: var(--t-dim); line-height: 1.25; color: var(--line);
-  font-variation-settings: 'wght' 400, 'wdth' 90;
+  font-size: 22px; line-height: 1.25; color: var(--line);
+  font-variation-settings: 'wght' 400, 'wdth' 88;
 }
+
+/* An app's name, set on the line of the dot that marks its slot. */
+.pr__app {
+  position: absolute;
+  max-width: 330px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+  font-size: 20px; line-height: 22px;
+  font-variation-settings: 'wght' 480, 'wdth' 80;
+}
+.pr__app--t1 { color: var(--line); opacity: 0.9; }
+.pr__app--t2 { color: var(--chalk); }
+.pr__app--t3 { color: var(--chalk); font-variation-settings: 'wght' 600, 'wdth' 80; }
 
 .pr__footer {
   position: absolute; left: 200px; top: 896px; margin: 0;

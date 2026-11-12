@@ -9,6 +9,8 @@
  * governance and the answer are the same fifty objects seen three times.
  */
 
+import { REGISTRY } from '../content/registry.ts'
+
 export interface Dot {
   id: number
   /** Scattered position, S-10. */
@@ -64,24 +66,34 @@ export function streamPosition(d: Dot): { x: number; y: number } {
 /**
  * The three risk tiers on the registry sheet.
  *
- * Fifty dots, three horizontal bands. The split is even by construction
- * (id mod 3) because nothing in the source says how many apps sit in each
- * tier, and a lopsided pyramid would quietly assert a number nobody gave.
+ * Dot `id` is app number `id + 1` in the HTPN App Registry, and each files
+ * into the tier the registry proposes for it: 3 experimental, 30
+ * departmental, 17 hospital-critical. The bands are sized to hold their
+ * own apps, three to a row, so a dot lands on the slot beside its own name.
+ * Index 0 is Tier 1, at the top; Tier 3, the heaviest, sits at the bottom.
  */
 export const TIER_BANDS = [
-  { y0: 370, h: 150 },
-  { y0: 540, h: 150 },
-  { y0: 710, h: 150 },
+  { y0: 254, h: 110 },
+  { y0: 378, h: 280 },
+  { y0: 672, h: 196 },
 ]
 
-export const tierOf = (d: Dot) => d.id % 3
+/** Three columns of app slots to the right of the tier descriptions. */
+export const SLOT = { x0: 668, colW: 362, rowH: 27, cols: 3, pad: 16 }
 
-/** Where a dot sits once it has been filed into its tier. */
+export const tierOf = (d: Dot) => REGISTRY[d.id].tier - 1
+
+/** Each app's place within its own tier, in registry order. */
+const RANK = REGISTRY.map((a) => REGISTRY.filter((b) => b.tier === a.tier && b.no < a.no).length)
+
+/** Where a dot sits once it has been filed into its tier: its slot's bullet. */
 export function tierPosition(d: Dot): { x: number; y: number } {
-  const k = Math.floor(d.id / 3)
+  const k = RANK[d.id]
   const b = TIER_BANDS[tierOf(d)]
+  const rows = Math.ceil(REGISTRY.filter((a) => a.tier === REGISTRY[d.id].tier).length / SLOT.cols)
+  const top = b.y0 + (b.h - rows * SLOT.rowH) / 2
   return {
-    x: 860 + Math.floor(k / 2) * 105,
-    y: b.y0 + b.h / 2 + (k % 2 ? 32 : -32),
+    x: SLOT.x0 + (k % SLOT.cols) * SLOT.colW,
+    y: top + Math.floor(k / SLOT.cols) * SLOT.rowH + SLOT.rowH / 2,
   }
 }

@@ -243,6 +243,8 @@ export interface Risks {
 export interface PhaseRegistry {
   heading: string
   kicker: string
+  /** Under the kicker: the registry is complete, its tiers are proposals. */
+  note: string
   tiers: { name: string; body: string }[]
   footer: string
 }
@@ -824,10 +826,11 @@ export const SCENES: Scene[] = [
     title: 'Phase 3: the registry',
     steps: 2,
     moment: 0,
-    seconds: 50,
+    seconds: 58,
     content: {
       heading: 'A registry with governance in proportion to risk',
       kicker: 'Phase 3 · Consolidate and Govern · Nov 2026 – Jun 2027',
+      note: 'All 50 apps registered · tiers proposed, for each owner to confirm',
       tiers: [
         {
           name: 'Experimental',

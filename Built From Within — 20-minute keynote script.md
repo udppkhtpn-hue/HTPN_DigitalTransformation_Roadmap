@@ -240,11 +240,11 @@ Phase five, Predict and Scale, starts in July 2028. At home, forecasting and gov
 
 Six enablers sit under all five, from people to funding and partnerships. Let me take you inside, starting with the least glamorous phase.
 
-### S-13 Phase 3: the registry  (50s, 117 words)
+### S-13 Phase 3: the registry  (58s, 136 words)
 
-*\[Press 1: The fifty dots return and sort into three tier bands\]*
+*\[Press 1: The fifty dots return and each files into its app's tier; the app names write themselves in beside them\]*
 
-Phase three turns those fifty scattered dots into a portfolio the hospital can rely on, in three tiers.
+Phase three turns those fifty scattered dots into a portfolio the hospital can rely on, in three tiers. All fifty are now registered, and every dot has a name: three experimental, thirty departmental, seventeen hospital-critical.
 
 Experimental tools use dummy or de-identified data, and anyone can build them freely. Departmental tools are in routine use in one unit. They need a named owner, documentation and a backup maintainer. Hospital-critical tools cross departments or touch patient safety. They get full governance, a security review and impact measures.
 
@@ -374,7 +374,7 @@ The whole talk runs 20:41: 20:11 spoken plus about 30 seconds of the reel playin
 | S-10 The national picture | 156 | 1:07 |
 | S-11 Vision 2028 | 199 | 1:25 |
 | S-12 Roadmap | 316 | 2:15 |
-| S-13 Phase 3: the registry | 117 | 0:50 |
+| S-13 Phase 3: the registry | 136 | 0:58 |
 | S-14 Phase 3: the foundations | 128 | 0:55 |
 | S-15 Command Centre | 150 | 1:04 |
 | S-16 Command Centre: how we build it | 134 | 0:57 |

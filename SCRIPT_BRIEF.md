@@ -13,7 +13,7 @@ You are writing the spoken script for a closing keynote. The speaker presents a 
 3. **Voice.** First person, plain, confident, short sentences. A clinician-leader speaking to industry leaders, not a vendor pitching. No jargon, no hype words, no rhetorical questions to the audience.
 4. **Screen and voice.** The audience reads the screen. Don't read the on-screen text out word for word; say what it means, and let the screen carry the detail.
 5. **Pace.** Write at 140 words a minute (about 2.3 words a second). For every sheet give its word count and spoken time, and give the total at the end.
-6. **Fit the target.** The planned times below add up to **20:41**, against a target of 5:00. If they don't fit, first propose which sheets to shorten, merge or skip (and why), wait for approval, then write. Don't silently drop a sheet.
+6. **Fit the target.** The planned times below add up to **20:49**, against a target of 5:00. If they don't fit, first propose which sheets to shorten, merge or skip (and why), wait for approval, then write. Don't silently drop a sheet.
 7. **Format.** For each sheet:
 
 ```
@@ -30,7 +30,7 @@ These are real tools, used every day...
 - **Audience:** senior industry leaders (Microsoft, Grab, Shopee and others), some of whom judged the Innovathon. Not clinicians; they know platforms and scale, not Malaysian public hospitals.
 - **Speaker:** Dr Ferwahn Fairis bin Ab Karim · Acting Deputy Director, Hospital Tengku Permaisuri Norashikin, Kajang · Ministry of Health Malaysia, presenting for the Healthcare Intelligence Office.
 - **The argument in one line:** a 135-year-old public hospital built its own digital tools from within, ahead of national policy; the next phases must turn that culture into structure, and share it with every KKM hospital.
-- **The deck:** 20 sheets, 54 clicker presses, planned 20:41. "Press 1" on each sheet is the click that brings the sheet up.
+- **The deck:** 20 sheets, 54 clicker presses, planned 20:49. "Press 1" on each sheet is the click that brings the sheet up.
 
 ## The sheets
 
@@ -366,15 +366,16 @@ Current notes (draft to improve, not to copy):
 For the speaker only, not on screen (facts you may use): Phase 1 in full, from sheets 3 to 8. Started April 2025, fourteen months before the Cabinet directive of 5 June 2026. Leaders learned first (Monash, EDLP with MIT Sloan and ASB, LSE); our own syllabus, so everyone leaves having built something; quick wins shipped in weeks; a national Innovathon to reward the builders. 1,300+ staff trained, 50+ in-house apps in active use, 35+ workshops (15 by external invitation), RM0 software licensing. Innovathon 2026, 21 July: 200 delegates, 28 finalists, 9 winners, 13 external judges, covered by BERNAMA. Done when. Phase 3: every tool is registered, owned, and tagged by reach. Phase 4: the Command Centre is used daily and flow beats baseline, and at least one general app runs at another KKM hospital. Phase 5: other KKM sites adopt it.
 
 ### S-13 Phase 3: the registry
-2 presses · planned 50s · about 117 words at 140 wpm · current notes 69 words
+2 presses · planned 58s · about 135 words at 140 wpm · current notes 69 words
 
 What the room sees:
-- Press 1: The fifty dots from the gap sheet return scattered, then sort into three tier bands, ruled lighter to heavier, each labelled.
+- Press 1: The fifty dots from the gap sheet return scattered while three tier bands are ruled, lighter to heavier. Each dot then files into the tier the HTPN App Registry proposes for its app and stops on a bullet, and the app's name writes itself in beside it: Tier 1 Experimental 3, Tier 2 Departmental 30, Tier 3 Hospital-critical 17 (amber). A line under the heading says all 50 are registered and the tiers are proposals for each owner to confirm.
 - Press 2: The footer line in amber.
 
 On screen (text and figures, exactly as shown):
 heading: A registry with governance in proportion to risk
 kicker: Phase 3 · Consolidate and Govern · Nov 2026 – Jun 2027
+note: All 50 apps registered · tiers proposed, for each owner to confirm
 tiers:
   - name: Experimental; body: Learning and testing with dummy or de-identified data. Built freely.
   - name: Departmental; body: Routine use in one unit. Needs a named owner, documentation and a backup maintainer.
@@ -523,6 +524,6 @@ Current notes (draft to improve, not to copy):
 ## Totals
 
 - 20 sheets, 54 presses.
-- Planned time 20:41 against a 5:00 slot.
+- Planned time 20:49 against a 5:00 slot.
 - Current notes total 1391 words.
 - S-08 plays a reel of about 56 seconds; the speaker can talk over it or advance early to cut it short.

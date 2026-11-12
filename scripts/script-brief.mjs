@@ -86,7 +86,7 @@ const PRESSES = {
     'Phase 5, Predict & Scale.',
   ],
   'phase-registry': [
-    'The fifty dots from the gap sheet return scattered, then sort into three tier bands, ruled lighter to heavier, each labelled.',
+    'The fifty dots from the gap sheet return scattered while three tier bands are ruled, lighter to heavier. Each dot then files into the tier the HTPN App Registry proposes for its app and stops on a bullet, and the app\'s name writes itself in beside it: Tier 1 Experimental 3, Tier 2 Departmental 30, Tier 3 Hospital-critical 17 (amber). A line under the heading says all 50 are registered and the tiers are proposals for each owner to confirm.',
     'The footer line in amber.',
   ],
   'phase-foundations': [

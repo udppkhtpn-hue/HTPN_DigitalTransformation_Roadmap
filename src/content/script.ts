@@ -270,12 +270,12 @@ export const SCRIPT: Record<string, SheetScript> = {
   "S-13": {
     sheet: "S-13",
     title: "Phase 3: the registry",
-    seconds: 50,
+    seconds: 58,
     reel: 0,
-    words: 117,
+    words: 134,
     blocks: [
-      { step: 0, cue: "The fifty dots return and sort into three tier bands", paras: [
-        "Phase three turns those fifty scattered dots into a portfolio the hospital can rely on, in three tiers.",
+      { step: 0, cue: "The fifty dots return and each files into its app's tier; the app names write themselves in beside them", paras: [
+        "Phase three turns those fifty scattered dots into a portfolio the hospital can rely on, in three tiers. All fifty are now registered, and every dot has a name: three experimental, thirty departmental, seventeen hospital-critical.",
         "Experimental tools use dummy or de-identified data, and anyone can build them freely. Departmental tools are in routine use in one unit. They need a named owner, documentation and a backup maintainer. Hospital-critical tools cross departments or touch patient safety. They get full governance, a security review and impact measures.",
       ] },
       { step: 1, cue: "The footer line in amber", paras: [
