@@ -13,7 +13,7 @@ You are writing the spoken script for a closing keynote. The speaker presents a 
 3. **Voice.** First person, plain, confident, short sentences. A clinician-leader speaking to industry leaders, not a vendor pitching. No jargon, no hype words, no rhetorical questions to the audience.
 4. **Screen and voice.** The audience reads the screen. Don't read the on-screen text out word for word; say what it means, and let the screen carry the detail.
 5. **Pace.** Write at 140 words a minute (about 2.3 words a second). For every sheet give its word count and spoken time, and give the total at the end.
-6. **Fit the target.** The planned times below add up to **20:10**, against a target of 5:00. If they don't fit, first propose which sheets to shorten, merge or skip (and why), wait for approval, then write. Don't silently drop a sheet.
+6. **Fit the target.** The planned times below add up to **21:06**, against a target of 5:00. If they don't fit, first propose which sheets to shorten, merge or skip (and why), wait for approval, then write. Don't silently drop a sheet.
 7. **Format.** For each sheet:
 
 ```
@@ -30,7 +30,7 @@ These are real tools, used every day...
 - **Audience:** senior industry leaders (Microsoft, Grab, Shopee and others), some of whom judged the Innovathon. Not clinicians; they know platforms and scale, not Malaysian public hospitals.
 - **Speaker:** Dr Ferwahn Fairis bin Ab Karim · Acting Deputy Director, Hospital Tengku Permaisuri Norashikin, Kajang · Ministry of Health Malaysia.
 - **The argument in one line:** a 135-year-old public hospital built its own digital tools from within, ahead of national policy; the next phases must turn that culture into structure, and share it with every KKM hospital.
-- **The deck:** 20 sheets, 50 clicker presses, planned 20:10. "Press 1" on each sheet is the click that brings the sheet up.
+- **The deck:** 21 sheets, 52 clicker presses, planned 21:06. "Press 1" on each sheet is the click that brings the sheet up.
 
 ## The sheets
 
@@ -67,7 +67,41 @@ tags: data sovereignty · access to source code · civil service talent
 Current notes (draft to improve, not to copy):
 > In June this year, the Prime Minister directed that all government digital services be built in-house, for data sovereignty, source code access and civil service talent. We started fourteen months earlier. We weren't reacting to the policy. We were already a working example of it.
 
-### S-03 Three forces
+### S-03 Who we are
+2 presses · planned 56s · about 131 words at 140 wpm · current notes 37 words
+
+What the room sees:
+- Press 1: The Healthcare Intelligence Office, established April 2025, a dedicated in-house team: six portrait cards with name and role (Dr Hj Mohd Slv Azhar Merican Bin Abdullah, Advisor; Dr Ferwahn Fairis bin Ab Karim, Coordinator; Dr Naim bin Abdul Malek and Dr Muhammad Syafiz bin Ruzain, Technical & Training; Megat Hafiz and Kenny Tuang Ling Ee, Facilitators), then the line about clinicians and nursing staff leading digital transformation from within.
+- Press 2: The cards give way to "Team credentials: Leaders learn first": seven programmes with who took them and whether Completed (cyan) or Ongoing (amber), then "Credibility before capability transfer".
+
+On screen (text and figures, exactly as shown):
+heading: HTPN Healthcare Intelligence Office
+established: Established April 2025
+since: a dedicated in-house team
+team:
+  - name: Dr Hj Mohd Slv Azhar Merican Bin Abdullah; role: Advisor; photo: azhar
+  - name: Dr Ferwahn Fairis bin Ab Karim; role: Coordinator; photo: fairis
+  - name: Dr Naim bin Abdul Malek; role: Technical & Training; photo: naim
+  - name: Dr Muhammad Syafiz bin Ruzain; role: Technical & Training; photo: syafiz
+  - name: Megat Hafiz; role: Facilitator; photo: megat
+  - name: Kenny Tuang Ling Ee; role: Facilitator; photo: kenny
+closer: lead: Clinicians and nursing staff leading digital transformation from within; rest:  — Insourcing.; line: The people who understand the problem are the people building the solution.
+eyebrow: Investing in capability
+credentialsHeading: Team credentials: Leaders learn first
+credentials:
+  - text: Micro-credential in Digital Health — Monash University; who: Dr Naim • Dr Fairis; status: Completed
+  - text: Advance Biostatistic (Stata & Python coding) — MHLM & MPH UNSW; who: Dr Naim; status: Completed
+  - text: Data Science & AI for Executives — In-campus Executive Programme, London School of Economics (LSE); who: Dr Naim; status: Completed
+  - text: Executive Digital Leadership Programme (EDLP) — MIT Sloan / Asia School of Business; who: Dr Naim • Dr Fairis; status: Completed
+  - text: PhD in Medicine (AI Research) — Universiti Putra Malaysia (UPM); who: Dr Fairis; status: Ongoing
+  - text: Master of Business Intelligence — Universiti Teknologi Malaysia (UTM); who: Dr Syafiz; status: Ongoing
+  - text: Deep Learning Research — Collaboration with Global Health AI Group (GH2AI), London School of Hygiene & Tropical Medicine (LSHTM); who: Dr Naim; status: Ongoing
+credentialsCloser: lead: Credibility before capability transfer; rest:  — leaders must learn first, before asking others to change.
+
+Current notes (draft to improve, not to copy):
+> We are the Healthcare Intelligence Office, established in April 2025: a dedicated in-house team of clinicians and nursing staff leading digital transformation from within. We learned first, so we had credibility before asking anyone else to change.
+
+### S-04 Three forces
 3 presses · planned 69s · about 161 words at 140 wpm · current notes 81 words
 
 What the room sees:
@@ -85,7 +119,7 @@ footer: Change fails when it is delegated. It succeeds when it is led.
 Current notes (draft to improve, not to copy):
 > Three forces made this necessary. Pressure: beds are full, staff are tired, and this June our dengue admissions rose a hundred and twenty-eight percent. Births have almost tripled since we moved into the new Women and Child Centre, from two hundred to more than five hundred a month. Vendor lock-in: procurement is too slow for problems that change every month. And opportunity: for the first time, clinicians can build real tools in weeks. The limit is no longer technology. It's leadership.
 
-### S-04 How we led it
+### S-05 How we led it
 6 presses · planned 61s · about 142 words at 140 wpm · current notes 55 words
 
 What the room sees:
@@ -110,7 +144,7 @@ flip: from: 85% outsourced; to: 85% insourced; caption: DBS Bank's shift. Our be
 Current notes (draft to improve, not to copy):
 > We ran this as a change programme, not an IT project. Leaders learned first, so we had credibility. We wrote our own syllabus, and everyone leaves having built something. We chose small, visible quick wins. And we celebrated the builders. Our benchmark was DBS Bank, which moved from eighty-five percent outsourced to eighty-five percent insourced.
 
-### S-05 Results
+### S-06 Results
 1 press · planned 34s · about 79 words at 140 wpm · current notes 34 words
 
 What the room sees:
@@ -127,7 +161,7 @@ footnote: Figures as of October 2026.
 Current notes (draft to improve, not to copy):
 > Eighteen months in: more than thirteen hundred staff trained, more than fifty apps in daily use, thirty-five workshops, fifteen of them because other hospitals and services invited us. And zero ringgit in software licences.
 
-### S-06 Where we've taught
+### S-07 Where we've taught
 2 presses · planned 55s · about 128 words at 140 wpm · current notes 75 words
 
 What the room sees:
@@ -143,7 +177,7 @@ legendAdopted: cyan ring = runs a tool built on our model
 Current notes (draft to improve, not to copy):
 > And then people started inviting us. Fifteen sessions in twelve months: hospitals, community groups, and whole national services. Northern, central and southern O&G. Family Medicine. Medical Services. From Alor Setar to Johor Bahru, and across the sea to Kuching. Five of those were in the last two months alone. And here's what happened next. The hospitals we taught started building their own tools, in Marudi, Sri Aman, Mukah, Penang and Johor. We taught. They built.
 
-### S-07 The portfolio
+### S-08 The portfolio
 1 press · planned 39s · about 91 words at 140 wpm · current notes 45 words
 
 What the room sees:
@@ -160,7 +194,7 @@ line: Built by clinicians, for clinicians.
 Current notes (draft to improve, not to copy):
 > These are real tools, used daily: theatre scheduling, an AI blood-loss estimator, an emergency department dashboard. And some of them weren't built by us. They were built by hospitals in Penang, Johor and Sarawak that learned our model. Scan the code and look for yourself.
 
-### S-08 Innovathon
+### S-09 Innovathon
 2 presses · planned 76s · about 177 words at 140 wpm · current notes 36 words
 
 What the room sees:
@@ -184,7 +218,7 @@ url: https://udppkhtpn-hue.github.io/innovathon2026/
 Current notes (draft to improve, not to copy):
 > In July we took it national. Innovathon 2026: two hundred delegates, twenty-eight finalists, thirteen judges from industry, academia and government, some of them in this room. Several winners came from other hospitals that adopted our model.
 
-### S-09 The gap
+### S-10 The gap
 5 presses · planned 66s · about 154 words at 140 wpm · current notes 55 words
 
 What the room sees:
@@ -207,7 +241,7 @@ lens: MIT CISR lens: strong shared insights, a growing developer community; weak
 Current notes (draft to improve, not to copy):
 > But success created a new problem, one you'll all recognise. Fifty apps is not one hospital. Our tools sit on separate spreadsheets. Many depend on a single builder. Governance hasn't caught up, and we lack the evidence to know what to scale. In MIT's terms, we have the community. We don't yet have the backbone.
 
-### S-10 The national picture
+### S-11 The national picture
 3 presses · planned 67s · about 156 words at 140 wpm · current notes 122 words
 
 What the room sees:
@@ -231,7 +265,7 @@ depth: line: Even in hospitals that have THIS, it did not cover the whole work p
 Current notes (draft to improve, not to copy):
 > Now zoom out from our hospital to the whole country. The Ministry runs a hundred and fifty-five hospitals. Twenty have THIS, the Total Hospital Information System. A hundred and thirty-five are still manual. THIS is coming: sixteen hospitals this year, then twenty-six, forty-four and forty-nine, on a budget of one billion ringgit. That's the right investment, and we're not competing with it. But even where THIS is live, it doesn't cover the whole work process. We saw that ourselves at Hospital Cyberjaya, at Port Dickson, and in our own Women and Child Centre. So our apps fill two gaps: the years before THIS arrives, and the work it was never designed to cover. And that's why our roadmap can't stop at Kajang.
 
-### S-11 Vision 2028
+### S-12 Vision 2028
 4 presses · planned 85s · about 198 words at 140 wpm · current notes 94 words
 
 What the room sees:
@@ -264,7 +298,7 @@ objectives:
 Current notes (draft to improve, not to copy):
 > Before the route, the destination. By 2028 we want two things at once: a hospital that sees its patient flow in real time and owns its own solutions, and a lighthouse other hospitals can learn from. But KKM hospitals are not the same. A district hospital may have thirty beds. A state hospital has more than a thousand. So not every app should travel. Some are built for our setup. Some belong to a discipline, like our O&G tools, already used nationally. And some, like patient-journey apps, work anywhere. Build locally. Scale what travels.
 
-### S-12 Roadmap
+### S-13 Roadmap
 5 presses · planned 135s · about 315 words at 140 wpm · current notes 120 words
 
 What the room sees:
@@ -292,7 +326,7 @@ Current notes (draft to improve, not to copy):
 
 For the speaker only, not on screen (facts you may use): Phase 1 in full, from sheets 3 to 8. Started April 2025, fourteen months before the Cabinet directive of 5 June 2026. Leaders learned first (Monash, EDLP with MIT Sloan and ASB, LSE); our own syllabus, so everyone leaves having built something; quick wins shipped in weeks; a national Innovathon to reward the builders. 1,300+ staff trained, 50+ in-house apps in active use, 35+ workshops (15 by external invitation), RM0 software licensing. Innovathon 2026, 21 July: 200 delegates, 28 finalists, 9 winners, 13 external judges, covered by BERNAMA. Done when. Phase 3: every tool is registered, owned, and tagged by reach. Phase 4: the Command Centre is used daily and flow beats baseline, and at least one general app runs at another KKM hospital. Phase 5: other KKM sites adopt it.
 
-### S-13 Phase 3: the registry
+### S-14 Phase 3: the registry
 2 presses · planned 50s · about 117 words at 140 wpm · current notes 69 words
 
 What the room sees:
@@ -311,7 +345,7 @@ footer: Experiments stay easy. Critical tools meet a full standard.
 Current notes (draft to improve, not to copy):
 > Phase three turns grassroots tools into a portfolio the hospital can rely on. Every tool is registered and placed in one of three tiers. Experiments stay easy: dummy data, build freely. A tool used routinely in one unit needs a named owner, documentation and a backup. And anything hospital-critical, crossing departments or touching patient safety, gets full governance, a security review and impact measures. Governance in proportion to risk.
 
-### S-14 Phase 3: the foundations
+### S-15 Phase 3: the foundations
 2 presses · planned 55s · about 128 words at 140 wpm · current notes 71 words
 
 What the room sees:
@@ -330,7 +364,7 @@ doneWhen: Done when: every tool is registered, and every hospital-critical tool 
 Current notes (draft to improve, not to copy):
 > Underneath the registry sit four foundations nobody will see, and everything rests on them. A standard build lifecycle, so a tool survives its builder. Data governance under the PDPA, with an on-premises route for sensitive AI work. Formal registration and a standing partnership with our IT colleagues at JP ICT, and we've already started on intellectual property. And a standard way to measure impact, based on our own twenty-week roster study.
 
-### S-15 Command Centre
+### S-16 Command Centre
 2 presses · planned 64s · about 149 words at 140 wpm · current notes 74 words
 
 What the room sees:
@@ -353,7 +387,7 @@ footer: Reads from existing tools · read-only HIS feeds · audit-logged access
 Current notes (draft to improve, not to copy):
 > This is where we're going. The HTPN Command Centre. Six data streams we already own — beds, the emergency department, theatres, transport, discharge and staffing — into one real-time view of patient flow, with automatic surge alerts built on our own dengue thresholds. Why? Because focused flow work already cut boarding time by thirteen point three percent. And during this year's dengue surge, every decision ran on bed data gathered by hand. Never again.
 
-### S-16 Command Centre: how we build it
+### S-17 Command Centre: how we build it
 2 presses · planned 57s · about 133 words at 140 wpm · current notes 88 words
 
 What the room sees:
@@ -371,7 +405,7 @@ doneWhen: Done when: used in daily bed meetings, alerts are automatic, and board
 Current notes (draft to improve, not to copy):
 > We won't build it all at once. A minimum viable view of beds and emergency department flow comes first, with surge alerts live before the next dengue season. It reads from the tools we already have, takes read-only feeds from the hospital information system where agreed, and logs every access to identifiable data. And because spreadsheets will hit their limits, Phase four includes an architecture review to choose a proper data layer. It's done when it's used every morning in the bed meeting, and the numbers beat baseline.
 
-### S-17 Predict and scale
+### S-18 Predict and scale
 1 press · planned 44s · about 103 words at 140 wpm · current notes 40 words
 
 What the room sees:
@@ -384,7 +418,7 @@ items: admission and bed-demand forecasting · governed clinical AI with clinici
 Current notes (draft to improve, not to copy):
 > With a year of clean, integrated data, we move from seeing now to anticipating next: forecasting admissions, putting clinical AI into production with a clinician always signing off, and packaging all of it as a playbook for every Ministry hospital.
 
-### S-18 Measuring success
+### S-19 Measuring success
 1 press · planned 43s · about 100 words at 140 wpm · current notes 68 words
 
 What the room sees:
@@ -404,7 +438,7 @@ note: Operational targets are set from Phase 3 baselines, grounded in HTPN's own
 Current notes (draft to improve, not to copy):
 > Every phase has indicators. You'll notice I haven't put a target on boarding time or length of stay. That's deliberate. Those targets will be set from our Phase three baselines, from our own data, not invented for a slide. And we track the health of the programme itself: active builders, tools with a backup, and how our staff feel. Because the biggest risk to this roadmap isn't technical.
 
-### S-19 Risks
+### S-20 Risks
 2 presses · planned 66s · about 154 words at 140 wpm · current notes 83 words
 
 What the room sees:
@@ -425,7 +459,7 @@ rest:
 Current notes (draft to improve, not to copy):
 > I want to be candid. The biggest risk isn't in the future. It's here now. This whole office runs on a handful of people doing it on top of clinical and management work. So protected time, formal posts and champions in every department are not optional. The other risks: being seen as shadow IT, data protection, platform limits, resistance to integration, and burnout. None of them is a reason to slow down. Each is a reason to make the next phase about structure.
 
-### S-20 Lesson & close
+### S-21 Lesson & close
 3 presses · planned 61s · about 142 words at 140 wpm · current notes 80 words
 
 What the room sees:
@@ -449,7 +483,7 @@ Current notes (draft to improve, not to copy):
 
 ## Totals
 
-- 20 sheets, 50 presses.
-- Planned time 20:10 against a 5:00 slot.
-- Current notes total 1391 words.
-- S-08 plays a reel of about 56 seconds; the speaker can talk over it or advance early to cut it short.
+- 21 sheets, 52 presses.
+- Planned time 21:06 against a 5:00 slot.
+- Current notes total 1428 words.
+- S-09 plays a reel of about 56 seconds; the speaker can talk over it or advance early to cut it short.

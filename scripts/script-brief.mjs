@@ -25,6 +25,10 @@ const PRESSES = {
   'cold-open': [
     'The sheet arrives on its own and runs for about seven seconds: three lines land one after another, then fade; the original 1889 hospital building draws in behind; the title, subtitle and byline appear.',
   ],
+  'who-we-are': [
+    'The Healthcare Intelligence Office, established April 2025, a dedicated in-house team: six portrait cards with name and role (Dr Hj Mohd Slv Azhar Merican Bin Abdullah, Advisor; Dr Ferwahn Fairis bin Ab Karim, Coordinator; Dr Naim bin Abdul Malek and Dr Muhammad Syafiz bin Ruzain, Technical & Training; Megat Hafiz and Kenny Tuang Ling Ee, Facilitators), then the line about clinicians and nursing staff leading digital transformation from within.',
+    'The cards give way to "Team credentials: Leaders learn first": seven programmes with who took them and whether Completed (cyan) or Ongoing (amber), then "Credibility before capability transfer".',
+  ],
   'three-forces': [
     'Pressure: +128% in red, dengue admissions, June 2026 vs the year before; then, under it, births a month 200+ → 500+, almost tripled since the move from the old building to the new Women & Child Centre.',
     'Vendor lock-in.',

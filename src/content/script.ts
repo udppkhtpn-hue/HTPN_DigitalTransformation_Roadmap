@@ -42,18 +42,35 @@ export const SCRIPT: Record<string, SheetScript> = {
     title: "Ahead of the mandate",
     seconds: 38,
     reel: 0,
-    words: 89,
+    words: 81,
     blocks: [
       { step: 0, cue: "The 5 June 2026 Cabinet directive, with the newspaper cutting", paras: [
         "On the fifth of June this year, the Cabinet directed that all government digital services be developed in-house. Three reasons were given: data sovereignty, government access to source code, and building talent inside the civil service.",
       ] },
       { step: 1, cue: "The timeline draws back to April 2025 and measures 14 months", paras: [
-        "We started in April 2025. Fourteen months before the directive. And those three reasons were already exactly why we were doing it. We weren't reacting to a policy. By the time it arrived, we were already a working example of it. So why did we start so early? Because we had no choice.",
+        "We started in April 2025. Fourteen months before the directive. And those three reasons were already exactly why we were doing it. We weren't reacting to a policy. By the time it arrived, we were already a working example of it. So, who is \"we\"?",
       ] },
     ],
   },
   "S-03": {
     sheet: "S-03",
+    title: "Who we are",
+    seconds: 56,
+    reel: 0,
+    words: 150,
+    blocks: [
+      { step: 0, cue: "The Healthcare Intelligence Office: six portraits with their roles, then the line about clinicians and nursing staff.", paras: [
+        "We are the Healthcare Intelligence Office, established in April 2025. A dedicated in-house team. Dr Azhar is our advisor. I coordinate. Dr Naim and Dr Syafiz lead the technical work and the training. Megat Hafiz and Kenny facilitate.",
+        "Clinicians and nursing staff, leading digital transformation from within. The people who understand the problem are the people building the solution.",
+      ] },
+      { step: 1, cue: "Team credentials, \"Leaders learn first\": seven programmes, four completed and three ongoing.", paras: [
+        "And we learned first. Completed: the Monash micro-credential in digital health, advanced biostatistics at UNSW, data science and AI for executives at the London School of Economics, and the Executive Digital Leadership Programme with MIT Sloan and Asia School of Business. Still going: a PhD in AI research at UPM, a Master of Business Intelligence at UTM, and deep learning research with the London School of Hygiene and Tropical Medicine.",
+        "Credibility before capability transfer. Leaders must learn first, before asking others to change. And here is why we had no choice.",
+      ] },
+    ],
+  },
+  "S-04": {
+    sheet: "S-04",
     title: "Three forces",
     seconds: 69,
     reel: 0,
@@ -70,8 +87,8 @@ export const SCRIPT: Record<string, SheetScript> = {
       ] },
     ],
   },
-  "S-04": {
-    sheet: "S-04",
+  "S-05": {
+    sheet: "S-05",
     title: "How we led it",
     seconds: 61,
     reel: 0,
@@ -99,8 +116,8 @@ export const SCRIPT: Record<string, SheetScript> = {
       ] },
     ],
   },
-  "S-05": {
-    sheet: "S-05",
+  "S-06": {
+    sheet: "S-06",
     title: "Results",
     seconds: 34,
     reel: 0,
@@ -113,8 +130,8 @@ export const SCRIPT: Record<string, SheetScript> = {
       ] },
     ],
   },
-  "S-06": {
-    sheet: "S-06",
+  "S-07": {
+    sheet: "S-07",
     title: "Where we've taught",
     seconds: 55,
     reel: 0,
@@ -131,8 +148,8 @@ export const SCRIPT: Record<string, SheetScript> = {
       ] },
     ],
   },
-  "S-07": {
-    sheet: "S-07",
+  "S-08": {
+    sheet: "S-08",
     title: "The portfolio",
     seconds: 39,
     reel: 0,
@@ -146,8 +163,8 @@ export const SCRIPT: Record<string, SheetScript> = {
       ] },
     ],
   },
-  "S-08": {
-    sheet: "S-08",
+  "S-09": {
+    sheet: "S-09",
     title: "Innovathon",
     seconds: 76,
     reel: 30,
@@ -163,8 +180,8 @@ export const SCRIPT: Record<string, SheetScript> = {
       ] },
     ],
   },
-  "S-09": {
-    sheet: "S-09",
+  "S-10": {
+    sheet: "S-10",
     title: "The gap",
     seconds: 66,
     reel: 0,
@@ -190,8 +207,8 @@ export const SCRIPT: Record<string, SheetScript> = {
       ] },
     ],
   },
-  "S-10": {
-    sheet: "S-10",
+  "S-11": {
+    sheet: "S-11",
     title: "The national picture",
     seconds: 67,
     reel: 0,
@@ -209,8 +226,8 @@ export const SCRIPT: Record<string, SheetScript> = {
       ] },
     ],
   },
-  "S-11": {
-    sheet: "S-11",
+  "S-12": {
+    sheet: "S-12",
     title: "Vision 2028",
     seconds: 85,
     reel: 0,
@@ -231,8 +248,8 @@ export const SCRIPT: Record<string, SheetScript> = {
       ] },
     ],
   },
-  "S-12": {
-    sheet: "S-12",
+  "S-13": {
+    sheet: "S-13",
     title: "Roadmap",
     seconds: 135,
     reel: 0,
@@ -257,8 +274,8 @@ export const SCRIPT: Record<string, SheetScript> = {
       ] },
     ],
   },
-  "S-13": {
-    sheet: "S-13",
+  "S-14": {
+    sheet: "S-14",
     title: "Phase 3: the registry",
     seconds: 50,
     reel: 0,
@@ -274,8 +291,8 @@ export const SCRIPT: Record<string, SheetScript> = {
       ] },
     ],
   },
-  "S-14": {
-    sheet: "S-14",
+  "S-15": {
+    sheet: "S-15",
     title: "Phase 3: the foundations",
     seconds: 55,
     reel: 0,
@@ -293,8 +310,8 @@ export const SCRIPT: Record<string, SheetScript> = {
       ] },
     ],
   },
-  "S-15": {
-    sheet: "S-15",
+  "S-16": {
+    sheet: "S-16",
     title: "Command Centre",
     seconds: 64,
     reel: 0,
@@ -312,8 +329,8 @@ export const SCRIPT: Record<string, SheetScript> = {
       ] },
     ],
   },
-  "S-16": {
-    sheet: "S-16",
+  "S-17": {
+    sheet: "S-17",
     title: "Command Centre: how we build it",
     seconds: 57,
     reel: 0,
@@ -328,8 +345,8 @@ export const SCRIPT: Record<string, SheetScript> = {
       ] },
     ],
   },
-  "S-17": {
-    sheet: "S-17",
+  "S-18": {
+    sheet: "S-18",
     title: "Predict and scale",
     seconds: 44,
     reel: 0,
@@ -342,8 +359,8 @@ export const SCRIPT: Record<string, SheetScript> = {
       ] },
     ],
   },
-  "S-18": {
-    sheet: "S-18",
+  "S-19": {
+    sheet: "S-19",
     title: "Measuring success",
     seconds: 43,
     reel: 0,
@@ -356,8 +373,8 @@ export const SCRIPT: Record<string, SheetScript> = {
       ] },
     ],
   },
-  "S-19": {
-    sheet: "S-19",
+  "S-20": {
+    sheet: "S-20",
     title: "Risks",
     seconds: 66,
     reel: 0,
@@ -372,8 +389,8 @@ export const SCRIPT: Record<string, SheetScript> = {
       ] },
     ],
   },
-  "S-20": {
-    sheet: "S-20",
+  "S-21": {
+    sheet: "S-21",
     title: "Lesson & close",
     seconds: 61,
     reel: 0,
