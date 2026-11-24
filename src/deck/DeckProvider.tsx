@@ -8,7 +8,7 @@ import {
   useState,
   type ReactNode,
 } from 'react'
-import { SCENES, type Scene } from '../content/scenes.ts'
+import { DECK, SCENES, type Scene } from '../content/scenes.ts'
 import { toggleFullscreen } from './fullscreen.ts'
 
 interface Cursor {
@@ -45,8 +45,9 @@ export function useDeck(): Deck {
   return ctx
 }
 
-const STORE_KEY = 'htpn-deck-cursor'
-const CHANNEL = 'htpn-deck'
+// Per deck, so the EDLP and Oxford talks never restore or steer each other.
+const STORE_KEY = DECK === 'edlp' ? 'htpn-deck-cursor' : `htpn-deck-cursor-${DECK}`
+const CHANNEL = DECK === 'edlp' ? 'htpn-deck' : `htpn-deck-${DECK}`
 
 const IS_PRESENTER = new URLSearchParams(window.location.search).has('presenter')
 

@@ -1,0 +1,399 @@
+/*
+ * The journey: one road on one large drawing, and a camera that drives it.
+ * Coordinates inside a stop's sheet are stage pixels on the 1920 × 1080
+ * sheet, as everywhere else in the deck.
+ */
+
+.jr { position: absolute; inset: 0; padding: 0; overflow: hidden; }
+
+/* The camera turns and zooms about the centre of the screen; the drawing
+   slides underneath it. No will-change: the zoom runs from 1 to about 0.06,
+   and a layer pinned at one raster scale paints only part of the road at the
+   other end. */
+.jr__cam {
+  position: absolute;
+  inset: 0;
+  transform-origin: 960px 540px;
+}
+
+.jr__world {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 0;
+  height: 0;
+}
+
+.jr__sheet,
+.jr__ground {
+  position: absolute;
+  width: 1920px;
+  height: 1080px;
+  transform-origin: 960px 540px;
+}
+
+/* Paper and grid that travel and turn with the drawing, so a bend reads as
+   the whole drawing turning, not the words. */
+.jr__ground::before {
+  content: '';
+  position: absolute;
+  inset: -520px;
+  background-color: var(--drafting);
+  background-image:
+    linear-gradient(to right, rgba(124, 196, 242, 0.07) 0 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(124, 196, 242, 0.07) 0 1px, transparent 1px),
+    linear-gradient(to right, rgba(124, 196, 242, 0.03) 0 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(124, 196, 242, 0.03) 0 1px, transparent 1px);
+  background-size:
+    120px 120px,
+    120px 120px,
+    24px 24px,
+    24px 24px;
+  background-position: 520px 520px;
+}
+
+/* ── the road ───────────────────────────────────────────────────────────── */
+
+/* The road's own layer: screen-sized, the camera applied inside it as an SVG
+   transform (see Journey). Between the paper and the stops. */
+.jr__road {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 1920px;
+  height: 1080px;
+  overflow: hidden;
+}
+
+/* Overview labels: sized in Journey to read at the overview's zoom, with a
+   paper-coloured halo so they stay legible over the wireframe. */
+.jr__map-label {
+  font-family: var(--font-display);
+  font-variation-settings: 'wght' 560, 'wdth' 92;
+  fill: var(--chalk);
+  stroke: var(--drafting);
+  stroke-linejoin: round;
+  paint-order: stroke;
+}
+.jr__map-label--ahead { fill: var(--line); }
+
+/* The chapter's name, painted on the road like a street name. */
+.jr__sign {
+  position: absolute;
+  font-family: var(--font-mono);
+  font-size: var(--t-dim);
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  color: var(--drafting);
+}
+/* Road along the foot of the sheet (centre 870) or its head (centre 210). */
+.jr__st--foot .jr__sign { right: 180px; top: 772px; }
+.jr__st--head .jr__sign { left: 200px; top: 108px; }
+
+/* ── first and last press: the whole road ───────────────────────────────── */
+
+.jr__over {
+  position: absolute;
+  top: 110px;
+  left: 200px;
+  width: 1560px;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  pointer-events: none;
+}
+
+.jr__kicker {
+  margin: 0;
+  font-family: var(--font-mono);
+  font-size: var(--t-dim);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--signal);
+}
+
+.jr__heading {
+  margin: 0;
+  font-size: 130px;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  color: var(--chalk);
+}
+
+.jr__count {
+  margin: 0;
+  font-size: var(--t-small);
+  font-variation-settings: 'wght' 400, 'wdth' 96;
+  color: var(--line);
+}
+
+/* ── the date, in navy on the road ──────────────────────────────────────── */
+
+.jr__date {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  color: var(--drafting);
+}
+.jr__st--foot .jr__date { left: 200px; top: 782px; transform-origin: 0 50%; }
+.jr__st--head .jr__date { right: 160px; top: 122px; transform-origin: 100% 50%; }
+
+.jr__date-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.jr__when {
+  font-family: var(--font-mono);
+  font-size: 34px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.jr__year {
+  font-size: 196px;
+  line-height: 0.9;
+  letter-spacing: -0.03em;
+  font-variation-settings: 'wdth' 84, 'wght' 800;
+}
+
+.jr__idx {
+  font-family: var(--font-mono);
+  font-size: var(--t-dim);
+  letter-spacing: 0.06em;
+  opacity: 0.75;
+}
+
+/* ── words ──────────────────────────────────────────────────────────────── */
+
+.jr__drawn { position: absolute; inset: 0; }
+
+.jr__word { display: inline-block; white-space: pre; }
+
+.jr__title,
+.jr__text {
+  position: absolute;
+  margin: 0;
+  left: 200px;
+  width: 860px;
+}
+
+.jr__title {
+  font-size: 68px;
+  line-height: 1.06;
+  letter-spacing: -0.01em;
+  font-variation-settings: 'wght' 650, 'wdth' 92;
+  color: var(--chalk);
+}
+
+.jr__text {
+  font-size: 38px;
+  line-height: 1.32;
+  font-variation-settings: 'wght' 400, 'wdth' 96;
+  color: var(--chalk);
+  opacity: 0.86;
+}
+
+.jr__st--foot .jr__title { top: 140px; }
+.jr__st--foot .jr__text { top: 300px; }
+.jr__st--head .jr__title { top: 380px; }
+.jr__st--head .jr__text { top: 540px; }
+
+/* ── chart and photograph ───────────────────────────────────────────────── */
+
+.jr__chart {
+  position: absolute;
+  left: 200px;
+  width: 860px;
+}
+.jr__st--foot .jr__chart { top: 430px; }
+.jr__st--head .jr__chart { top: 670px; }
+
+.jr__pic {
+  position: absolute;
+  left: 1180px;
+  width: 560px;
+  height: 380px;
+  margin: 0;
+  border: 1px solid rgba(124, 196, 242, 0.45);
+  background: var(--deep);
+  box-shadow: 0 16px 42px rgba(6, 16, 34, 0.7);
+  overflow: hidden;
+}
+.jr__st--foot .jr__pic { top: 150px; }
+.jr__st--head .jr__pic { top: 390px; }
+
+/* No chart: the photograph is the stop's one picture, larger. */
+.jr__pic--big { left: 1100px; width: 660px; height: 500px; }
+.jr__st--foot .jr__pic--big { top: 130px; }
+.jr__st--head .jr__pic--big { top: 370px; }
+
+.jr__pic img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.jr__pic--todo {
+  border: 2px dashed var(--line);
+  background: var(--drafting);
+  box-shadow: none;
+}
+.jr__pic--todo figcaption {
+  padding: 26px 28px;
+  font-size: var(--t-dim);
+  line-height: 1.34;
+  color: var(--line);
+}
+.jr__todo-tag {
+  display: block;
+  margin-bottom: 12px;
+  font-family: var(--font-mono);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--signal);
+}
+
+/* ── charts ─────────────────────────────────────────────────────────────── */
+
+/* Two columns, so three or four figures fit above or below the road. */
+.jr__counts {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 22px 40px;
+}
+
+/* Number over label: the counters run wide while they count. */
+.jr__counts li {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding-left: 24px;
+  border-left: 2px solid var(--line);
+}
+
+.jr__num {
+  font-size: 76px;
+  line-height: 1;
+}
+
+.jr__label {
+  font-size: 30px;
+  line-height: 1.25;
+  font-variation-settings: 'wght' 400, 'wdth' 96;
+  color: var(--chalk);
+}
+
+.jr__ring {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 36px;
+}
+.jr__ring svg { width: 270px; height: 270px; flex: none; }
+.jr__ring-mid {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 270px;
+  height: 270px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.jr__ring-num { font-size: 80px; line-height: 1; }
+.jr__ring-of {
+  margin-top: 6px;
+  font-family: var(--font-mono);
+  font-size: var(--t-dim);
+  color: var(--line);
+}
+.jr__ring-label {
+  font-size: 34px;
+  line-height: 1.3;
+  font-variation-settings: 'wght' 400, 'wdth' 96;
+  color: var(--chalk);
+}
+
+.jr__path { position: relative; width: 680px; height: 300px; }
+.jr__path svg { position: absolute; inset: 0; width: 680px; height: 300px; overflow: visible; }
+.jr__stop { position: absolute; width: 200px; }
+.jr__stop-n {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 68px;
+  height: 68px;
+  border-radius: 50%;
+  background: var(--signal);
+  color: var(--drafting);
+  font-family: var(--font-mono);
+  font-size: 28px;
+  font-weight: 700;
+}
+.jr__stop-t {
+  display: block;
+  margin-top: 12px;
+  font-size: 28px;
+  line-height: 1.25;
+  font-variation-settings: 'wght' 500, 'wdth' 92;
+  color: var(--chalk);
+}
+
+.jr__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.jr__tags li {
+  padding: 12px 22px;
+  border: 1px solid var(--line);
+  font-family: var(--font-mono);
+  font-size: var(--t-dim);
+  color: var(--line);
+}
+
+.jr__list {
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.jr__list li {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding-left: 24px;
+  border-left: 2px solid var(--signal);
+}
+.jr__list-name {
+  font-size: 40px;
+  font-variation-settings: 'wght' 620, 'wdth' 94;
+  color: var(--chalk);
+}
+.jr__list-with {
+  font-size: 28px;
+  line-height: 1.3;
+  color: var(--line);
+}
+
+/* Overview tags: navy, cyan-bordered, pinned to the road (see Tag in Journey). */
+.jr__tag { font-family: var(--font-display); font-variation-settings: 'wght' 560, 'wdth' 96; }
+.jr__tag-n { fill: var(--signal); font-variation-settings: 'wght' 700, 'wdth' 96; }
+.jr__tag-t { fill: var(--chalk); }

@@ -20,9 +20,11 @@ mkdirSync(out, { recursive: true })
 // media/ also holds source images (the 1889 building, the KIK IPO photos).
 // They are processed into src/assets by their own scripts and bundled from
 // there, so shipping the originals would add megabytes to every deploy for
-// nothing. Only what the deck loads at runtime is copied: the reel.
-const RUNTIME = /\.mp4$/i
-for (const name of readdirSync('media').filter((n) => RUNTIME.test(n))) {
+// nothing. Only what the deck loads at runtime is copied: the reel. Named,
+// not matched by extension: media/ also holds reference recordings (the
+// journey's style references) that must not be published with the deck.
+const RUNTIME = new Set(['innovathon.mp4'])
+for (const name of readdirSync('media').filter((n) => RUNTIME.has(n))) {
   cpSync(join('media', name), join(out, name))
   const kb = statSync(join('media', name)).size / 1024
   console.log(`media  ${name}  ${(kb / 1024).toFixed(1)}MB`)

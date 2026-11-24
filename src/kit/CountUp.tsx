@@ -14,6 +14,8 @@ interface Props extends Figure {
   duration?: number
   className?: string
   style?: React.CSSProperties
+  /** Mount already counted: for a drawing the camera has passed. */
+  still?: boolean
 }
 
 const toneVar: Record<string, string> = {
@@ -38,8 +40,9 @@ export function CountUp({
   duration = 1.4,
   className,
   style,
+  still = false,
 }: Props) {
-  const reduced = useReducedMotion()
+  const reduced = useReducedMotion() || still
   const n = useMotionValue(reduced ? value : 0)
   const wdth = useMotionValue(reduced ? 118 : 74)
   const settings = useMotionTemplate`'wdth' ${wdth}, 'wght' 600`
@@ -76,7 +79,7 @@ export function CountUp({
         display: 'inline-flex',
         alignItems: 'baseline',
       }}
-      initial={{ opacity: 0 }}
+      initial={still ? false : { opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: reduced ? 0.18 : 0.35, delay }}
     >

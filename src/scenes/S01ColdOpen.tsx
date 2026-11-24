@@ -1,14 +1,11 @@
 import { motion, useReducedMotion } from 'motion/react'
-import { SCENES } from '../content/scenes.ts'
+import { sceneContent } from './content.ts'
 import { WidthType } from '../kit/WidthType.tsx'
 import { FramedDrawing } from '../kit/FramedDrawing.tsx'
 import oldBuilding from '../assets/htpn-1889.webp'
 import './s01.css'
 
-const { content } = SCENES[0] as Extract<
-  (typeof SCENES)[number],
-  { id: 'cold-open' }
->
+const content = sceneContent('cold-open')
 
 /**
  * The hospital's first building, 1889, is drawn onto the sheet behind the

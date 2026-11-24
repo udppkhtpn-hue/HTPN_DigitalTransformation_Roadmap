@@ -41,7 +41,8 @@ const fit = (id: SceneId) => {
   const top = TOP_EDGE[id]
   return top === undefined ? 1 : (FOOT - TITLE_CLEAR) / (FOOT - top)
 }
-const NO_NAME: SceneId[] = ['cold-open']
+// The journey runs full-bleed and carries its own heading on its first press.
+const NO_NAME: SceneId[] = ['cold-open', 'journey']
 
 /**
  * The 1920×1080 stage, letterboxed in --deep and scaled to fit.

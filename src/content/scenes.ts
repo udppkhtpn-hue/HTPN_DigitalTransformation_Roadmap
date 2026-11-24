@@ -9,8 +9,26 @@
  * orchestrated animation — everything else holds still and readable.
  */
 
+/**
+ * Which talk to run. One codebase, two decks:
+ *
+ *   edlp    the five-minute EDLP closing keynote (default)
+ *   oxford  the Akal Budi AI Conference, Oxford version — open with ?deck=oxford
+ *
+ * In the browser it comes from the URL; scripts run under Node read DECK.
+ */
+export type DeckName = 'edlp' | 'oxford'
+const requested =
+  typeof window !== 'undefined'
+    ? new URLSearchParams(window.location.search).get('deck')
+    : typeof process !== 'undefined'
+      ? process.env.DECK
+      : undefined
+export const DECK: DeckName = requested === 'oxford' ? 'oxford' : 'edlp'
+
 export type SceneId =
   | 'cold-open'
+  | 'journey'
   | 'ahead-of-mandate'
   | 'three-forces'
   | 'how-we-led-it'
@@ -30,6 +48,10 @@ export type SceneId =
   | 'measuring-success'
   | 'risks'
   | 'lesson-and-close'
+  | 'byod'
+  | 'dbs'
+  | 'workshop-reach'
+  | 'deep-learning-lab'
 
 export type Tone = 'chalk' | 'line' | 'signal' | 'alert'
 
@@ -51,7 +73,17 @@ interface Base {
   notes: string
   /** Seen in the presenter panel only: lines that did not fit on the sheet at 28px. */
   cues?: string
+  /**
+   * Which entry of the generated keynote script (script.ts) to show in the
+   * presenter panel. Defaults to `sheet`; null shows `notes` instead. The
+   * Oxford deck renumbers its sheets, so it points each one back here.
+   */
+  script?: string | null
 }
+
+/** The key into SCRIPT for a scene, or undefined to fall back to its notes. */
+export const scriptKey = (s: { sheet: string; script?: string | null }) =>
+  s.script === null ? undefined : (s.script ?? s.sheet)
 
 // ─── Per-scene content ──────────────────────────────────────────────────────
 
@@ -148,7 +180,12 @@ export interface BoardRow {
 
 export interface Portfolio {
   /** Every app in the HTPN App Registry (Phase 3), one board page a press. */
-  pages: { title: string; rows: BoardRow[] }[]
+  pages: {
+    title: string
+    rows: BoardRow[]
+    /** Shown in place of the showcase code on this page: one QR per new app. */
+    links?: { qr: string; label: string; url: string }[]
+  }[]
   total: string
   columns: { no: string; name: string; category: string }
   legend: { htpn: string; partner: string }
@@ -283,6 +320,112 @@ export interface PredictAndScale {
   items: string[]
 }
 
+/** Existing photographs a journey station can use. Keys resolve in Journey.tsx. */
+export type JourneyPhoto =
+  | 'files'
+  | 'byod'
+  | 'hio'
+  | 'syllabus'
+  | 'sessions'
+  | 'news'
+  | 'preworkshop'
+  | 'judges'
+  | 'innovathon'
+  | 'woundVision'
+  | 'myipo'
+  | 'nationwide'
+
+/** The one small chart a station carries, after the template's chart kit. */
+export type JourneyChart =
+  | { kind: 'path'; nodes: string[] }
+  | { kind: 'ring'; value: number; of: number; label: string; ofLabel: string }
+  | { kind: 'counts'; items: Figure[] }
+  | { kind: 'tags'; items: string[] }
+  | { kind: 'list'; items: { name: string; with: string }[] }
+
+export interface JourneyEvent {
+  /** First day, ISO. Sets the spacing along the road: more time, more road. */
+  on: string
+  /** Index into Journey.chapters. A new chapter is a bend in the road. */
+  chapter: number
+  /** Small label above the year, e.g. "21 July" or "Apr – Aug". */
+  when: string
+  /** The large figure on the band. Four characters. */
+  year: string
+  title: string
+  body: string
+  chart?: JourneyChart
+  /** A photograph we already have, or a suggestion for one still to find. */
+  image: { photo?: JourneyPhoto; suggest: string }
+}
+
+/** "The Journey at a Glance": one road, a stop per press. */
+export interface Journey {
+  kicker: string
+  heading: string
+  /** Painted on the road; each one is a straight between two bends. */
+  chapters: string[]
+  /** First and last press: the building, under this heading. */
+  close: { heading: string }
+  events: JourneyEvent[]
+}
+
+/** Oxford: the BYOD initiative, with the denominator broken down by role. */
+export interface Byod {
+  kicker: string
+  heading: string
+  definition: string
+  users: number
+  total: number
+  usersLabel: string
+  rolesHeading: string
+  roles: { role: string; n: number }[]
+}
+
+/** Oxford: DBS Singapore, the benchmark named on the Kotter sheet. */
+export interface Dbs {
+  kicker: string
+  heading: string
+  flip: { from: string; to: string; caption: string }
+  how: string[]
+  algorithms: Figure
+  experience: string
+  income: {
+    caption: string
+    bars: { year: string; value: number; label: string }[]
+  }
+  closer: string
+}
+
+/** Oxford: every workshop, and who invited us. */
+export interface WorkshopReach {
+  kicker: string
+  heading: string
+  total: number
+  internal: { n: number; label: string }
+  external: { n: number; label: string }
+  trained: Figure
+  sitesHeading: string
+  groups: { name: string; sites: string[] }[]
+  closer: string
+}
+
+/** Oxford: the Deep Learning Lab and its two Wound Vision arms. */
+export interface DeepLearningLab {
+  kicker: string
+  heading: string
+  lead: string
+  arms: {
+    name: string
+    partners: string
+    shot: 'dfu' | 'dfu-pi'
+    qr: string
+    url: string
+  }[]
+  safeguardsHeading: string
+  safeguards: string[]
+}
+
 export interface LessonAndClose {
   before: string
   strike: string
@@ -295,6 +438,7 @@ export interface LessonAndClose {
 
 export type Scene =
   | (Base & { id: 'cold-open'; content: ColdOpen })
+  | (Base & { id: 'journey'; content: Journey })
   | (Base & { id: 'ahead-of-mandate'; content: AheadOfMandate })
   | (Base & { id: 'three-forces'; content: ThreeForces })
   | (Base & { id: 'how-we-led-it'; content: HowWeLedIt })
@@ -314,10 +458,14 @@ export type Scene =
   | (Base & { id: 'measuring-success'; content: MeasuringSuccess })
   | (Base & { id: 'risks'; content: Risks })
   | (Base & { id: 'lesson-and-close'; content: LessonAndClose })
+  | (Base & { id: 'byod'; content: Byod })
+  | (Base & { id: 'dbs'; content: Dbs })
+  | (Base & { id: 'workshop-reach'; content: WorkshopReach })
+  | (Base & { id: 'deep-learning-lab'; content: DeepLearningLab })
 
 // ─── The talk ───────────────────────────────────────────────────────────────
 
-export const SCENES: Scene[] = [
+const EDLP_SCENES: Scene[] = [
   {
     id: 'cold-open',
     sheet: 'S-01',
@@ -1118,6 +1266,447 @@ export const SCENES: Scene[] = [
     notes: `Here's the lesson for me as a leader. Phase one was won through culture: energy, example, recognition. The next phases must be won through architecture: structure, governance, roles. You have built platforms at a scale we can only imagine, and that's exactly the conversation I'd love to have with you after this. We started before the policy required it. Now we'll turn that head start into an intelligent hospital, built from within, and shared with all of KKM. Thank you.`,
   },
 ]
+
+// ─── Oxford: Akal Budi AI Conference ────────────────────────────────────────
+//
+// The EDLP talk with the sheets added from the "Akal Budi AI Conference
+// Oxford" Google Slides. Every figure below is quoted from that deck, or from
+// the EDLP source where a station reuses one (Innovathon counters, MyIPO).
+
+const JOURNEY: Scene = {
+  id: 'journey',
+  sheet: 'S-02',
+  title: 'The journey at a glance',
+  steps: 15,
+  moment: 1,
+  seconds: 180,
+  script: null,
+  content: {
+    kicker: 'Oct 2024 – Nov 2026',
+    heading: 'The journey at a glance',
+    chapters: ['Keep the hospital running', 'Build the capability', 'Spread, and the mandate', 'Reward the builders', 'Protect and scale'],
+    close: { heading: 'The road so far' },
+    events: [
+      {
+        on: '2024-10-01',
+        chapter: 0,
+        when: 'October',
+        year: '2024',
+        title: 'A fully manual hospital',
+        body: 'From a fully manual hospital to a limited interim budget for the Hospital Information System (HIS).',
+        chart: {
+          kind: 'path',
+          nodes: ['Fully manual', 'Limited interim HIS budget', 'In-house Code White IT & BCMS contingency plan'],
+        },
+        image: { photo: 'files', suggest: 'Paper case files at HTPN Kajang.' },
+      },
+      {
+        on: '2025-02-01',
+        chapter: 0,
+        when: 'February',
+        year: '2025',
+        title: 'Bring Your Own Device',
+        body: 'Staff use their own devices, with intranet‑only access.',
+        chart: {
+          kind: 'ring',
+          value: 643,
+          of: 1406,
+          label: 'clinical staff using their own device',
+          ofLabel: 'of 1,406',
+        },
+        image: { photo: 'byod', suggest: 'A nurse at the bedside, using her own phone.' },
+      },
+      {
+        on: '2025-04-01',
+        chapter: 1,
+        when: 'April',
+        year: '2025',
+        title: 'Healthcare Intelligence Office established',
+        body: 'A dedicated in-house team, set up to drive staff productivity.',
+        image: { photo: 'hio', suggest: 'A group photograph at Hospital Kajang.' },
+      },
+      {
+        on: '2025-04-15',
+        chapter: 1,
+        when: 'Apr – Aug',
+        year: '2025',
+        title: 'Our own AI workshop syllabus',
+        body: 'Written in-house, then taught in-house.',
+        chart: {
+          kind: 'counts',
+          items: [
+            { value: 10, label: 'internal AI workshops', tone: 'signal' },
+            { value: 20, label: 'quick-win projects', tone: 'signal' },
+            { value: 200, suffix: '+', label: 'hospital staff trained', tone: 'signal' },
+          ],
+        },
+        image: { photo: 'syllabus', suggest: 'An early internal workshop.' },
+      },
+      {
+        on: '2025-09-01',
+        chapter: 2,
+        when: 'Sep 2025 – Jun',
+        year: '2026',
+        title: 'Invited by other centres',
+        body: 'External invitations to run our AI workshops.',
+        chart: {
+          kind: 'counts',
+          items: [
+            { value: 32, label: 'internal and external AI workshops', tone: 'signal' },
+            { value: 1285, label: 'staff trained nationwide', tone: 'signal' },
+            { value: 30, suffix: '+', label: 'quick-win projects', tone: 'signal' },
+          ],
+        },
+        image: { photo: 'sessions', suggest: 'An invited session, Putrajaya.' },
+      },
+      {
+        on: '2026-06-05',
+        chapter: 2,
+        when: '5 June',
+        year: '2026',
+        title: 'PM directs all government digital services in-house',
+        body: 'Fourteen months after HTPN began building in-house.',
+        chart: {
+          kind: 'tags',
+          items: ['data sovereignty', 'access to source code', 'civil service talent'],
+        },
+        image: { photo: 'news', suggest: 'The Star, 5 June 2026.' },
+      },
+      {
+        on: '2026-06-25',
+        chapter: 3,
+        when: '25–26 June',
+        year: '2026',
+        title: 'HTPN Pre-Innovathon Workshop',
+        body: 'Teams shape their entries with external advisors.',
+        image: { photo: 'preworkshop', suggest: 'Teams at the Pre-Innovathon Workshop.' },
+      },
+      {
+        on: '2026-07-17',
+        chapter: 3,
+        when: '17 July',
+        year: '2026',
+        title: 'Judges’ round table',
+        body: 'Project pre-assessment, before the day.',
+        image: { photo: 'judges', suggest: 'The judges’ round table, 17 July 2026.' },
+      },
+      {
+        on: '2026-07-21',
+        chapter: 3,
+        when: '21 July',
+        year: '2026',
+        title: 'Reward culture: the Innovathon',
+        body: 'MPC & HTPN Productivity Intelligence Innovathon.',
+        chart: {
+          kind: 'counts',
+          items: [
+            { value: 200, label: 'delegates', tone: 'signal' },
+            { value: 28, label: 'finalists', tone: 'signal' },
+            { value: 9, label: 'winners', tone: 'signal' },
+            { value: 13, label: 'external judges', tone: 'signal' },
+          ],
+        },
+        image: { photo: 'innovathon', suggest: 'The Innovathon hall, 21 July 2026.' },
+      },
+      {
+        on: '2026-10-01',
+        chapter: 4,
+        when: 'October',
+        year: '2026',
+        title: 'Deep Learning Lab launched',
+        body: 'Wound Vision: computer vision for wound care.',
+        chart: {
+          kind: 'list',
+          items: [
+            { name: 'Diabetic foot ulcer', with: 'with Prof Sanjay Kinra & Prof Poppy Mallinson, LSHTM' },
+            { name: 'Pressure injury', with: 'collaboration grant with Dr Hakiim (UPM), Prof Shukor (UiTM) & Dr Ishak (RayaTech Sdn Bhd)' },
+          ],
+        },
+        image: { photo: 'woundVision', suggest: 'The Wound Vision screen, diabetic foot ulcer arm.' },
+      },
+      {
+        on: '2026-10-19',
+        chapter: 4,
+        when: '19–20 October',
+        year: '2026',
+        title: 'MyIPO Workshop',
+        body: 'Protecting our innovations as intellectual property.',
+        chart: {
+          kind: 'counts',
+          items: [{ value: 20, prefix: '~', label: 'Innovathon participants', tone: 'signal' }],
+        },
+        image: { photo: 'myipo', suggest: 'KIK & MyIPO workshop, 19–20 October 2026.' },
+      },
+      {
+        on: '2026-11-01',
+        chapter: 4,
+        when: 'Apr 2025 – Nov',
+        year: '2026',
+        title: 'Insourcing AI skills, nationwide',
+        body: 'Every workshop transfers the capability. It stays inside KKM after we leave.',
+        chart: {
+          kind: 'counts',
+          items: [
+            { value: 40, suffix: '+', label: 'AI workshops', tone: 'signal' },
+            { value: 1300, suffix: '+', label: 'MOH staff trained nationwide', tone: 'signal' },
+            { value: 50, suffix: '+', label: 'quick-win projects', tone: 'signal' },
+          ],
+        },
+        image: { photo: 'nationwide', suggest: 'Workshop participants, group photograph.' },
+      },
+    ],
+  },
+  notes: `First press: the building. Second: the road draws itself across it, chapter by chapter. Then one press per moment. October 2024: a fully manual hospital, a limited interim HIS budget, and our own Code White IT and BCMS contingency plan. February 2025: Bring Your Own Device, intranet only; 643 of 1,406 clinical staff now use their own device. April 2025: the Healthcare Intelligence Office. April to August 2025: our own syllabus; 10 internal workshops, 20 quick wins, over 200 staff. September 2025 to June 2026: other centres invite us; 32 workshops, 1,285 staff, over 30 quick wins. 5 June 2026: the Prime Minister directs all government digital services in-house, fourteen months after we started. June and July: the Pre-Innovathon Workshop with external advisors, the judges' round table, then the Innovathon on 21 July. October 2026: the Deep Learning Lab, and the MyIPO workshop on 19 and 20 October. In all: more than 40 workshops, more than 1,300 MOH staff, more than 50 quick-win projects.`,
+}
+
+const BYOD: Scene = {
+  id: 'byod',
+  sheet: 'S-00',
+  title: 'Bring Your Own Device',
+  steps: 2,
+  moment: 0,
+  seconds: 50,
+  script: null,
+  content: {
+    kicker: 'February 2025 · keep the hospital running',
+    heading: 'Bring Your Own Device',
+    definition: 'Staff use their own devices, with intranet‑only access.',
+    users: 643,
+    total: 1406,
+    usersLabel: 'clinical staff using their own device',
+    rolesHeading: 'Who the 1,406 clinical staff are',
+    roles: [
+      { role: 'Nursing', n: 545 },
+      { role: 'Medical Officer (permanent)', n: 332 },
+      { role: 'Medical Assistant', n: 176 },
+      { role: 'House Officer', n: 126 },
+      { role: 'Specialist', n: 113 },
+      { role: 'Jururawat Masyarakat', n: 82 },
+      { role: 'Medical Officer (contract)', n: 32 },
+    ],
+  },
+  notes: `With no hospital information system and only a limited interim budget, we started with the devices already in our staff's pockets. In February 2025 we launched Bring Your Own Device: staff use their own phones and laptops, with access to the intranet only. Today 643 of our 1,406 clinical staff do, about forty-five percent. That denominator is everyone: nurses, medical officers, medical assistants, house officers, specialists and community nurses.`,
+}
+
+const DBS: Scene = {
+  id: 'dbs',
+  sheet: 'S-00',
+  title: 'DBS Singapore as role model',
+  steps: 2,
+  moment: 0,
+  seconds: 55,
+  script: null,
+  content: {
+    kicker: 'Our benchmark',
+    heading: 'DBS Singapore as role model',
+    flip: {
+      from: '85% outsourced',
+      to: '85% insourced',
+      caption: 'Tech talent and infrastructure, brought in-house.',
+    },
+    how: [
+      'Creating a tech DNA and capabilities',
+      'Upskilling and reskilling employees to be future-ready',
+      'Quick-win projects',
+    ],
+    algorithms: { value: 100, suffix: '+', label: 'AI and ML algorithms created by 2023', tone: 'signal' },
+    experience: 'Customer experience improved through AI.',
+    income: {
+      caption: 'Total income, more than tripled',
+      bars: [
+        { year: '2009', value: 0.66, label: 'S$0.66bn' },
+        { year: '2022', value: 2.24, label: 'S$2.24bn' },
+      ],
+    },
+    closer: 'The same moves, inside a public hospital.',
+  },
+  notes: `Our benchmark is DBS in Singapore. DBS switched from eighty-five percent outsourcing of its tech talent and infrastructure to eighty-five percent insourcing. It did it by building a tech DNA, upskilling and reskilling its own people, and starting with quick wins. By 2023 it had created more than a hundred AI and machine-learning algorithms, and used them to improve customer experience. Its total income more than tripled, from 0.66 billion Singapore dollars in 2009 to 2.24 billion in 2022. We are making the same moves, inside a public hospital.`,
+}
+
+const WORKSHOP_REACH: Scene = {
+  id: 'workshop-reach',
+  sheet: 'S-00',
+  title: 'Workshop reach',
+  steps: 2,
+  moment: 0,
+  seconds: 60,
+  script: null,
+  content: {
+    kicker: 'April 2025 – November 2026',
+    heading: 'Insourcing AI skills nationwide',
+    total: 40,
+    internal: { n: 17, label: 'internal HTPN workshops' },
+    external: { n: 23, label: 'invited external workshops' },
+    trained: { value: 1300, prefix: '>', label: 'participants trained', tone: 'signal' },
+    sitesHeading: 'External invitations: the model is spreading',
+    groups: [
+      {
+        name: 'National services',
+        sites: [
+          'Internal Medicine Service (National)',
+          'National O&G Service (National)',
+          'Family Medicine Specialist Service (National & Sarawak)',
+        ],
+      },
+      {
+        name: 'Hospitals',
+        sites: [
+          'Hospital Pulau Pinang',
+          'Hospital Kepala Batas (Seberang Perai Cluster)',
+          'Hospital Sultanah Aminah',
+          'Hospital Cyberjaya',
+          'Hospital Port Dickson',
+          'Hospital Raja Perempuan Zainab II',
+        ],
+      },
+      {
+        name: 'States and clusters',
+        sites: ['JKN Sarawak', 'JKN Selangor', 'KPAS, JKNS', 'OMFS Cluster KKV4', 'Paediatric Dental KKV4'],
+      },
+      {
+        name: 'Community',
+        sites: ['St John Ambulance (WPKL)', 'Puspanita, HKL'],
+      },
+    ],
+    closer: 'Every workshop insources skills and transfers technology: the capability stays inside KKM after we leave.',
+  },
+  notes: `From April 2025 to November 2026 we ran forty workshops. Seventeen were internal, here at HTPN. Twenty-three were by invitation: the national internal medicine, O&G and family medicine services; hospitals from Penang to Johor to Kelantan; the state health departments in Sarawak and Selangor; even St John Ambulance and Puspanita. More than thirteen hundred people trained. And every workshop transfers the skill, so the capability stays inside the Ministry after we leave.`,
+}
+
+const DEEP_LEARNING_LAB: Scene = {
+  id: 'deep-learning-lab',
+  sheet: 'S-00',
+  title: 'Deep Learning Lab',
+  steps: 2,
+  moment: 0,
+  seconds: 60,
+  script: null,
+  content: {
+    kicker: 'Launched October 2026',
+    heading: 'Wound Vision',
+    lead: 'Computer vision for wound care, built in-house: catch a wound earlier, and grade it the same way every time.',
+    arms: [
+      {
+        name: 'Diabetic foot ulcer',
+        partners: 'with Prof Sanjay Kinra & Prof Poppy Mallinson, LSHTM',
+        shot: 'dfu',
+        qr: 'dfu',
+        url: 'htpn-clinical-checker.vercel.app/dfu',
+      },
+      {
+        name: 'Pressure injury',
+        partners: 'collaboration grant with Dr Hakiim (UPM), Prof Shukor (UiTM) & Dr Ishak (RayaTech Sdn Bhd)',
+        shot: 'dfu-pi',
+        qr: 'dfuPi',
+        url: 'htpn-clinical-checker.vercel.app/dfu/?arm=pi',
+      },
+    ],
+    safeguardsHeading: 'Safeguards before wider adoption',
+    safeguards: [
+      'Runs on the device',
+      'No identifiable photographs',
+      'Supports the clinician, never replaces them',
+      'Under evaluation until validated',
+    ],
+  },
+  notes: `In October 2026 we launched a Deep Learning Lab. Its first product is Wound Vision: computer vision that helps catch a wound earlier and grade it consistently. There are two arms. Diabetic foot ulcer, with Professor Sanjay Kinra and Professor Poppy Mallinson at the London School of Hygiene and Tropical Medicine. And pressure injury, under a collaboration grant with UPM, UiTM and RayaTech. The safeguards come first: it runs on the device, no identifiable photographs, it supports the clinician and never replaces them, and it stays under evaluation until the validation is done.`,
+}
+
+/** Oxford's own figures where they have moved on since the EDLP talk. */
+function oxfordOverride(s: Scene): Scene {
+  if (s.id === 'results') {
+    return {
+      ...s,
+      script: null,
+      content: {
+        ...s.content,
+        figures: [
+          { value: 1300, suffix: '+', label: 'healthcare staff trained', tone: 'signal' },
+          { value: 50, suffix: '+', label: 'in-house apps in active use', tone: 'signal' },
+          { value: 40, suffix: '+', label: 'workshops, 23 by external invitation', tone: 'signal' },
+          { value: 0, prefix: 'RM', label: 'software licensing cost', tone: 'signal' },
+        ],
+        footnote: 'Figures as of November 2026.',
+      },
+      notes: `Nineteen months in: more than thirteen hundred staff trained, more than fifty apps in daily use, forty workshops, twenty-three of them because other hospitals and services invited us. And zero ringgit in software licences.`,
+    }
+  }
+  if (s.id === 'where-weve-taught') {
+    return {
+      ...s,
+      script: null,
+      content: {
+        ...s.content,
+        subline: 'The first 15 invitations, mapped. 23 by November 2026.',
+      },
+      notes: `Here are the first fifteen of those invitations on the map, in the order they arrived: hospitals, community groups and whole national services, from Alor Setar to Johor Bahru, and across the sea to Kuching. By November there were twenty-three. And here's what happened next. The hospitals we taught started building their own tools, in Marudi, Sri Aman, Mukah, Penang and Johor. We taught. They built.`,
+    }
+  }
+  if (s.id === 'portfolio') {
+    return {
+      ...s,
+      steps: s.steps + 1,
+      content: {
+        ...s.content,
+        pages: [
+          ...s.content.pages,
+          {
+            title: 'Apps 51–52',
+            rows: [
+              { no: '51', name: 'Patient Journey within Hospital', by: 'htpn', category: 'Patient journey' },
+              { no: '52', name: 'ED status for public view', by: 'htpn', category: 'Patient journey' },
+            ],
+            links: [
+              { qr: 'patientJourney', label: '51 · Patient Journey', url: 'patient-journey-by-htpn.vercel.app' },
+              { qr: 'edStatus', label: '52 · ED status', url: 'prototype, MOH only' },
+            ],
+          },
+        ],
+        total: '52 apps in the registry',
+        legend: { htpn: '19 built at HTPN', partner: '33 built by the hospitals we taught' },
+      },
+      notes: `${s.notes} And two more since October: a patient journey app that guides patients through the hospital, and a prototype that shows the public how busy our emergency department is.`,
+    }
+  }
+  return s
+}
+
+/** Sheets are numbered by position; each keeps its EDLP script entry. */
+const renumber = (list: Scene[]): Scene[] =>
+  list.map((s, i) => ({
+    ...s,
+    sheet: `S-${String(i + 1).padStart(2, '0')}`,
+    script: s.script === undefined ? s.sheet : s.script,
+  }))
+
+const edlp = (id: SceneId) => oxfordOverride(EDLP_SCENES.find((s) => s.id === id)!)
+
+/** The EDLP order, with Oxford's four sheets set beside the ones they expand. */
+const OXFORD_SCENES: Scene[] = renumber([
+  edlp('cold-open'),
+  edlp('three-forces'),
+  JOURNEY,
+  edlp('how-we-led-it'),
+  // Ahead of the mandate is left out: the journey already tells it.
+  BYOD,
+  DBS,
+  edlp('results'),
+  WORKSHOP_REACH,
+  edlp('where-weve-taught'),
+  edlp('portfolio'),
+  edlp('innovathon'),
+  DEEP_LEARNING_LAB,
+  ...EDLP_SCENES.slice(EDLP_SCENES.findIndex((s) => s.id === 'the-gap')).map(oxfordOverride),
+])
+
+export const SCENES: Scene[] = DECK === 'oxford' ? OXFORD_SCENES : EDLP_SCENES
+
+/**
+ * Every scene module is imported whichever deck runs, and reads its content
+ * at load. The running deck's version wins; the other deck's is the fallback
+ * for sheets this deck never shows.
+ */
+export const ALL_SCENES: Scene[] = [...SCENES, ...EDLP_SCENES, ...OXFORD_SCENES]
 
 /** Total clicker presses across the talk. */
 export const TOTAL_STEPS = SCENES.reduce((n, s) => n + s.steps, 0)

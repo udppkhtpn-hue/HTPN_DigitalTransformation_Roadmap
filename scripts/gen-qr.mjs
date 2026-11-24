@@ -12,6 +12,12 @@ const URLS = {
   showcase: 'https://htpn-showcase-v2.vercel.app/',
   innovathon: 'https://udppkhtpn-hue.github.io/innovathon2026/',
   padlet: 'https://padlet.com/drsyafiz/bengkel-produktiviti-digital-ai-untuk-transformasi-perkhidma-s024ha3em14j8gw35eyo',
+  // Oxford deck
+  dfu: 'https://htpn-clinical-checker.vercel.app/dfu/',
+  dfuPi: 'https://htpn-clinical-checker.vercel.app/dfu/?arm=pi',
+  patientJourney: 'https://patient-journey-by-htpn.vercel.app',
+  // Internal: opens only with an moh.gov.my Google account.
+  edStatus: 'https://script.google.com/a/macros/moh.gov.my/s/AKfycbwpgXxk_fdR9c_gS_O-kCWQ7hYdJ-Wep2mKbVd8mtPKZdwgjimCRgoG0Md_kV5BmYTQ/exec',
 }
 
 /** One rect per dark module, merged into a single path. */

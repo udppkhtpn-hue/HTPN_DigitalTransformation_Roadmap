@@ -1,6 +1,6 @@
 import { useEffect, useRef } from 'react'
 import { SCRIPT } from '../content/script.ts'
-import type { Scene } from '../content/scenes.ts'
+import { scriptKey, type Scene } from '../content/scenes.ts'
 import './scriptpanel.css'
 
 interface Props {
@@ -20,7 +20,8 @@ interface Props {
  * click and the words can be matched at a glance.
  */
 export function ScriptPanel({ scene, step, show, onPress }: Props) {
-  const script = SCRIPT[scene.sheet]
+  const key = scriptKey(scene)
+  const script = key ? SCRIPT[key] : undefined
   const box = useRef<HTMLDivElement>(null)
 
   useEffect(() => {

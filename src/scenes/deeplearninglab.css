@@ -1,0 +1,111 @@
+.dll { position: absolute; inset: 0; padding: 0; }
+
+.dll__kicker {
+  position: absolute;
+  top: 176px;
+  left: 200px;
+  margin: 0;
+  font-family: var(--font-mono);
+  font-size: var(--t-dim);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--signal);
+}
+
+.dll__head {
+  position: absolute;
+  top: 222px;
+  left: 200px;
+  margin: 0;
+  font-size: 120px;
+  line-height: 1;
+  letter-spacing: -0.025em;
+  color: var(--chalk);
+  white-space: nowrap;
+}
+
+.dll__lead {
+  position: absolute;
+  top: 372px;
+  left: 200px;
+  width: 860px;
+  margin: 0;
+  font-size: 36px;
+  line-height: 1.28;
+  font-variation-settings: 'wght' 400, 'wdth' 96;
+  color: var(--chalk);
+}
+
+.dll__arms {
+  position: absolute;
+  top: 520px;
+  left: 200px;
+  width: 880px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.dll__arms li { display: flex; align-items: flex-start; gap: 30px; }
+.dll__arm-text { display: flex; flex-direction: column; gap: 8px; }
+.dll__arm-name {
+  font-size: 46px;
+  line-height: 1;
+  font-variation-settings: 'wght' 650, 'wdth' 92;
+  color: var(--chalk);
+}
+.dll__arm-with {
+  font-size: 28px;
+  line-height: 1.28;
+  font-variation-settings: 'wght' 400, 'wdth' 96;
+  color: var(--line);
+}
+.dll__arm-url {
+  font-family: var(--font-mono);
+  font-size: 20px;
+  color: var(--line);
+  opacity: 0.75;
+}
+
+/* The two arms, phone-sized, top right. */
+.dll__shot {
+  position: absolute;
+  top: 176px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.dll__shot-cap {
+  font-family: var(--font-mono);
+  font-size: 20px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--line);
+}
+
+/* Press 2, under the screenshots. Ends short of the title block. */
+.dll__guards {
+  position: absolute;
+  left: 1140px;
+  top: 600px;
+  width: 580px;
+}
+.dll__guards-head {
+  margin: 0 0 16px;
+  font-family: var(--font-mono);
+  font-size: 24px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--signal);
+}
+.dll__guards ul { margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 12px; }
+.dll__guards li {
+  padding-left: 22px;
+  border-left: 3px solid var(--signal);
+  font-size: 28px;
+  line-height: 1.22;
+  font-variation-settings: 'wght' 500, 'wdth' 94;
+  color: var(--chalk);
+}

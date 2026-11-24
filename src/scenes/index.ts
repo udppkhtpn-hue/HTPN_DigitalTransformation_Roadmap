@@ -2,6 +2,7 @@ import type { ComponentType } from 'react'
 import type { SceneId } from '../content/scenes.ts'
 
 import { S01ColdOpen } from './S01ColdOpen.tsx'
+import { Journey } from './Journey.tsx'
 import { S02ThreeForces } from './S02ThreeForces.tsx'
 import { S03AheadOfMandate } from './S03AheadOfMandate.tsx'
 import { S04HowWeLedIt } from './S04HowWeLedIt.tsx'
@@ -21,6 +22,10 @@ import { S11PredictAndScale } from './S11PredictAndScale.tsx'
 import { MeasuringSuccess } from './MeasuringSuccess.tsx'
 import { Risks } from './Risks.tsx'
 import { S12LessonAndClose } from './S12LessonAndClose.tsx'
+import { Byod } from './Byod.tsx'
+import { Dbs } from './Dbs.tsx'
+import { WorkshopReach } from './WorkshopReach.tsx'
+import { DeepLearningLab } from './DeepLearningLab.tsx'
 
 export interface SceneProps {
   step: number
@@ -33,6 +38,7 @@ export interface SceneProps {
  */
 export const SCENE_COMPONENTS: Record<SceneId, ComponentType<SceneProps>> = {
   'cold-open': S01ColdOpen,
+  journey: Journey,
   'three-forces': S02ThreeForces,
   'ahead-of-mandate': S03AheadOfMandate,
   'how-we-led-it': S04HowWeLedIt,
@@ -52,4 +58,8 @@ export const SCENE_COMPONENTS: Record<SceneId, ComponentType<SceneProps>> = {
   'measuring-success': MeasuringSuccess,
   risks: Risks,
   'lesson-and-close': S12LessonAndClose,
+  byod: Byod,
+  dbs: Dbs,
+  'workshop-reach': WorkshopReach,
+  'deep-learning-lab': DeepLearningLab,
 }

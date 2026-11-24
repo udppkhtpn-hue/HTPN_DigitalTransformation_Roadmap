@@ -8,6 +8,8 @@ interface Props {
   width?: number
   dashed?: boolean
   opacity?: number
+  /** Mount already drawn: for a drawing the camera has passed. */
+  still?: boolean
 }
 
 /**
@@ -25,8 +27,24 @@ export function DrawPath({
   width = 1.5,
   dashed = false,
   opacity = 0.75,
+  still = false,
 }: Props) {
   const reduced = useReducedMotion()
+  if (still) {
+    return (
+      <path
+        d={d}
+        fill="none"
+        stroke={stroke}
+        strokeWidth={width}
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeDasharray={dashed ? '6 7' : undefined}
+        vectorEffect="non-scaling-stroke"
+        opacity={opacity}
+      />
+    )
+  }
   return (
     <motion.path
       d={d}

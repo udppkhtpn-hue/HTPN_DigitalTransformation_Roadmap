@@ -14,6 +14,8 @@ const COLUMNS: FlapColumn[] = [
   { width: 23 },
 ]
 const ROWS = Math.max(...c.pages.map((p) => p.rows.length))
+/** 50 in the EDLP talk; Oxford adds a page of newer apps. */
+const TOTAL = c.pages.reduce((n, p) => n + p.rows.length, 0)
 /** Left edge of each column on the stage: tile 22px, gap 2px, column gap 28px. */
 const PITCH = 24
 const COL_X = COLUMNS.reduce<number[]>((xs, _, k) => {
@@ -64,7 +66,7 @@ export function S06Portfolio({ step }: SceneProps) {
           exit={{ opacity: 0, y: -8 * t, transition: { duration: 0.2 } }}
           transition={{ duration: 0.45, ease: [0.16, 1, 0.3, 1] }}
         >
-          {page.title} <span className="s06__count">of 50</span>
+          {page.title} <span className="s06__count">of {TOTAL}</span>
         </motion.h1>
       </AnimatePresence>
 
@@ -106,18 +108,40 @@ export function S06Portfolio({ step }: SceneProps) {
         ))}
       </ul>
 
-      <motion.div
-        className="s06__foot"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 0.5, delay: 1.2 * t }}
-      >
-        <QR code="showcase" size={124} />
-        <div className="s06__foot-text">
-          <span className="s06__url">htpn-showcase-v2.vercel.app</span>
-          <span className="s06__line">{c.line}</span>
-        </div>
-      </motion.div>
+      {page.links ? (
+        // A page of new apps: a code for each, in place of the showcase's.
+        <motion.div
+          key={`links-${step}`}
+          className="s06__foot"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.5, delay: 1.2 * t }}
+        >
+          {page.links.map((l) => (
+            <div className="s06__link" key={l.qr}>
+              <QR code={l.qr} size={112} />
+              <div className="s06__foot-text">
+                <span className="s06__link-name">{l.label}</span>
+                <span className="s06__url">{l.url}</span>
+              </div>
+            </div>
+          ))}
+        </motion.div>
+      ) : (
+        <motion.div
+          key="showcase"
+          className="s06__foot"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.5, delay: 1.2 * t }}
+        >
+          <QR code="showcase" size={124} />
+          <div className="s06__foot-text">
+            <span className="s06__url">htpn-showcase-v2.vercel.app</span>
+            <span className="s06__line">{c.line}</span>
+          </div>
+        </motion.div>
+      )}
     </div>
   )
 }

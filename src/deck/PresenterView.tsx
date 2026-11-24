@@ -1,6 +1,6 @@
 import { useDeck } from './DeckProvider.tsx'
 import { ScriptPanel } from './ScriptPanel.tsx'
-import { SCENES, PLANNED_SECONDS } from '../content/scenes.ts'
+import { SCENES, PLANNED_SECONDS, scriptKey } from '../content/scenes.ts'
 import { SCRIPT } from '../content/script.ts'
 import './presenterview.css'
 
@@ -23,8 +23,10 @@ export function PresenterView() {
   const drift = elapsed - planned
   const pace = !running ? 'idle' : drift > 20 ? 'late' : drift < -20 ? 'early' : 'on'
   const nextScene = SCENES[sceneIndex + 1]
-  const nextScript = nextScene && SCRIPT[nextScene.sheet]
-  const here = SCRIPT[scene.sheet]
+  const nextKey = nextScene && scriptKey(nextScene)
+  const nextScript = nextKey ? SCRIPT[nextKey] : undefined
+  const hereKey = scriptKey(scene)
+  const here = hereKey ? SCRIPT[hereKey] : undefined
   const remaining = PLANNED_SECONDS - elapsed
 
   // A clicked button keeps focus, and Space or Enter on a focused button

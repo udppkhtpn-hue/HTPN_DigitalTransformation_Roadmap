@@ -1,0 +1,112 @@
+.byod { position: absolute; inset: 0; padding: 0; }
+
+.byod__kicker {
+  position: absolute;
+  top: 176px;
+  left: 200px;
+  margin: 0;
+  font-family: var(--font-mono);
+  font-size: var(--t-dim);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--signal);
+}
+
+.byod__head {
+  position: absolute;
+  top: 222px;
+  left: 200px;
+  width: 1520px;
+  margin: 0;
+  font-size: 76px;
+  line-height: 1.04;
+  letter-spacing: -0.015em;
+  color: var(--chalk);
+}
+
+/* The ring: 440 square, its centre at (420, 640). */
+.byod__ring {
+  position: absolute;
+  left: 200px;
+  top: 420px;
+  width: 440px;
+  height: 440px;
+}
+.byod__track { fill: none; stroke: rgba(124, 196, 242, 0.22); stroke-width: 34; }
+.byod__arc { fill: none; stroke: var(--signal); stroke-width: 34; stroke-linecap: butt; }
+
+.byod__mid {
+  position: absolute;
+  left: 200px;
+  top: 420px;
+  width: 440px;
+  height: 440px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+.byod__num { font-size: 120px; line-height: 1; letter-spacing: -0.03em; }
+.byod__of {
+  font-family: var(--font-mono);
+  font-size: 30px;
+  color: var(--line);
+}
+
+.byod__share {
+  position: absolute;
+  left: 690px;
+  top: 560px;
+  width: 340px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.byod__pct {
+  font-size: 110px;
+  line-height: 1;
+  letter-spacing: -0.03em;
+  font-variation-settings: 'wght' 700, 'wdth' 90;
+  color: var(--chalk);
+}
+.byod__label {
+  font-size: var(--t-small);
+  line-height: 1.25;
+  font-variation-settings: 'wght' 400, 'wdth' 96;
+  color: var(--chalk);
+}
+
+/* Right column, clear of the title block below 860. */
+.byod__roles {
+  position: absolute;
+  left: 1060px;
+  top: 430px;
+  width: 700px;
+}
+.byod__roles-head {
+  margin: 0 0 18px;
+  font-family: var(--font-mono);
+  font-size: var(--t-dim);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--line);
+}
+.byod__roles ul { margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 14px; }
+.byod__roles li { display: flex; align-items: center; gap: 18px; height: 34px; }
+.byod__role {
+  flex: none;
+  width: 330px;
+  text-align: right;
+  font-size: 26px;
+  line-height: 1.1;
+  font-variation-settings: 'wght' 500, 'wdth' 94;
+  color: var(--chalk);
+}
+.byod__bar-row { display: flex; align-items: center; gap: 14px; height: 22px; }
+.byod__bar { display: block; height: 18px; background: var(--line); opacity: 0.8; }
+.byod__n {
+  font-family: var(--font-mono);
+  font-size: 24px;
+  color: var(--line);
+}

@@ -1,4 +1,4 @@
-import { SCENES, type Scene, type SceneId } from '../content/scenes.ts'
+import { ALL_SCENES, type Scene, type SceneId } from '../content/scenes.ts'
 
 /** The content shape belonging to one scene id. */
 type ContentOf<K extends SceneId> = Extract<Scene, { id: K }>['content']
@@ -10,7 +10,7 @@ type ContentOf<K extends SceneId> = Extract<Scene, { id: K }>['content']
  * resolved against the whole union and every field looks missing.
  */
 export function sceneContent<K extends SceneId>(id: K): ContentOf<K> {
-  const scene = SCENES.find((s) => s.id === id)
+  const scene = ALL_SCENES.find((s) => s.id === id)
   if (!scene) throw new Error(`No scene with id "${id}"`)
   return scene.content as ContentOf<K>
 }

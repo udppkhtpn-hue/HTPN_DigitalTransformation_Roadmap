@@ -6,9 +6,11 @@ import { statSync } from 'node:fs'
 // 4.3MB since the S-04 syllabus and Padlet prints and a longer QR code,
 // 4.6MB since the team portraits, S-03 pressure prints and S-08 winners,
 // 5.0MB once the winners went back to full colour, the firsts at 924px.
+// 5.75MB with the Oxford deck: its journey photographs, the Wound Vision and
+// patient-journey screenshots, and its new sheets.
 // Images decode during the boot screen, not on stage, and perf is re-run
 // against the bigger file, so the limit moves rather than the pictures.
-const LIMIT = 5.0 * 1024 * 1024
+const LIMIT = 5.75 * 1024 * 1024
 const size = statSync('dist-single/index.html').size
 const mb = (n) => `${(n / 1024 / 1024).toFixed(2)}MB`
 

@@ -1,0 +1,146 @@
+.wr { position: absolute; inset: 0; padding: 0; }
+
+.wr__kicker {
+  position: absolute;
+  top: 176px;
+  left: 200px;
+  margin: 0;
+  font-family: var(--font-mono);
+  font-size: var(--t-dim);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--signal);
+}
+
+.wr__head {
+  position: absolute;
+  top: 222px;
+  left: 200px;
+  width: 1520px;
+  margin: 0;
+  font-size: 96px;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  color: var(--chalk);
+  white-space: nowrap;
+}
+
+/* ── press 1: the ticks ─────────────────────────────────────────────────── */
+
+.wr__count { position: absolute; inset: 0; }
+
+.wr__figs {
+  position: absolute;
+  left: 200px;
+  top: 360px;
+  display: flex;
+  gap: 120px;
+}
+.wr__fig { display: flex; align-items: baseline; gap: 22px; }
+.wr__num { font-size: 120px; line-height: 1; letter-spacing: -0.03em; }
+.wr__fig-label {
+  font-size: var(--t-small);
+  font-variation-settings: 'wght' 400, 'wdth' 96;
+  color: var(--chalk);
+}
+
+.wr__ticks {
+  position: absolute;
+  left: 200px;
+  top: 540px;
+  width: 1520px;
+  height: 200px;
+  overflow: visible;
+}
+.wr__tick { fill: var(--chalk); opacity: 0.85; }
+.wr__tick--ext { fill: var(--signal); opacity: 1; }
+.wr__bracket { fill: none; stroke: var(--chalk); stroke-width: 2; opacity: 0.7; }
+.wr__bracket--ext { stroke: var(--signal); opacity: 1; }
+
+.wr__run {
+  position: absolute;
+  top: 680px;
+  display: flex;
+  align-items: baseline;
+  gap: 16px;
+}
+.wr__run-n {
+  font-size: 72px;
+  line-height: 1;
+  font-variation-settings: 'wght' 700, 'wdth' 92;
+}
+.wr__run-n--chalk { color: var(--chalk); }
+.wr__run-n--signal { color: var(--signal); }
+.wr__run-label {
+  font-size: 30px;
+  font-variation-settings: 'wght' 400, 'wdth' 96;
+  color: var(--chalk);
+}
+
+/* ── press 2: who invited us ────────────────────────────────────────────── */
+
+.wr__sites { position: absolute; inset: 0; }
+
+.wr__sites-head {
+  position: absolute;
+  left: 200px;
+  top: 360px;
+  margin: 0;
+  display: flex;
+  align-items: baseline;
+  gap: 18px;
+  font-family: var(--font-mono);
+  font-size: var(--t-dim);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--line);
+}
+.wr__sites-n {
+  font-family: var(--font-display);
+  font-size: 64px;
+  letter-spacing: 0;
+  font-variation-settings: 'wght' 700, 'wdth' 92;
+  color: var(--signal);
+}
+
+.wr__groups {
+  position: absolute;
+  left: 200px;
+  top: 450px;
+  width: 1520px;
+  display: grid;
+  grid-template-columns: 1.1fr 1.15fr 0.95fr 0.8fr;
+  gap: 44px;
+}
+.wr__group-name {
+  margin: 0 0 16px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid var(--line);
+  font-family: var(--font-mono);
+  font-size: 24px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--line);
+}
+.wr__group ul { margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 12px; }
+.wr__group li {
+  font-size: 28px;
+  line-height: 1.2;
+  font-variation-settings: 'wght' 450, 'wdth' 94;
+  color: var(--chalk);
+}
+
+/* Both presses. Ends short of the title block. */
+.wr__closer {
+  position: absolute;
+  left: 200px;
+  top: 880px;
+  width: 1040px;
+  margin: 0;
+  font-family: var(--font-human);
+  font-style: italic;
+  font-size: 40px;
+  line-height: 1.12;
+  color: var(--signal);
+}

@@ -64,3 +64,10 @@
   font-family: var(--font-human); font-style: italic; font-size: 44px;
   line-height: 1; color: var(--signal);
 }
+
+/* Oxford's last page: one code per new app, side by side. */
+.s06__link { display: flex; align-items: center; gap: 20px; margin-right: 24px; }
+.s06__link-name {
+  font-size: var(--t-small); line-height: 1.1;
+  font-variation-settings: 'wght' 600, 'wdth' 94; color: var(--chalk);
+}
