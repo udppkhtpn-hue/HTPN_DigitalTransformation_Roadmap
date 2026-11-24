@@ -131,35 +131,31 @@
 
 /* ── the date, in navy on the road ──────────────────────────────────────── */
 
-.jr__date {
+/* The road's band: 230 tall, centred at 870 (foot) or 210 (head). The date
+   is centred in it, one line, month and year at one size (set in Journey). */
+.jr__date-row {
   position: absolute;
+  height: 230px;
   display: flex;
   align-items: center;
-  gap: 30px;
-  color: var(--drafting);
+  z-index: 2;
 }
-.jr__st--foot .jr__date { left: 200px; top: 782px; transform-origin: 0 50%; }
-.jr__st--head .jr__date { right: 160px; top: 122px; transform-origin: 100% 50%; }
+.jr__st--foot .jr__date-row { left: 200px; top: 755px; }
+.jr__st--head .jr__date-row { right: 160px; top: 95px; }
 
-.jr__date-meta {
+.jr__date {
   display: flex;
-  flex-direction: column;
-  gap: 6px;
-}
-
-.jr__when {
-  font-family: var(--font-mono);
-  font-size: 34px;
-  font-weight: 600;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
+  align-items: baseline;
+  gap: 26px;
+  color: var(--drafting);
   white-space: nowrap;
 }
+.jr__st--foot .jr__date { transform-origin: 0 50%; }
+.jr__st--head .jr__date { transform-origin: 100% 50%; }
 
-.jr__year {
-  font-size: 196px;
-  line-height: 0.9;
-  letter-spacing: -0.03em;
+.jr__day {
+  line-height: 1;
+  letter-spacing: -0.025em;
   font-variation-settings: 'wdth' 84, 'wght' 800;
 }
 
@@ -182,6 +178,7 @@
   margin: 0;
   left: 200px;
   width: 860px;
+  z-index: 1;
 }
 
 .jr__title {
@@ -205,40 +202,129 @@
 .jr__st--head .jr__title { top: 380px; }
 .jr__st--head .jr__text { top: 540px; }
 
-/* ── chart and photograph ───────────────────────────────────────────────── */
-
+/* The stop's chart, under its words. */
 .jr__chart {
   position: absolute;
   left: 200px;
   width: 860px;
+  z-index: 1;
 }
 .jr__st--foot .jr__chart { top: 430px; }
 .jr__st--head .jr__chart { top: 670px; }
 
+/* ── photographs ────────────────────────────────────────────────────────── */
+
+/* The stop's free area: the sheet above the road (foot) or below it (head),
+   755 tall either way. Pictures are laid out against it. */
+.jr__st--foot { --t: 0px; --b: 325px; }
+.jr__st--head { --t: 325px; --b: 0px; }
+
 .jr__pic {
   position: absolute;
-  left: 1180px;
-  width: 560px;
-  height: 380px;
   margin: 0;
-  border: 1px solid rgba(124, 196, 242, 0.45);
-  background: var(--deep);
-  box-shadow: 0 16px 42px rgba(6, 16, 34, 0.7);
+  z-index: 0;
   overflow: hidden;
+  background: var(--deep);
 }
-.jr__st--foot .jr__pic { top: 150px; }
-.jr__st--head .jr__pic { top: 390px; }
-
-/* No chart: the photograph is the stop's one picture, larger. */
-.jr__pic--big { left: 1100px; width: 660px; height: 500px; }
-.jr__st--foot .jr__pic--big { top: 130px; }
-.jr__st--head .jr__pic--big { top: 370px; }
-
 .jr__pic img {
   display: block;
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+/* 01 · a tall column off the right and top edges, ruled on its inner side */
+.jr__pic--column { left: 1240px; right: 0; top: var(--t); bottom: var(--b); border-left: 3px solid var(--line); }
+
+/* 02 · behind the words, fading in from the left; bleeds off the right */
+.jr__pic--fade { left: 620px; right: 0; top: var(--t); bottom: var(--b); background: none; }
+.jr__pic--fade img {
+  object-position: 40% 30%;
+  -webkit-mask-image: linear-gradient(90deg, transparent 0%, #000 42%);
+  mask-image: linear-gradient(90deg, transparent 0%, #000 42%);
+}
+
+/* 03 · a large print, tilted */
+.jr__pic--print {
+  left: 900px; width: 860px; top: calc(var(--t) + 70px); height: 580px;
+  border: 1px solid rgba(124, 196, 242, 0.55);
+  box-shadow: 0 30px 70px rgba(4, 10, 24, 0.75);
+}
+.jr__drawn--print .jr__title,
+.jr__drawn--print .jr__text { width: 640px; }
+/* The narrower title runs to three lines: its words start below it. */
+.jr__st--foot .jr__drawn--print .jr__text { top: 380px; }
+.jr__st--head .jr__drawn--print .jr__text { top: 620px; }
+
+/* 04 · a hard-edged panel off the right and bottom edges */
+.jr__pic--panel { left: 1100px; right: 0; top: var(--t); bottom: var(--b); border-left: 3px solid var(--signal); }
+
+/* 05 · cut on a diagonal, off the right and top edges */
+.jr__pic--diagonal {
+  left: 860px; right: 0; top: var(--t); bottom: var(--b);
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 32% 100%);
+}
+.jr__drawn--diagonal .jr__title,
+.jr__drawn--diagonal .jr__text { width: 640px; }
+
+/* 06 · a cutting mounted on a paper mat, tilted */
+.jr__pic--mounted {
+  left: 1080px; width: 680px; top: calc(var(--t) + 100px); height: 520px;
+  padding: 16px;
+  background: var(--chalk);
+  box-shadow: 0 28px 60px rgba(4, 10, 24, 0.7);
+}
+
+/* 07 · the whole area, darkened behind the words */
+.jr__pic--backdrop { left: 0; right: 0; top: var(--t); bottom: var(--b); }
+.jr__pic--backdrop::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(16, 35, 63, 0.94) 0%, rgba(16, 35, 63, 0.78) 42%, rgba(16, 35, 63, 0.15) 100%);
+}
+
+/* 08 · a cinematic strip across the full width, under the words */
+.jr__pic--strip { left: 0; right: 0; top: calc(var(--t) + 330px); height: 390px; transform-origin: 50% 50%; }
+.jr__pic--strip img { object-position: 50% 40%; }
+
+/* 09 · an arched window, standing on the sheet's edge */
+.jr__pic--arch {
+  left: 1200px; width: 560px; top: calc(var(--t) + 40px); bottom: var(--b);
+  border-radius: 280px 280px 0 0;
+  border: 2px solid var(--line);
+  border-bottom: none;
+}
+
+/* 10 · the app, in a phone */
+.jr__pic--phone {
+  left: 1300px; width: 400px; top: calc(var(--t) + 60px); height: 600px;
+  border-radius: 44px;
+  border: 12px solid #050d1c;
+  box-shadow: 0 0 0 2px rgba(124, 196, 242, 0.5), 0 30px 70px rgba(4, 10, 24, 0.8);
+}
+.jr__pic--phone img { object-position: top; }
+
+/* 11 · a print with its outline offset behind it */
+.jr__pic--offset {
+  left: 1000px; width: 760px; top: calc(var(--t) + 80px); height: 520px;
+  overflow: visible;
+  box-shadow: 30px 30px 0 -2px var(--drafting), 30px 30px 0 0 var(--line);
+}
+.jr__drawn--offset .jr__title,
+.jr__drawn--offset .jr__text { width: 720px; }
+
+/* 12 · the whole area, fading down into the road */
+.jr__pic--horizon { left: 0; right: 0; top: var(--t); bottom: var(--b); background: none; }
+.jr__pic--horizon img {
+  -webkit-mask-image: linear-gradient(to bottom, #000 35%, transparent 100%);
+  mask-image: linear-gradient(to bottom, #000 35%, transparent 100%);
+}
+.jr__pic--horizon::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(16, 35, 63, 0.92) 0%, rgba(16, 35, 63, 0.7) 45%, rgba(16, 35, 63, 0) 90%);
 }
 
 .jr__pic--todo {

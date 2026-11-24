@@ -713,28 +713,43 @@ function Station({ pose, e, n, at, lead }: StationProps) {
  * behind the camera when the deck opens is drawn finished; a stop the
  * camera is travelling to builds as it arrives.
  */
+/** The stop's date as one line: "October 2024", "19–20 October 2026". */
+const dateOf = (e: JourneyEvent) => `${e.when} ${e.year}`
+/**
+ * One size for the whole date, as large as fits on the road beside the
+ * chapter's name: 150px for a month and year, stepping down for ranges.
+ */
+const dateSize = (t: string) => Math.round(Math.min(150, 940 / (t.length * 0.47)))
+
 function Drawn({ e, n, still: initiallyStill, lead }: { e: JourneyEvent; n: number; still: boolean; lead: number }) {
   const [still] = useState(initiallyStill)
   const at = (t: number) => lead + t
   const from = (o: TargetAndTransition): TargetAndTransition | false => (still ? false : o)
 
   return (
-    <motion.div className="jr__drawn" initial={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.3 }}>
-      {/* The date flies in large and settles on the road. */}
-      <motion.div
-        className="jr__date"
-        initial={from({ opacity: 0, scale: 1.9, x: 260, y: -140 })}
-        animate={{ opacity: 1, scale: 1, x: 0, y: 0 }}
-        transition={{ duration: 0.85, delay: at(-0.15), ease: EASE }}
-      >
-        <span className="jr__year">{e.year}</span>
-        <span className="jr__date-meta">
-          <Scramble className="jr__when" text={e.when} delay={at(0.35)} still={still} />
+    <motion.div
+      className={`jr__drawn jr__drawn--${FRAMES[n - 1].name}`}
+      initial={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 0.3 }}
+    >
+      {/* The date flies in large and settles on the road: month (and day)
+          as large as the year, since the whole journey is 2024 to 2026. */}
+      <div className="jr__date-row">
+        <motion.div
+          className="jr__date"
+          initial={from({ opacity: 0, scale: 1.6, x: 220, y: -120 })}
+          animate={{ opacity: 1, scale: 1, x: 0, y: 0 }}
+          transition={{ duration: 0.85, delay: at(-0.15), ease: EASE }}
+        >
+          <span className="jr__day" style={{ fontSize: dateSize(dateOf(e)) }}>
+            <Scramble text={dateOf(e)} delay={at(0.1)} still={still} />
+          </span>
           <span className="jr__idx">
             {String(n).padStart(2, '0')} / {String(N).padStart(2, '0')}
           </span>
-        </span>
-      </motion.div>
+        </motion.div>
+      </div>
 
       <Scramble as="h2" className="jr__title" text={e.title} delay={at(0.3)} still={still} />
       <motion.p
@@ -752,7 +767,7 @@ function Drawn({ e, n, still: initiallyStill, lead }: { e: JourneyEvent; n: numb
         </div>
       )}
 
-      <Picture e={e} big={!e.chart} delay={at(0.45)} still={still} />
+      <Picture e={e} n={n} delay={at(0.45)} still={still} />
     </motion.div>
   )
 }
@@ -804,27 +819,57 @@ function Scramble({
 }
 
 /**
- * The template's cut-outs arrive as a dark silhouette and then fill with
- * colour. A photograph does the same: in from the side, black, then lit.
+ * How each stop shows its photograph. Twelve stops, twelve treatments, none
+ * repeated: columns and panels that bleed off the sheet, backgrounds behind
+ * the words, prints laid on the drawing, a strip, an arch, a phone. Each
+ * arrives its own way; every one then lights from a dark silhouette, the
+ * template's cut-out reveal.
  */
-function Picture({ e, big, delay, still }: { e: JourneyEvent; big: boolean; delay: number; still: boolean }) {
+type Frame = { name: string; from: TargetAndTransition; to: TargetAndTransition }
+const FRAMES: Frame[] = [
+  // 01 case files: a tall column off the right and top edges
+  { name: 'column', from: { opacity: 0, x: 160 }, to: { opacity: 1, x: 0 } },
+  // 02 BYOD: the ward behind the ring, fading in from the left
+  { name: 'fade', from: { opacity: 0, x: 80 }, to: { opacity: 1, x: 0 } },
+  // 03 HIO: a large print, tilted
+  { name: 'print', from: { opacity: 0, x: 140, rotate: -7 }, to: { opacity: 1, x: 0, rotate: -2.5 } },
+  // 04 syllabus: a hard-edged panel off the right and bottom
+  { name: 'panel', from: { opacity: 0, x: 200 }, to: { opacity: 1, x: 0 } },
+  // 05 invited sessions: cut on a diagonal
+  { name: 'diagonal', from: { opacity: 0, x: 120 }, to: { opacity: 1, x: 0 } },
+  // 06 The Star: a mounted cutting, tilted the other way
+  { name: 'mounted', from: { opacity: 0, y: -60, rotate: 8 }, to: { opacity: 1, y: 0, rotate: 3 } },
+  // 07 Pre-Innovathon: the whole sheet, darkened behind the words
+  { name: 'backdrop', from: { opacity: 0, scale: 1.08 }, to: { opacity: 1, scale: 1 } },
+  // 08 judges: a cinematic strip across the sheet
+  { name: 'strip', from: { opacity: 0, scaleY: 0.2 }, to: { opacity: 1, scaleY: 1 } },
+  // 09 Innovathon: an arched window
+  { name: 'arch', from: { opacity: 0, y: 80 }, to: { opacity: 1, y: 0 } },
+  // 10 Wound Vision: the app, in a phone
+  { name: 'phone', from: { opacity: 0, y: 90, rotate: 2 }, to: { opacity: 1, y: 0, rotate: -4 } },
+  // 11 MyIPO: a print with its outline offset behind it
+  { name: 'offset', from: { opacity: 0, x: 100, y: -40 }, to: { opacity: 1, x: 0, y: 0 } },
+  // 12 nationwide: the whole sheet, fading into the road
+  { name: 'horizon', from: { opacity: 0, scale: 1.08 }, to: { opacity: 1, scale: 1 } },
+]
+
+function Picture({ e, n, delay, still }: { e: JourneyEvent; n: number; delay: number; still: boolean }) {
   const src = e.image.photo && PHOTO[e.image.photo]
+  const frame = FRAMES[n - 1]
   return (
     <motion.figure
-      className={`jr__pic${big ? ' jr__pic--big' : ''}${src ? '' : ' jr__pic--todo'}`}
-      initial={still ? false : { opacity: 0, x: 120, rotate: -5 }}
-      animate={{ opacity: 1, x: 0, rotate: -1.4 }}
-      transition={{ duration: 0.75, delay, ease: EASE }}
+      className={`jr__pic jr__pic--${frame.name}${src ? '' : ' jr__pic--todo'}`}
+      initial={still ? false : frame.from}
+      animate={frame.to}
+      transition={{ duration: 0.85, delay, ease: EASE }}
     >
       {src ? (
         <motion.img
           src={src}
           alt={e.image.suggest}
-          // The app screenshot is a tall phone column: keep its title in frame.
-          style={e.image.photo === 'woundVision' ? { objectPosition: 'top' } : undefined}
           initial={still ? false : { filter: 'brightness(0)' }}
           animate={{ filter: 'brightness(1)' }}
-          transition={{ duration: 0.7, delay: delay + 0.55, ease: 'easeOut' }}
+          transition={{ duration: 0.8, delay: delay + 0.5, ease: 'easeOut' }}
         />
       ) : (
         <figcaption>
